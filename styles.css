@@ -347,7 +347,7 @@ p {
   display: none;
 }
 
-\n  font-size: 33px;
+
 }
 
 .section-dark {
@@ -358,38 +358,52 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* PSD: play button x1=898, left text x2=851, gap≈47px ÷ 16 */
   gap: 2.94rem;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-text-left,
 .cta-text-right {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Futura', 'Futura PT', sans-serif;
     font-size: 33px;
-    font-weight: 300;
-    line-height: 1;
+    font-weight: 500;
+    line-height: 1.1;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ffffff;
     display: block;
 }
-
-.cta-text-left strong,
 .cta-text-right strong {
     font-weight: 700;
 }
 
 .video-cta {
-    background-image: url('assets/psd-export/195-new-14-1.png');
-    background-size: cover;
-    background-position: center;
-    background-color: var(--deep);
-    background-blend-mode: multiply;
+    position: relative;
     min-height: 939px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
+.video-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/psd-export/195-new-14-1.png');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.video-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('assets/psd-export/196-bg-7.png') center/cover;
+    z-index: 1;
+}
 .play {
   /* PSD Forma 1: x1=898 x2=1034 → 136px square */
   width: 136px;
@@ -1792,9 +1806,10 @@ p {
     align-items: center;
   }
 
-  \n  font-size: 33px;
+  
 }
 
+@media (max-width: 480px) {
   .cta-inner {
     gap: 1.2rem;
   }
