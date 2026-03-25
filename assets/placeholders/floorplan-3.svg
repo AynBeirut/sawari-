@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <rect width="1200" height="700" fill="#d9ddd9"/>
+  <rect x="110" y="70" width="980" height="560" fill="#eef1ee" stroke="#5e746f" stroke-width="8"/>
+  <rect x="150" y="110" width="280" height="190" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="460" y="110" width="300" height="150" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="790" y="110" width="260" height="190" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="150" y="330" width="280" height="260" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="460" y="290" width="260" height="300" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="750" y="330" width="300" height="260" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <text x="170" y="165" fill="#4b5f5a" font-family="Arial" font-size="26">BED 1</text>
+  <text x="480" y="170" fill="#4b5f5a" font-family="Arial" font-size="26">KITCHEN</text>
+  <text x="810" y="165" fill="#4b5f5a" font-family="Arial" font-size="26">BED 2</text>
+  <text x="175" y="470" fill="#4b5f5a" font-family="Arial" font-size="30">MASTER</text>
+  <text x="485" y="450" fill="#4b5f5a" font-family="Arial" font-size="26">SERVICE</text>
+  <text x="770" y="470" fill="#4b5f5a" font-family="Arial" font-size="30">LIVING</text>
+</svg>

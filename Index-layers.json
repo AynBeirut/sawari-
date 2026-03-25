@@ -1,0 +1,2576 @@
+[
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      0,
+      1920,
+      12486
+    ]
+  },
+  {
+    "name": "FOOTER",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      12109,
+      1920,
+      12630
+    ]
+  },
+  {
+    "name": "bg copy 4",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      12109,
+      1920,
+      12630
+    ]
+  },
+  {
+    "name": "line copy 15",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      859,
+      12226,
+      861,
+      12420
+    ]
+  },
+  {
+    "name": "line copy 16",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1249,
+      12226,
+      1251,
+      12420
+    ]
+  },
+  {
+    "name": " PRIVACY POLICY  TERMS & CONDITIONS COOKIES",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1344,
+      12225,
+      1576,
+      12332
+    ]
+  },
+  {
+    "name": " REGISTER FAQ DOWNLOADS VIDEOS VIRTUAL TOURS ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      989,
+      12226,
+      1144,
+      12420
+    ]
+  },
+  {
+    "name": " PROJECT OVERVIEW AMENTIES LOCATION GALLERY FLOOR PLANS ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      548,
+      12225,
+      753,
+      12420
+    ]
+  },
+  {
+    "name": "STAY IN TOUCH",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      140,
+      12389,
+      250,
+      12402
+    ]
+  },
+  {
+    "name": "Layer 522",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      207,
+      12423,
+      249,
+      12465
+    ]
+  },
+  {
+    "name": "Layer 523",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      273,
+      12423,
+      315,
+      12465
+    ]
+  },
+  {
+    "name": "Layer 524",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      141,
+      12423,
+      183,
+      12465
+    ]
+  },
+  {
+    "name": "Vector Smart Object copy 2",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      130,
+      12226,
+      359,
+      12296
+    ]
+  },
+  {
+    "name": "DOWNLOADS",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      360,
+      11953,
+      1588,
+      12036
+    ]
+  },
+  {
+    "name": "brochure2 copy",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      393,
+      11953,
+      437,
+      12000
+    ]
+  },
+  {
+    "name": "BROCHURE",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      360,
+      12019,
+      468,
+      12036
+    ]
+  },
+  {
+    "name": "brochure2 copy 2",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      766,
+      11953,
+      810,
+      12000
+    ]
+  },
+  {
+    "name": "FLOOR PLAN",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      728,
+      12019,
+      846,
+      12036
+    ]
+  },
+  {
+    "name": "brochure2 copy 3",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1126,
+      11953,
+      1170,
+      12000
+    ]
+  },
+  {
+    "name": "CONCEPT PLAN",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1069,
+      12019,
+      1218,
+      12036
+    ]
+  },
+  {
+    "name": "brochure2 copy 4",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1488,
+      11953,
+      1532,
+      12000
+    ]
+  },
+  {
+    "name": "ALL DOCUMENTS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1424,
+      12019,
+      1588,
+      12036
+    ]
+  },
+  {
+    "name": "REGISTER",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      11211,
+      1920,
+      11876
+    ]
+  },
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      959,
+      11211,
+      1920,
+      11876
+    ]
+  },
+  {
+    "name": "4",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      11212,
+      959,
+      11876
+    ]
+  },
+  {
+    "name": "line ",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1059,
+      11444,
+      1419,
+      11445
+    ]
+  },
+  {
+    "name": "Name",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1059,
+      11415,
+      1111,
+      11430
+    ]
+  },
+  {
+    "name": "line  copy 7",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1059,
+      11494,
+      1419,
+      11495
+    ]
+  },
+  {
+    "name": "EMAIL",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1059,
+      11465,
+      1107,
+      11480
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1059,
+      11544,
+      1419,
+      11545
+    ]
+  },
+  {
+    "name": "MOBILE",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1058,
+      11515,
+      1121,
+      11530
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1058,
+      11662,
+      1418,
+      11663
+    ]
+  },
+  {
+    "name": "text",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1059,
+      11596,
+      1418,
+      11697
+    ]
+  },
+  {
+    "name": "Message",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1058,
+      11565,
+      1139,
+      11580
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1059,
+      11302,
+      1061,
+      11394
+    ]
+  },
+  {
+    "name": "Thin button bg copy",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1061,
+      11734,
+      1201,
+      11773
+    ]
+  },
+  {
+    "name": "SUBMIT",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1101,
+      11747,
+      1163,
+      11760
+    ]
+  },
+  {
+    "name": "REGISTER YOUR INTEREST",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1091,
+      11337,
+      1451,
+      11363
+    ]
+  },
+  {
+    "name": "NEWS LETTER",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      10746,
+      1920,
+      11139
+    ]
+  },
+  {
+    "name": "AJMAN, DUBAI, UNITED ARAB EMIRATES",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      502,
+      11096,
+      736,
+      11109
+    ]
+  },
+  {
+    "name": "address",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      502,
+      11068,
+      578,
+      11083
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      475,
+      11047,
+      476,
+      11139
+    ]
+  },
+  {
+    "name": "Forma 1",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      400,
+      11072,
+      439,
+      11111
+    ]
+  },
+  {
+    "name": "SALES@SAWARI.COM",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      943,
+      11096,
+      1069,
+      11108
+    ]
+  },
+  {
+    "name": "email",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      944,
+      11068,
+      992,
+      11083
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      916,
+      11047,
+      917,
+      11139
+    ]
+  },
+  {
+    "name": "Forma 1",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      840,
+      11076,
+      880,
+      11106
+    ]
+  },
+  {
+    "name": "1-800-312-2121, 1-800-311-1010",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1304,
+      11096,
+      1480,
+      11109
+    ]
+  },
+  {
+    "name": "Forma 1",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1202,
+      11072,
+      1241,
+      11111
+    ]
+  },
+  {
+    "name": "call us",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1304,
+      11068,
+      1369,
+      11083
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1277,
+      11047,
+      1278,
+      11139
+    ]
+  },
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      10746,
+      1920,
+      10948
+    ]
+  },
+  {
+    "name": "line ",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      912,
+      10869,
+      1272,
+      10870
+    ]
+  },
+  {
+    "name": "enter your email",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      911,
+      10838,
+      1090,
+      10855
+    ]
+  },
+  {
+    "name": "Thin button bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1429,
+      10828,
+      1569,
+      10867
+    ]
+  },
+  {
+    "name": "subscribe",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1458,
+      10840,
+      1547,
+      10853
+    ]
+  },
+  {
+    "name": "line copy 13",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      349,
+      10800,
+      351,
+      10892
+    ]
+  },
+  {
+    "name": "SUBSCRIBE TO OUR  NEWSLETTER",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      379,
+      10816,
+      663,
+      10877
+    ]
+  },
+  {
+    "name": "FAQ",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      348,
+      9912,
+      1571,
+      10656
+    ]
+  },
+  {
+    "name": "line copy 7",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10166,
+      1571,
+      10167
+    ]
+  },
+  {
+    "name": "WHO IS THE DEVELOPER BEHIND SAWARY?",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      374,
+      10115,
+      915,
+      10138
+    ]
+  },
+  {
+    "name": "+",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1546,
+      10111,
+      1569,
+      10134
+    ]
+  },
+  {
+    "name": "line  copy",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10166,
+      1571,
+      10167
+    ]
+  },
+  {
+    "name": "line copy 8",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10246,
+      1571,
+      10247
+    ]
+  },
+  {
+    "name": "WHAT TYPES OF UNITS AVAILABLE IN SAWARY?",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      374,
+      10195,
+      959,
+      10218
+    ]
+  },
+  {
+    "name": "+ copy",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1546,
+      10191,
+      1569,
+      10214
+    ]
+  },
+  {
+    "name": "line  copy 2",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10246,
+      1571,
+      10247
+    ]
+  },
+  {
+    "name": "line copy 9",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10326,
+      1571,
+      10327
+    ]
+  },
+  {
+    "name": "WHAT ARE THE PAYMENT PLANS?",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      374,
+      10275,
+      787,
+      10298
+    ]
+  },
+  {
+    "name": "+ copy 2",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1546,
+      10271,
+      1569,
+      10294
+    ]
+  },
+  {
+    "name": "line  copy 3",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10326,
+      1571,
+      10327
+    ]
+  },
+  {
+    "name": "line copy 10",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10406,
+      1571,
+      10407
+    ]
+  },
+  {
+    "name": "WHY INVEST IN SAWARY?",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      374,
+      10355,
+      697,
+      10378
+    ]
+  },
+  {
+    "name": "+ copy 3",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1546,
+      10351,
+      1569,
+      10374
+    ]
+  },
+  {
+    "name": "line  copy 4",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10406,
+      1571,
+      10407
+    ]
+  },
+  {
+    "name": "line copy 11",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10486,
+      1571,
+      10487
+    ]
+  },
+  {
+    "name": "WHAT MAKES SAWARY UNIQUE?",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      374,
+      10435,
+      792,
+      10458
+    ]
+  },
+  {
+    "name": "+ copy 4",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1546,
+      10431,
+      1569,
+      10454
+    ]
+  },
+  {
+    "name": "line  copy 5",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10486,
+      1571,
+      10487
+    ]
+  },
+  {
+    "name": "line copy 12",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10655,
+      1571,
+      10656
+    ]
+  },
+  {
+    "name": "WHEN IS THE EXPECTED COMPLETION DATE FOR SAWARY?",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      374,
+      10515,
+      1113,
+      10538
+    ]
+  },
+  {
+    "name": "-",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1547,
+      10516,
+      1570,
+      10521
+    ]
+  },
+  {
+    "name": "line  copy 6",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      375,
+      10655,
+      1571,
+      10656
+    ]
+  },
+  {
+    "name": "line copy 6",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      348,
+      9912,
+      352,
+      10080
+    ]
+  },
+  {
+    "name": "FAQ    ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      381,
+      9967,
+      470,
+      10006
+    ]
+  },
+  {
+    "name": "Phase 1 will be delivered by the end of 2027, Phase 2 will be d",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      375,
+      10563,
+      1521,
+      10621
+    ]
+  },
+  {
+    "name": "ANIMATION",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      8628,
+      1920,
+      9829
+    ]
+  },
+  {
+    "name": "Vector Smart Object",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      8628,
+      1920,
+      9829
+    ]
+  },
+  {
+    "name": "Vector Smart Object",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      459,
+      8730,
+      1459,
+      9731
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 3",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      432,
+      9204,
+      488,
+      9260
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 4",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      445,
+      9217,
+      475,
+      9247
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 5",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1431,
+      9204,
+      1487,
+      9260
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 5",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1444,
+      9217,
+      1474,
+      9247
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 6",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      932,
+      9704,
+      988,
+      9760
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 6",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      945,
+      9717,
+      975,
+      9747
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 7",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      932,
+      8713,
+      988,
+      8769
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 7",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      945,
+      8726,
+      975,
+      8756
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 8",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1326,
+      8922,
+      1382,
+      8978
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 8",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1339,
+      8935,
+      1369,
+      8965
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 10",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1284,
+      9512,
+      1340,
+      9568
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 10",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1297,
+      9525,
+      1327,
+      9555
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 11",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      566,
+      9512,
+      622,
+      9568
+    ]
+  },
+  {
+    "name": "ICONIC URBAN IDENTITY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      127,
+      9221,
+      400,
+      9241
+    ]
+  },
+  {
+    "name": "CENTRAL POINT DISTRICT",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      214,
+      8950,
+      487,
+      8970
+    ]
+  },
+  {
+    "name": "PREMIUM MATERIALS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1419,
+      8944,
+      1644,
+      8964
+    ]
+  },
+  {
+    "name": "CONCEPT IDEOLOGY copy",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      849,
+      8666,
+      1081,
+      8686
+    ]
+  },
+  {
+    "name": "COMMUNITY-CENTRIC LIVING",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      186,
+      9531,
+      519,
+      9551
+    ]
+  },
+  {
+    "name": "dynamic and iconic skyline through a composition of elegantly a",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      591,
+      9132,
+      1332,
+      9327
+    ]
+  },
+  {
+    "name": "LIFESTYLE INTEGRATION",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1384,
+      9531,
+      1636,
+      9551
+    ]
+  },
+  {
+    "name": "LUXURY WITH SUSTAINABILITY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      801,
+      9782,
+      1121,
+      9802
+    ]
+  },
+  {
+    "name": "HUMAN-CENTERED MOBILITY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1513,
+      9219,
+      1836,
+      9239
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 11",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      579,
+      9525,
+      609,
+      9555
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 9",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      511,
+      8932,
+      567,
+      8988
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 9",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      524,
+      8945,
+      554,
+      8975
+    ]
+  },
+  {
+    "name": "VIRTUAL TOUR",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      7198,
+      1920,
+      8557
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      8556,
+      1920,
+      8557
+    ]
+  },
+  {
+    "name": "1",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      352,
+      8227,
+      639,
+      8509
+    ]
+  },
+  {
+    "name": "1",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      669,
+      8228,
+      951,
+      8511
+    ]
+  },
+  {
+    "name": "2",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      352,
+      7428,
+      1570,
+      8186
+    ]
+  },
+  {
+    "name": "1",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      979,
+      8228,
+      1262,
+      8510
+    ]
+  },
+  {
+    "name": "1",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1290,
+      8229,
+      1570,
+      8509
+    ]
+  },
+  {
+    "name": "Ellipse 1",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      375,
+      8113,
+      431,
+      8169
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1541,
+      8332,
+      1597,
+      8388
+    ]
+  },
+  {
+    "name": "Ellipse 1 copy 2",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      324,
+      8332,
+      380,
+      8388
+    ]
+  },
+  {
+    "name": "Ellipse 2",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      397,
+      8120,
+      408,
+      8132
+    ]
+  },
+  {
+    "name": "Ellipse 2 copy",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      397,
+      8136,
+      408,
+      8147
+    ]
+  },
+  {
+    "name": "Ellipse 2 copy 2",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      397,
+      8151,
+      408,
+      8162
+    ]
+  },
+  {
+    "name": "line copy 5",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      347,
+      7198,
+      351,
+      7366
+    ]
+  },
+  {
+    "name": "VIRTUAL TOUR",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      377,
+      7232,
+      686,
+      7272
+    ]
+  },
+  {
+    "name": "Choose from a range of well-designed layouts created for modern",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      378,
+      7295,
+      1378,
+      7332
+    ]
+  },
+  {
+    "name": "bg copy 3",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      352,
+      7428,
+      1570,
+      7523
+    ]
+  },
+  {
+    "name": "arrows_16549963 copy 3",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      334,
+      8346,
+      370,
+      8374
+    ]
+  },
+  {
+    "name": "arrows_16549963 copy 4",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1549,
+      8346,
+      1585,
+      8374
+    ]
+  },
+  {
+    "name": "Forma ",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1499,
+      8114,
+      1557,
+      8172
+    ]
+  },
+  {
+    "name": "1 Bedroom  Apartment - Tower A",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      785,
+      7465,
+      1139,
+      7494
+    ]
+  },
+  {
+    "name": "PHOTO GALLERY",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      5713,
+      1919,
+      7063
+    ]
+  },
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      5713,
+      1919,
+      6072
+    ]
+  },
+  {
+    "name": "line copy 2",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      349,
+      5762,
+      353,
+      5930
+    ]
+  },
+  {
+    "name": "PHOTO GALLERY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      382,
+      5796,
+      743,
+      5835
+    ]
+  },
+  {
+    "name": "The Art of Living",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      379,
+      5859,
+      599,
+      5896
+    ]
+  },
+  {
+    "name": "1 BEDROOM",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      884,
+      5952,
+      1010,
+      5970
+    ]
+  },
+  {
+    "name": "2 BEDROOMS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1069,
+      5952,
+      1214,
+      5970
+    ]
+  },
+  {
+    "name": "3 BEDROOMS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1274,
+      5952,
+      1419,
+      5970
+    ]
+  },
+  {
+    "name": "GARDEN",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1479,
+      5952,
+      1571,
+      5970
+    ]
+  },
+  {
+    "name": "LOBBY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      760,
+      5952,
+      826,
+      5970
+    ]
+  },
+  {
+    "name": "line copy 14",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      757,
+      6014,
+      1572,
+      6018
+    ]
+  },
+  {
+    "name": "current copy 2",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      757,
+      6013,
+      826,
+      6019
+    ]
+  },
+  {
+    "name": "line copy 3",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      352,
+      7059,
+      1572,
+      7063
+    ]
+  },
+  {
+    "name": "current copy",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      780,
+      7057,
+      1124,
+      7063
+    ]
+  },
+  {
+    "name": "1",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      633,
+      6153,
+      1309,
+      6997
+    ]
+  },
+  {
+    "name": "2",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      45,
+      6239,
+      592,
+      6923
+    ]
+  },
+  {
+    "name": "4",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1348,
+      6239,
+      1878,
+      6923
+    ]
+  },
+  {
+    "name": "bg copy 2",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      718,
+      6239,
+      1216,
+      6923
+    ]
+  },
+  {
+    "name": "zoom-icon copy",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      940,
+      6539,
+      989,
+      6588
+    ]
+  },
+  {
+    "name": "ENTRANCE LOBBY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      856,
+      6692,
+      1096,
+      6716
+    ]
+  },
+  {
+    "name": "NUMBERS",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      437,
+      5524,
+      1451,
+      5615
+    ]
+  },
+  {
+    "name": "COMPLETED PROJECTS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      437,
+      5599,
+      621,
+      5614
+    ]
+  },
+  {
+    "name": "75",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      443,
+      5525,
+      506,
+      5573
+    ]
+  },
+  {
+    "name": "finished projects",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      744,
+      5599,
+      903,
+      5615
+    ]
+  },
+  {
+    "name": "151",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      737,
+      5525,
+      805,
+      5572
+    ]
+  },
+  {
+    "name": "happy clients",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1044,
+      5599,
+      1167,
+      5615
+    ]
+  },
+  {
+    "name": "275 ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1043,
+      5524,
+      1140,
+      5573
+    ]
+  },
+  {
+    "name": "APARTMENTS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1343,
+      5599,
+      1451,
+      5615
+    ]
+  },
+  {
+    "name": "316",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1343,
+      5524,
+      1428,
+      5572
+    ]
+  },
+  {
+    "name": "FLOOR PLANS",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      4798,
+      1920,
+      5414
+    ]
+  },
+  {
+    "name": "1BED TYP 1",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      878,
+      5014,
+      1920,
+      5413
+    ]
+  },
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      876,
+      5012,
+      1920,
+      5414
+    ]
+  },
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      5012,
+      876,
+      5414
+    ]
+  },
+  {
+    "name": "2 bedroom - Level Typical Size: 156 sqm ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      383,
+      5152,
+      614,
+      5194
+    ]
+  },
+  {
+    "name": "DOWNLOAD FLOOR PLAN",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      440,
+      5281,
+      691,
+      5300
+    ]
+  },
+  {
+    "name": "brochure2",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      383,
+      5267,
+      427,
+      5314
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      352,
+      5066,
+      354,
+      5158
+    ]
+  },
+  {
+    "name": "UNIT 1",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      382,
+      5097,
+      476,
+      5126
+    ]
+  },
+  {
+    "name": "line copy",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      350,
+      4798,
+      354,
+      4966
+    ]
+  },
+  {
+    "name": "FLOOR PLANS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      383,
+      4835,
+      683,
+      4875
+    ]
+  },
+  {
+    "name": "Carefully planned spaces designed to combine practicality with ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      381,
+      4898,
+      1397,
+      4935
+    ]
+  },
+  {
+    "name": "EXPLORE FLOOR PLANS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1373,
+      4838,
+      1553,
+      4851
+    ]
+  },
+  {
+    "name": "Rectangle 531",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      1349,
+      4822,
+      1571,
+      4867
+    ]
+  },
+  {
+    "name": "zoom-icon",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1385,
+      5198,
+      1434,
+      5247
+    ]
+  },
+  {
+    "name": "arrows_16549963",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      78,
+      5197,
+      124,
+      5233
+    ]
+  },
+  {
+    "name": "arrows_16549963 copy",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1796,
+      5197,
+      1842,
+      5233
+    ]
+  },
+  {
+    "name": "LOCATION",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      3666,
+      1920,
+      4738
+    ]
+  },
+  {
+    "name": "bg copy",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      4505,
+      1920,
+      4738
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      350,
+      3666,
+      354,
+      3834
+    ]
+  },
+  {
+    "name": "LOCATION & CONNECTIVITY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      383,
+      3700,
+      1023,
+      3740
+    ]
+  },
+  {
+    "name": "Strategically positioned in the heart of Ajman with seamless ac",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      380,
+      3763,
+      1567,
+      3800
+    ]
+  },
+  {
+    "name": "13 mins alZorah",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      744,
+      3885,
+      945,
+      3903
+    ]
+  },
+  {
+    "name": "15mins ajman beach",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      991,
+      3885,
+      1246,
+      3903
+    ]
+  },
+  {
+    "name": "30 mins Dubai AIRPORT",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1300,
+      3885,
+      1571,
+      3903
+    ]
+  },
+  {
+    "name": "10 mins Sharjah City Center ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      350,
+      3885,
+      694,
+      3903
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      515,
+      3948,
+      1572,
+      3952
+    ]
+  },
+  {
+    "name": "current",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      350,
+      3946,
+      694,
+      3952
+    ]
+  },
+  {
+    "name": "Vector Smart Object",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      351,
+      4003,
+      1573,
+      4631
+    ]
+  },
+  {
+    "name": "Rectangle 1 copy",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      351,
+      4001,
+      1574,
+      4633
+    ]
+  },
+  {
+    "name": "VIDEO",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      0,
+      2606,
+      1920,
+      3545
+    ]
+  },
+  {
+    "name": "new 14",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      0,
+      2606,
+      1920,
+      3545
+    ]
+  },
+  {
+    "name": "bg",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      2606,
+      1920,
+      3545
+    ]
+  },
+  {
+    "name": "EXPLORE THE FUTURE",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      494,
+      3071,
+      851,
+      3100
+    ]
+  },
+  {
+    "name": "OF SAWARI AJMAN",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1080,
+      3071,
+      1449,
+      3100
+    ]
+  },
+  {
+    "name": "Forma 1",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      898,
+      3017,
+      1034,
+      3153
+    ]
+  },
+  {
+    "name": "AMENITIES",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      318,
+      2083,
+      1598,
+      2457
+    ]
+  },
+  {
+    "name": "Group 1",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      318,
+      2146,
+      1598,
+      2457
+    ]
+  },
+  {
+    "name": "SAWARI AMENITIES",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      380,
+      2146,
+      803,
+      2186
+    ]
+  },
+  {
+    "name": "weight_9361040",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      318,
+      2322,
+      453,
+      2457
+    ]
+  },
+  {
+    "name": "balcony_6100616",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1083,
+      2321,
+      1216,
+      2455
+    ]
+  },
+  {
+    "name": "cctv_13347367",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      1464,
+      2323,
+      1598,
+      2457
+    ]
+  },
+  {
+    "name": "parking-lot_13320115",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      1272,
+      2322,
+      1406,
+      2456
+    ]
+  },
+  {
+    "name": "pilot_18004123",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      701,
+      2322,
+      835,
+      2456
+    ]
+  },
+  {
+    "name": "snowy_17606018",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      510,
+      2322,
+      645,
+      2456
+    ]
+  },
+  {
+    "name": "swimming-pool_18304138",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      892,
+      2321,
+      1026,
+      2455
+    ]
+  },
+  {
+    "name": "line copy 17",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      350,
+      2083,
+      354,
+      2251
+    ]
+  },
+  {
+    "name": "PROJECT OVERVIEW",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      -1,
+      976,
+      1921,
+      1972
+    ]
+  },
+  {
+    "name": "Rectangle 1",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      -1,
+      976,
+      1921,
+      1972
+    ]
+  },
+  {
+    "name": "new 14",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      302,
+      1344,
+      864,
+      1620
+    ]
+  },
+  {
+    "name": "new 01",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      303,
+      1055,
+      864,
+      1330
+    ]
+  },
+  {
+    "name": "line",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      1801,
+      1838,
+      1802
+    ]
+  },
+  {
+    "name": "SAWARI is envisioned as an Urban Oasis - a residential destinat",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      975,
+      1419,
+      1605,
+      1711
+    ]
+  },
+  {
+    "name": "PROJECT  OVERVIEW",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1020,
+      1293,
+      1468,
+      1333
+    ]
+  },
+  {
+    "name": "new 12",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      302,
+      1635,
+      865,
+      1911
+    ]
+  },
+  {
+    "name": "line copy 4",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      972,
+      1226,
+      976,
+      1394
+    ]
+  },
+  {
+    "name": "HEADER",
+    "visible": true,
+    "kind": "group",
+    "bbox": [
+      -43,
+      -396,
+      1962,
+      979
+    ]
+  },
+  {
+    "name": "img",
+    "visible": true,
+    "kind": "pixel",
+    "bbox": [
+      0,
+      0,
+      1920,
+      979
+    ]
+  },
+  {
+    "name": "new 01",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      -43,
+      -2,
+      1962,
+      979
+    ]
+  },
+  {
+    "name": "Vector Smart Object",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      -12,
+      -396,
+      1929,
+      979
+    ]
+  },
+  {
+    "name": "icon mouse",
+    "visible": true,
+    "kind": "shape",
+    "bbox": [
+      944,
+      904,
+      975,
+      955
+    ]
+  },
+  {
+    "name": "Vector Smart Object",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      621,
+      398,
+      1298,
+      604
+    ]
+  },
+  {
+    "name": "ENQUIRE NOW",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1683,
+      59,
+      1793,
+      76
+    ]
+  },
+  {
+    "name": "FAQ",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1610,
+      59,
+      1640,
+      76
+    ]
+  },
+  {
+    "name": "GALLERY",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1502,
+      59,
+      1568,
+      73
+    ]
+  },
+  {
+    "name": "FLOOR PLANS",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1359,
+      59,
+      1459,
+      73
+    ]
+  },
+  {
+    "name": "LOCATION",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1242,
+      59,
+      1317,
+      73
+    ]
+  },
+  {
+    "name": "AMENITIES",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      1115,
+      59,
+      1197,
+      73
+    ]
+  },
+  {
+    "name": "OVERVIEW",
+    "visible": true,
+    "kind": "type",
+    "bbox": [
+      999,
+      58,
+      1076,
+      72
+    ]
+  },
+  {
+    "name": "LOGO",
+    "visible": true,
+    "kind": "smartobject",
+    "bbox": [
+      68,
+      43,
+      192,
+      160
+    ]
+  }
+]

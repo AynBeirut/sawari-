@@ -1,0 +1,3499 @@
+{
+  "psd": "Index.psd",
+  "document_size": [
+    1920,
+    12630
+  ],
+  "exported_layers": 218,
+  "full_composite": "full-composite.png",
+  "items": [
+    {
+      "file": "000-bg-1.png",
+      "name": "bg",
+      "bbox": [
+        0,
+        0,
+        1920,
+        12486
+      ],
+      "size": [
+        1920,
+        12486
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "002-bg-copy-4-1.png",
+      "name": "bg copy 4",
+      "bbox": [
+        0,
+        12109,
+        1920,
+        12630
+      ],
+      "size": [
+        1920,
+        521
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "003-line-copy-15-1.png",
+      "name": "line copy 15",
+      "bbox": [
+        859,
+        12226,
+        861,
+        12420
+      ],
+      "size": [
+        2,
+        194
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "004-line-copy-16-1.png",
+      "name": "line copy 16",
+      "bbox": [
+        1249,
+        12226,
+        1251,
+        12420
+      ],
+      "size": [
+        2,
+        194
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "005-privacy-policy-terms-conditions-cookies-1.png",
+      "name": " PRIVACY POLICY  TERMS & CONDITIONS COOKIES",
+      "bbox": [
+        1344,
+        12225,
+        1576,
+        12332
+      ],
+      "size": [
+        232,
+        107
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "006-register-faq-downloads-videos-virtual-tours-1.png",
+      "name": " REGISTER FAQ DOWNLOADS VIDEOS VIRTUAL TOURS ",
+      "bbox": [
+        989,
+        12226,
+        1144,
+        12420
+      ],
+      "size": [
+        155,
+        194
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "007-project-overview-amenties-location-gallery-floor-plans-1.png",
+      "name": " PROJECT OVERVIEW AMENTIES LOCATION GALLERY FLOOR PLANS ",
+      "bbox": [
+        548,
+        12225,
+        753,
+        12420
+      ],
+      "size": [
+        205,
+        195
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "008-stay-in-touch-1.png",
+      "name": "STAY IN TOUCH",
+      "bbox": [
+        140,
+        12389,
+        250,
+        12402
+      ],
+      "size": [
+        110,
+        13
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "009-layer-522-1.png",
+      "name": "Layer 522",
+      "bbox": [
+        207,
+        12423,
+        249,
+        12465
+      ],
+      "size": [
+        42,
+        42
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "010-layer-523-1.png",
+      "name": "Layer 523",
+      "bbox": [
+        273,
+        12423,
+        315,
+        12465
+      ],
+      "size": [
+        42,
+        42
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "011-layer-524-1.png",
+      "name": "Layer 524",
+      "bbox": [
+        141,
+        12423,
+        183,
+        12465
+      ],
+      "size": [
+        42,
+        42
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "012-vector-smart-object-copy-2-1.png",
+      "name": "Vector Smart Object copy 2",
+      "bbox": [
+        130,
+        12226,
+        359,
+        12296
+      ],
+      "size": [
+        229,
+        70
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "014-brochure2-copy-1.png",
+      "name": "brochure2 copy",
+      "bbox": [
+        393,
+        11953,
+        437,
+        12000
+      ],
+      "size": [
+        44,
+        47
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "015-brochure-1.png",
+      "name": "BROCHURE",
+      "bbox": [
+        360,
+        12019,
+        468,
+        12036
+      ],
+      "size": [
+        108,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "016-brochure2-copy-2-1.png",
+      "name": "brochure2 copy 2",
+      "bbox": [
+        766,
+        11953,
+        810,
+        12000
+      ],
+      "size": [
+        44,
+        47
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "017-floor-plan-1.png",
+      "name": "FLOOR PLAN",
+      "bbox": [
+        728,
+        12019,
+        846,
+        12036
+      ],
+      "size": [
+        118,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "018-brochure2-copy-3-1.png",
+      "name": "brochure2 copy 3",
+      "bbox": [
+        1126,
+        11953,
+        1170,
+        12000
+      ],
+      "size": [
+        44,
+        47
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "019-concept-plan-1.png",
+      "name": "CONCEPT PLAN",
+      "bbox": [
+        1069,
+        12019,
+        1218,
+        12036
+      ],
+      "size": [
+        149,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "020-brochure2-copy-4-1.png",
+      "name": "brochure2 copy 4",
+      "bbox": [
+        1488,
+        11953,
+        1532,
+        12000
+      ],
+      "size": [
+        44,
+        47
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "021-all-documents-1.png",
+      "name": "ALL DOCUMENTS",
+      "bbox": [
+        1424,
+        12019,
+        1588,
+        12036
+      ],
+      "size": [
+        164,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "023-bg-2.png",
+      "name": "bg",
+      "bbox": [
+        959,
+        11211,
+        1920,
+        11876
+      ],
+      "size": [
+        961,
+        665
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "024-4-1.png",
+      "name": "4",
+      "bbox": [
+        0,
+        11212,
+        959,
+        11876
+      ],
+      "size": [
+        959,
+        664
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "025-line-1.png",
+      "name": "line ",
+      "bbox": [
+        1059,
+        11444,
+        1419,
+        11445
+      ],
+      "size": [
+        360,
+        1
+      ],
+      "opacity": 102,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "026-name-1.png",
+      "name": "Name",
+      "bbox": [
+        1059,
+        11415,
+        1111,
+        11430
+      ],
+      "size": [
+        52,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "027-line-copy-7-1.png",
+      "name": "line  copy 7",
+      "bbox": [
+        1059,
+        11494,
+        1419,
+        11495
+      ],
+      "size": [
+        360,
+        1
+      ],
+      "opacity": 102,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "028-email-1.png",
+      "name": "EMAIL",
+      "bbox": [
+        1059,
+        11465,
+        1107,
+        11480
+      ],
+      "size": [
+        48,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "029-line-2.png",
+      "name": "line",
+      "bbox": [
+        1059,
+        11544,
+        1419,
+        11545
+      ],
+      "size": [
+        360,
+        1
+      ],
+      "opacity": 102,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "030-mobile-1.png",
+      "name": "MOBILE",
+      "bbox": [
+        1058,
+        11515,
+        1121,
+        11530
+      ],
+      "size": [
+        63,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "031-line-3.png",
+      "name": "line",
+      "bbox": [
+        1058,
+        11662,
+        1418,
+        11663
+      ],
+      "size": [
+        360,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "032-text-1.png",
+      "name": "text",
+      "bbox": [
+        1059,
+        11596,
+        1418,
+        11697
+      ],
+      "size": [
+        359,
+        101
+      ],
+      "opacity": 102,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "033-message-1.png",
+      "name": "Message",
+      "bbox": [
+        1058,
+        11565,
+        1139,
+        11580
+      ],
+      "size": [
+        81,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "034-line-4.png",
+      "name": "line",
+      "bbox": [
+        1059,
+        11302,
+        1061,
+        11394
+      ],
+      "size": [
+        2,
+        92
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "035-thin-button-bg-copy-1.png",
+      "name": "Thin button bg copy",
+      "bbox": [
+        1061,
+        11734,
+        1201,
+        11773
+      ],
+      "size": [
+        140,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "036-submit-1.png",
+      "name": "SUBMIT",
+      "bbox": [
+        1101,
+        11747,
+        1163,
+        11760
+      ],
+      "size": [
+        62,
+        13
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "037-register-your-interest-1.png",
+      "name": "REGISTER YOUR INTEREST",
+      "bbox": [
+        1091,
+        11337,
+        1451,
+        11363
+      ],
+      "size": [
+        360,
+        26
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "039-ajman-dubai-united-arab-emirates-1.png",
+      "name": "AJMAN, DUBAI, UNITED ARAB EMIRATES",
+      "bbox": [
+        502,
+        11096,
+        736,
+        11109
+      ],
+      "size": [
+        234,
+        13
+      ],
+      "opacity": 204,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "040-address-1.png",
+      "name": "address",
+      "bbox": [
+        502,
+        11068,
+        578,
+        11083
+      ],
+      "size": [
+        76,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "041-line-5.png",
+      "name": "line",
+      "bbox": [
+        475,
+        11047,
+        476,
+        11139
+      ],
+      "size": [
+        1,
+        92
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "042-forma-1-1.png",
+      "name": "Forma 1",
+      "bbox": [
+        400,
+        11072,
+        439,
+        11111
+      ],
+      "size": [
+        39,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "043-sales-sawari-com-1.png",
+      "name": "SALES@SAWARI.COM",
+      "bbox": [
+        943,
+        11096,
+        1069,
+        11108
+      ],
+      "size": [
+        126,
+        12
+      ],
+      "opacity": 204,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "044-email-2.png",
+      "name": "email",
+      "bbox": [
+        944,
+        11068,
+        992,
+        11083
+      ],
+      "size": [
+        48,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "045-line-6.png",
+      "name": "line",
+      "bbox": [
+        916,
+        11047,
+        917,
+        11139
+      ],
+      "size": [
+        1,
+        92
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "046-forma-1-2.png",
+      "name": "Forma 1",
+      "bbox": [
+        840,
+        11076,
+        880,
+        11106
+      ],
+      "size": [
+        40,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "047-1-800-312-2121-1-800-311-1010-1.png",
+      "name": "1-800-312-2121, 1-800-311-1010",
+      "bbox": [
+        1304,
+        11096,
+        1480,
+        11109
+      ],
+      "size": [
+        176,
+        13
+      ],
+      "opacity": 204,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "048-forma-1-3.png",
+      "name": "Forma 1",
+      "bbox": [
+        1202,
+        11072,
+        1241,
+        11111
+      ],
+      "size": [
+        39,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "049-call-us-1.png",
+      "name": "call us",
+      "bbox": [
+        1304,
+        11068,
+        1369,
+        11083
+      ],
+      "size": [
+        65,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "050-line-7.png",
+      "name": "line",
+      "bbox": [
+        1277,
+        11047,
+        1278,
+        11139
+      ],
+      "size": [
+        1,
+        92
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "051-bg-3.png",
+      "name": "bg",
+      "bbox": [
+        0,
+        10746,
+        1920,
+        10948
+      ],
+      "size": [
+        1920,
+        202
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "052-line-8.png",
+      "name": "line ",
+      "bbox": [
+        912,
+        10869,
+        1272,
+        10870
+      ],
+      "size": [
+        360,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "053-enter-your-email-1.png",
+      "name": "enter your email",
+      "bbox": [
+        911,
+        10838,
+        1090,
+        10855
+      ],
+      "size": [
+        179,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "054-thin-button-bg-1.png",
+      "name": "Thin button bg",
+      "bbox": [
+        1429,
+        10828,
+        1569,
+        10867
+      ],
+      "size": [
+        140,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "055-subscribe-1.png",
+      "name": "subscribe",
+      "bbox": [
+        1458,
+        10840,
+        1547,
+        10853
+      ],
+      "size": [
+        89,
+        13
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "056-line-copy-13-1.png",
+      "name": "line copy 13",
+      "bbox": [
+        349,
+        10800,
+        351,
+        10892
+      ],
+      "size": [
+        2,
+        92
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "057-subscribe-to-our-newsletter-1.png",
+      "name": "SUBSCRIBE TO OUR  NEWSLETTER",
+      "bbox": [
+        379,
+        10816,
+        663,
+        10877
+      ],
+      "size": [
+        284,
+        61
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "059-line-copy-7-2.png",
+      "name": "line copy 7",
+      "bbox": [
+        375,
+        10166,
+        1571,
+        10167
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "060-who-is-the-developer-behind-sawary-1.png",
+      "name": "WHO IS THE DEVELOPER BEHIND SAWARY?",
+      "bbox": [
+        374,
+        10115,
+        915,
+        10138
+      ],
+      "size": [
+        541,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "061-layer-1.png",
+      "name": "+",
+      "bbox": [
+        1546,
+        10111,
+        1569,
+        10134
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "062-line-copy-1.png",
+      "name": "line  copy",
+      "bbox": [
+        375,
+        10166,
+        1571,
+        10167
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "063-line-copy-8-1.png",
+      "name": "line copy 8",
+      "bbox": [
+        375,
+        10246,
+        1571,
+        10247
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "064-what-types-of-units-available-in-sawary-1.png",
+      "name": "WHAT TYPES OF UNITS AVAILABLE IN SAWARY?",
+      "bbox": [
+        374,
+        10195,
+        959,
+        10218
+      ],
+      "size": [
+        585,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "065-copy-1.png",
+      "name": "+ copy",
+      "bbox": [
+        1546,
+        10191,
+        1569,
+        10214
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "066-line-copy-2-1.png",
+      "name": "line  copy 2",
+      "bbox": [
+        375,
+        10246,
+        1571,
+        10247
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "067-line-copy-9-1.png",
+      "name": "line copy 9",
+      "bbox": [
+        375,
+        10326,
+        1571,
+        10327
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "068-what-are-the-payment-plans-1.png",
+      "name": "WHAT ARE THE PAYMENT PLANS?",
+      "bbox": [
+        374,
+        10275,
+        787,
+        10298
+      ],
+      "size": [
+        413,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "069-copy-2-1.png",
+      "name": "+ copy 2",
+      "bbox": [
+        1546,
+        10271,
+        1569,
+        10294
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "070-line-copy-3-1.png",
+      "name": "line  copy 3",
+      "bbox": [
+        375,
+        10326,
+        1571,
+        10327
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "071-line-copy-10-1.png",
+      "name": "line copy 10",
+      "bbox": [
+        375,
+        10406,
+        1571,
+        10407
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "072-why-invest-in-sawary-1.png",
+      "name": "WHY INVEST IN SAWARY?",
+      "bbox": [
+        374,
+        10355,
+        697,
+        10378
+      ],
+      "size": [
+        323,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "073-copy-3-1.png",
+      "name": "+ copy 3",
+      "bbox": [
+        1546,
+        10351,
+        1569,
+        10374
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "074-line-copy-4-1.png",
+      "name": "line  copy 4",
+      "bbox": [
+        375,
+        10406,
+        1571,
+        10407
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "075-line-copy-11-1.png",
+      "name": "line copy 11",
+      "bbox": [
+        375,
+        10486,
+        1571,
+        10487
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "076-what-makes-sawary-unique-1.png",
+      "name": "WHAT MAKES SAWARY UNIQUE?",
+      "bbox": [
+        374,
+        10435,
+        792,
+        10458
+      ],
+      "size": [
+        418,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "077-copy-4-1.png",
+      "name": "+ copy 4",
+      "bbox": [
+        1546,
+        10431,
+        1569,
+        10454
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "078-line-copy-5-1.png",
+      "name": "line  copy 5",
+      "bbox": [
+        375,
+        10486,
+        1571,
+        10487
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "079-line-copy-12-1.png",
+      "name": "line copy 12",
+      "bbox": [
+        375,
+        10655,
+        1571,
+        10656
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "080-when-is-the-expected-completion-date-for-sawary-1.png",
+      "name": "WHEN IS THE EXPECTED COMPLETION DATE FOR SAWARY?",
+      "bbox": [
+        374,
+        10515,
+        1113,
+        10538
+      ],
+      "size": [
+        739,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "081-layer-2.png",
+      "name": "-",
+      "bbox": [
+        1547,
+        10516,
+        1570,
+        10521
+      ],
+      "size": [
+        23,
+        5
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "082-line-copy-6-1.png",
+      "name": "line  copy 6",
+      "bbox": [
+        375,
+        10655,
+        1571,
+        10656
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "083-line-copy-6-2.png",
+      "name": "line copy 6",
+      "bbox": [
+        348,
+        9912,
+        352,
+        10080
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "084-faq-1.png",
+      "name": "FAQ    ",
+      "bbox": [
+        381,
+        9967,
+        470,
+        10006
+      ],
+      "size": [
+        89,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "085-phase-1-will-be-delivered-by-the-end-of-2027-phase-2-will-be-d-1.png",
+      "name": "Phase 1 will be delivered by the end of 2027, Phase 2 will be d",
+      "bbox": [
+        375,
+        10563,
+        1521,
+        10621
+      ],
+      "size": [
+        1146,
+        58
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "087-vector-smart-object-1.png",
+      "name": "Vector Smart Object",
+      "bbox": [
+        0,
+        8628,
+        1920,
+        9829
+      ],
+      "size": [
+        1920,
+        1201
+      ],
+      "opacity": 240,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "088-vector-smart-object-2.png",
+      "name": "Vector Smart Object",
+      "bbox": [
+        459,
+        8730,
+        1459,
+        9731
+      ],
+      "size": [
+        1000,
+        1001
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "089-ellipse-1-copy-3-1.png",
+      "name": "Ellipse 1 copy 3",
+      "bbox": [
+        432,
+        9204,
+        488,
+        9260
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "090-ellipse-1-copy-4-1.png",
+      "name": "Ellipse 1 copy 4",
+      "bbox": [
+        445,
+        9217,
+        475,
+        9247
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "091-ellipse-1-copy-5-1.png",
+      "name": "Ellipse 1 copy 5",
+      "bbox": [
+        1431,
+        9204,
+        1487,
+        9260
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "092-ellipse-1-copy-5-2.png",
+      "name": "Ellipse 1 copy 5",
+      "bbox": [
+        1444,
+        9217,
+        1474,
+        9247
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "093-ellipse-1-copy-6-1.png",
+      "name": "Ellipse 1 copy 6",
+      "bbox": [
+        932,
+        9704,
+        988,
+        9760
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "094-ellipse-1-copy-6-2.png",
+      "name": "Ellipse 1 copy 6",
+      "bbox": [
+        945,
+        9717,
+        975,
+        9747
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "095-ellipse-1-copy-7-1.png",
+      "name": "Ellipse 1 copy 7",
+      "bbox": [
+        932,
+        8713,
+        988,
+        8769
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "096-ellipse-1-copy-7-2.png",
+      "name": "Ellipse 1 copy 7",
+      "bbox": [
+        945,
+        8726,
+        975,
+        8756
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "097-ellipse-1-copy-8-1.png",
+      "name": "Ellipse 1 copy 8",
+      "bbox": [
+        1326,
+        8922,
+        1382,
+        8978
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "098-ellipse-1-copy-8-2.png",
+      "name": "Ellipse 1 copy 8",
+      "bbox": [
+        1339,
+        8935,
+        1369,
+        8965
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "099-ellipse-1-copy-10-1.png",
+      "name": "Ellipse 1 copy 10",
+      "bbox": [
+        1284,
+        9512,
+        1340,
+        9568
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "100-ellipse-1-copy-10-2.png",
+      "name": "Ellipse 1 copy 10",
+      "bbox": [
+        1297,
+        9525,
+        1327,
+        9555
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "101-ellipse-1-copy-11-1.png",
+      "name": "Ellipse 1 copy 11",
+      "bbox": [
+        566,
+        9512,
+        622,
+        9568
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "102-iconic-urban-identity-1.png",
+      "name": "ICONIC URBAN IDENTITY",
+      "bbox": [
+        127,
+        9221,
+        400,
+        9241
+      ],
+      "size": [
+        273,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "103-central-point-district-1.png",
+      "name": "CENTRAL POINT DISTRICT",
+      "bbox": [
+        214,
+        8950,
+        487,
+        8970
+      ],
+      "size": [
+        273,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "104-premium-materials-1.png",
+      "name": "PREMIUM MATERIALS",
+      "bbox": [
+        1419,
+        8944,
+        1644,
+        8964
+      ],
+      "size": [
+        225,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "105-concept-ideology-copy-1.png",
+      "name": "CONCEPT IDEOLOGY copy",
+      "bbox": [
+        849,
+        8666,
+        1081,
+        8686
+      ],
+      "size": [
+        232,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "106-community-centric-living-1.png",
+      "name": "COMMUNITY-CENTRIC LIVING",
+      "bbox": [
+        186,
+        9531,
+        519,
+        9551
+      ],
+      "size": [
+        333,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "107-dynamic-and-iconic-skyline-through-a-composition-of-elegantly-a-1.png",
+      "name": "dynamic and iconic skyline through a composition of elegantly a",
+      "bbox": [
+        591,
+        9132,
+        1332,
+        9327
+      ],
+      "size": [
+        741,
+        195
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "108-lifestyle-integration-1.png",
+      "name": "LIFESTYLE INTEGRATION",
+      "bbox": [
+        1384,
+        9531,
+        1636,
+        9551
+      ],
+      "size": [
+        252,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "109-luxury-with-sustainability-1.png",
+      "name": "LUXURY WITH SUSTAINABILITY",
+      "bbox": [
+        801,
+        9782,
+        1121,
+        9802
+      ],
+      "size": [
+        320,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "110-human-centered-mobility-1.png",
+      "name": "HUMAN-CENTERED MOBILITY",
+      "bbox": [
+        1513,
+        9219,
+        1836,
+        9239
+      ],
+      "size": [
+        323,
+        20
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "111-ellipse-1-copy-11-2.png",
+      "name": "Ellipse 1 copy 11",
+      "bbox": [
+        579,
+        9525,
+        609,
+        9555
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "112-ellipse-1-copy-9-1.png",
+      "name": "Ellipse 1 copy 9",
+      "bbox": [
+        511,
+        8932,
+        567,
+        8988
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "113-ellipse-1-copy-9-2.png",
+      "name": "Ellipse 1 copy 9",
+      "bbox": [
+        524,
+        8945,
+        554,
+        8975
+      ],
+      "size": [
+        30,
+        30
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "115-line-9.png",
+      "name": "line",
+      "bbox": [
+        0,
+        8556,
+        1920,
+        8557
+      ],
+      "size": [
+        1920,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "116-1-1.png",
+      "name": "1",
+      "bbox": [
+        352,
+        8227,
+        639,
+        8509
+      ],
+      "size": [
+        287,
+        282
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "117-1-2.png",
+      "name": "1",
+      "bbox": [
+        669,
+        8228,
+        951,
+        8511
+      ],
+      "size": [
+        282,
+        283
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "118-2-1.png",
+      "name": "2",
+      "bbox": [
+        352,
+        7428,
+        1570,
+        8186
+      ],
+      "size": [
+        1218,
+        758
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "119-1-3.png",
+      "name": "1",
+      "bbox": [
+        979,
+        8228,
+        1262,
+        8510
+      ],
+      "size": [
+        283,
+        282
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "120-1-4.png",
+      "name": "1",
+      "bbox": [
+        1290,
+        8229,
+        1570,
+        8509
+      ],
+      "size": [
+        280,
+        280
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "121-ellipse-1-1.png",
+      "name": "Ellipse 1",
+      "bbox": [
+        375,
+        8113,
+        431,
+        8169
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "122-ellipse-1-copy-1.png",
+      "name": "Ellipse 1 copy",
+      "bbox": [
+        1541,
+        8332,
+        1597,
+        8388
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "123-ellipse-1-copy-2-1.png",
+      "name": "Ellipse 1 copy 2",
+      "bbox": [
+        324,
+        8332,
+        380,
+        8388
+      ],
+      "size": [
+        56,
+        56
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "124-ellipse-2-1.png",
+      "name": "Ellipse 2",
+      "bbox": [
+        397,
+        8120,
+        408,
+        8132
+      ],
+      "size": [
+        11,
+        12
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "125-ellipse-2-copy-1.png",
+      "name": "Ellipse 2 copy",
+      "bbox": [
+        397,
+        8136,
+        408,
+        8147
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "126-ellipse-2-copy-2-1.png",
+      "name": "Ellipse 2 copy 2",
+      "bbox": [
+        397,
+        8151,
+        408,
+        8162
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "127-line-copy-5-2.png",
+      "name": "line copy 5",
+      "bbox": [
+        347,
+        7198,
+        351,
+        7366
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "128-virtual-tour-1.png",
+      "name": "VIRTUAL TOUR",
+      "bbox": [
+        377,
+        7232,
+        686,
+        7272
+      ],
+      "size": [
+        309,
+        40
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "129-choose-from-a-range-of-well-designed-layouts-created-for-modern-1.png",
+      "name": "Choose from a range of well-designed layouts created for modern",
+      "bbox": [
+        378,
+        7295,
+        1378,
+        7332
+      ],
+      "size": [
+        1000,
+        37
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "130-bg-copy-3-1.png",
+      "name": "bg copy 3",
+      "bbox": [
+        352,
+        7428,
+        1570,
+        7523
+      ],
+      "size": [
+        1218,
+        95
+      ],
+      "opacity": 230,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "131-arrows-16549963-copy-3-1.png",
+      "name": "arrows_16549963 copy 3",
+      "bbox": [
+        334,
+        8346,
+        370,
+        8374
+      ],
+      "size": [
+        36,
+        28
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "132-arrows-16549963-copy-4-1.png",
+      "name": "arrows_16549963 copy 4",
+      "bbox": [
+        1549,
+        8346,
+        1585,
+        8374
+      ],
+      "size": [
+        36,
+        28
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "133-forma-1.png",
+      "name": "Forma ",
+      "bbox": [
+        1499,
+        8114,
+        1557,
+        8172
+      ],
+      "size": [
+        58,
+        58
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "134-1-bedroom-apartment-tower-a-1.png",
+      "name": "1 Bedroom  Apartment - Tower A",
+      "bbox": [
+        785,
+        7465,
+        1139,
+        7494
+      ],
+      "size": [
+        354,
+        29
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "136-bg-4.png",
+      "name": "bg",
+      "bbox": [
+        0,
+        5713,
+        1919,
+        6072
+      ],
+      "size": [
+        1919,
+        359
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "137-line-copy-2-2.png",
+      "name": "line copy 2",
+      "bbox": [
+        349,
+        5762,
+        353,
+        5930
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "138-photo-gallery-1.png",
+      "name": "PHOTO GALLERY",
+      "bbox": [
+        382,
+        5796,
+        743,
+        5835
+      ],
+      "size": [
+        361,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "139-the-art-of-living-1.png",
+      "name": "The Art of Living",
+      "bbox": [
+        379,
+        5859,
+        599,
+        5896
+      ],
+      "size": [
+        220,
+        37
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "140-1-bedroom-1.png",
+      "name": "1 BEDROOM",
+      "bbox": [
+        884,
+        5952,
+        1010,
+        5970
+      ],
+      "size": [
+        126,
+        18
+      ],
+      "opacity": 133,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "141-2-bedrooms-1.png",
+      "name": "2 BEDROOMS",
+      "bbox": [
+        1069,
+        5952,
+        1214,
+        5970
+      ],
+      "size": [
+        145,
+        18
+      ],
+      "opacity": 133,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "142-3-bedrooms-1.png",
+      "name": "3 BEDROOMS",
+      "bbox": [
+        1274,
+        5952,
+        1419,
+        5970
+      ],
+      "size": [
+        145,
+        18
+      ],
+      "opacity": 133,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "143-garden-1.png",
+      "name": "GARDEN",
+      "bbox": [
+        1479,
+        5952,
+        1571,
+        5970
+      ],
+      "size": [
+        92,
+        18
+      ],
+      "opacity": 133,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "144-lobby-1.png",
+      "name": "LOBBY",
+      "bbox": [
+        760,
+        5952,
+        826,
+        5970
+      ],
+      "size": [
+        66,
+        18
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "145-line-copy-14-1.png",
+      "name": "line copy 14",
+      "bbox": [
+        757,
+        6014,
+        1572,
+        6018
+      ],
+      "size": [
+        815,
+        4
+      ],
+      "opacity": 77,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "146-current-copy-2-1.png",
+      "name": "current copy 2",
+      "bbox": [
+        757,
+        6013,
+        826,
+        6019
+      ],
+      "size": [
+        69,
+        6
+      ],
+      "opacity": 77,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "147-line-copy-3-2.png",
+      "name": "line copy 3",
+      "bbox": [
+        352,
+        7059,
+        1572,
+        7063
+      ],
+      "size": [
+        1220,
+        4
+      ],
+      "opacity": 77,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "148-current-copy-1.png",
+      "name": "current copy",
+      "bbox": [
+        780,
+        7057,
+        1124,
+        7063
+      ],
+      "size": [
+        344,
+        6
+      ],
+      "opacity": 77,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "149-1-5.png",
+      "name": "1",
+      "bbox": [
+        633,
+        6153,
+        1309,
+        6997
+      ],
+      "size": [
+        676,
+        844
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "150-2-2.png",
+      "name": "2",
+      "bbox": [
+        45,
+        6239,
+        592,
+        6923
+      ],
+      "size": [
+        547,
+        684
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "151-4-2.png",
+      "name": "4",
+      "bbox": [
+        1348,
+        6239,
+        1878,
+        6923
+      ],
+      "size": [
+        530,
+        684
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "152-bg-copy-2-1.png",
+      "name": "bg copy 2",
+      "bbox": [
+        718,
+        6239,
+        1216,
+        6923
+      ],
+      "size": [
+        498,
+        684
+      ],
+      "opacity": 230,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "153-zoom-icon-copy-1.png",
+      "name": "zoom-icon copy",
+      "bbox": [
+        940,
+        6539,
+        989,
+        6588
+      ],
+      "size": [
+        49,
+        49
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "154-entrance-lobby-1.png",
+      "name": "ENTRANCE LOBBY",
+      "bbox": [
+        856,
+        6692,
+        1096,
+        6716
+      ],
+      "size": [
+        240,
+        24
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "156-completed-projects-1.png",
+      "name": "COMPLETED PROJECTS",
+      "bbox": [
+        437,
+        5599,
+        621,
+        5614
+      ],
+      "size": [
+        184,
+        15
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "157-75-1.png",
+      "name": "75",
+      "bbox": [
+        443,
+        5525,
+        506,
+        5573
+      ],
+      "size": [
+        63,
+        48
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "158-finished-projects-1.png",
+      "name": "finished projects",
+      "bbox": [
+        744,
+        5599,
+        903,
+        5615
+      ],
+      "size": [
+        159,
+        16
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "159-151-1.png",
+      "name": "151",
+      "bbox": [
+        737,
+        5525,
+        805,
+        5572
+      ],
+      "size": [
+        68,
+        47
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "160-happy-clients-1.png",
+      "name": "happy clients",
+      "bbox": [
+        1044,
+        5599,
+        1167,
+        5615
+      ],
+      "size": [
+        123,
+        16
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "161-275-1.png",
+      "name": "275 ",
+      "bbox": [
+        1043,
+        5524,
+        1140,
+        5573
+      ],
+      "size": [
+        97,
+        49
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "162-apartments-1.png",
+      "name": "APARTMENTS",
+      "bbox": [
+        1343,
+        5599,
+        1451,
+        5615
+      ],
+      "size": [
+        108,
+        16
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "163-316-1.png",
+      "name": "316",
+      "bbox": [
+        1343,
+        5524,
+        1428,
+        5572
+      ],
+      "size": [
+        85,
+        48
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "165-1bed-typ-1-1.png",
+      "name": "1BED TYP 1",
+      "bbox": [
+        878,
+        5014,
+        1920,
+        5413
+      ],
+      "size": [
+        1042,
+        399
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "166-bg-5.png",
+      "name": "bg",
+      "bbox": [
+        876,
+        5012,
+        1920,
+        5414
+      ],
+      "size": [
+        1044,
+        402
+      ],
+      "opacity": 112,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "167-bg-6.png",
+      "name": "bg",
+      "bbox": [
+        0,
+        5012,
+        876,
+        5414
+      ],
+      "size": [
+        876,
+        402
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "168-2-bedroom-level-typical-size-156-sqm-1.png",
+      "name": "2 bedroom - Level Typical Size: 156 sqm ",
+      "bbox": [
+        383,
+        5152,
+        614,
+        5194
+      ],
+      "size": [
+        231,
+        42
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "169-download-floor-plan-1.png",
+      "name": "DOWNLOAD FLOOR PLAN",
+      "bbox": [
+        440,
+        5281,
+        691,
+        5300
+      ],
+      "size": [
+        251,
+        19
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "170-brochure2-1.png",
+      "name": "brochure2",
+      "bbox": [
+        383,
+        5267,
+        427,
+        5314
+      ],
+      "size": [
+        44,
+        47
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "171-line-10.png",
+      "name": "line",
+      "bbox": [
+        352,
+        5066,
+        354,
+        5158
+      ],
+      "size": [
+        2,
+        92
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "172-unit-1-1.png",
+      "name": "UNIT 1",
+      "bbox": [
+        382,
+        5097,
+        476,
+        5126
+      ],
+      "size": [
+        94,
+        29
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "173-line-copy-2.png",
+      "name": "line copy",
+      "bbox": [
+        350,
+        4798,
+        354,
+        4966
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "174-floor-plans-1.png",
+      "name": "FLOOR PLANS",
+      "bbox": [
+        383,
+        4835,
+        683,
+        4875
+      ],
+      "size": [
+        300,
+        40
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "175-carefully-planned-spaces-designed-to-combine-practicality-with-1.png",
+      "name": "Carefully planned spaces designed to combine practicality with ",
+      "bbox": [
+        381,
+        4898,
+        1397,
+        4935
+      ],
+      "size": [
+        1016,
+        37
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "176-explore-floor-plans-1.png",
+      "name": "EXPLORE FLOOR PLANS",
+      "bbox": [
+        1373,
+        4838,
+        1553,
+        4851
+      ],
+      "size": [
+        180,
+        13
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "177-rectangle-531-1.png",
+      "name": "Rectangle 531",
+      "bbox": [
+        1349,
+        4822,
+        1571,
+        4867
+      ],
+      "size": [
+        222,
+        45
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "178-zoom-icon-1.png",
+      "name": "zoom-icon",
+      "bbox": [
+        1385,
+        5198,
+        1434,
+        5247
+      ],
+      "size": [
+        49,
+        49
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "179-arrows-16549963-1.png",
+      "name": "arrows_16549963",
+      "bbox": [
+        78,
+        5197,
+        124,
+        5233
+      ],
+      "size": [
+        46,
+        36
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "180-arrows-16549963-copy-1.png",
+      "name": "arrows_16549963 copy",
+      "bbox": [
+        1796,
+        5197,
+        1842,
+        5233
+      ],
+      "size": [
+        46,
+        36
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "182-bg-copy-1.png",
+      "name": "bg copy",
+      "bbox": [
+        0,
+        4505,
+        1920,
+        4738
+      ],
+      "size": [
+        1920,
+        233
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "183-line-11.png",
+      "name": "line",
+      "bbox": [
+        350,
+        3666,
+        354,
+        3834
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "184-location-connectivity-1.png",
+      "name": "LOCATION & CONNECTIVITY",
+      "bbox": [
+        383,
+        3700,
+        1023,
+        3740
+      ],
+      "size": [
+        640,
+        40
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "185-strategically-positioned-in-the-heart-of-ajman-with-seamless-ac-1.png",
+      "name": "Strategically positioned in the heart of Ajman with seamless ac",
+      "bbox": [
+        380,
+        3763,
+        1567,
+        3800
+      ],
+      "size": [
+        1187,
+        37
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "186-13-mins-alzorah-1.png",
+      "name": "13 mins alZorah",
+      "bbox": [
+        744,
+        3885,
+        945,
+        3903
+      ],
+      "size": [
+        201,
+        18
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "187-15mins-ajman-beach-1.png",
+      "name": "15mins ajman beach",
+      "bbox": [
+        991,
+        3885,
+        1246,
+        3903
+      ],
+      "size": [
+        255,
+        18
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "188-30-mins-dubai-airport-1.png",
+      "name": "30 mins Dubai AIRPORT",
+      "bbox": [
+        1300,
+        3885,
+        1571,
+        3903
+      ],
+      "size": [
+        271,
+        18
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "189-10-mins-sharjah-city-center-1.png",
+      "name": "10 mins Sharjah City Center ",
+      "bbox": [
+        350,
+        3885,
+        694,
+        3903
+      ],
+      "size": [
+        344,
+        18
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "190-line-12.png",
+      "name": "line",
+      "bbox": [
+        515,
+        3948,
+        1572,
+        3952
+      ],
+      "size": [
+        1057,
+        4
+      ],
+      "opacity": 77,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "191-current-1.png",
+      "name": "current",
+      "bbox": [
+        350,
+        3946,
+        694,
+        3952
+      ],
+      "size": [
+        344,
+        6
+      ],
+      "opacity": 77,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "192-vector-smart-object-3.png",
+      "name": "Vector Smart Object",
+      "bbox": [
+        351,
+        4003,
+        1573,
+        4631
+      ],
+      "size": [
+        1222,
+        628
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "193-rectangle-1-copy-1.png",
+      "name": "Rectangle 1 copy",
+      "bbox": [
+        351,
+        4001,
+        1574,
+        4633
+      ],
+      "size": [
+        1223,
+        632
+      ],
+      "opacity": 148,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "195-new-14-1.png",
+      "name": "new 14",
+      "bbox": [
+        0,
+        2606,
+        1920,
+        3545
+      ],
+      "size": [
+        1920,
+        939
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "196-bg-7.png",
+      "name": "bg",
+      "bbox": [
+        0,
+        2606,
+        1920,
+        3545
+      ],
+      "size": [
+        1920,
+        939
+      ],
+      "opacity": 230,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "197-explore-the-future-1.png",
+      "name": "EXPLORE THE FUTURE",
+      "bbox": [
+        494,
+        3071,
+        851,
+        3100
+      ],
+      "size": [
+        357,
+        29
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "198-of-sawari-ajman-1.png",
+      "name": "OF SAWARI AJMAN",
+      "bbox": [
+        1080,
+        3071,
+        1449,
+        3100
+      ],
+      "size": [
+        369,
+        29
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "199-forma-1-4.png",
+      "name": "Forma 1",
+      "bbox": [
+        898,
+        3017,
+        1034,
+        3153
+      ],
+      "size": [
+        136,
+        136
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "202-sawari-amenities-1.png",
+      "name": "SAWARI AMENITIES",
+      "bbox": [
+        380,
+        2146,
+        803,
+        2186
+      ],
+      "size": [
+        423,
+        40
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "203-weight-9361040-1.png",
+      "name": "weight_9361040",
+      "bbox": [
+        318,
+        2322,
+        453,
+        2457
+      ],
+      "size": [
+        135,
+        135
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "204-balcony-6100616-1.png",
+      "name": "balcony_6100616",
+      "bbox": [
+        1083,
+        2321,
+        1216,
+        2455
+      ],
+      "size": [
+        133,
+        134
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "205-cctv-13347367-1.png",
+      "name": "cctv_13347367",
+      "bbox": [
+        1464,
+        2323,
+        1598,
+        2457
+      ],
+      "size": [
+        134,
+        134
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "206-parking-lot-13320115-1.png",
+      "name": "parking-lot_13320115",
+      "bbox": [
+        1272,
+        2322,
+        1406,
+        2456
+      ],
+      "size": [
+        134,
+        134
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "207-pilot-18004123-1.png",
+      "name": "pilot_18004123",
+      "bbox": [
+        701,
+        2322,
+        835,
+        2456
+      ],
+      "size": [
+        134,
+        134
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "208-snowy-17606018-1.png",
+      "name": "snowy_17606018",
+      "bbox": [
+        510,
+        2322,
+        645,
+        2456
+      ],
+      "size": [
+        135,
+        134
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "209-swimming-pool-18304138-1.png",
+      "name": "swimming-pool_18304138",
+      "bbox": [
+        892,
+        2321,
+        1026,
+        2455
+      ],
+      "size": [
+        134,
+        134
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "210-line-copy-17-1.png",
+      "name": "line copy 17",
+      "bbox": [
+        350,
+        2083,
+        354,
+        2251
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "212-rectangle-1-1.png",
+      "name": "Rectangle 1",
+      "bbox": [
+        -1,
+        976,
+        1921,
+        1972
+      ],
+      "size": [
+        1922,
+        996
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "213-new-14-2.png",
+      "name": "new 14",
+      "bbox": [
+        302,
+        1344,
+        864,
+        1620
+      ],
+      "size": [
+        562,
+        276
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "214-new-01-1.png",
+      "name": "new 01",
+      "bbox": [
+        303,
+        1055,
+        864,
+        1330
+      ],
+      "size": [
+        561,
+        275
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "215-line-13.png",
+      "name": "line",
+      "bbox": [
+        0,
+        1801,
+        1838,
+        1802
+      ],
+      "size": [
+        1838,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "216-sawari-is-envisioned-as-an-urban-oasis-a-residential-destinat-1.png",
+      "name": "SAWARI is envisioned as an Urban Oasis - a residential destinat",
+      "bbox": [
+        975,
+        1419,
+        1605,
+        1711
+      ],
+      "size": [
+        630,
+        292
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "217-project-overview-1.png",
+      "name": "PROJECT  OVERVIEW",
+      "bbox": [
+        1020,
+        1293,
+        1468,
+        1333
+      ],
+      "size": [
+        448,
+        40
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "218-new-12-1.png",
+      "name": "new 12",
+      "bbox": [
+        302,
+        1635,
+        865,
+        1911
+      ],
+      "size": [
+        563,
+        276
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "219-line-copy-4-2.png",
+      "name": "line copy 4",
+      "bbox": [
+        972,
+        1226,
+        976,
+        1394
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "221-img-1.png",
+      "name": "img",
+      "bbox": [
+        0,
+        0,
+        1920,
+        979
+      ],
+      "size": [
+        1920,
+        979
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "222-new-01-2.png",
+      "name": "new 01",
+      "bbox": [
+        -43,
+        -2,
+        1962,
+        979
+      ],
+      "size": [
+        2005,
+        981
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "223-vector-smart-object-4.png",
+      "name": "Vector Smart Object",
+      "bbox": [
+        -12,
+        -396,
+        1929,
+        979
+      ],
+      "size": [
+        1941,
+        1375
+      ],
+      "opacity": 207,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "224-icon-mouse-1.png",
+      "name": "icon mouse",
+      "bbox": [
+        944,
+        904,
+        975,
+        955
+      ],
+      "size": [
+        31,
+        51
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "225-vector-smart-object-5.png",
+      "name": "Vector Smart Object",
+      "bbox": [
+        621,
+        398,
+        1298,
+        604
+      ],
+      "size": [
+        677,
+        206
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "226-enquire-now-1.png",
+      "name": "ENQUIRE NOW",
+      "bbox": [
+        1683,
+        59,
+        1793,
+        76
+      ],
+      "size": [
+        110,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "227-faq-2.png",
+      "name": "FAQ",
+      "bbox": [
+        1610,
+        59,
+        1640,
+        76
+      ],
+      "size": [
+        30,
+        17
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "228-gallery-1.png",
+      "name": "GALLERY",
+      "bbox": [
+        1502,
+        59,
+        1568,
+        73
+      ],
+      "size": [
+        66,
+        14
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "229-floor-plans-2.png",
+      "name": "FLOOR PLANS",
+      "bbox": [
+        1359,
+        59,
+        1459,
+        73
+      ],
+      "size": [
+        100,
+        14
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "230-location-1.png",
+      "name": "LOCATION",
+      "bbox": [
+        1242,
+        59,
+        1317,
+        73
+      ],
+      "size": [
+        75,
+        14
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "231-amenities-1.png",
+      "name": "AMENITIES",
+      "bbox": [
+        1115,
+        59,
+        1197,
+        73
+      ],
+      "size": [
+        82,
+        14
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "232-overview-1.png",
+      "name": "OVERVIEW",
+      "bbox": [
+        999,
+        58,
+        1076,
+        72
+      ],
+      "size": [
+        77,
+        14
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "233-logo-1.png",
+      "name": "LOGO",
+      "bbox": [
+        68,
+        43,
+        192,
+        160
+      ],
+      "size": [
+        124,
+        117
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    }
+  ]
+}

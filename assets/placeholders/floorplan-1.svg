@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <rect width="1200" height="700" fill="#d9ddd9"/>
+  <rect x="120" y="90" width="960" height="520" fill="#eef1ee" stroke="#5e746f" stroke-width="8"/>
+  <rect x="160" y="130" width="260" height="180" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="450" y="130" width="260" height="120" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="740" y="130" width="300" height="180" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="160" y="340" width="400" height="230" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="590" y="280" width="210" height="290" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="830" y="340" width="210" height="230" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <path d="M420 260H450M560 360H590M800 460H830" stroke="#5e746f" stroke-width="8"/>
+  <text x="170" y="165" fill="#4b5f5a" font-family="Arial" font-size="30">BEDROOM</text>
+  <text x="462" y="180" fill="#4b5f5a" font-family="Arial" font-size="28">KITCHEN</text>
+  <text x="748" y="165" fill="#4b5f5a" font-family="Arial" font-size="30">LIVING</text>
+  <text x="170" y="465" fill="#4b5f5a" font-family="Arial" font-size="34">MASTER ROOM</text>
+  <text x="610" y="430" fill="#4b5f5a" font-family="Arial" font-size="28">BATH</text>
+  <text x="850" y="465" fill="#4b5f5a" font-family="Arial" font-size="30">BALCONY</text>
+</svg>

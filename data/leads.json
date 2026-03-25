@@ -1,0 +1,26 @@
+{
+  "newsletter": [
+    {
+      "email": "test@example.com",
+      "submittedAt": "2026-03-20T15:45:25.115Z"
+    },
+    {
+      "email": "test@sawari.com",
+      "submittedAt": "2026-03-20T15:45:33.336Z"
+    }
+  ],
+  "registerInterest": [
+    {
+      "name": "Test User",
+      "email": "test@example.com",
+      "phone": "0501234567",
+      "submittedAt": "2026-03-20T15:45:25.186Z"
+    },
+    {
+      "name": "Test",
+      "email": "test@sawari.com",
+      "phone": "0501234567",
+      "submittedAt": "2026-03-20T15:46:11.251Z"
+    }
+  ]
+}
