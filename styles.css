@@ -889,12 +889,12 @@ p {
   align-items: center;
   gap: 1.45rem;
   margin-bottom: 1.55rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3.5rem;
   justify-content: flex-start;
   margin-top: 0;
   background: #e5e2da;
   width: 100%;
-  padding-top: 0.5rem;
+  padding-top: 1.5rem;
   padding-left: max(752px, 10vw);
   padding-right: 4vw;
   position: relative;
@@ -906,7 +906,7 @@ p {
   position: absolute;
   left: calc(max(752px, 10vw) + 2rem);
   right: 14vw;
-  bottom: 1rem;
+  bottom: 3.2rem;
   height: 3px;
   background: rgba(87, 103, 101, 0.18);
 }
@@ -921,8 +921,8 @@ p {
   align-items: center;
   justify-content: center;
   line-height: 0;
-  margin-bottom: 0;
-  align-self: stretch;
+  margin-bottom: 2rem;
+  align-self: flex-start;
 }
 
 .gallery-filter button img {
@@ -942,7 +942,7 @@ p {
   position: absolute;
   left: 2rem;
   right: 2rem;
-  bottom: 0;
+  bottom: -2.2rem;
   height: 3px;
   background: #69713e;
 }
