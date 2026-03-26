@@ -577,18 +577,17 @@ p {
 
 .plans {
   background: #ffffff;
-  /* PSD: FLOOR PLANS group y1=4798, title y1=4835 → 37px ÷ 16 = 2.3125rem */
-  padding-top: 2.3125rem;
+  padding-top: 4rem;
   padding-bottom: 0 !important;
 }
 
 /* HEAD — inside container */
 .plan-head {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-bottom: 1.2rem;
+  padding-bottom: 4rem;
 }
 
 .plan-head-col {
@@ -608,35 +607,22 @@ p {
 .plan-head-texts {
   display: flex;
   flex-direction: column;
-  /* PSD: title y2=4875, subtitle y1=4898 → 23px ÷ 16 = 1.4375rem */
-  gap: 1.4375rem;
+  gap: 0.5rem;
 }
 
-/* PSD 300×40px — rendered at natural PSD width */
+/* PSD 300×40px — image asset, no text styling needed */
 .plans-title {
-  width: auto;
+  width: 300px;
   max-width: 100%;
+  height: auto;
   display: block;
-  font-family: 'Futura', 'Jost', sans-serif;
-  font-size: 48.75px; font-weight: 100;
-  font-weight: 100;
-  font-family: 'Futura', 'Jost', sans-serif;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
-/* PSD 1016×37px */
+/* PSD 1016×37px — image asset, no text styling needed */
 .plans-subtitle {
   width: 100%;
   max-width: 860px;
   display: block;
-  font-family: 'Futura', 'Jost', sans-serif;
-  font-size: 33px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.02em;
 }
 
 .plan-cta {
@@ -768,6 +754,8 @@ p {
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0.5;
+  filter: brightness(1.3) contrast(0.8);
 }
 
 /* Zoom icon: center x=(1409.5-876)/1044=51.1%, center y=(5222.5-5012)/402=52.4% */
@@ -803,16 +791,20 @@ p {
 /* STATS — inside container */
 .stats {
   /* PSD: plan-viewer y2=5414, stats y1=5524 → 110px ÷ 16 = 6.875rem */
-  margin-top: 6.875rem;
+  margin-top: -1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 .stats div {
-  padding: 0.85rem 0.2rem;
+  min-height: 320px;
+  padding: 0 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .stats strong {
@@ -821,17 +813,12 @@ p {
   font-size: 60px;
   font-weight: 400;
   line-height: 1;
+  color: #264620;
 }
 
 .stat-label {
   display: block;
   margin: 0.2rem auto 0;
-  font-family: 'Futura', 'Jost', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  color: var(--ink);
   max-width: 90%;
 }
 
@@ -1852,7 +1839,6 @@ p {
   }
 
   .overview-title,
-  .plans-title,
   .gallery-title,
   .tour-title,
   .faq-head-title,
@@ -1862,7 +1848,6 @@ p {
     font-size: clamp(2rem, 7vw, 3rem);
   }
 
-  .plans-subtitle,
   .gallery-subtitle,
   .tour-subtitle,
   .loc-subtitle {

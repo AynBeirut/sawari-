@@ -30,8 +30,8 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 3 | Amenities | ✅ Done (icons pending designer) |
 | 4 | Video CTA | ✅ Done — filter fixed using 196-bg-7.png overlay |
 | 5 | Location | ✅ Done — typography, vertical bar, tabs, map overlap with beige strip, font swap to Jost |
-| 6 | Floor Plans | 🔲 Remaining |
-| 7 | Numbers / Stats | 🔲 Remaining |
+| 6 | Floor Plans | ✅ Done — beige backgrounds restored, floor plan image opacity/filter applied |
+| 7 | Numbers / Stats | ✅ Done — border lines removed, white space adjusted, numbers color set to Myrtle Green |
 | 8 | Photo Gallery | 🔲 Remaining |
 | 9 | Virtual Tour | 🔲 Remaining |
 | 10 | Philosophy (Animation) | 🔲 Remaining |
@@ -48,6 +48,8 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 ### ✅ Completed This Session
 - Section 4 (Video CTA): teal overlay fixed — replaced solid color+opacity with `196-bg-7.png` PNG overlay asset
 - Section 5 (Location): top padding-top increased from `2.125rem` → `5.5rem` to match reference spacing
+- Section 6 (Floor Plans): Restored beige backgrounds (167-bg-6.png, 166-bg-5.png), applied opacity 0.5 + brightness filter to floor plan image
+- Section 7 (Stats): Removed border lines, adjusted vertical spacing (margin-top: -1rem, min-height: 320px), numbers color: Myrtle Green (#264620)
 
 ### ⚠️ Section 5 — Awaiting User Test
 - Spacing fix applied. User will test and return with feedback.
@@ -100,7 +102,7 @@ All headings/titles use: `font-family: 'Futura', 'Futura PT', sans-serif`
 | Marble White | `#f3eee7` | `--marble-white` |
 | Limestone Grey | `#e5e2da` | `--limestone` |
 | Quill Grey | `#c6cfbf` | `--quill-grey` |
-| Natural Beige | `#a3937b` | `--natural-beige` |
+| Natural Beige | `#a3937b` |`--natural-beige` |
 | Teakwood Beige | `#8d7f6a` | `--teakwood` |
 | Palm Green | `#69713e` | `--palm-green` |
 | Myrtle Green | `#264620` | `--myrtle` |
