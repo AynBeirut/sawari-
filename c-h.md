@@ -32,7 +32,7 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 5 | Location | ✅ Done — typography, vertical bar, tabs, map overlap with beige strip, font swap to Jost |
 | 6 | Floor Plans | ✅ Done — beige backgrounds restored, floor plan image opacity/filter applied |
 | 7 | Numbers / Stats | ✅ Done — border lines removed, white space adjusted, numbers color set to Myrtle Green |
-| 8 | Photo Gallery | 🔲 Remaining |
+| 8 | Photo Gallery | ✅ Done — full-width beige bar, gallery head at 265px, filter tabs at 47rem, zoom icon 30px, label 100px |
 | 9 | Virtual Tour | 🔲 Remaining |
 | 10 | Philosophy (Animation) | 🔲 Remaining |
 | 11 | FAQ | 🔲 Remaining |
