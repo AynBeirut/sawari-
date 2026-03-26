@@ -895,7 +895,7 @@ p {
   background: #e5e2da;
   width: 100%;
   padding-top: 1.5rem;
-  padding-left: max(752px, 10vw);
+  padding-left: max(640px, 8.3vw);
   padding-right: 4vw;
   position: relative;
   min-height: 4rem;
@@ -904,8 +904,8 @@ p {
 .gallery-filter::after {
   content: "";
   position: absolute;
-  left: calc(max(752px, 10vw) + 2rem);
-  right: 14vw;
+  left: calc(max(640px, 8.3vw) + 2rem);
+  right: 22vw;
   bottom: 3.2rem;
   height: 3px;
   background: rgba(87, 103, 101, 0.18);
