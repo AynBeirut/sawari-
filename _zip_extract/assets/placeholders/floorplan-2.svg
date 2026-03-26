@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <rect width="1200" height="700" fill="#d9ddd9"/>
+  <rect x="130" y="80" width="940" height="540" fill="#eef1ee" stroke="#5e746f" stroke-width="8"/>
+  <rect x="170" y="120" width="220" height="220" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="420" y="120" width="260" height="160" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="710" y="120" width="320" height="220" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="170" y="370" width="320" height="210" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="520" y="320" width="220" height="260" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <rect x="770" y="370" width="260" height="210" fill="#dce4e1" stroke="#5e746f" stroke-width="6"/>
+  <text x="182" y="165" fill="#4b5f5a" font-family="Arial" font-size="28">STUDIO</text>
+  <text x="438" y="170" fill="#4b5f5a" font-family="Arial" font-size="28">KITCHEN</text>
+  <text x="728" y="165" fill="#4b5f5a" font-family="Arial" font-size="30">LIVING</text>
+  <text x="185" y="480" fill="#4b5f5a" font-family="Arial" font-size="30">ROOM</text>
+  <text x="548" y="445" fill="#4b5f5a" font-family="Arial" font-size="28">BATH</text>
+  <text x="800" y="480" fill="#4b5f5a" font-family="Arial" font-size="28">BALCONY</text>
+</svg>

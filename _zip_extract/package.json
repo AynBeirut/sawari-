@@ -1,0 +1,10 @@
+{
+  "name": "sawari-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sawari landing page with form submission backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
