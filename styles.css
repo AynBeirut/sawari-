@@ -1,3 +1,47 @@
+/* ─── Futura 100 Font Family ─── */
+@font-face {
+  font-family: 'Futura 100';
+  src: url('assets/fonts/Futura 100 - Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura 100';
+  src: url('assets/fonts/Futura 100 - Book.otf') format('opentype');
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura 100';
+  src: url('assets/fonts/Futura 100 - Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura 100';
+  src: url('assets/fonts/Futura 100 - Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura 100';
+  src: url('assets/fonts/Futura 100 - Demibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura 100';
+  src: url('assets/fonts/Futura 100 - Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --ink: #2b3a39;
   --muted: #667372;
@@ -30,7 +74,7 @@ body {
   padding: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -53,7 +97,7 @@ h2,
 h3,
 h4,
 .brand {
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-weight: 400;
@@ -117,7 +161,7 @@ p {
   align-items: center;
   text-decoration: none;
   color: #fff;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   opacity: 0.88;
@@ -263,10 +307,10 @@ p {
   width: auto;
   max-width: 100%;
   display: block;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 48.75px; font-weight: 100;
   font-weight: 100;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.04em;
@@ -277,7 +321,7 @@ p {
 .overview-body {
     width: 100%;
     max-width: 630px;
-    font-family: 'Futura', 'Jost', sans-serif;
+    font-family: 'Futura 100', 'Futura', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     color: #1a1a1a;
@@ -317,7 +361,7 @@ p {
     width: auto;
     max-width: 100%;
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Futura 100', 'Futura', sans-serif;
     font-size: 48.75px;
     font-weight: 300;
     line-height: 1;
@@ -377,7 +421,7 @@ p {
 
 .cta-text-left,
 .cta-text-right {
-    font-family: 'Futura', 'Jost', sans-serif;
+    font-family: 'Futura 100', 'Futura', sans-serif;
     font-size: 33px;
     font-weight: 500;
     line-height: 1.1;
@@ -473,7 +517,7 @@ p {
 }
 
 .loc-title {
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 48.75px;
   font-weight: 400;
   line-height: 1;
@@ -486,7 +530,7 @@ p {
 .loc-subtitle {
   width: 100%;
   max-width: 1187px;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 1.2;
@@ -513,7 +557,7 @@ p {
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 21.73px;
   font-weight: 400;
   line-height: 1;
@@ -809,7 +853,7 @@ p {
 
 .stats strong {
   display: block;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 60px;
   font-weight: 400;
   line-height: 1;
@@ -1240,10 +1284,10 @@ p {
 .faq-head-title {
   width: auto;
   display: block;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 48.75px; font-weight: 100;
   font-weight: 100;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.04em;
@@ -1322,10 +1366,10 @@ p {
 }
 
 .newsletter-title {
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 48.75px; font-weight: 100;
   font-weight: 100;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: 0.02em;
@@ -1453,10 +1497,10 @@ p {
 .register-title {
   width: auto;
   max-width: 360px;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-size: 48.75px; font-weight: 100;
   font-weight: 100;
-  font-family: 'Futura', 'Jost', sans-serif;
+  font-family: 'Futura 100', 'Futura', sans-serif;
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: 0.02em;
