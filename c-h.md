@@ -32,7 +32,7 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 5 | Location | ✅ Done — typography, vertical bar, tabs, map overlap with beige strip, font swap to Jost |
 | 6 | Floor Plans | ✅ Done — beige backgrounds restored, floor plan image opacity/filter applied |
 | 7 | Numbers / Stats | ✅ Done — border lines removed, white space adjusted, numbers color set to Myrtle Green |
-| 8 | Photo Gallery | ✅ Done — navigation bar spacing, underlines (gray baseline + green active), positioning at 640px from left, baseline ending at 22vw |
+| 8 | Photo Gallery | ⚠️ In Progress — Navigation bar ✅ complete (positioning, underlines), but gallery grid images/layout not yet done |
 | 9 | Virtual Tour | 🔲 Remaining |
 | 10 | Philosophy (Animation) | 🔲 Remaining |
 | 11 | FAQ | 🔲 Remaining |
@@ -45,17 +45,20 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 
 ## SESSION HANDOFF NOTES (March 27, 2026)
 
-### ✅ SECTION 8 (Photo Gallery) — COMPLETED
+### ⚠️ SECTION 8 (Photo Gallery) — NAVIGATION COMPLETED, GRID REMAINING
 
-The gallery section navigation has been finalized. All adjustments match the design:
-
-**Key changes made:**
-- Navigation bar repositioned to 640px from left (was 752px)
+**✅ Navigation bar completed:**
+- All navigation bar adjustments match the design
+- Positioning: 640px from left
 - Title/subtitle pushed down with 2rem top padding
 - Navigation bar expanded with proper top (1.5rem) and bottom (3.5rem) padding
 - Gray baseline positioned at 3.2rem from bottom, ending at 22vw from right
 - Active tab green underline positioned at -2.2rem to overlap gray baseline
 - Both underlines properly inset with 2rem horizontal padding on buttons
+
+**🔲 Gallery grid images/layout — NOT YET DONE:**
+- The photo grid below the navigation needs to be reviewed and adjusted to match the design
+- Check image layout, spacing, overlay cards, etc.
 
 **Final CSS values:**
 - `.gallery-head-texts` → `padding-top: 2rem`
