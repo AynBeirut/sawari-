@@ -8,11 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=5" />
   <script>
     (function () {
       function applyZoom() {
         var z = Math.min(1, window.innerWidth / 1920);
+        document.documentElement.style.setProperty('--page-zoom', z);
         document.documentElement.style.zoom = z;
       }
       applyZoom();
@@ -182,7 +183,6 @@
     </section>
 
     <section class="gallery section" id="gallery">
-      <div class="container">
         <div class="gallery-head reveal">
           <img class="gallery-vline" src="assets/psd-export/137-line-copy-2-2.png" alt="" aria-hidden="true" />
           <div class="gallery-head-texts">
@@ -197,15 +197,16 @@
           <button data-filter="3bed" type="button"><img src="assets/psd-export/142-3-bedrooms-1.png" alt="3 Bedrooms" /></button>
           <button data-filter="garden" type="button"><img src="assets/psd-export/143-garden-1.png" alt="Garden" /></button>
         </div>
+      <div class="container">
         <div class="gallery-grid reveal">
-          <img src="assets/psd-export/150-2-2.png" alt="Lobby interior" />
-          <div class="overlay-card" role="img" aria-label="Entrance lobby preview">
+          <img class="gallery-open" src="assets/psd-export/150-2-2.png" data-gallery-full="assets/psd-export/150-2-2.png" alt="Lobby interior" />
+          <div class="overlay-card gallery-open" role="button" tabindex="0" data-gallery-full="assets/psd-export/149-1-5.png" aria-label="Open entrance lobby image">
             <div class="overlay-panel">
               <img class="overlay-zoom" src="assets/psd-export/153-zoom-icon-copy-1.png" alt="" aria-hidden="true" />
               <img class="overlay-label" src="assets/psd-export/154-entrance-lobby-1.png" alt="Entrance Lobby" />
             </div>
           </div>
-          <img src="assets/psd-export/151-4-2.png" alt="Lobby reception" />
+          <img class="gallery-open" src="assets/psd-export/151-4-2.png" data-gallery-full="assets/psd-export/151-4-2.png" alt="Lobby reception" />
         </div>
       </div>
     </section>
@@ -468,6 +469,13 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="gallery-lightbox-close" id="galleryLightboxClose" type="button" aria-label="Close gallery image">&times;</button>
+    <div class="gallery-lightbox-viewport">
+      <img id="galleryLightboxImage" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="script.js?v=3"></script>
 </body>
 </html>

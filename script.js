@@ -180,6 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.getElementById('registerPopup');
   const closePopup = document.getElementById('closePopup');
   const enquireBtns = document.querySelectorAll('.nav-enquire, a[href="#register"]');
+  const galleryLightbox = document.getElementById('galleryLightbox');
+  const galleryLightboxImage = document.getElementById('galleryLightboxImage');
+  const galleryLightboxClose = document.getElementById('galleryLightboxClose');
+  const galleryTriggers = document.querySelectorAll('.gallery-open');
   
   if (enquireBtns && popup) {
     enquireBtns.forEach(btn => {
@@ -206,6 +210,65 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const closeGalleryLightbox = () => {
+    if (!galleryLightbox) {
+      return;
+    }
+
+    galleryLightbox.classList.remove('active');
+    galleryLightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('gallery-lightbox-open');
+    if (galleryLightboxImage) {
+      galleryLightboxImage.src = '';
+      galleryLightboxImage.alt = '';
+    }
+  };
+
+  if (galleryTriggers.length && galleryLightbox && galleryLightboxImage) {
+    galleryTriggers.forEach((trigger) => {
+      const openGalleryLightbox = () => {
+        const fullImage = trigger.dataset.galleryFull || trigger.getAttribute('src');
+        const imageLabel = trigger.getAttribute('aria-label') || trigger.getAttribute('alt') || 'Gallery image';
+
+        if (!fullImage) {
+          return;
+        }
+
+        galleryLightboxImage.src = fullImage;
+        galleryLightboxImage.alt = imageLabel;
+        galleryLightbox.classList.add('active');
+        galleryLightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('gallery-lightbox-open');
+      };
+
+      trigger.addEventListener('click', openGalleryLightbox);
+      trigger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openGalleryLightbox();
+        }
+      });
+    });
+  }
+
+  if (galleryLightboxClose) {
+    galleryLightboxClose.addEventListener('click', closeGalleryLightbox);
+  }
+
+  if (galleryLightbox) {
+    galleryLightbox.addEventListener('click', (event) => {
+      if (event.target === galleryLightbox) {
+        closeGalleryLightbox();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && galleryLightbox?.classList.contains('active')) {
+      closeGalleryLightbox();
+    }
+  });
 
   const allPlans = [
     String.fromCharCode(49,66,69,68,32,84,89,80,32,49,46,106,112,103), String.fromCharCode(50,32,66,69,68,32,84,89,80,32,49,46,106,112,103), String.fromCharCode(50,32,66,69,68,32,84,89,80,32,50,46,106,112,103),
