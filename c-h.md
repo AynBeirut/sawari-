@@ -31,7 +31,7 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 4 | Video CTA | ✅ Done — filter fixed using 196-bg-7.png overlay |
 | 5 | Location | ✅ Done — typography, vertical bar, tabs, map overlap with beige strip, font swap to Jost |
 | 6 | Floor Plans | ✅ Done — beige backgrounds restored, floor plan image opacity/filter applied |
-| 7 | Numbers / Stats | ✅ Done — border lines removed, white space adjusted, numbers color set to Myrtle Green |
+| 7 | Numbers / Stats | ✅ Done — border lines removed, white space reduced & centered, numbers color Myrtle Green |
 | 8 | Photo Gallery | ✅ Done — navigation bar preserved, responsive gallery layout approved, center image larger, side images offset downward, click-to-fullscreen lightbox added |
 | 9 | Virtual Tour | 🔲 Remaining |
 | 10 | Philosophy (Animation) | 🔲 Remaining |
@@ -39,7 +39,33 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 12 | Newsletter | 🔲 Remaining |
 | 13 | Register | 🔲 Remaining |
 | 14 | Downloads | 🔲 Remaining |
-| 15 | Footer | 🔲 Remaining |
+| 15 | Footer | ⚠️ Layout done (grid, bars, columns, background) — content/typography remaining |
+
+---
+
+## SESSION HANDOFF NOTES (March 27, 2026 — Evening)
+
+### ✅ Section 7 (Stats) — Fine-Tuned
+- White space reduced from 320px → ~8rem symmetric padding
+- Numbers vertically centered in the white area
+- CSS version: v=42
+
+### ✅ Section 15 (Footer) — Layout Done
+- Grid: `1.25fr 1fr 1.5rem 1fr 1.5rem 1.75fr`
+- Padding: `0 5vw 0 9.1vw`
+- All 3 vlines: `margin-left: -4rem`
+- Register col (nth-child 4): `margin-left: 3rem`
+- Privacy col (nth-child 6): `margin-left: 1rem`
+- Background: `#e5e2da` (Limestone Grey)
+- Footer padding: `7rem 0 14rem`
+- Git commit: f43affd
+
+### 🔜 Next Steps (Priority Order)
+1. **Fine-tuning pass** — review all ✅ sections for pixel-perfect parity with reference image
+2. **Section 10 (Philosophy/Animation)** — scroll-triggered animation
+3. **Real assets** — swap PSD placeholders with designer assets from `design/` folder once provided
+4. **Sections 9, 11–14** — Virtual Tour, FAQ, Newsletter, Register, Downloads
+5. **Section 15 content** — footer typography, links, and social icons
 
 ---
 

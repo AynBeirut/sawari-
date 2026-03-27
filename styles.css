@@ -798,8 +798,7 @@ p {
 }
 
 .stats div {
-  min-height: 320px;
-  padding: 0 0.2rem;
+  padding: 6.6rem 0.2rem 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
