@@ -180,10 +180,136 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.getElementById('registerPopup');
   const closePopup = document.getElementById('closePopup');
   const enquireBtns = document.querySelectorAll('.nav-enquire, a[href="#register"]');
+  const galleryButtons = document.querySelectorAll('.gallery-filter button');
+  const gallerySideLeft = document.getElementById('gallerySideLeft');
+  const gallerySideRight = document.getElementById('gallerySideRight');
+  const galleryMainCard = document.getElementById('galleryMainCard');
+  const galleryMainLabelImage = document.getElementById('galleryMainLabelImage');
+  const galleryMainLabelText = document.getElementById('galleryMainLabelText');
+  const galleryProgress = document.getElementById('galleryProgress');
   const galleryLightbox = document.getElementById('galleryLightbox');
   const galleryLightboxImage = document.getElementById('galleryLightboxImage');
   const galleryLightboxClose = document.getElementById('galleryLightboxClose');
+  const galleryLightboxPrev = document.getElementById('galleryLightboxPrev');
+  const galleryLightboxNext = document.getElementById('galleryLightboxNext');
+  const galleryLightboxProgress = document.getElementById('galleryLightboxProgress');
   const galleryTriggers = document.querySelectorAll('.gallery-open');
+
+  const galleryCollections = {
+    lobby: {
+      labelImage: 'assets/psd-export/154-entrance-lobby-1.png',
+      labelAlt: 'Entrance Lobby',
+      placeholderText: '',
+      items: [
+        {
+          image: 'assets/psd-export/149-1-5.png',
+          fullImage: 'assets/psd-export/149-1-5.png',
+          lightboxAlt: 'Entrance lobby image'
+        },
+        {
+          image: 'assets/psd-export/150-2-2.png',
+          fullImage: 'assets/psd-export/150-2-2.png',
+          lightboxAlt: 'Lobby interior image'
+        },
+        {
+          image: 'assets/psd-export/151-4-2.png',
+          fullImage: 'assets/psd-export/151-4-2.png',
+          lightboxAlt: 'Lobby reception image'
+        }
+      ]
+    },
+    '1bed': {
+      labelImage: '',
+      labelAlt: '',
+      placeholderText: '',
+      items: [
+        {
+          image: 'assets/psd-export/118-2-1.png',
+          fullImage: 'assets/psd-export/118-2-1.png',
+          lightboxAlt: '1 bedroom placeholder image 1'
+        },
+        {
+          image: 'assets/psd-export/150-2-2.png',
+          fullImage: 'assets/psd-export/150-2-2.png',
+          lightboxAlt: '1 bedroom placeholder image 2'
+        },
+        {
+          image: 'assets/psd-export/151-4-2.png',
+          fullImage: 'assets/psd-export/151-4-2.png',
+          lightboxAlt: '1 bedroom placeholder image 3'
+        }
+      ]
+    },
+    '2bed': {
+      labelImage: '',
+      labelAlt: '',
+      placeholderText: '',
+      items: [
+        {
+          image: 'assets/psd-export/150-2-2.png',
+          fullImage: 'assets/psd-export/150-2-2.png',
+          lightboxAlt: '2 bedrooms placeholder image 1'
+        },
+        {
+          image: 'assets/psd-export/151-4-2.png',
+          fullImage: 'assets/psd-export/151-4-2.png',
+          lightboxAlt: '2 bedrooms placeholder image 2'
+        },
+        {
+          image: 'assets/psd-export/118-2-1.png',
+          fullImage: 'assets/psd-export/118-2-1.png',
+          lightboxAlt: '2 bedrooms placeholder image 3'
+        }
+      ]
+    },
+    '3bed': {
+      labelImage: '',
+      labelAlt: '',
+      placeholderText: '',
+      items: [
+        {
+          image: 'assets/psd-export/151-4-2.png',
+          fullImage: 'assets/psd-export/151-4-2.png',
+          lightboxAlt: '3 bedrooms placeholder image 1'
+        },
+        {
+          image: 'assets/psd-export/118-2-1.png',
+          fullImage: 'assets/psd-export/118-2-1.png',
+          lightboxAlt: '3 bedrooms placeholder image 2'
+        },
+        {
+          image: 'assets/psd-export/149-1-5.png',
+          fullImage: 'assets/psd-export/149-1-5.png',
+          lightboxAlt: '3 bedrooms placeholder image 3'
+        }
+      ]
+    },
+    garden: {
+      labelImage: '',
+      labelAlt: '',
+      placeholderText: '',
+      items: [
+        {
+          image: 'assets/psd-export/149-1-5.png',
+          fullImage: 'assets/psd-export/149-1-5.png',
+          lightboxAlt: 'Garden placeholder image 1'
+        },
+        {
+          image: 'assets/psd-export/118-2-1.png',
+          fullImage: 'assets/psd-export/118-2-1.png',
+          lightboxAlt: 'Garden placeholder image 2'
+        },
+        {
+          image: 'assets/psd-export/150-2-2.png',
+          fullImage: 'assets/psd-export/150-2-2.png',
+          lightboxAlt: 'Garden placeholder image 3'
+        }
+      ]
+    }
+  };
+
+  let activeGalleryFilter = 'lobby';
+  let activeGalleryIndex = 0;
   
   if (enquireBtns && popup) {
     enquireBtns.forEach(btn => {
@@ -211,6 +337,99 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const renderGalleryProgress = (container, total, currentIndex, onSelect) => {
+    if (!container) {
+      return;
+    }
+
+    container.textContent = '';
+    for (let index = 0; index < total; index += 1) {
+      const step = document.createElement('button');
+      step.type = 'button';
+      step.classList.toggle('active', index === currentIndex);
+      step.setAttribute('aria-label', `Show gallery image ${index + 1} of ${total}`);
+      step.addEventListener('click', () => onSelect(index));
+      container.appendChild(step);
+    }
+  };
+
+  const updateGalleryDisplay = () => {
+    const collection = galleryCollections[activeGalleryFilter] || galleryCollections.lobby;
+    const totalItems = collection.items.length;
+    const currentItem = collection.items[activeGalleryIndex];
+    const prevItem = collection.items[(activeGalleryIndex - 1 + totalItems) % totalItems];
+    const nextItem = collection.items[(activeGalleryIndex + 1) % totalItems];
+
+    if (galleryMainCard) {
+      galleryMainCard.style.backgroundImage = `url("${currentItem.image}")`;
+      galleryMainCard.dataset.galleryFull = currentItem.fullImage;
+      galleryMainCard.setAttribute('aria-label', `Open ${currentItem.lightboxAlt}`);
+    }
+
+    if (gallerySideLeft) {
+      gallerySideLeft.src = prevItem.image;
+      gallerySideLeft.alt = prevItem.lightboxAlt;
+    }
+
+    if (gallerySideRight) {
+      gallerySideRight.src = nextItem.image;
+      gallerySideRight.alt = nextItem.lightboxAlt;
+    }
+
+    if (galleryMainLabelImage) {
+      if (collection.labelImage) {
+        galleryMainLabelImage.src = collection.labelImage;
+        galleryMainLabelImage.alt = collection.labelAlt;
+        galleryMainLabelImage.hidden = false;
+      } else {
+        galleryMainLabelImage.hidden = true;
+      }
+    }
+
+    if (galleryMainLabelText) {
+      if (collection.placeholderText) {
+        galleryMainLabelText.textContent = `${collection.placeholderText}\n${activeGalleryIndex + 1} / ${totalItems}`;
+        galleryMainLabelText.hidden = false;
+      } else {
+        galleryMainLabelText.textContent = '';
+        galleryMainLabelText.hidden = true;
+      }
+    }
+
+    galleryButtons.forEach((button) => {
+      button.classList.toggle('active', button.dataset.filter === activeGalleryFilter);
+    });
+
+    renderGalleryProgress(galleryProgress, totalItems, activeGalleryIndex, (index) => {
+      activeGalleryIndex = index;
+      updateGalleryDisplay();
+    });
+
+    renderGalleryProgress(galleryLightboxProgress, totalItems, activeGalleryIndex, (index) => {
+      activeGalleryIndex = index;
+      updateGalleryDisplay();
+      if (galleryLightbox?.classList.contains('active') && galleryLightboxImage) {
+        const selectedItem = collection.items[activeGalleryIndex];
+        galleryLightboxImage.src = selectedItem.fullImage;
+        galleryLightboxImage.alt = selectedItem.lightboxAlt;
+      }
+    });
+  };
+
+  if (galleryButtons.length) {
+    galleryButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeGalleryFilter = button.dataset.filter;
+        activeGalleryIndex = 0;
+        updateGalleryDisplay();
+      });
+    });
+
+    const activeGalleryButton = document.querySelector('.gallery-filter button.active');
+    activeGalleryFilter = activeGalleryButton?.dataset.filter || 'lobby';
+    updateGalleryDisplay();
+  }
+
   const closeGalleryLightbox = () => {
     if (!galleryLightbox) {
       return;
@@ -228,8 +447,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (galleryTriggers.length && galleryLightbox && galleryLightboxImage) {
     galleryTriggers.forEach((trigger) => {
       const openGalleryLightbox = () => {
-        const fullImage = trigger.dataset.galleryFull || trigger.getAttribute('src');
-        const imageLabel = trigger.getAttribute('aria-label') || trigger.getAttribute('alt') || 'Gallery image';
+        const collection = galleryCollections[activeGalleryFilter] || galleryCollections.lobby;
+        const currentItem = collection.items[activeGalleryIndex];
+        const fullImage = trigger.dataset.galleryFull || currentItem.fullImage || trigger.getAttribute('src');
+        const imageLabel = currentItem.lightboxAlt || trigger.getAttribute('aria-label') || trigger.getAttribute('alt') || 'Gallery image';
 
         if (!fullImage) {
           return;
@@ -254,6 +475,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (galleryLightboxClose) {
     galleryLightboxClose.addEventListener('click', closeGalleryLightbox);
+  }
+
+  if (galleryLightboxPrev) {
+    galleryLightboxPrev.addEventListener('click', () => {
+      const collection = galleryCollections[activeGalleryFilter] || galleryCollections.lobby;
+      activeGalleryIndex = (activeGalleryIndex - 1 + collection.items.length) % collection.items.length;
+      updateGalleryDisplay();
+      if (galleryLightboxImage) {
+        galleryLightboxImage.src = collection.items[activeGalleryIndex].fullImage;
+        galleryLightboxImage.alt = collection.items[activeGalleryIndex].lightboxAlt;
+      }
+    });
+  }
+
+  if (galleryLightboxNext) {
+    galleryLightboxNext.addEventListener('click', () => {
+      const collection = galleryCollections[activeGalleryFilter] || galleryCollections.lobby;
+      activeGalleryIndex = (activeGalleryIndex + 1) % collection.items.length;
+      updateGalleryDisplay();
+      if (galleryLightboxImage) {
+        galleryLightboxImage.src = collection.items[activeGalleryIndex].fullImage;
+        galleryLightboxImage.alt = collection.items[activeGalleryIndex].lightboxAlt;
+      }
+    });
   }
 
   if (galleryLightbox) {

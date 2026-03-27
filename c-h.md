@@ -32,7 +32,7 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 5 | Location | ✅ Done — typography, vertical bar, tabs, map overlap with beige strip, font swap to Jost |
 | 6 | Floor Plans | ✅ Done — beige backgrounds restored, floor plan image opacity/filter applied |
 | 7 | Numbers / Stats | ✅ Done — border lines removed, white space adjusted, numbers color set to Myrtle Green |
-| 8 | Photo Gallery | ⚠️ In Progress — Navigation bar ✅ complete (positioning, underlines), but gallery grid images/layout not yet done |
+| 8 | Photo Gallery | ✅ Done — navigation bar preserved, responsive gallery layout approved, center image larger, side images offset downward, click-to-fullscreen lightbox added |
 | 9 | Virtual Tour | 🔲 Remaining |
 | 10 | Philosophy (Animation) | 🔲 Remaining |
 | 11 | FAQ | 🔲 Remaining |
@@ -45,9 +45,9 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 
 ## SESSION HANDOFF NOTES (March 27, 2026)
 
-### ⚠️ SECTION 8 (Photo Gallery) — NAVIGATION COMPLETED, GRID REMAINING
+### ✅ SECTION 8 (Photo Gallery) — COMPLETED
 
-**✅ Navigation bar completed:**
+**✅ Navigation bar preserved:**
 - All navigation bar adjustments match the design
 - Positioning: 640px from left
 - Title/subtitle pushed down with 2rem top padding
@@ -56,9 +56,15 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 - Active tab green underline positioned at -2.2rem to overlap gray baseline
 - Both underlines properly inset with 2rem horizontal padding on buttons
 
-**🔲 Gallery grid images/layout — NOT YET DONE:**
-- The photo grid below the navigation needs to be reviewed and adjusted to match the design
-- Check image layout, spacing, overlay cards, etc.
+**✅ Gallery grid/layout completed:**
+- Bar structure restored so the beige gallery strip stays correct
+- Global page zoom kept in place for the approved top layout, with gallery width compensated locally using `--page-zoom`
+- Gallery image stage widened beyond the normal container without touching the bar
+- Center gallery image kept dominant while side images remain smaller
+- Left and right images pushed downward to match the design composition
+- Bottom gallery progress line restored below the image stage
+- Click-to-fullscreen gallery lightbox added for all three gallery images
+- Cache-busted asset URLs updated: `styles.css?v=5`, `script.js?v=3`
 
 **Final CSS values:**
 - `.gallery-head-texts` → `padding-top: 2rem`
@@ -66,6 +72,21 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 - `.gallery-filter::after` → `bottom: 3.2rem`, `right: 22vw`, `left: calc(max(640px, 8.3vw) + 2rem)`
 - `.gallery-filter button` → `padding: 0 2rem`, `margin-bottom: 2rem`
 - `.gallery-filter button.active::after` → `bottom: -2.2rem`, `left: 2rem`, `right: 2rem`
+- `.gallery .container` → `width: min(1833px, calc((100vw - 4rem) / var(--page-zoom, 1)))`, `margin-left: 50%`, `transform: translateX(-50%)`
+- `.gallery-grid` → `grid-template-columns: 29.84% 36.88% 28.91%`, `gap: 2.18%`, `align-items: start`, `padding-bottom: 4.2rem`
+- `.gallery-grid > img:first-child` → `margin-top: clamp(4.1rem, 5.8vw, 5.9rem)`
+- `.gallery-grid > img:last-child` → `margin-top: clamp(4.1rem, 5.8vw, 5.9rem)`
+- `.gallery-grid::before` → baseline from `left: 16.75%` to `right: 16.69%`
+- `.gallery-grid::after` → active segment `left: 40.1%`, `width: 18.77%`
+
+**HTML/JS additions:**
+- Gallery images now use `.gallery-open` and `data-gallery-full`
+- Added `#galleryLightbox`, `#galleryLightboxImage`, `#galleryLightboxClose`
+- Added fullscreen gallery open/close logic in `script.js`
+- Added category-based gallery switching for `Lobby`, `1 Bedroom`, `2 Bedrooms`, `3 Bedrooms`, `Garden`
+- Added per-category bottom progress and fullscreen previous/next navigation
+- Real category image population is paused until the designer sends the remaining images
+- Gallery folders prepared under `assets/gallery/1bed`, `assets/gallery/2bed`, `assets/gallery/3bed`, `assets/gallery/garden`, and `assets/gallery/lobby`
 
 ---
 
@@ -152,12 +173,19 @@ All headings/titles use: `font-family: 'Futura', 'Futura PT', sans-serif`
 
 ## Remaining Tasks
 
-1. Fix the Project Overview section image composition and spacing to match the reference.
-2. Replace any placeholders or wrong images with original PSD-exported assets where available.
-3. Finish the bottom area parity:
+1. Replace any placeholders or wrong images with original PSD-exported assets where available.
+2. Finish the bottom area parity:
    - Contact strip
    - Register Your Interest form block
    - Documents strip with correct PDF icons/text alignment
+3. Build remaining sections:
+  - Virtual Tour
+  - Philosophy (Animation)
+  - FAQ
+  - Newsletter
+  - Register
+  - Downloads
+  - Footer
 4. Keep existing working interactions unless they conflict with the reference.
 
 ## Output format
