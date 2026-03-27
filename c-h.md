@@ -32,7 +32,7 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 | 5 | Location | ✅ Done — typography, vertical bar, tabs, map overlap with beige strip, font swap to Jost |
 | 6 | Floor Plans | ✅ Done — beige backgrounds restored, floor plan image opacity/filter applied |
 | 7 | Numbers / Stats | ✅ Done — border lines removed, white space adjusted, numbers color set to Myrtle Green |
-| 8 | Photo Gallery | ✅ Done — full-width beige bar, gallery head at 265px, filter tabs at 47rem, zoom icon 30px, label 100px |
+| 8 | Photo Gallery | ✅ Done — navigation bar spacing, underlines (gray baseline + green active), positioning at 640px from left, baseline ending at 22vw |
 | 9 | Virtual Tour | 🔲 Remaining |
 | 10 | Philosophy (Animation) | 🔲 Remaining |
 | 11 | FAQ | 🔲 Remaining |
@@ -43,7 +43,30 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 
 ---
 
-## SESSION HANDOFF NOTES (March 26, 2026)
+## SESSION HANDOFF NOTES (March 27, 2026)
+
+### ✅ SECTION 8 (Photo Gallery) — COMPLETED
+
+The gallery section navigation has been finalized. All adjustments match the design:
+
+**Key changes made:**
+- Navigation bar repositioned to 640px from left (was 752px)
+- Title/subtitle pushed down with 2rem top padding
+- Navigation bar expanded with proper top (1.5rem) and bottom (3.5rem) padding
+- Gray baseline positioned at 3.2rem from bottom, ending at 22vw from right
+- Active tab green underline positioned at -2.2rem to overlap gray baseline
+- Both underlines properly inset with 2rem horizontal padding on buttons
+
+**Final CSS values:**
+- `.gallery-head-texts` → `padding-top: 2rem`
+- `.gallery-filter` → `padding-left: max(640px, 8.3vw)`, `padding-top: 1.5rem`, `padding-bottom: 3.5rem`
+- `.gallery-filter::after` → `bottom: 3.2rem`, `right: 22vw`, `left: calc(max(640px, 8.3vw) + 2rem)`
+- `.gallery-filter button` → `padding: 0 2rem`, `margin-bottom: 2rem`
+- `.gallery-filter button.active::after` → `bottom: -2.2rem`, `left: 2rem`, `right: 2rem`
+
+---
+
+## SESSION HANDOFF NOTES (March 26, 2026 — Midday)
 
 ### ✅ Completed This Session
 - Section 4 (Video CTA): teal overlay fixed — replaced solid color+opacity with `196-bg-7.png` PNG overlay asset
