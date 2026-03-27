@@ -246,7 +246,7 @@ p {
 .overview-head {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 2rem;
   /* PSD: vline y2=1394, body text y1=1419 → gap=25px ÷ 16 = 1.5625rem */
   margin-bottom: 1.5625rem;
 }
@@ -302,7 +302,7 @@ p {
 .amenities-head {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 2rem;
     margin-bottom: 71px;
     padding-left: 32px;
 }
@@ -453,7 +453,7 @@ p {
 .loc-head {
   display: flex;
   align-items: stretch;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -594,7 +594,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.6rem;
+  gap: 2rem;
 }
 
 .plan-head-line {
@@ -847,11 +847,12 @@ p {
 .gallery-head {
   display: flex;
   align-items: flex-start;
-  gap: 1.2rem;
+  gap: 2rem;
   margin-bottom: 0;
   background: #e5e2da;
   width: 100%;
-  padding: 3.5rem 4vw 0 max(265px, 4vw);
+  /* Align left edge with standard container (min(1223px,92vw) centered) */
+  padding: 3.5rem 4vw 0 calc((100% - min(1223px, 92vw)) / 2);
 }
 
 .gallery-vline {
@@ -890,7 +891,7 @@ p {
 .gallery-filter {
   display: flex;
   align-items: center;
-  gap: 1.45rem;
+  gap: 1.35rem;
   margin-bottom: 1.55rem;
   padding-bottom: 3.5rem;
   justify-content: flex-start;
@@ -898,7 +899,7 @@ p {
   background: #e5e2da;
   width: 100%;
   padding-top: 1.5rem;
-  padding-left: max(640px, 8.3vw);
+  padding-left: max(735px, 9.3vw);
   padding-right: 4vw;
   position: relative;
   min-height: 4rem;
@@ -907,8 +908,8 @@ p {
 .gallery-filter::after {
   content: "";
   position: absolute;
-  left: calc(max(640px, 8.3vw) + 2rem);
-  right: 22vw;
+  left: calc(max(735px, 9.3vw) + 1rem);
+  right: 26vw;
   bottom: 3.2rem;
   height: 3px;
   background: rgba(87, 103, 101, 0.18);
@@ -917,7 +918,7 @@ p {
 .gallery-filter button {
   border: 0;
   background: transparent;
-  padding: 0 2rem;
+  padding: 0 1rem;
   cursor: pointer;
   position: relative;
   display: flex;
@@ -943,11 +944,11 @@ p {
 .gallery-filter button.active::after {
   content: "";
   position: absolute;
-  left: 2rem;
-  right: 2rem;
+  left: 1rem;
+  right: 1rem;
   bottom: -2.2rem;
   height: 3px;
-  background: #69713e;
+  background: rgba(87, 103, 101, 0.6);
 }
 
 .gallery-grid {
@@ -1152,7 +1153,7 @@ p {
 .tour-head {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 2rem;
   margin-bottom: 1.4rem;
 }
 
@@ -1370,7 +1371,7 @@ p {
 .faq-head {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 2rem;
   /* PSD: title y2=10006, first question y1=10115 → 109px ÷ 16 = 6.8125rem */
   margin-bottom: 6.8125rem;
 }
@@ -1593,33 +1594,36 @@ p {
 
 .register {
   background: #efece6;
-  /* PSD: REGISTER group [0,11211,1920,11876] */
-  padding-top: 7.875rem;
-  /* Added padding-bottom to extend background fully */
-  padding-bottom: 3rem;
+  /* padding moved to form column so image fills full height */
+  padding: 0;
+}
+
+.register .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
 .register-grid {
   display: grid;
   /* PSD: left image width=959px, right area=861px */
   grid-template-columns: 959fr 861fr;
-  /* PSD: image right x=959, form content left x=1059 → 100px ÷ 16 = 6.25rem */
-  gap: 6.25rem;
+  gap: 0;
   align-items: stretch;
 }
 
 .register-grid > img {
   width: 100%;
   height: 100%;
-  /* Changed from cover to contain to show full image without cropping */
-  object-fit: contain;
-  min-height: 290px;
+  object-fit: cover;
+  display: block;
+  min-height: 400px;
 }
 
 .register-form {
   background: #d9d3c6;
   /* PSD: form area [959,11211,1920,11876] */
-  padding: 2rem 3.75rem;
+  padding: 7.875rem 3.75rem 3rem;
   display: grid;
   gap: 0.5rem;
   align-content: start;
@@ -1690,8 +1694,6 @@ p {
 
 .feature-strip {
   background: #f6f4f0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   padding: 0;
 }
 
@@ -1699,6 +1701,9 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 16vw;
 }
 
 .doc-item {
@@ -1706,12 +1711,10 @@ p {
   justify-items: center;
   align-items: center;
   gap: 0.4rem;
-  padding: 1rem 0.4rem;
-  border-right: 1px solid var(--line);
+  padding: 5rem 0.4rem;
 }
 
 .doc-item:last-child {
-  border-right: 0;
 }
 
 .doc-icon {
@@ -1729,32 +1732,58 @@ p {
 }
 
 .site-footer {
-  background: #edeae3;
+  background: #e5e2da;
   border-top: 1px solid var(--line);
   /* PSD: footer top=12109, top divider line y=12226 → 117px ÷ 16 = 7.3125rem */
-  padding: 7.3125rem 0 1.7rem;
+  padding: 7rem 0 14rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 2px 1fr 2px 1fr 1fr;
+  /* PSD: vline-1 at x=860, vline-2 at x=1250 on 1920px canvas → 1fr≈303px, privacy col=1.75fr≈530px */
+  grid-template-columns: 1.25fr 1fr 1.5rem 1fr 1.5rem 1.75fr;
   gap: 2rem;
   align-items: start;
+  padding: 0 5vw 0 9.1vw;
 }
 
 .footer-vline-1,
-.footer-vline-2 {
-  /* PSD: vertical lines in footer separator */
-  width: 2px;
-  height: auto;
+.footer-vline-2,
+.footer-vline-3 {
+  /* CSS divider — stretches to full row height, centered in 1.5rem column */
+  width: 1px;
+  background: var(--line);
   justify-self: center;
   align-self: stretch;
+  margin-left: -4rem;
+}
+
+.footer-vline-2 {
+  margin-left: -4rem;
+}
+
+.footer-vline-3 {
+  margin-left: -4rem;
+}
+
+/* register / FAQ column */
+.footer-grid > div:nth-child(4) {
+  margin-left: 3rem;
+}
+
+/* privacy column */
+.footer-grid > div:nth-child(6) {
+  margin-left: 1rem;
 }
 
 .brand {
   font-size: 2rem;
   line-height: 0.9;
   margin-bottom: 0.45rem;
+}
+
+.footer-grid > div:not(.footer-brand-col) {
+  margin-top: -1rem;
 }
 
 .footer-logo {
@@ -1799,17 +1828,19 @@ p {
   object-fit: contain;
 }
 
-.footer-grid h4 {
-  font-size: 0.63rem;
-  margin-bottom: 0.6rem;
+.footer-grid h4,
+.footer-col-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
   letter-spacing: 0.08em;
+  color: #5f6f6d;
 }
 
 .footer-grid a {
   display: block;
-  font-size: 0.63rem;
+  font-size: 1.5rem;
   letter-spacing: 0.04em;
-  margin: 0.28rem 0;
+  margin: 0.4rem 0;
   color: #5f6f6d;
   text-decoration: none;
 }
@@ -1819,7 +1850,7 @@ p {
 }
 
 .footer-grid p {
-  font-size: 0.63rem;
+  font-size: 0.85rem;
   letter-spacing: 0.04em;
   margin: 0.3rem 0;
   color: #5f6f6d;
@@ -1982,10 +2013,6 @@ p {
 
   .gallery-filter button {
     font-size: 0.64rem;
-  }
-
-  .gallery-filter button.active::after {
-    bottom: -0.62rem;
   }
 
   .gallery-grid {
