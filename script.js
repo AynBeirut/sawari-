@@ -80,6 +80,9 @@ if (planImage) {
 }
 
 const faqItems = document.querySelectorAll('.faq-item');
+const faqPlusIcon = 'assets/psd-export/061-layer-1.png';
+const faqMinusIcon = 'assets/psd-export/081-layer-2.png';
+
 faqItems.forEach((item) => {
   item.addEventListener('click', () => {
     const answer = item.nextElementSibling;
@@ -89,9 +92,9 @@ faqItems.forEach((item) => {
     document.querySelectorAll('.faq-item').forEach((faqItem) => {
       faqItem.classList.remove('is-open');
       faqItem.setAttribute('aria-expanded', 'false');
-      const icon = faqItem.querySelector('.faq-q-icon');
+      const icon = faqItem.querySelector('.faq-toggle-icon');
       if (icon) {
-        icon.textContent = '+';
+        icon.src = faqPlusIcon;
       }
     });
 
@@ -99,9 +102,9 @@ faqItems.forEach((item) => {
       answer.classList.add('open');
       item.classList.add('is-open');
       item.setAttribute('aria-expanded', 'true');
-      const icon = item.querySelector('.faq-q-icon');
+      const icon = item.querySelector('.faq-toggle-icon');
       if (icon) {
-        icon.textContent = '-';
+        icon.src = faqMinusIcon;
       }
     }
   });
@@ -202,6 +205,11 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholderText: '',
       items: [
         {
+          image: 'assets/psd-export/151-4-2.png',
+          fullImage: 'assets/psd-export/151-4-2.png',
+          lightboxAlt: 'Lobby reception image'
+        },
+        {
           image: 'assets/psd-export/149-1-5.png',
           fullImage: 'assets/psd-export/149-1-5.png',
           lightboxAlt: 'Entrance lobby image'
@@ -210,11 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
           image: 'assets/psd-export/150-2-2.png',
           fullImage: 'assets/psd-export/150-2-2.png',
           lightboxAlt: 'Lobby interior image'
-        },
-        {
-          image: 'assets/psd-export/151-4-2.png',
-          fullImage: 'assets/psd-export/151-4-2.png',
-          lightboxAlt: 'Lobby reception image'
         }
       ]
     },
@@ -224,6 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholderText: '',
       items: [
         {
+          image: 'assets/psd-export/151-4-2.png',
+          fullImage: 'assets/psd-export/151-4-2.png',
+          lightboxAlt: '1 bedroom placeholder image 3'
+        },
+        {
           image: 'assets/psd-export/118-2-1.png',
           fullImage: 'assets/psd-export/118-2-1.png',
           lightboxAlt: '1 bedroom placeholder image 1'
@@ -232,11 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
           image: 'assets/psd-export/150-2-2.png',
           fullImage: 'assets/psd-export/150-2-2.png',
           lightboxAlt: '1 bedroom placeholder image 2'
-        },
-        {
-          image: 'assets/psd-export/151-4-2.png',
-          fullImage: 'assets/psd-export/151-4-2.png',
-          lightboxAlt: '1 bedroom placeholder image 3'
         }
       ]
     },
@@ -246,6 +249,11 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholderText: '',
       items: [
         {
+          image: 'assets/psd-export/118-2-1.png',
+          fullImage: 'assets/psd-export/118-2-1.png',
+          lightboxAlt: '2 bedrooms placeholder image 3'
+        },
+        {
           image: 'assets/psd-export/150-2-2.png',
           fullImage: 'assets/psd-export/150-2-2.png',
           lightboxAlt: '2 bedrooms placeholder image 1'
@@ -254,11 +262,6 @@ document.addEventListener('DOMContentLoaded', () => {
           image: 'assets/psd-export/151-4-2.png',
           fullImage: 'assets/psd-export/151-4-2.png',
           lightboxAlt: '2 bedrooms placeholder image 2'
-        },
-        {
-          image: 'assets/psd-export/118-2-1.png',
-          fullImage: 'assets/psd-export/118-2-1.png',
-          lightboxAlt: '2 bedrooms placeholder image 3'
         }
       ]
     },
@@ -268,6 +271,11 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholderText: '',
       items: [
         {
+          image: 'assets/psd-export/149-1-5.png',
+          fullImage: 'assets/psd-export/149-1-5.png',
+          lightboxAlt: '3 bedrooms placeholder image 3'
+        },
+        {
           image: 'assets/psd-export/151-4-2.png',
           fullImage: 'assets/psd-export/151-4-2.png',
           lightboxAlt: '3 bedrooms placeholder image 1'
@@ -276,11 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
           image: 'assets/psd-export/118-2-1.png',
           fullImage: 'assets/psd-export/118-2-1.png',
           lightboxAlt: '3 bedrooms placeholder image 2'
-        },
-        {
-          image: 'assets/psd-export/149-1-5.png',
-          fullImage: 'assets/psd-export/149-1-5.png',
-          lightboxAlt: '3 bedrooms placeholder image 3'
         }
       ]
     },
@@ -290,6 +293,11 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholderText: '',
       items: [
         {
+          image: 'assets/psd-export/150-2-2.png',
+          fullImage: 'assets/psd-export/150-2-2.png',
+          lightboxAlt: 'Garden placeholder image 3'
+        },
+        {
           image: 'assets/psd-export/149-1-5.png',
           fullImage: 'assets/psd-export/149-1-5.png',
           lightboxAlt: 'Garden placeholder image 1'
@@ -298,18 +306,13 @@ document.addEventListener('DOMContentLoaded', () => {
           image: 'assets/psd-export/118-2-1.png',
           fullImage: 'assets/psd-export/118-2-1.png',
           lightboxAlt: 'Garden placeholder image 2'
-        },
-        {
-          image: 'assets/psd-export/150-2-2.png',
-          fullImage: 'assets/psd-export/150-2-2.png',
-          lightboxAlt: 'Garden placeholder image 3'
         }
       ]
     }
   };
 
   let activeGalleryFilter = 'lobby';
-  let activeGalleryIndex = 0;
+  let activeGalleryIndex = 1;
   
   if (enquireBtns && popup) {
     enquireBtns.forEach(btn => {
@@ -420,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryButtons.forEach((button) => {
       button.addEventListener('click', () => {
         activeGalleryFilter = button.dataset.filter;
-        activeGalleryIndex = 0;
+        activeGalleryIndex = 1;
         updateGalleryDisplay();
       });
     });
