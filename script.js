@@ -5,10 +5,12 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
       }
     });
   },
-  { threshold: 0.15 }
+  { threshold: 0.05, rootMargin: '0px 0px 12% 0px' }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
@@ -120,6 +122,73 @@ thumbs.forEach((thumb) => {
   });
 });
 
+const philosophyCenterText = document.getElementById('philCenterText');
+const philosophyNodes = document.querySelectorAll('.phil-node');
+const philosophyStage = document.querySelector('.philosophy-stage');
+
+if (philosophyCenterText && philosophyNodes.length) {
+  const philosophyCopy = {
+    default: 'Dynamic and iconic skyline through a composition of elegantly articulated towers that establish Sawari as a landmark mixed-use destination.',
+    concept: 'Dummy text about concept ideology, describing the overall vision behind Sawari and how every design decision supports a clear, unified development identity.',
+    iconic: 'Dummy text about iconic urban identity, expressing how Sawari creates a recognizable landmark presence with a strong and memorable silhouette.',
+    central: 'Dummy text about central point district, highlighting Sawari as a connected destination with seamless access to the city and its daily essentials.',
+    premium: 'Dummy text about premium materials, reflecting refined finishes, durable surfaces, and carefully selected details that elevate everyday living.',
+    human: 'Dummy text about human-centered mobility, focusing on walkability, smooth circulation, and a more intuitive experience for residents and visitors.',
+    lifestyle: 'Dummy text about lifestyle integration, showing how leisure, wellness, convenience, and community functions are woven into one environment.',
+    community: 'Dummy text about community-centric living, emphasizing shared experiences, social connection, and spaces designed to bring people together.',
+    luxury: 'Dummy text about luxury with sustainability, balancing elegant design with responsible planning, efficiency, and long-term environmental value.'
+  };
+
+  let lockedTopic = 'concept';
+
+  const setPhilosophyTopic = (topic) => {
+    const nextTopic = philosophyCopy[topic] ? topic : 'default';
+    philosophyCenterText.textContent = philosophyCopy[nextTopic];
+
+    philosophyNodes.forEach((node) => {
+      node.classList.toggle('is-active', node.dataset.philosophyTopic === nextTopic);
+    });
+  };
+
+  philosophyNodes.forEach((node) => {
+    const topic = node.dataset.philosophyTopic;
+    const label = node.getAttribute('alt') || `${topic} section`;
+
+    node.setAttribute('role', 'button');
+    node.setAttribute('tabindex', '0');
+    node.setAttribute('aria-label', label);
+
+    node.addEventListener('mouseenter', () => {
+      setPhilosophyTopic(topic);
+    });
+
+    node.addEventListener('focus', () => {
+      setPhilosophyTopic(topic);
+    });
+
+    node.addEventListener('click', () => {
+      lockedTopic = topic;
+      setPhilosophyTopic(topic);
+    });
+
+    node.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        lockedTopic = topic;
+        setPhilosophyTopic(topic);
+      }
+    });
+  });
+
+  if (philosophyStage) {
+    philosophyStage.addEventListener('mouseleave', () => {
+      setPhilosophyTopic(lockedTopic);
+    });
+  }
+
+  setPhilosophyTopic(lockedTopic);
+}
+
 const newsletterForm = document.getElementById('newsletterForm');
 const registerForm = document.getElementById('registerForm');
 
@@ -183,6 +252,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.getElementById('registerPopup');
   const closePopup = document.getElementById('closePopup');
   const enquireBtns = document.querySelectorAll('.nav-enquire, a[href="#register"]');
+  const videoSection = document.querySelector('.video-cta');
+  const videoPlayButton = document.querySelector('.play[data-video-embed]');
+  const videoInlinePlayer = document.getElementById('videoInlinePlayer');
+  const videoInlineClose = document.getElementById('videoInlineClose');
+  const videoInlineFrame = document.getElementById('videoInlineFrame');
   const galleryButtons = document.querySelectorAll('.gallery-filter button');
   const gallerySideLeft = document.getElementById('gallerySideLeft');
   const gallerySideRight = document.getElementById('gallerySideRight');
@@ -313,6 +387,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeGalleryFilter = 'lobby';
   let activeGalleryIndex = 1;
+
+  const closeInlineVideo = () => {
+    if (!videoSection || !videoInlinePlayer) {
+      return;
+    }
+
+    videoSection.classList.remove('is-playing');
+    videoInlinePlayer.setAttribute('aria-hidden', 'true');
+
+    if (videoInlineFrame) {
+      videoInlineFrame.src = '';
+    }
+  };
+
+  if (videoPlayButton && videoSection && videoInlinePlayer && videoInlineFrame) {
+    videoPlayButton.addEventListener('click', () => {
+      const baseEmbed = videoPlayButton.dataset.videoEmbed;
+
+      if (!baseEmbed) {
+        return;
+      }
+
+      const autoplayUrl = `${baseEmbed}${baseEmbed.includes('?') ? '&' : '?'}autoplay=1&rel=0`;
+      videoInlineFrame.src = autoplayUrl;
+      videoSection.classList.add('is-playing');
+      videoInlinePlayer.setAttribute('aria-hidden', 'false');
+    });
+  }
+
+  if (videoInlineClose) {
+    videoInlineClose.addEventListener('click', closeInlineVideo);
+  }
   
   if (enquireBtns && popup) {
     enquireBtns.forEach(btn => {
@@ -513,6 +619,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && videoSection?.classList.contains('is-playing')) {
+      closeInlineVideo();
+      return;
+    }
+
     if (event.key === 'Escape' && galleryLightbox?.classList.contains('active')) {
       closeGalleryLightbox();
     }

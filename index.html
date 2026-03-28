@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=44" />
+  <link rel="stylesheet" href="styles.css?v=49" />
   <script>
     (function () {
       function applyPageScale() {
@@ -49,12 +49,12 @@
 
     <section class="overview section" id="overview">
       <div class="container two-col">
-        <div class="overview-grid reveal">
+        <div class="overview-grid reveal reveal-left">
           <img src="assets/psd-export/214-new-01-1.png" alt="Tower skyline view" />
           <img src="assets/psd-export/213-new-14-2.png" alt="Modern residence exterior" />
           <img src="assets/psd-export/218-new-12-1.png" alt="Community courtyard" />
         </div>
-        <article class="overview-copy reveal">
+        <article class="overview-copy reveal reveal-right">
           <div class="overview-head">
             <img class="overview-vline" src="assets/psd-export/219-line-copy-4-2.png" alt="" aria-hidden="true" />
             <img class="overview-title" src="assets/psd-export/217-project-overview-1.png" alt="Project Overview" />
@@ -72,25 +72,25 @@
         </div>
         <div class="amenity-row reveal stagger">
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-1.png" alt="Gym" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Gym" aria-label="Gym"><img src="assets/icons/icon-1.png" alt="Gym" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-2.png" alt="Snow Room" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Snow Room" aria-label="Snow Room"><img src="assets/icons/icon-2.png" alt="Snow Room" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-3.png" alt="Pilot" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Pilot" aria-label="Pilot"><img src="assets/icons/icon-3.png" alt="Pilot" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-4.png" alt="Swimming Pool" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Swimming Pool" aria-label="Swimming Pool"><img src="assets/icons/icon-4.png" alt="Swimming Pool" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-5.png" alt="Balcony" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Balcony" aria-label="Balcony"><img src="assets/icons/icon-5.png" alt="Balcony" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-6.png" alt="Parking" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Parking" aria-label="Parking"><img src="assets/icons/icon-6.png" alt="Parking" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/icons/icon-7.png" alt="CCTV" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="CCTV" aria-label="CCTV"><img src="assets/icons/icon-7.png" alt="CCTV" /></span>
           </div>
         </div>
       </div>
@@ -99,10 +99,24 @@
     <section class="video-cta section-dark">
       <div class="container cta-inner reveal">
           <span class="cta-text-left">EXPLORE THE <strong>FUTURE</strong></span>
-          <button class="play" type="button" aria-label="Play video">
+          <button class="play" type="button" aria-label="Play video" data-video-embed="https://www.youtube.com/embed/aS1UKWxiDII?si=mUBjDlC2q1Tjf8PL">
             <img src="assets/psd-export/199-forma-1-4.png" alt="" />
           </button>
           <span class="cta-text-right">OF <strong>SAWARI AJMAN</strong></span>
+        </div>
+        <div class="video-inline-player" id="videoInlinePlayer" aria-hidden="true">
+          <button class="video-inline-close" id="videoInlineClose" type="button" aria-label="Close video">&times;</button>
+          <div class="video-inline-frame-wrap">
+            <iframe
+              id="videoInlineFrame"
+              src=""
+              title="Sawari video"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -249,51 +263,54 @@
 
         <!-- Wheel rings diagram -->
         <img class="phil-el phil-wheel" src="assets/psd-export/088-vector-smart-object-2.png" alt="" />
+        <img class="phil-el phil-wheel phil-wheel-inner" src="assets/psd-export/088-vector-smart-object-2.png" alt="" />
 
         <!-- Title: CONCEPT IDEOLOGY -->
-        <img class="phil-el phil-title" src="assets/psd-export/105-concept-ideology-copy-1.png" alt="Concept Ideology" />
+        <img class="phil-el phil-node phil-title" src="assets/psd-export/105-concept-ideology-copy-1.png" alt="Concept Ideology" data-philosophy-topic="concept" />
 
         <!-- Center text block -->
-        <img class="phil-el phil-center" src="assets/psd-export/107-dynamic-and-iconic-skyline-through-a-composition-of-elegantly-a-1.png" alt="Dynamic and iconic skyline concept" />
+        <div class="phil-el phil-center" id="philCenterText" aria-live="polite">
+          Dynamic and iconic skyline through a composition of elegantly articulated towers that establish Sawari as a landmark mixed-use destination.
+        </div>
 
         <!-- Top dot (no label) -->
-        <img class="phil-el phil-top-o" src="assets/psd-export/095-ellipse-1-copy-7-1.png" alt="" />
-        <img class="phil-el phil-top-i" src="assets/psd-export/096-ellipse-1-copy-7-2.png" alt="" />
+        <img class="phil-el phil-node phil-top-o" src="assets/psd-export/095-ellipse-1-copy-7-1.png" alt="" data-philosophy-topic="concept" />
+        <img class="phil-el phil-node phil-top-i" src="assets/psd-export/096-ellipse-1-copy-7-2.png" alt="" data-philosophy-topic="concept" />
 
         <!-- ICONIC URBAN IDENTITY — left middle -->
-        <img class="phil-el phil-iconic-dot-o" src="assets/psd-export/089-ellipse-1-copy-3-1.png" alt="" />
-        <img class="phil-el phil-iconic-dot-i" src="assets/psd-export/090-ellipse-1-copy-4-1.png" alt="" />
-        <img class="phil-el phil-iconic-lbl" src="assets/psd-export/102-iconic-urban-identity-1.png" alt="Iconic Urban Identity" />
+        <img class="phil-el phil-node phil-iconic-dot-o" src="assets/psd-export/091-ellipse-1-copy-5-1.png" alt="" data-philosophy-topic="iconic" />
+        <img class="phil-el phil-node phil-iconic-dot-i" src="assets/psd-export/090-ellipse-1-copy-4-1.png" alt="" data-philosophy-topic="iconic" />
+        <img class="phil-el phil-node phil-iconic-lbl" src="assets/psd-export/102-iconic-urban-identity-1.png" alt="Iconic Urban Identity" data-philosophy-topic="iconic" />
 
         <!-- CENTRAL POINT DISTRICT — upper left -->
-        <img class="phil-el phil-central-dot-o" src="assets/psd-export/112-ellipse-1-copy-9-1.png" alt="" />
-        <img class="phil-el phil-central-dot-i" src="assets/psd-export/113-ellipse-1-copy-9-2.png" alt="" />
-        <img class="phil-el phil-central-lbl" src="assets/psd-export/103-central-point-district-1.png" alt="Central Point District" />
+        <img class="phil-el phil-node phil-central-dot-o" src="assets/psd-export/112-ellipse-1-copy-9-1.png" alt="" data-philosophy-topic="central" />
+        <img class="phil-el phil-node phil-central-dot-i" src="assets/psd-export/113-ellipse-1-copy-9-2.png" alt="" data-philosophy-topic="central" />
+        <img class="phil-el phil-node phil-central-lbl" src="assets/psd-export/103-central-point-district-1.png" alt="Central Point District" data-philosophy-topic="central" />
 
         <!-- PREMIUM MATERIALS — upper right -->
-        <img class="phil-el phil-premium-dot-o" src="assets/psd-export/097-ellipse-1-copy-8-1.png" alt="" />
-        <img class="phil-el phil-premium-dot-i" src="assets/psd-export/098-ellipse-1-copy-8-2.png" alt="" />
-        <img class="phil-el phil-premium-lbl" src="assets/psd-export/104-premium-materials-1.png" alt="Premium Materials" />
+        <img class="phil-el phil-node phil-premium-dot-o" src="assets/psd-export/097-ellipse-1-copy-8-1.png" alt="" data-philosophy-topic="premium" />
+        <img class="phil-el phil-node phil-premium-dot-i" src="assets/psd-export/098-ellipse-1-copy-8-2.png" alt="" data-philosophy-topic="premium" />
+        <img class="phil-el phil-node phil-premium-lbl" src="assets/psd-export/104-premium-materials-1.png" alt="Premium Materials" data-philosophy-topic="premium" />
 
         <!-- HUMAN-CENTERED MOBILITY — right middle -->
-        <img class="phil-el phil-human-dot-o" src="assets/psd-export/091-ellipse-1-copy-5-1.png" alt="" />
-        <img class="phil-el phil-human-dot-i" src="assets/psd-export/092-ellipse-1-copy-5-2.png" alt="" />
-        <img class="phil-el phil-human-lbl" src="assets/psd-export/110-human-centered-mobility-1.png" alt="Human-Centered Mobility" />
+        <img class="phil-el phil-node phil-human-dot-o" src="assets/psd-export/091-ellipse-1-copy-5-1.png" alt="" data-philosophy-topic="human" />
+        <img class="phil-el phil-node phil-human-dot-i" src="assets/psd-export/092-ellipse-1-copy-5-2.png" alt="" data-philosophy-topic="human" />
+        <img class="phil-el phil-node phil-human-lbl" src="assets/psd-export/110-human-centered-mobility-1.png" alt="Human-Centered Mobility" data-philosophy-topic="human" />
 
         <!-- LIFESTYLE INTEGRATION — lower right -->
-        <img class="phil-el phil-lifestyle-dot-o" src="assets/psd-export/099-ellipse-1-copy-10-1.png" alt="" />
-        <img class="phil-el phil-lifestyle-dot-i" src="assets/psd-export/100-ellipse-1-copy-10-2.png" alt="" />
-        <img class="phil-el phil-lifestyle-lbl" src="assets/psd-export/108-lifestyle-integration-1.png" alt="Lifestyle Integration" />
+        <img class="phil-el phil-node phil-lifestyle-dot-o" src="assets/psd-export/099-ellipse-1-copy-10-1.png" alt="" data-philosophy-topic="lifestyle" />
+        <img class="phil-el phil-node phil-lifestyle-dot-i" src="assets/psd-export/100-ellipse-1-copy-10-2.png" alt="" data-philosophy-topic="lifestyle" />
+        <img class="phil-el phil-node phil-lifestyle-lbl" src="assets/psd-export/108-lifestyle-integration-1.png" alt="Lifestyle Integration" data-philosophy-topic="lifestyle" />
 
         <!-- COMMUNITY-CENTRIC LIVING — lower left -->
-        <img class="phil-el phil-community-dot-o" src="assets/psd-export/101-ellipse-1-copy-11-1.png" alt="" />
-        <img class="phil-el phil-community-dot-i" src="assets/psd-export/111-ellipse-1-copy-11-2.png" alt="" />
-        <img class="phil-el phil-community-lbl" src="assets/psd-export/106-community-centric-living-1.png" alt="Community-Centric Living" />
+        <img class="phil-el phil-node phil-community-dot-o" src="assets/psd-export/101-ellipse-1-copy-11-1.png" alt="" data-philosophy-topic="community" />
+        <img class="phil-el phil-node phil-community-dot-i" src="assets/psd-export/111-ellipse-1-copy-11-2.png" alt="" data-philosophy-topic="community" />
+        <img class="phil-el phil-node phil-community-lbl" src="assets/psd-export/106-community-centric-living-1.png" alt="Community-Centric Living" data-philosophy-topic="community" />
 
         <!-- LUXURY WITH SUSTAINABILITY — bottom -->
-        <img class="phil-el phil-luxury-dot-o" src="assets/psd-export/093-ellipse-1-copy-6-1.png" alt="" />
-        <img class="phil-el phil-luxury-dot-i" src="assets/psd-export/094-ellipse-1-copy-6-2.png" alt="" />
-        <img class="phil-el phil-luxury-lbl" src="assets/psd-export/109-luxury-with-sustainability-1.png" alt="Luxury with Sustainability" />
+        <img class="phil-el phil-node phil-luxury-dot-o" src="assets/psd-export/093-ellipse-1-copy-6-1.png" alt="" data-philosophy-topic="luxury" />
+        <img class="phil-el phil-node phil-luxury-dot-i" src="assets/psd-export/094-ellipse-1-copy-6-2.png" alt="" data-philosophy-topic="luxury" />
+        <img class="phil-el phil-node phil-luxury-lbl" src="assets/psd-export/109-luxury-with-sustainability-1.png" alt="Luxury with Sustainability" data-philosophy-topic="luxury" />
 
       </div>
     </section>
@@ -347,7 +364,7 @@
     </section>
 
     <section class="newsletter">
-      <div class="container newsletter-inner">
+      <div class="container newsletter-inner reveal">
         <img class="newsletter-vline" src="assets/psd-export/056-line-copy-13-1.png" alt="" aria-hidden="true" />
         <img class="newsletter-title" src="assets/psd-export/057-subscribe-to-our-newsletter-1.png" alt="Subscribe to our newsletter" />
         <form id="newsletterForm" novalidate>
@@ -361,7 +378,7 @@
     </section>
 
     <section class="contact-strip">
-      <div class="container contact-grid">
+      <div class="container contact-grid reveal">
         <div class="contact-item">
           <img src="assets/psd-export/042-forma-1-1.png" alt="Address icon" class="contact-icon" />
           <img src="assets/psd-export/041-line-5.png" alt="" class="contact-vbar" aria-hidden="true" />
@@ -390,7 +407,7 @@
     </section>
 
     <section class="register section" id="register">
-      <div class="container register-grid">
+      <div class="container register-grid reveal">
         <img src="assets/psd-export/024-4-1.png" alt="Reception lobby interior" />
         <form id="registerForm" class="register-form" novalidate>
           <img src="assets/psd-export/037-register-your-interest-1.png" alt="Register your interest" class="register-title" />
@@ -419,7 +436,7 @@
     </section>
 
     <section class="feature-strip">
-      <div class="feature-grid">
+      <div class="feature-grid reveal">
         <div class="doc-item">
           <img src="assets/psd-export/014-brochure2-copy-1.png" alt="PDF icon" class="doc-icon" />
           <img src="assets/psd-export/015-brochure-1.png" alt="Brochure" class="doc-label" />
@@ -441,7 +458,7 @@
   </main>
 
   <footer class="site-footer">
-      <div class="footer-grid">
+      <div class="footer-grid reveal">
       <div class="footer-brand-col">
         <img src="assets/psd-export/012-vector-smart-object-copy-2-1.png" alt="Sawari wordmark" class="footer-logo" />
         <p class="footer-address">Ajman, UAE</p>
@@ -486,6 +503,6 @@
     <div class="gallery-lightbox-progress" id="galleryLightboxProgress" aria-label="Fullscreen gallery images"></div>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

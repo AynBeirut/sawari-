@@ -43,6 +43,44 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 
 ---
 
+## SESSION HANDOFF NOTES (March 29, 2026)
+
+### ✅ Animation + Interaction Pass — In Progress
+- Global scroll reveal strengthened and set to replay whenever the user re-enters a section
+- Project Overview image motion increased noticeably from left to right, with separate text reveal
+- Section 4 video CTA now plays inline inside the section using the supplied YouTube embed, while fullscreen remains available through the player controls
+- Philosophy wheel now spins smoothly with a second counter-rotating inner layer while labels and center copy stay fixed
+- FAQ list left edge aligned to the same start line as the `FAQ` title
+
+### 📦 Deployment Packages
+- Original package preserved: `sawari-deploy-webuzo.zip`
+- New animated build package requested for deployment: `sawri animated.zip`
+
+### 🔜 Next Steps (Priority Order)
+1. **Section 10 (Philosophy/Animation)** — continue refining final copy, timing, and motion parity against the reference
+2. **Sections 9, 11-14** — Virtual Tour, FAQ, Newsletter, Register, Downloads
+3. **Section 15 content** — footer typography, links, and social icons
+4. **Second page** — move to the next page after the animation section is approved
+5. **Real assets** — replace placeholders with final designer assets from `design/`
+
+---
+
+## SESSION HANDOFF NOTES (March 28, 2026)
+
+### ✅ Fine-Tuning Pass — Finished
+- Approved micro-adjustments applied across the completed sections
+- Gallery bottom bar kept at the same size, with the default active state starting from the middle
+- Current deployment zip should reflect the latest approved workspace state
+
+### 🔜 Next Steps (Priority Order)
+1. **Section 10 (Philosophy/Animation)** — build the animation section next
+2. **Second page** — move to the next page after the animation section
+3. **Sections 9, 11-14** — Virtual Tour, FAQ, Newsletter, Register, Downloads
+4. **Section 15 content** — footer typography, links, and social icons
+5. **Real assets** — replace placeholders with final designer assets from `design/`
+
+---
+
 ## SESSION HANDOFF NOTES (March 27, 2026 — Evening)
 
 ### ✅ Section 7 (Stats) — Fine-Tuned
@@ -61,10 +99,10 @@ index.html, styles.css, script.js, server.js, assets/psd-export, design/
 - Git commit: f43affd
 
 ### 🔜 Next Steps (Priority Order)
-1. **Fine-tuning pass** — review all ✅ sections for pixel-perfect parity with reference image
-2. **Section 10 (Philosophy/Animation)** — scroll-triggered animation
-3. **Real assets** — swap PSD placeholders with designer assets from `design/` folder once provided
-4. **Sections 9, 11–14** — Virtual Tour, FAQ, Newsletter, Register, Downloads
+1. **Fine-tuning pass** — completed on March 28, 2026
+2. **Section 10 (Philosophy/Animation)** — next active build task
+3. **Second page** — follow immediately after the animation section
+4. **Sections 9, 11-14** — Virtual Tour, FAQ, Newsletter, Register, Downloads
 5. **Section 15 content** — footer typography, links, and social icons
 
 ---
