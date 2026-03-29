@@ -3382,6 +3382,7 @@ p {
 .fp-header-block {
   position: relative;
   padding-left: 2rem;
+  padding-top: 6rem; /* Push description text down */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -3393,7 +3394,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 3.5rem;
+  bottom: 9.5rem; /* 3.5rem + 6rem offset to maintain exact bar size */
   width: 3px;
   background-color: var(--natural-beige);
   transform: translateY(-0.5rem);
@@ -3402,7 +3403,7 @@ p {
 /* For sections 2-13, the extra subtitle makes the container taller.
    Increase 'bottom' to keep the beige bar exactly the same height as section 1. */
 .fp-header-block:has(.fp-subtitle-type)::before {
-  bottom: 4.8rem;
+  bottom: 10.8rem; /* 4.8rem + 6rem offset to maintain exact bar size */
 }
 
 .fp-keyplan {
