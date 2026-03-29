@@ -3274,11 +3274,11 @@ p {
 
 /* Typography for inner info */
 .fp-info h2 {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 33px; /* From c-h.md */
   line-height: 1.08;
   color: #4B524A;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -3382,7 +3382,7 @@ p {
 .fp-header-block {
   position: relative;
   padding-left: 2rem;
-  padding-top: 6rem; /* Push description text down */
+  padding-top: 1rem; /* Push description text down */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -3394,16 +3394,15 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 9.5rem; /* 3.5rem + 6rem offset to maintain exact bar size */
+  height: clamp(65px, 6.5vw, 98px); /* Hardware lock the bar height so padding cannot shrink or stretch it */
   width: 3px;
   background-color: var(--natural-beige);
   transform: translateY(-0.5rem);
 }
 
-/* For sections 2-13, the extra subtitle makes the container taller.
-   Increase 'bottom' to keep the beige bar exactly the same height as section 1. */
+/* For sections 2-13, the extra subtitle makes the container taller. */
 .fp-header-block:has(.fp-subtitle-type)::before {
-  bottom: 10.8rem; /* 4.8rem + 6rem offset to maintain exact bar size */
+  height: clamp(85px, 8.5vw, 127px); /* Hardware lock the extended bar height */
 }
 
 .fp-keyplan {
