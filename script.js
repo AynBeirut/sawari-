@@ -50,36 +50,385 @@ tabs.forEach((tab) => {
   });
 });
 
+
 const plans = [
-  { image: 'assets/plans/1BED TYP 1.jpg' },
-  { image: 'assets/plans/2 BED TYP 1.jpg' },
-  { image: 'assets/plans/2 BED TYP 2.jpg' },
-  { image: 'assets/plans/3 BED TYP 1.jpg' },
-  { image: 'assets/plans/3 BED TYP 2.jpg' },
-  { image: 'assets/plans/3 BED TYP 3.jpg' },
-  { image: 'assets/plans/3 BED TYP 4.jpg' },
-  { image: 'assets/plans/3 BED TYP 4A.jpg' },
-  { image: 'assets/plans/4 BED DUPL TYP 1 LOW.jpg' },
-  { image: 'assets/plans/4 BED DUPL TYP 1 UPP.jpg' },
-  { image: 'assets/plans/4 BED DUPL TYP 2 LOW.jpg' },
-  { image: 'assets/plans/4 BED DUPL TYP 2 UPP.jpg' },
-  { image: 'assets/plans/4 BED TYP 1.jpg' }
+  {
+    "title": "ONE BED APARTMENT",
+    "subtitle": "",
+    "stats": [
+      "Unit Area (NSA) - 81.81 SQM",
+      "Balcony/Terrace Area - 11.52 SQM",
+      "Total Area (GSA) - 93.33 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - TYP 1 (4TH - 8TH FLOOR)",
+      "CPT B (50 Floor Tower) - TYP 1 (2ND - 13TH FLOOR)",
+      "CPT C (Twin Tower) - TYP 1 (4TH - 8TH FLOOR)",
+      "CPT D (28 Floor Tower) - TYP 1 (2ND - 7TH), 8TH FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/1BED TYP 1.jpg"
+  },
+  {
+    "title": "TWO BED APARTMENT",
+    "subtitle": "2 BED TYPE 1",
+    "stats": [
+      "Unit Area (NSA) - 141.28 SQM",
+      "Balcony/Terrace Area - 9.51 SQM",
+      "Total Area (GSA) - 150.79 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - TYP 1 (4TH - 8TH FLOOR)",
+      "CPT B (50 Floor Tower) - TYP 1 (2ND - 13TH FLOOR)",
+      "CPT C (Twin Tower) - TYP 1 (4TH - 8TH FLOOR)",
+      "CPT D (28 Floor Tower) - TYP 1 (2ND - 7TH), 8TH FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/2 BED TYP 1.jpg"
+  },
+  {
+    "title": "TWO BED APARTMENT",
+    "subtitle": "2 BED TYPE 2",
+    "stats": [
+      "Unit Area (NSA) - 120.68 SQM",
+      "Balcony/Terrace Area - 53.72 SQM",
+      "Total Area (GSA) - 174.40 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - 3RD FLOOR",
+      "CPT B (50 Floor Tower) - NA",
+      "CPT C (Twin Tower) - 3RD FLOOR",
+      "CPT D (28 Floor Tower) - NA"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/2 BED TYP 2.jpg"
+  },
+  {
+    "title": "THREE BED APARTMENT",
+    "subtitle": "3 BED TYPE 1",
+    "stats": [
+      "Unit Area (NSA) - 185.39 SQM",
+      "Balcony/Terrace Area - 22.22 SQM",
+      "Total Area (GSA) - 207.61 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - TYP 2 (9TH - 11TH FLOOR)",
+      "CPT B (50 Floor Tower) - TYP 2 (17TH - 19TH FLOOR)",
+      "CPT C (Twin Tower) - TYP 2 (9TH - 11TH FLOOR)",
+      "CPT D (28 Floor Tower) - TYP 2 (10TH - 11TH FLOOR)"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 1.jpg"
+  },
+  {
+    "title": "THREE BED APARTMENT",
+    "subtitle": "3 BED TYPE 2",
+    "stats": [
+      "Unit Area (NSA) - 173.82 SQM",
+      "Balcony/Terrace Area - 22.22 SQM",
+      "Total Area (GSA) - 196.04 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - TYP 3 (12TH - 17TH FLOOR)",
+      "CPT B (50 Floor Tower) - TYP 3 (20TH - 32ND FLOOR)",
+      "CPT C (Twin Tower) - TYP 3 (12TH - 17TH FLOOR)",
+      "CPT D (28 Floor Tower) - TYP 3 (12TH - 17TH FLOOR)"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 2.jpg"
+  },
+  {
+    "title": "THREE BED APARTMENT",
+    "subtitle": "3 BED TYPE 3",
+    "stats": [
+      "Unit Area (NSA) - 186.51 SQM",
+      "Balcony/Terrace Area - 41.24 SQM",
+      "Total Area (GSA) - 227.75 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - TYP 4 (18TH - 26TH FLOOR)",
+      "CPT B (50 Floor Tower) - TYP 4 (33RD - 49TH FLOOR)",
+      "CPT C (Twin Tower) - TYP 4 (18TH - 26TH FLOOR)",
+      "CPT D (28 Floor Tower) - TYP 4 (18TH - 26TH FLOOR)"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 3.jpg"
+  },
+  {
+    "title": "THREE BED APARTMENT",
+    "subtitle": "3 BED TYPE 4",
+    "stats": [
+      "Unit Area (NSA) - 226.75 SQM",
+      "Balcony/Terrace Area - 35.80 SQM",
+      "Total Area (GSA) - 262.55 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - NA",
+      "CPT B (50 Floor Tower) - 14TH FLOOR",
+      "CPT C (Twin Tower) - NA",
+      "CPT D (28 Floor Tower) - NA"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 4.jpg"
+  },
+  {
+    "title": "THREE BED APARTMENT",
+    "subtitle": "3 BED TYPE 4A",
+    "stats": [
+      "Unit Area (NSA) - 226.75 SQM",
+      "Balcony/Terrace Area - 155.07 SQM",
+      "Total Area (GSA) - 381.82 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - NA",
+      "CPT B (50 Floor Tower) - 15TH - 16TH FLOOR",
+      "CPT C (Twin Tower) - NA",
+      "CPT D (28 Floor Tower) - NA"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 4A.jpg"
+  },
+  {
+    "title": "FOUR BED APARTMENT",
+    "subtitle": "4 BED TYPE 1",
+    "stats": [
+      "Unit Area (NSA) - 253.09 SQM",
+      "Balcony/Terrace Area - 41.24 SQM",
+      "Total Area (GSA) - 294.33 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - 27TH FLOOR",
+      "CPT B (50 Floor Tower) - 50TH FLOOR",
+      "CPT C (Twin Tower) - 27TH FLOOR",
+      "CPT D (28 Floor Tower) - 27TH FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/4 BED TYP 1.jpg"
+  },
+  {
+    "title": "4 BED DUPLEX TYPE 1",
+    "subtitle": "LOWER FLOOR",
+    "stats": [
+      "Unit Area (NSA) - 342.85 SQM",
+      "Balcony/Terrace Area - 7.50 SQM",
+      "Total Area (GSA) - 350.35 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - 28TH FLOOR",
+      "CPT B (50 Floor Tower) - NA",
+      "CPT C (Twin Tower) - 28TH FLOOR",
+      "CPT D (28 Floor Tower) - 28TH FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 1 LOW.jpg"
+  },
+  {
+    "title": "4 BED DUPLEX TYPE 1",
+    "subtitle": "UPPER FLOOR",
+    "stats": [
+      "Unit Area (NSA) - 342.85 SQM",
+      "Balcony/Terrace Area - 7.50 SQM",
+      "Total Area (GSA) - 350.35 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - 28TH FLOOR",
+      "CPT B (50 Floor Tower) - NA",
+      "CPT C (Twin Tower) - 28TH FLOOR",
+      "CPT D (28 Floor Tower) - 28TH FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 1 UPP.jpg"
+  },
+  {
+    "title": "4 BED DUPLEX TYPE 2",
+    "subtitle": "LOWER FLOOR",
+    "stats": [
+      "Unit Area (NSA) - 404.81 SQM",
+      "Balcony/Terrace Area - 0.00 SQM",
+      "Total Area (GSA) - 404.81 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - 1ST FLOOR",
+      "CPT B (50 Floor Tower) - 1ST FLOOR",
+      "CPT C (Twin Tower) - 1ST FLOOR",
+      "CPT D (28 Floor Tower) - 1ST FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 2 LOW.jpg"
+  },
+  {
+    "title": "4 BED DUPLEX TYPE 2",
+    "subtitle": "UPPER FLOOR",
+    "stats": [
+      "Unit Area (NSA) - 404.81 SQM",
+      "Balcony/Terrace Area - 0.00 SQM",
+      "Total Area (GSA) - 404.81 SQM"
+    ],
+    "keyplan": [
+      "CPT A (Triple Tower) - 1ST FLOOR",
+      "CPT B (50 Floor Tower) - 1ST FLOOR",
+      "CPT C (Twin Tower) - 1ST FLOOR",
+      "CPT D (28 Floor Tower) - 1ST FLOOR"
+    ],
+    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 2 UPP.jpg"
+  }
 ];
 
 let planIndex = 0;
 const planImage = document.getElementById('planImage');
+const planTitle = document.getElementById('planTitle');
+const planSubtitle = document.getElementById('planSubtitle');
+const planStats = document.getElementById('planStats');
+
+function updatePlanUI() {
+  const p = plans[planIndex];
+  if (planImage) planImage.src = p.image;
+  
+  if (planTitle) planTitle.textContent = p.title || 'FLOOR PLAN';
+  if (planSubtitle) {
+    if (p.subtitle) {
+      planSubtitle.textContent = p.subtitle;
+      planSubtitle.style.display = 'block';
+    } else {
+      planSubtitle.style.display = 'none';
+    }
+  }
+  if (planStats) {
+    planStats.innerHTML = p.stats.map(s => `<p>${s}</p>`).join('');
+  }
+}
 
 if (planImage) {
-  document.getElementById('planPrev').addEventListener('click', () => {
+  // Initial load
+  updatePlanUI();
+
+  document.getElementById('planPrev')?.addEventListener('click', () => {
     planIndex = (planIndex - 1 + plans.length) % plans.length;
-    planImage.src = plans[planIndex].image;
+    updatePlanUI();
   });
 
-  document.getElementById('planNext').addEventListener('click', () => {
+  document.getElementById('planNext')?.addEventListener('click', () => {
     planIndex = (planIndex + 1) % plans.length;
-    planImage.src = plans[planIndex].image;
+    updatePlanUI();
   });
+
+  // Scroll functionality on the viewer
+  const planViewer = document.querySelector('.plan-viewer');
+  if (planViewer) {
+    let scrollTimeout;
+    planViewer.addEventListener('wheel', (e) => {
+      e.preventDefault(); // Prevent page scrolling
+      if (scrollTimeout) return; // Debounce
+      
+      if (e.deltaY > 0) {
+        planIndex = (planIndex + 1) % plans.length;
+      } else {
+        planIndex = (planIndex - 1 + plans.length) % plans.length;
+      }
+      updatePlanUI();
+      
+      scrollTimeout = setTimeout(() => {
+        scrollTimeout = null;
+      }, 500); // 500ms delay between scrolls
+    }, { passive: false });
+  }
+
+  // Lightbox Functionality
+  const lbWrap = document.getElementById('homeFpLightbox');
+  const lbImage = document.getElementById('homeFpLightboxImage');
+  const lbTitle = document.getElementById('lbPlanTitle');
+  const lbSub = document.getElementById('lbPlanSubtitle');
+  const lbStats = document.getElementById('lbPlanStats');
+  const lbKeyplan = document.getElementById('lbPlanKeyplan');
+  const lbProgress = document.getElementById('homeFpLightboxProgress');
+  
+  const zoomIcon = document.querySelector('.plan-zoom');
+  let lbActiveIndex = 0;
+
+  function updateLightboxUI() {
+    const p = plans[lbActiveIndex];
+    if(lbImage) lbImage.src = p.image;
+    if(lbTitle) lbTitle.textContent = p.title || 'FLOOR PLAN';
+    if(lbSub) lbSub.textContent = p.subtitle || '';
+    if(lbStats) lbStats.innerHTML = p.stats.map(s => `<p>${s}</p>`).join('');
+    if(lbKeyplan) lbKeyplan.innerHTML = p.keyplan.map(s => `<p>${s}</p>`).join('');
+    if(lbProgress) lbProgress.textContent = `${lbActiveIndex + 1} / ${plans.length}`;
+  }
+
+  function openLightbox() {
+    lbActiveIndex = planIndex; // sync index
+    updateLightboxUI();
+    if(lbWrap) {
+      lbWrap.classList.add('active');
+      lbWrap.setAttribute('aria-hidden', 'false');
+    }
+    document.body.classList.add('gallery-lightbox-open');
+  }
+
+  function closeLightbox() {
+    if(lbWrap) {
+      lbWrap.classList.remove('active');
+      lbWrap.setAttribute('aria-hidden', 'true');
+    }
+    document.body.classList.remove('gallery-lightbox-open');
+  }
+
+  if (zoomIcon) {
+    zoomIcon.addEventListener('click', openLightbox);
+  }
+  // also allow clicking the image itself
+  if (planImage) {
+    planImage.style.cursor = 'pointer';
+    planImage.addEventListener('click', openLightbox);
+  }
+
+  document.getElementById('homeFpLightboxClose')?.addEventListener('click', closeLightbox);
+  
+  document.getElementById('homeFpLightboxPrev')?.addEventListener('click', () => {
+    lbActiveIndex = (lbActiveIndex - 1 + plans.length) % plans.length;
+    updateLightboxUI();
+  });
+  
+  document.getElementById('homeFpLightboxNext')?.addEventListener('click', () => {
+    lbActiveIndex = (lbActiveIndex + 1) % plans.length;
+    updateLightboxUI();
+  });
+
+  // Keep scroll working inside lightbox too!
+  if (lbWrap) {
+    let lbScrollTimeout;
+    lbWrap.addEventListener('wheel', (e) => {
+      // Don't prevent default if they are scrolling the content vertically.
+      // But we want to scroll the planes if they scroll over the image.
+      // Let's only do it if they hover the image wrapper.
+    });
+    
+    document.querySelector('.fp-lightbox-image-wrap')?.addEventListener('wheel', (e) => {
+       e.preventDefault();
+       if (lbScrollTimeout) return;
+       
+       if (e.deltaY > 0) {
+         lbActiveIndex = (lbActiveIndex + 1) % plans.length;
+       } else {
+         lbActiveIndex = (lbActiveIndex - 1 + plans.length) % plans.length;
+       }
+       updateLightboxUI();
+       
+       lbScrollTimeout = setTimeout(() => { lbScrollTimeout = null; }, 500);
+    }, { passive: false });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (lbWrap && lbWrap.classList.contains('active')) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') {
+        lbActiveIndex = (lbActiveIndex - 1 + plans.length) % plans.length;
+        updateLightboxUI();
+      }
+      if (e.key === 'ArrowRight') {
+        lbActiveIndex = (lbActiveIndex + 1) % plans.length;
+        updateLightboxUI();
+      }
+    }
+  });
+
+  if (lbWrap) {
+    lbWrap.addEventListener('click', (e) => {
+      if (e.target === lbWrap || e.target.classList.contains('fp-lightbox-content')) {
+        closeLightbox();
+      }
+    });
+  }
 }
+
 
 const faqItems = document.querySelectorAll('.faq-item');
 const faqPlusIcon = 'assets/psd-export/061-layer-1.png';
