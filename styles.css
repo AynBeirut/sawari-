@@ -63,6 +63,13 @@ h4,
   margin: 0;
 }
 
+.plan-progress {
+  margin: 1.25rem 0 0;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: var(--myrtle);
+}
 h2 {
   font-size: clamp(1.7rem, 2.3vw, 3rem);
 }
@@ -890,7 +897,7 @@ p {
 .plan-dl-row {
   position: absolute;
   left: calc(39% + 2px + 2rem);
-  top: 63.4%;
+  top: 72%;
   width: 34%;
   display: flex;
   align-items: center;
@@ -3367,7 +3374,7 @@ p {
 /* Home Page Floor Plans Text */
 .plan-text-container {
   position: absolute;
-  left: calc(34% + 1.25rem);
+  left: calc(34% + 5.25rem);
   top: 15%;
   color: var(--myrtle);
   font-family: 'Futura', 'Century Gothic', sans-serif;
@@ -3380,6 +3387,14 @@ p {
   font-weight: 500;
   letter-spacing: 1px;
 }
+
+#planTextContainer .plan-subtitle,
+#planTextContainer .plan-stats,
+#planTextContainer .plan-progress {
+  margin-left: 0;
+  width: 100%;
+}
+
 .plan-subtitle {
   font-family: 'Manrope', sans-serif;
   font-size: 18px;
@@ -3467,22 +3482,55 @@ p {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 2rem;
-  text-align: center;
+  text-align: left;
   color: var(--myrtle);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.fp-lightbox-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#homeFpLightboxInfo .fp-lightbox-copy,
+#homeFpLightboxInfo .fp-lightbox-details {
+  width: calc(100% - 3rem);
+  margin-left: 3rem;
 }
 .fp-lightbox-info h2 {
   font-family: 'Futura', sans-serif;
   font-size: 32px;
   margin: 0 0 0.5rem;
+  width: 100%;
 }
+
+#lbPlanSubtitle {
+  display: block;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+  text-align: left;
+  align-self: flex-start;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #333;
+}
+
 .fp-lightbox-details {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3rem;
   margin-top: 1.5rem;
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   text-align: left;
+  width: 100%;
 }
 .lb-separator {
   width: 1px;
@@ -3506,4 +3554,26 @@ p {
 
 .gallery-lightbox-open {
   overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .fp-lightbox-info {
+    padding: 1.5rem;
+  }
+
+  #homeFpLightboxInfo .fp-lightbox-copy,
+  #homeFpLightboxInfo .fp-lightbox-details {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .fp-lightbox-details {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .lb-separator {
+    width: 100%;
+    height: 1px;
+  }
 }

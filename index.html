@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=199999" />
+  <link rel="stylesheet" href="styles.css?v=200007" />
   <script>
     (function () {
       function applyPageScale() {
@@ -177,15 +177,16 @@
           
           <div id="planTextContainer" class="plan-text-container" aria-live="polite">
             <h3 id="planTitle">ONE BED APARTMENT</h3>
-            <p id="planSubtitle" class="plan-subtitle" style="display:none;"></p>
+            <p id="planSubtitle" class="plan-subtitle" hidden></p>
             <div id="planStats" class="plan-stats">
               <p>Unit Area (NSA) - 81.81 SQM</p>
               <p>Balcony/Terrace Area - 11.52 SQM</p>
               <p>Total Area (GSA) - 93.33 SQM</p>
             </div>
+            <p id="planProgress" class="plan-progress">1 / 13</p>
           </div>
 
-          <a class="plan-dl-row" href="assets/psd-export/169-download-floor-plan-1.png" target="_blank" rel="noopener">
+          <a class="plan-dl-row" href="assets/psd-export/169-download-floor-plan-1.png" download>
             <img class="plan-brochure" src="assets/psd-export/170-brochure2-1.png" alt="" aria-hidden="true" />
             <img class="plan-dl-text" src="assets/psd-export/169-download-floor-plan-1.png" alt="Download Floor Plan" />
           </a>
@@ -524,8 +525,10 @@
         <img id="homeFpLightboxImage" src="" alt="Floor Plan" />
       </div>
       <div class="fp-lightbox-info" id="homeFpLightboxInfo">
-        <h2 id="lbPlanTitle"></h2>
-        <p id="lbPlanSubtitle" class="fp-subtitle-type"></p>
+        <div class="fp-lightbox-copy">
+          <h2 id="lbPlanTitle"></h2>
+          <p id="lbPlanSubtitle" class="fp-subtitle-type"></p>
+        </div>
         <div class="fp-lightbox-details">
           <div id="lbPlanStats" class="fp-stats"></div>
           <div class="lb-separator"></div>

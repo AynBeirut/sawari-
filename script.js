@@ -267,22 +267,35 @@ const planImage = document.getElementById('planImage');
 const planTitle = document.getElementById('planTitle');
 const planSubtitle = document.getElementById('planSubtitle');
 const planStats = document.getElementById('planStats');
+const planProgress = document.getElementById('planProgress');
+const planDownloadLink = document.querySelector('.plan-dl-row');
 
 function updatePlanUI() {
   const p = plans[planIndex];
-  if (planImage) planImage.src = p.image;
+  if (planImage) {
+    planImage.src = p.image;
+    planImage.alt = [p.title, p.subtitle].filter(Boolean).join(' · ') || 'Floor plan';
+  }
   
   if (planTitle) planTitle.textContent = p.title || 'FLOOR PLAN';
   if (planSubtitle) {
     if (p.subtitle) {
       planSubtitle.textContent = p.subtitle;
-      planSubtitle.style.display = 'block';
+      planSubtitle.hidden = false;
     } else {
-      planSubtitle.style.display = 'none';
+      planSubtitle.hidden = true;
     }
   }
   if (planStats) {
     planStats.innerHTML = p.stats.map(s => `<p>${s}</p>`).join('');
+  }
+  if (planProgress) {
+    planProgress.textContent = `${planIndex + 1} / ${plans.length}`;
+  }
+  if (planDownloadLink) {
+    planDownloadLink.href = p.image;
+    planDownloadLink.setAttribute('download', p.image.split('/').pop() || 'floor-plan.jpg');
+    planDownloadLink.setAttribute('aria-label', `Download ${[p.title, p.subtitle].filter(Boolean).join(' ')} floor plan`);
   }
 }
 
@@ -337,7 +350,10 @@ if (planImage) {
     const p = plans[lbActiveIndex];
     if(lbImage) lbImage.src = p.image;
     if(lbTitle) lbTitle.textContent = p.title || 'FLOOR PLAN';
-    if(lbSub) lbSub.textContent = p.subtitle || '';
+    if (lbSub) {
+      lbSub.textContent = p.subtitle || '';
+      lbSub.hidden = !p.subtitle;
+    }
     if(lbStats) lbStats.innerHTML = p.stats.map(s => `<p>${s}</p>`).join('');
     if(lbKeyplan) lbKeyplan.innerHTML = p.keyplan.map(s => `<p>${s}</p>`).join('');
     if(lbProgress) lbProgress.textContent = `${lbActiveIndex + 1} / ${plans.length}`;
@@ -382,41 +398,9 @@ if (planImage) {
     updateLightboxUI();
   });
 
-  // Keep scroll working inside lightbox too!
-  if (lbWrap) {
-    let lbScrollTimeout;
-    lbWrap.addEventListener('wheel', (e) => {
-      // Don't prevent default if they are scrolling the content vertically.
-      // But we want to scroll the planes if they scroll over the image.
-      // Let's only do it if they hover the image wrapper.
-    });
-    
-    document.querySelector('.fp-lightbox-image-wrap')?.addEventListener('wheel', (e) => {
-       e.preventDefault();
-       if (lbScrollTimeout) return;
-       
-       if (e.deltaY > 0) {
-         lbActiveIndex = (lbActiveIndex + 1) % plans.length;
-       } else {
-         lbActiveIndex = (lbActiveIndex - 1 + plans.length) % plans.length;
-       }
-       updateLightboxUI();
-       
-       lbScrollTimeout = setTimeout(() => { lbScrollTimeout = null; }, 500);
-    }, { passive: false });
-  }
-
   document.addEventListener('keydown', (e) => {
     if (lbWrap && lbWrap.classList.contains('active')) {
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') {
-        lbActiveIndex = (lbActiveIndex - 1 + plans.length) % plans.length;
-        updateLightboxUI();
-      }
-      if (e.key === 'ArrowRight') {
-        lbActiveIndex = (lbActiveIndex + 1) % plans.length;
-        updateLightboxUI();
-      }
     }
   });
 
@@ -978,23 +962,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const allPlans = [
-    String.fromCharCode(49,66,69,68,32,84,89,80,32,49,46,106,112,103), String.fromCharCode(50,32,66,69,68,32,84,89,80,32,49,46,106,112,103), String.fromCharCode(50,32,66,69,68,32,84,89,80,32,50,46,106,112,103),
-    String.fromCharCode(51,32,66,69,68,32,84,89,80,32,49,46,106,112,103), String.fromCharCode(51,32,66,69,68,32,84,89,80,32,50,46,106,112,103), String.fromCharCode(51,32,66,69,68,32,84,89,80,32,51,46,106,112,103),
-    String.fromCharCode(51,32,66,69,68,32,84,89,80,32,52,46,106,112,103), String.fromCharCode(51,32,66,69,68,32,84,89,80,32,52,65,46,106,112,103), String.fromCharCode(52,32,66,69,68,32,68,85,80,76,32,84,89,80,32,49,32,76,79,87,46,106,112,103),
-    String.fromCharCode(52,32,66,69,68,32,68,85,80,76,32,84,89,80,32,49,32,85,80,80,46,106,112,103), String.fromCharCode(52,32,66,69,68,32,68,85,80,76,32,84,89,80,32,50,32,76,79,87,46,106,112,103),
-    String.fromCharCode(52,32,66,69,68,32,68,85,80,76,32,84,89,80,32,50,32,85,80,80,46,106,112,103), String.fromCharCode(52,32,66,69,68,32,84,89,80,32,49,46,106,112,103)
-  ];
-  const grid = document.querySelector('.plan-grid');
-  if (grid) {
-    allPlans.forEach(planName => {
-      let displayName = planName.replace('.jpg', '').replace(/TYP/g, 'TYPE').replace(/DUPL/g, 'DUPLEX');
-      let encodedName = encodeURIComponent(planName);
-      
-      let html = String.fromCharCode(60,100,105,118,32,99,108,97,115,115,61,34,112,108,97,110,45,105,116,101,109,34,62,60,100,105,118,32,99,108,97,115,115,61,34,112,108,97,110,45,105,109,103,45,119,114,97,112,34,62,60,105,109,103,32,115,114,99,61,34,97,115,115,101,116,115,47,112,108,97,110,115,47) + encodedName + String.fromCharCode(34,32,97,108,116,61,34) + displayName + String.fromCharCode(34,32,108,111,97,100,105,110,103,61,34,108,97,122,121,34,32,47,62,60,47,100,105,118,62,60,100,105,118,32,99,108,97,115,115,61,34,112,108,97,110,45,105,110,102,111,34,62,60,100,105,118,32,99,108,97,115,115,61,34,112,108,97,110,45,110,97,109,101,34,62) + displayName + String.fromCharCode(60,47,100,105,118,62,60,97,32,99,108,97,115,115,61,34,112,108,97,110,45,100,108,45,98,116,110,34,32,104,114,101,102,61,34,97,115,115,101,116,115,47,112,108,97,110,115,47) + encodedName + String.fromCharCode(34,32,116,97,114,103,101,116,61,34,95,98,108,97,110,107,34,32,100,111,119,110,108,111,97,100,62,38,35,120,50,49,57,51,59,32,68,79,87,78,76,79,65,68,32,70,76,79,79,82,32,80,76,65,78,60,47,97,62,60,47,100,105,118,62,60,47,100,105,118,62);
-      grid.insertAdjacentHTML('beforeend', html);
-    });
-  }
 });
 
   /* ==================================
