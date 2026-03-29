@@ -3204,7 +3204,7 @@ p {
 }
 
 .fp-title {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 48.75px;
   color: var(--myrtle);
   font-weight: 400;
@@ -3285,7 +3285,7 @@ p {
 }
 
 .fp-subtitle-type {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 21.71px; /* From c-h.md */
   letter-spacing: 1px;
   color: #7A8177;
@@ -3301,14 +3301,14 @@ p {
 }
 
 .fp-stats p {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 21.71px; /* From c-h.md */
   margin: 0;
   color: #7A8177;
 }
 
 .fp-keyplan h3 {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 21.71px; /* From c-h.md */
   font-weight: 600;
   color: #4B524A;
@@ -3317,7 +3317,7 @@ p {
 }
 
 .fp-keyplan p {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 18px; /* From c-h.md */
   margin: 0;
   color: #7A8177;
@@ -3339,7 +3339,7 @@ p {
 }
 
 .fp-download span {
-  font-family: 'Futura', 'Futura PT', sans-serif;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 18px; /* Match c-h.md standard */
   font-weight: 600;
   color: #4B524A;
@@ -3400,10 +3400,7 @@ p {
   transform: translateY(-0.5rem);
 }
 
-/* For sections 2-13, the extra subtitle makes the container taller. */
-.fp-header-block:has(.fp-subtitle-type)::before {
-  height: clamp(85px, 8.5vw, 127px); /* Hardware lock the extended bar height */
-}
+/* The bar size is strictly locked for all elements, so no override is needed based on subtitles */
 
 .fp-keyplan {
   margin-left: 9.2rem;
