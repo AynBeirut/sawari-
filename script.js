@@ -561,15 +561,72 @@ faqItems.forEach((item) => {
   });
 });
 const mainTour = document.getElementById('tourMain');
-const thumbs = document.querySelectorAll('#tourThumbs img');
-thumbs.forEach((thumb) => {
-  thumb.addEventListener('click', () => {
-    thumbs.forEach((img) => img.classList.remove('active'));
-    thumb.classList.add('active');
-    const tourImage = thumb.getAttribute('data-main') || thumb.getAttribute('src');
+const tourThumbsTrack = document.getElementById('tourThumbs');
+const thumbs = Array.from(document.querySelectorAll('#tourThumbs img'));
+const tourArrowButtons = Array.from(document.querySelectorAll('.tour-rail .thumb-arrow'));
+
+if (mainTour && thumbs.length) {
+  let activeTourIndex = Math.max(thumbs.findIndex((thumb) => thumb.classList.contains('active')), 0);
+
+  const keepTourThumbVisible = (activeThumb) => {
+    if (!tourThumbsTrack) {
+      return;
+    }
+
+    const trackWidth = tourThumbsTrack.clientWidth;
+    const maxScrollLeft = tourThumbsTrack.scrollWidth - trackWidth;
+
+    if (maxScrollLeft <= 0) {
+      return;
+    }
+
+    const thumbCenter = activeThumb.offsetLeft + activeThumb.offsetWidth / 2;
+    const targetScrollLeft = Math.min(
+      Math.max(thumbCenter - trackWidth / 2, 0),
+      maxScrollLeft
+    );
+
+    tourThumbsTrack.scrollTo({
+      left: targetScrollLeft,
+      behavior: 'smooth'
+    });
+  };
+
+  const updateTourImage = (nextIndex) => {
+    activeTourIndex = (nextIndex + thumbs.length) % thumbs.length;
+
+    thumbs.forEach((img, index) => {
+      img.classList.toggle('active', index === activeTourIndex);
+    });
+
+    const activeThumb = thumbs[activeTourIndex];
+    const tourImage = activeThumb.getAttribute('data-main') || activeThumb.getAttribute('src');
     mainTour.src = tourImage;
+    mainTour.alt = activeThumb.alt.replace('thumbnail', 'scene').trim() || 'Virtual tour scene';
+
+    keepTourThumbVisible(activeThumb);
+  };
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+      updateTourImage(index);
+    });
   });
-});
+
+  if (tourArrowButtons[0]) {
+    tourArrowButtons[0].addEventListener('click', () => {
+      updateTourImage(activeTourIndex - 1);
+    });
+  }
+
+  if (tourArrowButtons[1]) {
+    tourArrowButtons[1].addEventListener('click', () => {
+      updateTourImage(activeTourIndex + 1);
+    });
+  }
+
+  updateTourImage(activeTourIndex);
+}
 
 const philosophyCenterText = document.getElementById('philCenterText');
 const philosophyNodes = document.querySelectorAll('.phil-node');
@@ -589,10 +646,21 @@ if (philosophyCenterText && philosophyNodes.length) {
   };
 
   let lockedTopic = 'concept';
+  let currentPhilosophyTopic = '';
 
   const setPhilosophyTopic = (topic) => {
     const nextTopic = philosophyCopy[topic] ? topic : 'default';
-    philosophyCenterText.textContent = philosophyCopy[nextTopic];
+    if (currentPhilosophyTopic !== nextTopic) {
+      philosophyCenterText.textContent = philosophyCopy[nextTopic];
+
+      if (philosophyStage?.classList.contains('show')) {
+        philosophyCenterText.classList.remove('is-rising');
+        void philosophyCenterText.offsetWidth;
+        philosophyCenterText.classList.add('is-rising');
+      }
+
+      currentPhilosophyTopic = nextTopic;
+    }
 
     philosophyNodes.forEach((node) => {
       node.classList.toggle('is-active', node.dataset.philosophyTopic === nextTopic);
@@ -701,6 +769,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.getElementById('registerPopup');
   const closePopup = document.getElementById('closePopup');
   const enquireBtns = document.querySelectorAll('.nav-enquire, a[href="#register"]');
+  const projectStats = document.getElementById('projectStats');
+  const statCountNumbers = Array.from(document.querySelectorAll('#projectStats strong[data-count-target]'));
   const videoSection = document.querySelector('.video-cta');
   const videoPlayButton = document.querySelector('.play[data-video-embed]');
   const videoInlinePlayer = document.getElementById('videoInlinePlayer');
@@ -836,6 +906,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeGalleryFilter = 'lobby';
   let activeGalleryIndex = 1;
+
+  const statAnimationFrameIds = new WeakMap();
+  const statAnimationTimeoutIds = new WeakMap();
+
+  const resetStatCount = (element) => {
+    const pendingFrame = statAnimationFrameIds.get(element);
+    const pendingTimeout = statAnimationTimeoutIds.get(element);
+
+    if (pendingFrame) {
+      cancelAnimationFrame(pendingFrame);
+      statAnimationFrameIds.delete(element);
+    }
+
+    if (pendingTimeout) {
+      window.clearTimeout(pendingTimeout);
+      statAnimationTimeoutIds.delete(element);
+    }
+
+    element.textContent = '0';
+  };
+
+  const animateStatCount = (element, delay = 0) => {
+    const targetValue = Number(element.dataset.countTarget || '0');
+    const duration = 5200;
+
+    resetStatCount(element);
+
+    const startAnimation = () => {
+      const startTime = performance.now();
+
+      const tick = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        element.textContent = Math.round(targetValue * easedProgress).toString();
+
+        if (progress < 1) {
+          const nextFrame = requestAnimationFrame(tick);
+          statAnimationFrameIds.set(element, nextFrame);
+          return;
+        }
+
+        element.textContent = targetValue.toString();
+        statAnimationFrameIds.delete(element);
+      };
+
+      const firstFrame = requestAnimationFrame(tick);
+      statAnimationFrameIds.set(element, firstFrame);
+    };
+
+    const timeoutId = window.setTimeout(startAnimation, delay);
+    statAnimationTimeoutIds.set(element, timeoutId);
+  };
+
+  if (projectStats && statCountNumbers.length) {
+    let statsInView = false;
+
+    const statsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (statsInView) {
+              return;
+            }
+
+            statsInView = true;
+            statCountNumbers.forEach((item, index) => animateStatCount(item, index * 280));
+            return;
+          }
+
+          statsInView = false;
+          statCountNumbers.forEach((item) => resetStatCount(item));
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    statsObserver.observe(projectStats);
+  }
 
   const closeInlineVideo = () => {
     if (!videoSection || !videoInlinePlayer) {
