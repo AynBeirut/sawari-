@@ -3257,6 +3257,7 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 3rem; /* Override shared heavy padding so image can be larger */
 }
 
 /* Zebra crossing layout */
@@ -3345,7 +3346,7 @@ p {
 
 /* Image settings */
 .fp-image img:not(.fp-zoom-icon) {
-  max-width: 100%;
+  width: 85%; /* Make it fill most of its container to match original design */
   max-height: 80vh;
   object-fit: contain;
   opacity: 0.85;
