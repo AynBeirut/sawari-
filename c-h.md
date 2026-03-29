@@ -259,3 +259,10 @@ Short plan → Applied file changes → Visual parity notes → Next small step
 Keep responses concise. Avoid large repeated summaries to prevent request-size errors.
 Edit styles.css directly using exact string replacements (Node.js if needed due to Unicode characters in comments).
 Never use regex scripts that touch multiple selectors at once — they cause cascading syntax corruption.
+
+### ✓ Completed Floor Plans Page Layout (March 29, 2026)
+- Typography: Locally hosted .otf Futura variants accurately bonded via @font-face solving silent typeface mismatch. .fp-info h2 updated with bold 700 and alignment shifted up.
+- Universal Beige Bar Lock: Changed the decorative .fp-header-block::before pseudo element from soft offsets (bottom) to a hard literal locked size (height: clamp(65px, 6.5vw, 98px)) which completely decoupled it from container padding variables. Applied globally to 13/13 apartment cards.
+- Page Footer Compositing: Migrated global structures (.register, .feature-strip, footer columns and links) from index.html to floor-plans.html precisely.
+- Padding and Component Match: Enforced equal alignment register-grid columns (1fr 1fr) tying its left border to align perfectly with the upper items. Generated a requested 120px spacing separator under the items.
+- Hero Consistency: Stripped out independent background structural CSS modifiers for .page-floor-plans .hero that were interfering with the central teal filter on floor-plans.html ensuring uniformity.
