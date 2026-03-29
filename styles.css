@@ -1833,7 +1833,7 @@ p {
 .register-grid {
   display: grid;
   /* PSD: left image width=959px, right area=861px */
-  grid-template-columns: 959fr 861fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0;
   align-items: stretch;
 }
