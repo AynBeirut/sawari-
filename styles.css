@@ -3258,6 +3258,7 @@ p {
   align-items: center;
   cursor: pointer;
   padding: 0 !important; /* Force override */
+  overflow: hidden; /* Prevent zoomed image from leaking */
 }
 
 /* Zebra crossing layout */
@@ -3346,10 +3347,11 @@ p {
 
 /* Image settings */
 .fp-image img:not(.fp-zoom-icon) {
-  width: 90% !important;
-  height: auto;
+  width: 100% !important;
+  height: 100% !important;
   max-height: none !important;
   object-fit: contain;
+  transform: scale(2.2); /* Zoom past the empty white margins of the raw image */
   opacity: 0.85;
    /* Applies ONLY to the floor plan image*/
   mix-blend-mode: multiply;
