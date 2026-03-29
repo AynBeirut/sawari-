@@ -3395,12 +3395,19 @@ p {
   transform: translateY(-0.5rem);
 }
 
+/* For sections 2-13, the extra subtitle makes the container taller.
+   Increase 'bottom' to keep the beige bar exactly the same height as section 1. */
+.fp-header-block:has(.fp-subtitle-type)::before {
+  bottom: 4.8rem;
+}
+
 .fp-keyplan {
-  padding-left: calc(2rem + 2px);
+  margin-left: 9.2rem;
+  padding-left: 2rem;
   margin-top: 1.5rem;
 }
 
 .fp-info > .fp-download {
-  margin-left: calc(2rem + 2px);
+  margin-left: calc(9.2rem + 2rem);
 }
 
