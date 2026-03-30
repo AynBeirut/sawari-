@@ -11,14 +11,20 @@
   <link rel="stylesheet" href="styles.css?v=300000" />
   <script>
     (function () {
-      function applyPageScale() {
+      window.applyPageScale = function applyPageScale() {
         var width = window.innerWidth || document.documentElement.clientWidth || 0;
-        var scale = width >= 1200 ? Math.min(1, width / 1920) : 1;
+        var isLightboxOpen = !!(document.body && document.body.classList.contains('gallery-lightbox-open'));
+        var scale = !isLightboxOpen && width >= 1200 ? Math.min(1, width / 1920) : 1;
         document.documentElement.style.setProperty('--page-zoom', scale);
         document.documentElement.style.zoom = scale;
-      }
-      applyPageScale();
-      window.addEventListener('resize', applyPageScale);
+      };
+      window.applyPageScale();
+      window.addEventListener('resize', window.applyPageScale);
+      document.addEventListener('DOMContentLoaded', function () {
+        if (!document.body) return;
+        var observer = new MutationObserver(window.applyPageScale);
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      });
     })();
   </script>
 </head>
