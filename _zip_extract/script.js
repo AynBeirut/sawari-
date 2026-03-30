@@ -1323,6 +1323,18 @@ document.addEventListener('DOMContentLoaded', () => {
      FLOOR PLANS LIGHTBOX
      ================================== */
   if (document.body.classList.contains('page-floor-plans')) {
+    // Wire each download button to its floor plan image
+    document.querySelectorAll('.fp-item').forEach(item => {
+      const img = item.querySelector('.fp-image > img:not(.fp-zoom-icon)');
+      const dlBtn = item.querySelector('.fp-download');
+      if (img && dlBtn) {
+        const filename = img.src.split('/').pop() || 'floor-plan.jpg';
+        dlBtn.href = img.src;
+        dlBtn.setAttribute('download', filename);
+        dlBtn.setAttribute('aria-label', `Download ${img.alt || 'floor plan'}`);
+      }
+    });
+
     const fpLightbox = document.getElementById('fpLightbox');
     const fpLightboxImage = document.getElementById('fpLightboxImage');
     const fpLightboxClose = document.getElementById('fpLightboxClose');
