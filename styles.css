@@ -3827,3 +3827,225 @@ p {
     gap: 1.5rem;
   }
 }
+
+/* ==================================
+   REGISTER INTEREST POPUP
+   ================================== */
+.reg-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10, 15, 14, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 1rem;
+}
+
+.reg-popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.reg-popup {
+  position: relative;
+  background: #fff;
+  max-width: 1060px;
+  width: 95%;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+  animation: popupSlideIn 0.4s ease both;
+}
+
+@keyframes popupSlideIn {
+  from { transform: translateY(28px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.reg-popup-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  z-index: 10;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1.5px solid #c0c0c0;
+  background: transparent;
+  color: #555;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.reg-popup-close:hover {
+  background: #f5f5f5;
+  color: #222;
+}
+
+.reg-popup-inner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 600px;
+}
+
+/* Left: photo — zoom into building portion of POP-UP design, hiding form half */
+.reg-popup-photo {
+  background-image: url('design/POP-UP.jpg');
+  background-size: 210% auto;
+  background-position: left center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+
+/* Right: form side */
+.reg-popup-form-side {
+  padding: 3.5rem 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.reg-popup-eyebrow {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #C4983A;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+}
+
+.reg-popup-heading {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+
+.reg-popup-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 2rem;
+}
+
+#regPopupForm {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0;
+}
+
+.reg-popup-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.reg-popup-label {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 0.55rem;
+}
+
+.reg-popup-input {
+  border: none;
+  border-bottom: 1.5px solid #C4983A;
+  background: transparent;
+  padding: 0.45rem 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.reg-popup-input::placeholder {
+  color: #bbb;
+  font-size: 13px;
+}
+
+.reg-popup-input:focus {
+  border-bottom-color: #a07020;
+}
+
+.reg-popup-status {
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  color: var(--myrtle);
+  margin: 0 0 0.5rem;
+  min-height: 1.2em;
+}
+
+.reg-popup-submit {
+  width: 100%;
+  background: #C4983A;
+  color: #1a1a1a;
+  border: none;
+  padding: 1rem;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.2s;
+}
+
+.reg-popup-submit:hover {
+  background: #b08530;
+}
+
+.reg-popup-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  color: #aaa;
+  margin: 1rem 0 0;
+  line-height: 1.5;
+}
+
+.reg-popup-privacy svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: #aaa;
+}
+
+@media (max-width: 640px) {
+  .reg-popup-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-popup-photo {
+    min-height: 220px;
+    background-size: 300% auto;
+    background-position: 0% center;
+  }
+
+  .reg-popup-form-side {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .reg-popup-heading {
+    font-size: 28px;
+  }
+}

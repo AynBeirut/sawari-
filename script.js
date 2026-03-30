@@ -1318,3 +1318,70 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  /* ============================================================
+     REGISTER INTEREST POPUP — shows after 7s on home page
+     ============================================================ */
+  document.addEventListener('DOMContentLoaded', function () {
+    var overlay = document.getElementById('regPopupOverlay');
+    if (!overlay) return;
+
+    // Don't show if user already dismissed this session
+    if (sessionStorage.getItem('regPopupDismissed')) return;
+
+    function openPopup() {
+      overlay.classList.add('active');
+      document.addEventListener('keydown', onKey);
+    }
+
+    function closePopup() {
+      overlay.classList.remove('active');
+      sessionStorage.setItem('regPopupDismissed', '1');
+      document.removeEventListener('keydown', onKey);
+    }
+
+    function onKey(e) {
+      if (e.key === 'Escape') closePopup();
+    }
+
+    // Close button
+    var closeBtn = document.getElementById('regPopupClose');
+    if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+    // Click outside the popup card closes it
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closePopup();
+    });
+
+    // Handle form submission
+    var form = document.getElementById('regPopupForm');
+    var statusEl = document.getElementById('regPopupStatus');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name    = (form.querySelector('[name="name"]') || {}).value || '';
+        var email   = (form.querySelector('[name="email"]') || {}).value || '';
+        var phone   = (form.querySelector('[name="phone"]') || {}).value || '';
+        var message = '';
+
+        fetch('/api/register-interest', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, phone: phone, message: message })
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (statusEl) statusEl.textContent = data.message || 'Thank you!';
+            form.reset();
+            setTimeout(closePopup, 2000);
+          })
+          .catch(function () {
+            if (statusEl) statusEl.textContent = 'Something went wrong. Please try again.';
+          });
+      });
+    }
+
+    // Trigger after 7 seconds
+    setTimeout(openPopup, 7000);
+  });
+
