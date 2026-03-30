@@ -474,13 +474,14 @@ if (planImage) {
     lbWrap.addEventListener('wheel', (e) => {
       if (!lbWrap.classList.contains('active')) return;
 
+      // Always block page scroll / browser back-forward navigation when lightbox is open
+      e.preventDefault();
+      e.stopPropagation();
+
       const horizontalDelta = Math.abs(e.deltaX);
       const verticalDelta = Math.abs(e.deltaY);
 
       if (horizontalDelta < LIGHTBOX_WHEEL_DELTA_THRESHOLD || horizontalDelta < verticalDelta) return;
-
-      e.preventDefault();
-      e.stopPropagation();
 
       if (lightboxWheelLocked) return;
       lightboxWheelLocked = true;
