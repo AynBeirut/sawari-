@@ -4,11 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sawari Ajman</title>
-  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=200037" />
+  <script>
+    (function () {
+      window.applyPageScale = function applyPageScale() {
+        var width = window.innerWidth || document.documentElement.clientWidth || 0;
+        var isLightboxOpen = !!(document.body && document.body.classList.contains('gallery-lightbox-open'));
+        var scale = !isLightboxOpen && width >= 1200 ? Math.min(1, width / 1920) : 1;
+
+        document.documentElement.style.setProperty('--page-zoom', scale);
+        document.documentElement.style.zoom = scale;
+      };
+
+      window.applyPageScale();
+      window.addEventListener('resize', window.applyPageScale);
+
+      document.addEventListener('DOMContentLoaded', function () {
+        if (!document.body) return;
+
+        var observer = new MutationObserver(function () {
+          window.applyPageScale();
+        });
+
+        observer.observe(document.body, {
+          attributes: true,
+          attributeFilter: ['class']
+        });
+      });
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -22,12 +50,22 @@
       <a href="#plans"><img src="assets/psd-export/229-floor-plans-2.png" alt="Floor Plans" /></a>
       <a href="#gallery"><img src="assets/psd-export/228-gallery-1.png" alt="Gallery" /></a>
       <a href="#faq"><img src="assets/psd-export/227-faq-2.png" alt="FAQ" /></a>
-      <a class="nav-enquire" href="#register"><img src="assets/psd-export/226-enquire-now-1.png" alt="Enquire Now" /></a>
+      <a class="nav-enquire" href="#register">ENQUIRE NOW</a>
+      <button class="nav-lang" type="button" aria-label="Switch language">
+        <svg class="nav-lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span class="nav-lang-en">EN</span>
+        <span class="nav-lang-sep">|</span>
+        <span class="nav-lang-ar">AR</span>
+      </button>
     </nav>
   </header>
   <main>
     <section class="hero" id="top">
-      <img class="hero-bg" src="assets/psd-export/221-img-1.png" alt="Sawari Ajman" />
+      <img class="hero-bg" src="assets/psd-export/222-new-01-2.png" alt="Sawari Ajman" />
       <img class="hero-overlay" src="assets/psd-export/223-vector-smart-object-4.png" alt="" aria-hidden="true" />
       <img class="hero-wordmark" src="assets/psd-export/225-vector-smart-object-5.png" alt="Sawari" />
       <img class="hero-mouse" src="assets/psd-export/224-icon-mouse-1.png" alt="" aria-hidden="true" />
@@ -35,55 +73,48 @@
 
     <section class="overview section" id="overview">
       <div class="container two-col">
-        <div class="overview-grid reveal">
+        <div class="overview-grid reveal reveal-left">
           <img src="assets/psd-export/214-new-01-1.png" alt="Tower skyline view" />
           <img src="assets/psd-export/213-new-14-2.png" alt="Modern residence exterior" />
           <img src="assets/psd-export/218-new-12-1.png" alt="Community courtyard" />
         </div>
-        <article class="overview-copy reveal">
-          <h2 class="section-head">PROJECT OVERVIEW</h2>
-          <p>
-            SAWARI is envisioned as an Urban Oasis - a residential destination where contemporary
-            architecture, lush landscapes, and human centered design come together to create a
-            tranquil yet connected living environment.
-          </p>
-          <p>
-            Inspired by Ajman's evolving urban fabric, the development balances modern city life
-            with natural openness, creating a community where residents can enjoy both vibrancy
-            and serenity.
-          </p>
-          <p>
-            SAWARI harmonizes these contrasts through elegant architecture, expansive green
-            spaces, and thoughtfully designed public realms.
-          </p>
+        <article class="overview-copy reveal reveal-right">
+          <div class="overview-head">
+            <img class="overview-vline" src="assets/psd-export/219-line-copy-4-2.png" alt="" aria-hidden="true" />
+            <img class="overview-title" src="assets/psd-export/217-project-overview-1.png" alt="Project Overview" />
+          </div>
+          <img class="overview-body" src="assets/psd-export/216-sawari-is-envisioned-as-an-urban-oasis-a-residential-destinat-1.png" alt="SAWARI is envisioned as an Urban Oasis - a residential destination where contemporary architecture, lush landscapes, and human centered design come together to create a tranquil yet connected living environment." />
         </article>
       </div>
     </section>
 
     <section class="amenities section" id="amenities">
       <div class="container">
-        <h2 class="section-head reveal">SAWARI AMENITIES</h2>
+        <div class="amenities-head reveal">
+          <img class="amenities-vline" src="assets/psd-export/210-line-copy-17-1.png" alt="" aria-hidden="true" />
+          <h2 class="amenities-title">SAWARI AMENITIES</h2>
+        </div>
         <div class="amenity-row reveal stagger">
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/203-weight-9361040-1.png" alt="Gym amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Gym" aria-label="Gym"><img src="assets/icons/icon-1.png" alt="Gym" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/208-snowy-17606018-1.png" alt="Snow amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Snow Room" aria-label="Snow Room"><img src="assets/icons/icon-2.png" alt="Snow Room" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/207-pilot-18004123-1.png" alt="Pilot amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Pilot" aria-label="Pilot"><img src="assets/icons/icon-3.png" alt="Pilot" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/209-swimming-pool-18304138-1.png" alt="Swimming amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Swimming Pool" aria-label="Swimming Pool"><img src="assets/icons/icon-4.png" alt="Swimming Pool" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/204-balcony-6100616-1.png" alt="Balcony amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Balcony" aria-label="Balcony"><img src="assets/icons/icon-5.png" alt="Balcony" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/206-parking-lot-13320115-1.png" alt="Parking amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="Parking" aria-label="Parking"><img src="assets/icons/icon-6.png" alt="Parking" /></span>
           </div>
           <div class="amenity-item">
-            <span class="amenity-pill"><img src="assets/psd-export/205-cctv-13347367-1.png" alt="CCTV amenity icon" /></span>
+            <span class="amenity-pill" tabindex="0" data-amenity="CCTV" aria-label="CCTV"><img src="assets/icons/icon-7.png" alt="CCTV" /></span>
           </div>
         </div>
       </div>
@@ -91,35 +122,57 @@
 
     <section class="video-cta section-dark">
       <div class="container cta-inner reveal">
-        <img class="cta-text-left" src="assets/psd-export/197-explore-the-future-1.png" alt="Explore the Future" />
-        <button class="play" type="button" aria-label="Play video">
-          <img src="assets/psd-export/199-forma-1-4.png" alt="" />
-        </button>
-        <img class="cta-text-right" src="assets/psd-export/198-of-sawari-ajman-1.png" alt="of Sawari Ajman" />
-      </div>
-    </section>
+          <span class="cta-text-left">EXPLORE THE <strong>FUTURE</strong></span>
+          <button class="play" type="button" aria-label="Play video" data-video-embed="https://www.youtube.com/embed/aS1UKWxiDII?si=mUBjDlC2q1Tjf8PL">
+            <img src="assets/psd-export/199-forma-1-4.png" alt="" />
+          </button>
+          <span class="cta-text-right">OF <strong>SAWARI AJMAN</strong></span>
+        </div>
+        <div class="video-inline-player" id="videoInlinePlayer" aria-hidden="true">
+          <button class="video-inline-close" id="videoInlineClose" type="button" aria-label="Close video">&times;</button>
+          <div class="video-inline-frame-wrap">
+            <iframe
+              id="videoInlineFrame"
+              src=""
+              title="Sawari video"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
 
     <section class="location section" id="location">
       <div class="container reveal">
-        <img class="loc-title" src="assets/psd-export/184-location-connectivity-1.png" alt="Location &amp; Connectivity" />
-        <img class="loc-subtitle" src="assets/psd-export/185-strategically-positioned-in-the-heart-of-ajman-with-seamless-ac-1.png" alt="Strategically positioned in the heart of Ajman with seamless access to major emirates" />
+        <div class="loc-head">
+          <div class="loc-vline"></div>
+          <div class="loc-head-text">
+            <h2 class="loc-title">Location &amp; Connectivity</h2>
+            <p class="loc-subtitle">Strategically positioned in the heart of Ajman with seamless access to major emirates</p>
+          </div>
+        </div>
         <div class="tabs" role="tablist" aria-label="Nearby landmarks">
           <button class="tab active" data-map="sharjah" role="tab" aria-selected="true">
             <img src="assets/psd-export/189-10-mins-sharjah-city-center-1.png" alt="10 Mins Sharjah City Center" />
           </button>
-          <button class="tab" data-map="city" role="tab" aria-selected="false">
+          <button class="tab" data-map="alzorah" role="tab" aria-selected="false">
             <img src="assets/psd-export/186-13-mins-alzorah-1.png" alt="13 Mins Al Zorah" />
           </button>
-          <button class="tab" data-map="airport" role="tab" aria-selected="false">
+          <button class="tab" data-map="ajman" role="tab" aria-selected="false">
             <img src="assets/psd-export/187-15mins-ajman-beach-1.png" alt="15 Mins Ajman Beach" />
           </button>
-          <button class="tab" data-map="schools" role="tab" aria-selected="false">
+          <button class="tab" data-map="dubai" role="tab" aria-selected="false">
             <img src="assets/psd-export/188-30-mins-dubai-airport-1.png" alt="30 Mins Dubai Airport" />
           </button>
         </div>
         <div class="map-box" id="mapBox">
           <img id="mapImage" src="assets/psd-export/192-vector-smart-object-3.png" alt="Location map view" />
           <img class="map-overlay" src="assets/psd-export/193-rectangle-1-copy-1.png" alt="" aria-hidden="true" />
+          <div class="map-focus" id="mapFocus" aria-hidden="true">
+            <span class="map-focus-label" id="mapFocusLabel"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -136,7 +189,7 @@
               <img class="plans-subtitle" src="assets/psd-export/175-carefully-planned-spaces-designed-to-combine-practicality-with-1.png" alt="Carefully planned spaces designed to combine practicality with elegance" />
             </div>
           </div>
-          <a class="plan-cta" href="assets/psd-export/169-download-floor-plan-1.png" target="_blank" rel="noopener">
+          <a class="plan-cta" href="floor-plans.html">
             <img class="plan-cta-bg" src="assets/psd-export/177-rectangle-531-1.png" alt="" aria-hidden="true" />
             <img class="plan-cta-label" src="assets/psd-export/176-explore-floor-plans-1.png" alt="Explore Floor Plans" />
           </a>
@@ -145,12 +198,22 @@
       <div class="plan-viewer reveal">
         <div class="plan-left">
           <button class="plan-prev" id="planPrev" aria-label="Previous plan">
-            <img src="assets/psd-export/179-arrows-16549963-1.png" alt="←" />
+            <img src="assets/psd-export/179-arrows-16549963-1.png" alt="&larr;" />
           </button>
           <img class="plan-vline" src="assets/psd-export/171-line-10.png" alt="" aria-hidden="true" />
-          <img class="plan-unit" src="assets/psd-export/172-unit-1-1.png" alt="Unit 1" />
-          <img class="plan-size" src="assets/psd-export/168-2-bedroom-level-typical-size-156-sqm-1.png" alt="2 Bedroom · Level Typical · 156 sqm" />
-          <a class="plan-dl-row" href="assets/psd-export/169-download-floor-plan-1.png" target="_blank" rel="noopener">
+          
+          <div id="planTextContainer" class="plan-text-container" aria-live="polite">
+            <h3 id="planTitle">ONE BED APARTMENT</h3>
+            <p id="planSubtitle" class="plan-subtitle" hidden></p>
+            <div id="planStats" class="plan-stats">
+              <p>Unit Area (NSA) - 81.81 SQM</p>
+              <p>Balcony/Terrace Area - 11.52 SQM</p>
+              <p>Total Area (GSA) - 93.33 SQM</p>
+            </div>
+            <p id="planProgress" class="plan-progress">1 / 13</p>
+          </div>
+
+          <a class="plan-dl-row" href="assets/psd-export/169-download-floor-plan-1.png" download>
             <img class="plan-brochure" src="assets/psd-export/170-brochure2-1.png" alt="" aria-hidden="true" />
             <img class="plan-dl-text" src="assets/psd-export/169-download-floor-plan-1.png" alt="Download Floor Plan" />
           </a>
@@ -164,46 +227,71 @@
         </div>
       </div>
       <div class="container">
-        <div class="stats reveal stagger">
-          <div><strong>75</strong><span>Studio Units</span></div>
-          <div><strong>151</strong><span>1 BR Units</span></div>
-          <div><strong>275</strong><span>2 BR Units</span></div>
-          <div><strong>316</strong><span>Total Units</span></div>
+        <div class="stats reveal stagger" id="projectStats">
+          <div><strong data-count-target="75">0</strong><img class="stat-label" src="assets/psd-export/156-completed-projects-1.png" alt="Completed Projects" /></div>
+          <div><strong data-count-target="151">0</strong><img class="stat-label" src="assets/psd-export/158-finished-projects-1.png" alt="Finished Projects" /></div>
+          <div><strong data-count-target="275">0</strong><img class="stat-label" src="assets/psd-export/160-happy-clients-1.png" alt="Happy Clients" /></div>
+          <div><strong data-count-target="316">0</strong><img class="stat-label" src="assets/psd-export/162-apartments-1.png" alt="Apartments" /></div>
         </div>
       </div>
     </section>
 
     <section class="gallery section" id="gallery">
-      <div class="container">
-        <h2 class="section-head reveal">Photo Gallery</h2>
-        <div class="gallery-filter reveal">
-          <button class="active" type="button">Lobby</button>
-          <button type="button">1 Bedroom</button>
-          <button type="button">2 Bedrooms</button>
-          <button type="button">3 Bedrooms</button>
-          <button type="button">Garden</button>
+        <div class="gallery-head reveal">
+          <img class="gallery-vline" src="assets/psd-export/137-line-copy-2-2.png" alt="" aria-hidden="true" />
+          <div class="gallery-head-texts">
+            <img class="gallery-title" src="assets/psd-export/138-photo-gallery-1.png" alt="Photo Gallery" />
+            <img class="gallery-subtitle" src="assets/psd-export/139-the-art-of-living-1.png" alt="The Art of Living" />
+          </div>
         </div>
+        <div class="gallery-filter reveal">
+          <button class="active" data-filter="lobby" type="button"><img src="assets/psd-export/144-lobby-1.png" alt="Lobby" /></button>
+          <button data-filter="1bed" type="button"><img src="assets/psd-export/140-1-bedroom-1.png" alt="1 Bedroom" /></button>
+          <button data-filter="2bed" type="button"><img src="assets/psd-export/141-2-bedrooms-1.png" alt="2 Bedrooms" /></button>
+          <button data-filter="3bed" type="button"><img src="assets/psd-export/142-3-bedrooms-1.png" alt="3 Bedrooms" /></button>
+          <button data-filter="garden" type="button"><img src="assets/psd-export/143-garden-1.png" alt="Garden" /></button>
+        </div>
+      <div class="container">
         <div class="gallery-grid reveal">
-          <img src="assets/psd-export/150-2-2.png" alt="Lobby interior" />
-          <div class="overlay-card" role="img" aria-label="Entrance lobby preview">
+          <img id="gallerySideLeft" src="assets/psd-export/150-2-2.png" alt="Lobby interior" />
+          <div id="galleryMainCard" class="overlay-card gallery-open" role="button" tabindex="0" data-gallery-full="assets/psd-export/149-1-5.png" aria-label="Open entrance lobby image">
             <div class="overlay-panel">
-              <span class="zoom-glyph">⌕</span>
-              <span>ENTRANCE LOBBY</span>
+              <img class="overlay-zoom" src="assets/psd-export/153-zoom-icon-copy-1.png" alt="" aria-hidden="true" />
+              <img id="galleryMainLabelImage" class="overlay-label" src="assets/psd-export/154-entrance-lobby-1.png" alt="Entrance Lobby" />
+              <span id="galleryMainLabelText" class="overlay-label-text" hidden></span>
             </div>
           </div>
-          <img src="assets/psd-export/151-4-2.png" alt="Lobby reception" />
+          <img id="gallerySideRight" src="assets/psd-export/151-4-2.png" alt="Lobby reception" />
         </div>
+        <div class="gallery-progress" id="galleryProgress" aria-label="Gallery images"></div>
       </div>
     </section>
 
     <section class="tour section">
       <div class="container reveal">
-        <h2 class="section-head">Virtual Tour</h2>
-        <p class="muted">Choose from a range of well-designed layouts created for modern living</p>
+        <div class="tour-head">
+          <img class="tour-vline" src="assets/psd-export/127-line-copy-5-2.png" alt="" aria-hidden="true" />
+          <div class="tour-head-texts">
+            <img class="tour-title" src="assets/psd-export/128-virtual-tour-1.png" alt="Virtual Tour" />
+            <img class="tour-subtitle" src="assets/psd-export/129-choose-from-a-range-of-well-designed-layouts-created-for-modern-1.png" alt="Choose from a range of well-designed layouts created for modern living" />
+          </div>
+        </div>
         <div class="tour-stage">
           <div class="tour-main-wrap">
-            <div class="tour-headbar">1 Bedroom Apartment - Tower A</div>
+            <div class="tour-headbar"><img src="assets/psd-export/134-1-bedroom-apartment-tower-a-1.png" alt="1 Bedroom Apartment - Tower A" /></div>
             <img id="tourMain" class="tour-main" src="assets/psd-export/118-2-1.png" alt="Virtual tour scene" />
+            <button class="tour-main-icon-secondary-btn" id="tourSecondaryBtn" aria-label="Start visual tour">
+              <div class="tour-main-icon-secondary" aria-hidden="true">
+                <img class="tour-main-icon-secondary-bg" src="assets/psd-export/121-ellipse-1-1.png" alt="" />
+                <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-1" src="assets/psd-export/124-ellipse-2-1.png" alt="" />
+                <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-2" src="assets/psd-export/125-ellipse-2-copy-1.png" alt="" />
+                <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-3" src="assets/psd-export/126-ellipse-2-copy-2-1.png" alt="" />
+                <img class="tour-main-icon-secondary-play" src="assets/psd-export/133-forma-1.png" alt="" />
+              </div>
+            </button>
+            <button class="tour-main-icon-btn" id="tourPlayBtn" aria-label="Start visual tour">
+              <img class="tour-main-icon" src="assets/psd-export/133-forma-1.png" alt="" aria-hidden="true" />
+            </button>
           </div>
           <div class="tour-rail" aria-hidden="true">
             <button class="thumb-arrow" type="button">&#8592;</button>
@@ -219,91 +307,137 @@
       </div>
     </section>
 
+    <!-- Visual Tour Modal Placeholder -->
+    <div class="tour-modal" id="tourModal" aria-hidden="true">
+      <div class="tour-modal-overlay" id="tourModalOverlay"></div>
+      <div class="tour-modal-content">
+        <button class="tour-modal-close" id="tourModalClose" aria-label="Close visual tour modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="tour-modal-body">
+          <h2>Virtual Tour</h2>
+          <p class="tour-modal-subtitle">Explore the spaces in interactive 360° views</p>
+          <div class="tour-modal-message">
+            <p>Test assets — Visual tour functionality coming soon</p>
+            <p class="tour-modal-hint">This placeholder will be replaced with immersive 3D panoramic views of each room</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section class="philosophy section-dark">
       <div class="philosophy-stage reveal">
 
         <!-- Wheel rings diagram -->
         <img class="phil-el phil-wheel" src="assets/psd-export/088-vector-smart-object-2.png" alt="" />
+        <img class="phil-el phil-wheel phil-wheel-inner" src="assets/psd-export/088-vector-smart-object-2.png" alt="" />
 
         <!-- Title: CONCEPT IDEOLOGY -->
-        <img class="phil-el phil-title" src="assets/psd-export/105-concept-ideology-copy-1.png" alt="Concept Ideology" />
+        <img class="phil-el phil-node phil-title" src="assets/psd-export/105-concept-ideology-copy-1.png" alt="Concept Ideology" data-philosophy-topic="concept" />
 
         <!-- Center text block -->
-        <img class="phil-el phil-center" src="assets/psd-export/107-dynamic-and-iconic-skyline-through-a-composition-of-elegantly-a-1.png" alt="Dynamic and iconic skyline concept" />
+        <div class="phil-el phil-center" id="philCenterText" aria-live="polite">
+          Dynamic and iconic skyline through a composition of elegantly articulated towers that establish Sawari as a landmark mixed-use destination.
+        </div>
 
         <!-- Top dot (no label) -->
-        <img class="phil-el phil-top-o" src="assets/psd-export/095-ellipse-1-copy-7-1.png" alt="" />
-        <img class="phil-el phil-top-i" src="assets/psd-export/096-ellipse-1-copy-7-2.png" alt="" />
+        <img class="phil-el phil-node phil-top-o" src="assets/psd-export/095-ellipse-1-copy-7-1.png" alt="" data-philosophy-topic="concept" />
+        <img class="phil-el phil-node phil-top-i" src="assets/psd-export/096-ellipse-1-copy-7-2.png" alt="" data-philosophy-topic="concept" />
 
         <!-- ICONIC URBAN IDENTITY — left middle -->
-        <img class="phil-el phil-iconic-dot-o" src="assets/psd-export/089-ellipse-1-copy-3-1.png" alt="" />
-        <img class="phil-el phil-iconic-dot-i" src="assets/psd-export/090-ellipse-1-copy-4-1.png" alt="" />
-        <img class="phil-el phil-iconic-lbl" src="assets/psd-export/102-iconic-urban-identity-1.png" alt="Iconic Urban Identity" />
+        <img class="phil-el phil-node phil-iconic-dot-o" src="assets/psd-export/091-ellipse-1-copy-5-1.png" alt="" data-philosophy-topic="iconic" />
+        <img class="phil-el phil-node phil-iconic-dot-i" src="assets/psd-export/090-ellipse-1-copy-4-1.png" alt="" data-philosophy-topic="iconic" />
+        <img class="phil-el phil-node phil-iconic-lbl" src="assets/psd-export/102-iconic-urban-identity-1.png" alt="Iconic Urban Identity" data-philosophy-topic="iconic" />
 
         <!-- CENTRAL POINT DISTRICT — upper left -->
-        <img class="phil-el phil-central-dot-o" src="assets/psd-export/112-ellipse-1-copy-9-1.png" alt="" />
-        <img class="phil-el phil-central-dot-i" src="assets/psd-export/113-ellipse-1-copy-9-2.png" alt="" />
-        <img class="phil-el phil-central-lbl" src="assets/psd-export/103-central-point-district-1.png" alt="Central Point District" />
+        <img class="phil-el phil-node phil-central-dot-o" src="assets/psd-export/112-ellipse-1-copy-9-1.png" alt="" data-philosophy-topic="central" />
+        <img class="phil-el phil-node phil-central-dot-i" src="assets/psd-export/113-ellipse-1-copy-9-2.png" alt="" data-philosophy-topic="central" />
+        <img class="phil-el phil-node phil-central-lbl" src="assets/psd-export/103-central-point-district-1.png" alt="Central Point District" data-philosophy-topic="central" />
 
         <!-- PREMIUM MATERIALS — upper right -->
-        <img class="phil-el phil-premium-dot-o" src="assets/psd-export/097-ellipse-1-copy-8-1.png" alt="" />
-        <img class="phil-el phil-premium-dot-i" src="assets/psd-export/098-ellipse-1-copy-8-2.png" alt="" />
-        <img class="phil-el phil-premium-lbl" src="assets/psd-export/104-premium-materials-1.png" alt="Premium Materials" />
+        <img class="phil-el phil-node phil-premium-dot-o" src="assets/psd-export/097-ellipse-1-copy-8-1.png" alt="" data-philosophy-topic="premium" />
+        <img class="phil-el phil-node phil-premium-dot-i" src="assets/psd-export/098-ellipse-1-copy-8-2.png" alt="" data-philosophy-topic="premium" />
+        <img class="phil-el phil-node phil-premium-lbl" src="assets/psd-export/104-premium-materials-1.png" alt="Premium Materials" data-philosophy-topic="premium" />
 
         <!-- HUMAN-CENTERED MOBILITY — right middle -->
-        <img class="phil-el phil-human-dot-o" src="assets/psd-export/091-ellipse-1-copy-5-1.png" alt="" />
-        <img class="phil-el phil-human-dot-i" src="assets/psd-export/092-ellipse-1-copy-5-2.png" alt="" />
-        <img class="phil-el phil-human-lbl" src="assets/psd-export/110-human-centered-mobility-1.png" alt="Human-Centered Mobility" />
+        <img class="phil-el phil-node phil-human-dot-o" src="assets/psd-export/091-ellipse-1-copy-5-1.png" alt="" data-philosophy-topic="human" />
+        <img class="phil-el phil-node phil-human-dot-i" src="assets/psd-export/092-ellipse-1-copy-5-2.png" alt="" data-philosophy-topic="human" />
+        <img class="phil-el phil-node phil-human-lbl" src="assets/psd-export/110-human-centered-mobility-1.png" alt="Human-Centered Mobility" data-philosophy-topic="human" />
 
         <!-- LIFESTYLE INTEGRATION — lower right -->
-        <img class="phil-el phil-lifestyle-dot-o" src="assets/psd-export/099-ellipse-1-copy-10-1.png" alt="" />
-        <img class="phil-el phil-lifestyle-dot-i" src="assets/psd-export/100-ellipse-1-copy-10-2.png" alt="" />
-        <img class="phil-el phil-lifestyle-lbl" src="assets/psd-export/108-lifestyle-integration-1.png" alt="Lifestyle Integration" />
+        <img class="phil-el phil-node phil-lifestyle-dot-o" src="assets/psd-export/099-ellipse-1-copy-10-1.png" alt="" data-philosophy-topic="lifestyle" />
+        <img class="phil-el phil-node phil-lifestyle-dot-i" src="assets/psd-export/100-ellipse-1-copy-10-2.png" alt="" data-philosophy-topic="lifestyle" />
+        <img class="phil-el phil-node phil-lifestyle-lbl" src="assets/psd-export/108-lifestyle-integration-1.png" alt="Lifestyle Integration" data-philosophy-topic="lifestyle" />
 
         <!-- COMMUNITY-CENTRIC LIVING — lower left -->
-        <img class="phil-el phil-community-dot-o" src="assets/psd-export/101-ellipse-1-copy-11-1.png" alt="" />
-        <img class="phil-el phil-community-dot-i" src="assets/psd-export/111-ellipse-1-copy-11-2.png" alt="" />
-        <img class="phil-el phil-community-lbl" src="assets/psd-export/106-community-centric-living-1.png" alt="Community-Centric Living" />
+        <img class="phil-el phil-node phil-community-dot-o" src="assets/psd-export/101-ellipse-1-copy-11-1.png" alt="" data-philosophy-topic="community" />
+        <img class="phil-el phil-node phil-community-dot-i" src="assets/psd-export/111-ellipse-1-copy-11-2.png" alt="" data-philosophy-topic="community" />
+        <img class="phil-el phil-node phil-community-lbl" src="assets/psd-export/106-community-centric-living-1.png" alt="Community-Centric Living" data-philosophy-topic="community" />
 
         <!-- LUXURY WITH SUSTAINABILITY — bottom -->
-        <img class="phil-el phil-luxury-dot-o" src="assets/psd-export/093-ellipse-1-copy-6-1.png" alt="" />
-        <img class="phil-el phil-luxury-dot-i" src="assets/psd-export/094-ellipse-1-copy-6-2.png" alt="" />
-        <img class="phil-el phil-luxury-lbl" src="assets/psd-export/109-luxury-with-sustainability-1.png" alt="Luxury with Sustainability" />
+        <img class="phil-el phil-node phil-luxury-dot-o" src="assets/psd-export/093-ellipse-1-copy-6-1.png" alt="" data-philosophy-topic="luxury" />
+        <img class="phil-el phil-node phil-luxury-dot-i" src="assets/psd-export/094-ellipse-1-copy-6-2.png" alt="" data-philosophy-topic="luxury" />
+        <img class="phil-el phil-node phil-luxury-lbl" src="assets/psd-export/109-luxury-with-sustainability-1.png" alt="Luxury with Sustainability" data-philosophy-topic="luxury" />
 
       </div>
     </section>
 
     <section class="faq section" id="faq">
       <div class="container">
-        <h2 class="section-head reveal">FAQ</h2>
+        <div class="faq-head reveal">
+          <img class="faq-head-line" src="assets/psd-export/083-line-copy-6-2.png" alt="" aria-hidden="true" />
+          <img class="faq-head-title" src="assets/psd-export/084-faq-1.png" alt="FAQ" />
+        </div>
         <div class="faq-list reveal">
-          <button class="faq-item" type="button"><span>Who is the developer behind Sawari?</span><b>+</b></button>
+          <button class="faq-item" type="button" aria-expanded="false">
+            <img class="faq-q-img" src="assets/psd-export/060-who-is-the-developer-behind-sawary-1.png" alt="Who is the developer behind Sawary?" />
+            <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
+          </button>
           <div class="faq-answer">Sawari is developed by a team with deep regional real estate and urban planning expertise.</div>
 
-          <button class="faq-item" type="button"><span>What types of units are available?</span><b>+</b></button>
+          <button class="faq-item" type="button" aria-expanded="false">
+            <img class="faq-q-img" src="assets/psd-export/064-what-types-of-units-available-in-sawary-1.png" alt="What types of units available in Sawary?" />
+            <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
+          </button>
           <div class="faq-answer">Studios, 1-bedroom, and 2-bedroom configurations are available.</div>
 
-          <button class="faq-item" type="button"><span>What are the payment plans?</span><b>+</b></button>
+          <button class="faq-item" type="button" aria-expanded="false">
+            <img class="faq-q-img" src="assets/psd-export/068-what-are-the-payment-plans-1.png" alt="What are the payment plans?" />
+            <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
+          </button>
           <div class="faq-answer">Flexible payment structures are available based on current campaign releases.</div>
 
-          <button class="faq-item" type="button"><span>Why invest in Sawari?</span><b>+</b></button>
+          <button class="faq-item" type="button" aria-expanded="false">
+            <img class="faq-q-img" src="assets/psd-export/072-why-invest-in-sawary-1.png" alt="Why invest in Sawary?" />
+            <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
+          </button>
           <div class="faq-answer">Prime Ajman location, practical unit mix, and strong long-term livability support value growth.</div>
 
-          <button class="faq-item" type="button"><span>What makes Sawari unique?</span><b>+</b></button>
+          <button class="faq-item" type="button" aria-expanded="false">
+            <img class="faq-q-img" src="assets/psd-export/076-what-makes-sawary-unique-1.png" alt="What makes Sawary unique?" />
+            <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
+          </button>
           <div class="faq-answer">A coherent design language combines residential comfort, connected mobility, and premium amenities.</div>
 
-          <button class="faq-item" type="button"><span>When is handover expected?</span><b>+</b></button>
-          <div class="faq-answer">Handover schedule will be confirmed in the latest project release pack.</div>
+          <button class="faq-item" type="button" aria-expanded="false">
+            <img class="faq-q-img" src="assets/psd-export/080-when-is-the-expected-completion-date-for-sawary-1.png" alt="When is the expected completion date for Sawary?" />
+            <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
+          </button>
+          <div class="faq-answer">Phase 1 will be delivered by the end of 2027, Phase 2 will be delivered by the end of 2028.</div>
         </div>
       </div>
     </section>
 
     <section class="newsletter">
-      <div class="container newsletter-inner">
-        <p>Subscribe to our newsletter</p>
+      <div class="container newsletter-inner reveal">
+        <img class="newsletter-vline" src="assets/psd-export/056-line-copy-13-1.png" alt="" aria-hidden="true" />
+        <img class="newsletter-title" src="assets/psd-export/057-subscribe-to-our-newsletter-1.png" alt="Subscribe to our newsletter" />
         <form id="newsletterForm" novalidate>
-          <input type="email" name="email" placeholder="Your email" aria-label="Email" required />
-          <button class="btn" type="submit">Submit</button>
+          <input type="email" name="email" placeholder="ENTER YOUR EMAIL" aria-label="Email" required />
+          <button class="btn" type="submit">SUBSCRIBE</button>
         </form>
       </div>
       <div class="container">
@@ -312,9 +446,10 @@
     </section>
 
     <section class="contact-strip">
-      <div class="container contact-grid">
+      <div class="container contact-grid reveal">
         <div class="contact-item">
           <img src="assets/psd-export/042-forma-1-1.png" alt="Address icon" class="contact-icon" />
+          <img src="assets/psd-export/041-line-5.png" alt="" class="contact-vbar" aria-hidden="true" />
           <div class="contact-text">
             <img src="assets/psd-export/040-address-1.png" alt="Address" class="contact-label" />
             <img src="assets/psd-export/039-ajman-dubai-united-arab-emirates-1.png" alt="Ajman, Dubai, United Arab Emirates" class="contact-value" />
@@ -322,6 +457,7 @@
         </div>
         <div class="contact-item">
           <img src="assets/psd-export/046-forma-1-2.png" alt="Email icon" class="contact-icon" />
+          <img src="assets/psd-export/045-line-6.png" alt="" class="contact-vbar" aria-hidden="true" />
           <div class="contact-text">
             <img src="assets/psd-export/044-email-2.png" alt="Email" class="contact-label" />
             <img src="assets/psd-export/043-sales-sawari-com-1.png" alt="sales@sawari.com" class="contact-value" />
@@ -329,19 +465,20 @@
         </div>
         <div class="contact-item">
           <img src="assets/psd-export/048-forma-1-3.png" alt="Phone icon" class="contact-icon" />
+          <img src="assets/psd-export/050-line-7.png" alt="" class="contact-vbar" aria-hidden="true" />
           <div class="contact-text">
             <img src="assets/psd-export/049-call-us-1.png" alt="Call us" class="contact-label" />
-            <img src="assets/psd-export/047-1-800-312-2121-1-800-311-1010-1.png" alt="1 800 312 2121 / 1 800 311 1010" class="contact-value" />
+            <img src="assets/psd-export/047-1-800-312-2121-1-800-311-1010-1.png" alt="1 800 312 2121 / 1 800 311 1010" class="contact-value contact-phone" />
           </div>
         </div>
       </div>
     </section>
 
     <section class="register section" id="register">
-      <div class="container register-grid">
+      <div class="container register-grid reveal">
         <img src="assets/psd-export/024-4-1.png" alt="Reception lobby interior" />
         <form id="registerForm" class="register-form" novalidate>
-          <img src="assets/psd-export/037-register-your-interest-1.png" alt="Register your interest" class="register-title" />
+          <div class="register-title">Register your interest</div>
           <div class="field-wrap">
             <img src="assets/psd-export/026-name-1.png" alt="Name" class="field-label" />
             <input type="text" name="name" aria-label="Name" required />
@@ -358,16 +495,14 @@
             <img src="assets/psd-export/033-message-1.png" alt="Message" class="field-label" />
             <textarea name="message" rows="2" aria-label="Message"></textarea>
           </div>
-          <button class="register-submit" type="submit">
-            <img src="assets/psd-export/036-submit-1.png" alt="Submit" />
-          </button>
+          <button class="register-submit" type="submit">SUBMIT</button>
           <p id="registerStatus" class="form-status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
     <section class="feature-strip">
-      <div class="container feature-grid">
+      <div class="feature-grid reveal">
         <div class="doc-item">
           <img src="assets/psd-export/014-brochure2-copy-1.png" alt="PDF icon" class="doc-icon" />
           <img src="assets/psd-export/015-brochure-1.png" alt="Brochure" class="doc-label" />
@@ -389,7 +524,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
+      <div class="footer-grid reveal">
       <div class="footer-brand-col">
         <img src="assets/psd-export/012-vector-smart-object-copy-2-1.png" alt="Sawari wordmark" class="footer-logo" />
         <p class="footer-address">Ajman, UAE</p>
@@ -401,24 +536,22 @@
         </div>
       </div>
       <div>
-        <h4>Project Overview</h4>
-        <a href="#overview">Overview</a>
+        <a href="#overview" class="footer-col-heading">Project Overview</a>
         <a href="#amenities">Amenities</a>
         <a href="#location">Location</a>
         <a href="#gallery">Gallery</a>
         <a href="#plans">Floor Plans</a>
       </div>
+      <div class="footer-vline-2" aria-hidden="true"></div>
       <div>
-        <h4>More Information</h4>
         <a href="#register">Register</a>
         <a href="#faq">FAQ</a>
         <a href="#plans">Downloads</a>
         <a href="#top">Videos</a>
         <a href="#top">Virtual Tours</a>
       </div>
+      <div class="footer-vline-3" aria-hidden="true"></div>
       <div>
-        <h4>Information</h4>
-        <a href="#plans">Floor Plans</a>
         <a href="#top">Privacy Policy</a>
         <a href="#top">Terms &amp; Conditions</a>
         <a href="#top">Cookies</a>
@@ -426,6 +559,82 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="gallery-lightbox-close" id="galleryLightboxClose" type="button" aria-label="Close gallery image">&times;</button>
+    <button class="gallery-lightbox-nav prev" id="galleryLightboxPrev" type="button" aria-label="Previous gallery image">&#8592;</button>
+    <div class="gallery-lightbox-viewport">
+      <img id="galleryLightboxImage" src="" alt="" />
+    </div>
+    <button class="gallery-lightbox-nav next" id="galleryLightboxNext" type="button" aria-label="Next gallery image">&#8594;</button>
+    <div class="gallery-lightbox-progress" id="galleryLightboxProgress" aria-label="Fullscreen gallery images"></div>
+  </div>
+
+  <!-- Floor Plans Lightbox for Home Page -->
+  <div class="fp-lightbox" id="homeFpLightbox" aria-hidden="true">
+    <button class="fp-lightbox-close" id="homeFpLightboxClose" type="button" aria-label="Close floor plan lightbox">&times;</button>
+    <button class="gallery-lightbox-nav prev" id="homeFpLightboxPrev" type="button" aria-label="Previous floor plan">&#8592;</button>
+    
+    <div class="fp-lightbox-content home-lb-layout">
+      <div class="fp-lightbox-image-wrap">
+        <img id="homeFpLightboxImage" src="" alt="Floor Plan" />
+      </div>
+      <div class="fp-lightbox-info" id="homeFpLightboxInfo">
+        <div class="fp-lightbox-copy">
+          <h2 id="lbPlanTitle"></h2>
+          <p id="lbPlanSubtitle" class="fp-subtitle-type"></p>
+        </div>
+        <div class="fp-lightbox-details">
+          <div id="lbPlanStats" class="fp-stats"></div>
+          <div class="lb-separator"></div>
+          <div class="fp-keyplan">
+            <h3>KEY PLAN</h3>
+            <div id="lbPlanKeyplan"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="gallery-lightbox-nav next" id="homeFpLightboxNext" type="button" aria-label="Next floor plan">&#8594;</button>
+    <div class="gallery-lightbox-progress" id="homeFpLightboxProgress" aria-label="Floor plan progress">1 / 13</div>
+  </div>
+
+  <!-- Register Interest Popup -->
+  <div class="reg-popup-overlay" id="regPopupOverlay" aria-modal="true" role="dialog" aria-label="Register your interest">
+    <div class="reg-popup">
+      <button class="reg-popup-close" id="regPopupClose" type="button" aria-label="Close">&times;</button>
+      <div class="reg-popup-inner">
+        <div class="reg-popup-photo"></div>
+        <div class="reg-popup-form-side">
+          <p class="reg-popup-eyebrow">EXCLUSIVE ACCESS</p>
+          <h2 class="reg-popup-heading">REGISTER INTEREST</h2>
+          <p class="reg-popup-sub">Speak to our sales experts.</p>
+          <form id="regPopupForm" novalidate>
+            <div class="reg-popup-field">
+              <label class="reg-popup-label" for="rpName">FULL NAME</label>
+              <input class="reg-popup-input" id="rpName" type="text" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="reg-popup-field">
+              <label class="reg-popup-label" for="rpEmail">EMAIL ADDRESS</label>
+              <input class="reg-popup-input" id="rpEmail" type="email" name="email" placeholder="name@example.com" required />
+            </div>
+            <div class="reg-popup-field">
+              <label class="reg-popup-label" for="rpPhone">PHONE NUMBER</label>
+              <input class="reg-popup-input" id="rpPhone" type="tel" name="phone" placeholder="Mobile Number" required />
+            </div>
+            <p id="regPopupStatus" class="reg-popup-status" aria-live="polite"></p>
+            <button class="reg-popup-submit" type="submit">SUBMIT YOUR REQUEST</button>
+            <p class="reg-popup-privacy">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Your information is secure. By submitting, you agree to our privacy policy and to be contacted by our sales team
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=200005"></script>
+
 </body>
 </html>
+

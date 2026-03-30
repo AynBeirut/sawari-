@@ -50,7 +50,7 @@
       <a href="#plans"><img src="assets/psd-export/229-floor-plans-2.png" alt="Floor Plans" /></a>
       <a href="#gallery"><img src="assets/psd-export/228-gallery-1.png" alt="Gallery" /></a>
       <a href="#faq"><img src="assets/psd-export/227-faq-2.png" alt="FAQ" /></a>
-      <a class="nav-enquire" href="#register"><img src="assets/psd-export/226-enquire-now-1.png" alt="Enquire Now" /></a>
+      <a class="nav-enquire" href="#register">ENQUIRE NOW</a>
       <button class="nav-lang" type="button" aria-label="Switch language">
         <svg class="nav-lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/>
@@ -157,19 +157,22 @@
           <button class="tab active" data-map="sharjah" role="tab" aria-selected="true">
             <img src="assets/psd-export/189-10-mins-sharjah-city-center-1.png" alt="10 Mins Sharjah City Center" />
           </button>
-          <button class="tab" data-map="city" role="tab" aria-selected="false">
+          <button class="tab" data-map="alzorah" role="tab" aria-selected="false">
             <img src="assets/psd-export/186-13-mins-alzorah-1.png" alt="13 Mins Al Zorah" />
           </button>
-          <button class="tab" data-map="airport" role="tab" aria-selected="false">
+          <button class="tab" data-map="ajman" role="tab" aria-selected="false">
             <img src="assets/psd-export/187-15mins-ajman-beach-1.png" alt="15 Mins Ajman Beach" />
           </button>
-          <button class="tab" data-map="schools" role="tab" aria-selected="false">
+          <button class="tab" data-map="dubai" role="tab" aria-selected="false">
             <img src="assets/psd-export/188-30-mins-dubai-airport-1.png" alt="30 Mins Dubai Airport" />
           </button>
         </div>
         <div class="map-box" id="mapBox">
           <img id="mapImage" src="assets/psd-export/192-vector-smart-object-3.png" alt="Location map view" />
           <img class="map-overlay" src="assets/psd-export/193-rectangle-1-copy-1.png" alt="" aria-hidden="true" />
+          <div class="map-focus" id="mapFocus" aria-hidden="true">
+            <span class="map-focus-label" id="mapFocusLabel"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -277,13 +280,18 @@
           <div class="tour-main-wrap">
             <div class="tour-headbar"><img src="assets/psd-export/134-1-bedroom-apartment-tower-a-1.png" alt="1 Bedroom Apartment - Tower A" /></div>
             <img id="tourMain" class="tour-main" src="assets/psd-export/118-2-1.png" alt="Virtual tour scene" />
-            <div class="tour-main-icon-secondary" aria-hidden="true">
-              <img class="tour-main-icon-secondary-bg" src="assets/psd-export/121-ellipse-1-1.png" alt="" />
-              <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-1" src="assets/psd-export/124-ellipse-2-1.png" alt="" />
-              <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-2" src="assets/psd-export/125-ellipse-2-copy-1.png" alt="" />
-              <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-3" src="assets/psd-export/126-ellipse-2-copy-2-1.png" alt="" />
-            </div>
-            <img class="tour-main-icon" src="assets/psd-export/133-forma-1.png" alt="" aria-hidden="true" />
+            <button class="tour-main-icon-secondary-btn" id="tourSecondaryBtn" aria-label="Start visual tour">
+              <div class="tour-main-icon-secondary" aria-hidden="true">
+                <img class="tour-main-icon-secondary-bg" src="assets/psd-export/121-ellipse-1-1.png" alt="" />
+                <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-1" src="assets/psd-export/124-ellipse-2-1.png" alt="" />
+                <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-2" src="assets/psd-export/125-ellipse-2-copy-1.png" alt="" />
+                <img class="tour-main-icon-secondary-dot tour-main-icon-secondary-dot-3" src="assets/psd-export/126-ellipse-2-copy-2-1.png" alt="" />
+                <img class="tour-main-icon-secondary-play" src="assets/psd-export/133-forma-1.png" alt="" />
+              </div>
+            </button>
+            <button class="tour-main-icon-btn" id="tourPlayBtn" aria-label="Start visual tour">
+              <img class="tour-main-icon" src="assets/psd-export/133-forma-1.png" alt="" aria-hidden="true" />
+            </button>
           </div>
           <div class="tour-rail" aria-hidden="true">
             <button class="thumb-arrow" type="button">&#8592;</button>
@@ -298,6 +306,27 @@
         </div>
       </div>
     </section>
+
+    <!-- Visual Tour Modal Placeholder -->
+    <div class="tour-modal" id="tourModal" aria-hidden="true">
+      <div class="tour-modal-overlay" id="tourModalOverlay"></div>
+      <div class="tour-modal-content">
+        <button class="tour-modal-close" id="tourModalClose" aria-label="Close visual tour modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="tour-modal-body">
+          <h2>Virtual Tour</h2>
+          <p class="tour-modal-subtitle">Explore the spaces in interactive 360° views</p>
+          <div class="tour-modal-message">
+            <p>Test assets — Visual tour functionality coming soon</p>
+            <p class="tour-modal-hint">This placeholder will be replaced with immersive 3D panoramic views of each room</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="philosophy section-dark">
       <div class="philosophy-stage reveal">
@@ -397,9 +426,7 @@
             <img class="faq-q-img" src="assets/psd-export/080-when-is-the-expected-completion-date-for-sawary-1.png" alt="When is the expected completion date for Sawary?" />
             <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
           </button>
-          <div class="faq-answer">
-            <img class="faq-answer-img" src="assets/psd-export/085-phase-1-will-be-delivered-by-the-end-of-2027-phase-2-will-be-d-1.png" alt="Phase 1 will be delivered by the end of 2027, Phase 2 will be delivered by the end of 2028." />
-          </div>
+          <div class="faq-answer">Phase 1 will be delivered by the end of 2027, Phase 2 will be delivered by the end of 2028.</div>
         </div>
       </div>
     </section>

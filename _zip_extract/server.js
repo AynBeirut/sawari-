@@ -121,12 +121,13 @@ function handleApi(req, res) {
 }
 
 function serveStatic(req, res) {
-  const rawPath = req.url.split('?')[0];
+  const rawPath = decodeURIComponent(req.url).split('?')[0];
   const urlPath = rawPath === '/' ? '/index.html' : rawPath;
-  const safePath = path.normalize(urlPath).replace(/^([.][.][/\\])+/, '');
-  const filePath = path.join(rootDir, safePath);
+  const normalizedPath = path.normalize(urlPath).replace(/^[/\\]+/, '');
+  const safePath = normalizedPath.replace(/^([.][.][/\\])+/, '');
+  const filePath = path.resolve(rootDir, safePath);
 
-  if (!filePath.startsWith(rootDir)) {
+  if (filePath !== rootDir && !filePath.startsWith(rootDir + path.sep)) {
     sendJson(res, 403, { error: 'Forbidden' });
     return;
   }

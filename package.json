@@ -7,6 +7,10 @@
   "scripts": {
     "start": "node server.js"
   },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "nodemailer": "^6.10.1"
+  },
   "devDependencies": {
     "jimp": "^1.6.0",
     "psd": "^3.4.0"

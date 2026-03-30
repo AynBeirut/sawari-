@@ -18,37 +18,73 @@ revealItems.forEach((item) => revealObserver.observe(item));
 const mapBox = document.getElementById('mapBox');
 const mapCopy = document.querySelector('.map-copy');
 const mapImage = document.getElementById('mapImage');
+const mapFocusLabel = document.getElementById('mapFocusLabel');
 const tabs = document.querySelectorAll('.tab');
-const mapContent = {
-  city: '13 mins to Al Zorah',
-  airport: '15 mins to Ajman Beach',
-  schools: '30 mins to Dubai Airport',
-  sharjah: '10 mins to Sharjah City Center'
+const mapTargets = {
+  sharjah: {
+    copy: '10 mins to Sharjah City Center',
+    label: 'Sharjah City Center',
+    x: 59,
+    y: 65
+  },
+  alzorah: {
+    copy: '13 mins to Al Zorah',
+    label: 'Al Zorah',
+    x: 81,
+    y: 35
+  },
+  ajman: {
+    copy: '15 mins to Ajman Beach',
+    label: 'Ajman Beach',
+    x: 57,
+    y: 34
+  },
+  dubai: {
+    copy: '30 mins to Dubai Airport',
+    label: 'Dubai Airport',
+    x: 47,
+    y: 86
+  }
 };
-const mapImages = {
-  city: 'assets/psd-export/192-vector-smart-object-3.png',
-  airport: 'assets/psd-export/192-vector-smart-object-3.png',
-  schools: 'assets/psd-export/192-vector-smart-object-3.png',
-  sharjah: 'assets/psd-export/192-vector-smart-object-3.png'
-};
+
+function activateMapTarget(targetKey) {
+  const selectedTarget = mapTargets[targetKey] || mapTargets.sharjah;
+
+  tabs.forEach((item) => {
+    const isActive = item.dataset.map === targetKey;
+    item.classList.toggle('active', isActive);
+    item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+
+  if (mapCopy) {
+    mapCopy.textContent = selectedTarget.copy;
+  }
+
+  if (mapBox) {
+    mapBox.style.setProperty('--focus-x', `${selectedTarget.x}%`);
+    mapBox.style.setProperty('--focus-y', `${selectedTarget.y}%`);
+    mapBox.setAttribute('data-active-map', targetKey);
+  }
+
+  if (mapFocusLabel) {
+    mapFocusLabel.textContent = selectedTarget.label;
+  }
+
+  if (mapImage) {
+    mapImage.src = 'assets/psd-export/192-vector-smart-object-3.png';
+  }
+}
 
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
-    tabs.forEach((item) => {
-      item.classList.remove('active');
-      item.setAttribute('aria-selected', 'false');
-    });
-
-    tab.classList.add('active');
-    tab.setAttribute('aria-selected', 'true');
-    if (mapCopy) {
-      mapCopy.textContent = mapContent[tab.dataset.map] || mapContent.city;
-    }
-    if (mapImage) {
-      mapImage.src = mapImages[tab.dataset.map] || mapImages.city;
-    }
+    activateMapTarget(tab.dataset.map);
   });
 });
+
+const initiallyActiveTab = document.querySelector('.tab.active');
+if (initiallyActiveTab) {
+  activateMapTarget(initiallyActiveTab.dataset.map);
+}
 
 
 const plans = [
@@ -66,7 +102,7 @@ const plans = [
       "CPT C (Twin Tower) - TYP 1 (4TH - 8TH FLOOR)",
       "CPT D (28 Floor Tower) - TYP 1 (2ND - 7TH), 8TH FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/1BED TYP 1.jpg"
+    "image": "assets/plans/1BED TYP 1.jpg"
   },
   {
     "title": "TWO BED APARTMENT",
@@ -82,7 +118,7 @@ const plans = [
       "CPT C (Twin Tower) - TYP 1 (4TH - 8TH FLOOR)",
       "CPT D (28 Floor Tower) - TYP 1 (2ND - 7TH), 8TH FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/2 BED TYP 1.jpg"
+    "image": "assets/plans/2 BED TYP 1.jpg"
   },
   {
     "title": "TWO BED APARTMENT",
@@ -98,7 +134,7 @@ const plans = [
       "CPT C (Twin Tower) - 3RD FLOOR",
       "CPT D (28 Floor Tower) - NA"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/2 BED TYP 2.jpg"
+    "image": "assets/plans/2 BED TYP 2.jpg"
   },
   {
     "title": "THREE BED APARTMENT",
@@ -114,7 +150,7 @@ const plans = [
       "CPT C (Twin Tower) - TYP 2 (9TH - 11TH FLOOR)",
       "CPT D (28 Floor Tower) - TYP 2 (10TH - 11TH FLOOR)"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 1.jpg"
+    "image": "assets/plans/3 BED TYP 1.jpg"
   },
   {
     "title": "THREE BED APARTMENT",
@@ -130,7 +166,7 @@ const plans = [
       "CPT C (Twin Tower) - TYP 3 (12TH - 17TH FLOOR)",
       "CPT D (28 Floor Tower) - TYP 3 (12TH - 17TH FLOOR)"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 2.jpg"
+    "image": "assets/plans/3 BED TYP 2.jpg"
   },
   {
     "title": "THREE BED APARTMENT",
@@ -146,7 +182,7 @@ const plans = [
       "CPT C (Twin Tower) - TYP 4 (18TH - 26TH FLOOR)",
       "CPT D (28 Floor Tower) - TYP 4 (18TH - 26TH FLOOR)"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 3.jpg"
+    "image": "assets/plans/3 BED TYP 3.jpg"
   },
   {
     "title": "THREE BED APARTMENT",
@@ -162,7 +198,7 @@ const plans = [
       "CPT C (Twin Tower) - NA",
       "CPT D (28 Floor Tower) - NA"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 4.jpg"
+    "image": "assets/plans/3 BED TYP 4.jpg"
   },
   {
     "title": "THREE BED APARTMENT",
@@ -178,7 +214,7 @@ const plans = [
       "CPT C (Twin Tower) - NA",
       "CPT D (28 Floor Tower) - NA"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/3 BED TYP 4A.jpg"
+    "image": "assets/plans/3 BED TYP 4A.jpg"
   },
   {
     "title": "FOUR BED APARTMENT",
@@ -194,7 +230,7 @@ const plans = [
       "CPT C (Twin Tower) - 27TH FLOOR",
       "CPT D (28 Floor Tower) - 27TH FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/4 BED TYP 1.jpg"
+    "image": "assets/plans/4 BED TYP 1.jpg"
   },
   {
     "title": "4 BED DUPLEX TYPE 1",
@@ -210,7 +246,7 @@ const plans = [
       "CPT C (Twin Tower) - 28TH FLOOR",
       "CPT D (28 Floor Tower) - 28TH FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 1 LOW.jpg"
+    "image": "assets/plans/4 BED DUPL TYP 1 LOW.jpg"
   },
   {
     "title": "4 BED DUPLEX TYPE 1",
@@ -226,7 +262,7 @@ const plans = [
       "CPT C (Twin Tower) - 28TH FLOOR",
       "CPT D (28 Floor Tower) - 28TH FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 1 UPP.jpg"
+    "image": "assets/plans/4 BED DUPL TYP 1 UPP.jpg"
   },
   {
     "title": "4 BED DUPLEX TYPE 2",
@@ -242,7 +278,7 @@ const plans = [
       "CPT C (Twin Tower) - 1ST FLOOR",
       "CPT D (28 Floor Tower) - 1ST FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 2 LOW.jpg"
+    "image": "assets/plans/4 BED DUPL TYP 2 LOW.jpg"
   },
   {
     "title": "4 BED DUPLEX TYPE 2",
@@ -258,7 +294,7 @@ const plans = [
       "CPT C (Twin Tower) - 1ST FLOOR",
       "CPT D (28 Floor Tower) - 1ST FLOOR"
     ],
-    "image": "design/UNIT RENDER/UNIT RENDER/4 BED DUPL TYP 2 UPP.jpg"
+    "image": "assets/plans/4 BED DUPL TYP 2 UPP.jpg"
   }
 ];
 
@@ -627,6 +663,51 @@ if (mainTour && thumbs.length) {
 
   updateTourImage(activeTourIndex);
 }
+
+// Visual Tour Modal Functionality
+const tourPlayBtn = document.getElementById('tourPlayBtn');
+const tourSecondaryBtn = document.getElementById('tourSecondaryBtn');
+const tourModal = document.getElementById('tourModal');
+const tourModalOverlay = document.getElementById('tourModalOverlay');
+const tourModalClose = document.getElementById('tourModalClose');
+
+function openTourModal() {
+  if (tourModal) {
+    tourModal.setAttribute('aria-hidden', 'false');
+    tourModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeTourModal() {
+  if (tourModal) {
+    tourModal.setAttribute('aria-hidden', 'true');
+    tourModal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+}
+
+if (tourPlayBtn) {
+  tourPlayBtn.addEventListener('click', openTourModal);
+}
+
+if (tourSecondaryBtn) {
+  tourSecondaryBtn.addEventListener('click', openTourModal);
+}
+
+if (tourModalClose) {
+  tourModalClose.addEventListener('click', closeTourModal);
+}
+
+if (tourModalOverlay) {
+  tourModalOverlay.addEventListener('click', closeTourModal);
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && tourModal?.classList.contains('is-open')) {
+    closeTourModal();
+  }
+});
 
 const philosophyCenterText = document.getElementById('philCenterText');
 const philosophyNodes = document.querySelectorAll('.phil-node');
