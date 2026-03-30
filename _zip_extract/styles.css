@@ -4058,26 +4058,32 @@ p {
 }
 #homeFpLightboxInfo .fp-stats,
 #homeFpLightboxInfo .fp-keyplan,
-#homeFpLightboxInfo #lbPlanKeyplan {
+#homeFpLightboxInfo #lbPlanKeyplan,
+#fpLightboxInfo .fp-stats,
+#fpLightboxInfo .fp-keyplan,
+#fpLightboxInfo #fpLbKeyplan {
   display: block;
   width: 100%;
   margin-left: 0;
   padding-left: 0;
 }
-#homeFpLightboxInfo .fp-stats p {
+#homeFpLightboxInfo .fp-stats p,
+#fpLightboxInfo .fp-stats p {
   color: #e8e4dc;
   margin: 0 0 4px;
   line-height: 18px;
   font-size: 14px;
 }
-#homeFpLightboxInfo .fp-keyplan h3 {
+#homeFpLightboxInfo .fp-keyplan h3,
+#fpLightboxInfo .fp-keyplan h3 {
   color: rgba(232,228,220,0.5);
   font-size: 11px;
   letter-spacing: 2px;
   margin: 0 0 0.4rem;
   text-transform: uppercase;
 }
-#homeFpLightboxInfo .fp-keyplan p {
+#homeFpLightboxInfo .fp-keyplan p,
+#fpLightboxInfo .fp-keyplan p {
   color: #e8e4dc;
   margin: 0 0 0.2rem;
   font-size: 13px;
@@ -4087,7 +4093,8 @@ p {
   display: none;
 }
 /* Progress counter */
-.gallery-lightbox-progress#homeFpLightboxProgress {
+.gallery-lightbox-progress#homeFpLightboxProgress,
+.gallery-lightbox-progress#fpLightboxProgress {
   color: rgba(232,228,220,0.5);
   font-family: 'Futura', sans-serif;
   font-size: 12px;

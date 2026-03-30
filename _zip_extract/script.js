@@ -470,10 +470,10 @@ if (planImage) {
     }
   });
 
-  // Block ALL wheel/trackpad scroll on document when lightbox is open
+  // Block ALL wheel/trackpad scroll on document when any lightbox is open
   // This prevents browser back/forward navigation on horizontal swipe
   document.addEventListener('wheel', (e) => {
-    if (lbWrap && lbWrap.classList.contains('active')) {
+    if (document.body.classList.contains('gallery-lightbox-open')) {
       e.preventDefault();
     }
   }, { passive: false, capture: true });
@@ -1352,6 +1352,28 @@ document.addEventListener('DOMContentLoaded', () => {
       fpLightboxImage.alt = fpImages[activeFpIndex].alt || 'Floor Plan';
       if (fpLightboxProgress) {
         fpLightboxProgress.textContent = (activeFpIndex + 1) + ' / ' + fpImages.length;
+      }
+      // Populate info panel from the matching fp-item
+      const item = document.querySelectorAll('.fp-item')[activeFpIndex];
+      if (item) {
+        const titleEl = document.getElementById('fpLbTitle');
+        const subtitleEl = document.getElementById('fpLbSubtitle');
+        const statsEl = document.getElementById('fpLbStats');
+        const keyplanEl = document.getElementById('fpLbKeyplan');
+        if (titleEl) titleEl.textContent = item.querySelector('h2')?.textContent || '';
+        if (subtitleEl) {
+          const sub = item.querySelector('.fp-subtitle-type');
+          subtitleEl.textContent = sub ? sub.textContent : '';
+          subtitleEl.style.display = sub ? '' : 'none';
+        }
+        if (statsEl) {
+          statsEl.innerHTML = '';
+          item.querySelectorAll('.fp-stats p').forEach(p => statsEl.appendChild(p.cloneNode(true)));
+        }
+        if (keyplanEl) {
+          keyplanEl.innerHTML = '';
+          item.querySelectorAll('.fp-keyplan p').forEach(p => keyplanEl.appendChild(p.cloneNode(true)));
+        }
       }
     };
 

@@ -548,14 +548,29 @@
     </div>
   </footer>
 
-  <div class="gallery-lightbox" id="fpLightbox" aria-hidden="true">
-    <button class="gallery-lightbox-close" id="fpLightboxClose" type="button" aria-label="Close gallery image">&times;</button>
-    <button class="gallery-lightbox-nav prev" id="fpLightboxPrev" type="button" aria-label="Previous gallery image">&#8592;</button>
-    <div class="gallery-lightbox-viewport">
-      <img id="fpLightboxImage" src="" alt="" />
+  <div class="fp-lightbox" id="fpLightbox" aria-hidden="true">
+    <button class="fp-lightbox-close" id="fpLightboxClose" type="button" aria-label="Close floor plan">&times;</button>
+    <button class="gallery-lightbox-nav prev" id="fpLightboxPrev" type="button" aria-label="Previous floor plan">&#8592;</button>
+    <div class="fp-lightbox-content home-lb-layout">
+      <div class="fp-lightbox-image-wrap">
+        <img id="fpLightboxImage" src="" alt="Floor Plan" />
+      </div>
+      <div class="fp-lightbox-info" id="fpLightboxInfo">
+        <div class="fp-lightbox-copy">
+          <h2 id="fpLbTitle"></h2>
+          <p id="fpLbSubtitle" class="fp-subtitle-type"></p>
+        </div>
+        <div class="fp-lightbox-details">
+          <div id="fpLbStats" class="fp-stats"></div>
+          <div class="fp-keyplan">
+            <h3>KEY PLAN</h3>
+            <div id="fpLbKeyplan"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="gallery-lightbox-nav next" id="fpLightboxNext" type="button" aria-label="Next gallery image">&#8594;</button>
-    <div class="gallery-lightbox-progress" id="fpLightboxProgress" aria-label="Fullscreen gallery images"></div>
+    <button class="gallery-lightbox-nav next" id="fpLightboxNext" type="button" aria-label="Next floor plan">&#8594;</button>
+    <div class="gallery-lightbox-progress" id="fpLightboxProgress" aria-label="Floor plan progress"></div>
   </div>
 
   <script src="script.js?v=400000"></script>
