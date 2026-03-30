@@ -64,7 +64,7 @@ h4,
 }
 
 .plan-progress {
-  margin: 1.25rem 0 0;
+    margin: -4px 0 0;
   font-family: 'Futura', 'Century Gothic', sans-serif;
   font-size: 18px;
   letter-spacing: 0.08em;
@@ -3758,16 +3758,21 @@ p {
   text-transform: uppercase;
 }
 
-.fp-stats,
-.fp-keyplan {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
+.fp-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .fp-keyplan {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
 
 .fp-stats p {
-  font-family: 'Futura', 'Century Gothic', sans-serif;
-  font-size: 21.71px; /* From c-h.md */
+    font-family: 'Futura', 'Century Gothic', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
   margin: 0;
   color: #7A8177;
 }
@@ -3882,9 +3887,9 @@ p {
 
 /* Home Page Floor Plans Text */
 .plan-text-container {
-  position: absolute;
-  left: calc(34% + 5.25rem);
-  top: 15%;
+    position: absolute;
+    left: calc(34% + 5.25rem);
+    top: 20%;
   color: var(--myrtle);
   font-family: 'Futura', 'Century Gothic', sans-serif;
   width: 50%;
@@ -3912,13 +3917,16 @@ p {
   text-transform: uppercase;
 }
 .plan-stats {
-  font-family: 'Manrope', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-}
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+  }
 .plan-stats p {
-  margin: 0;
-}
+    margin: 0 0 4px 0;
+  }
+  .plan-stats p:last-child {
+    margin-bottom: 0;
+  }
 
 @media (max-width: 900px) {
   .plan-text-container {
@@ -4096,9 +4104,9 @@ p {
 }
 
 #homeFpLightboxInfo .fp-stats p {
-  margin: 0 0 0.24rem;
-  line-height: 1.25;
-}
+    margin: 0;
+    line-height: 20px;
+  }
 
 #homeFpLightboxInfo .fp-keyplan h3 {
   margin: 0 0 0.35rem;
@@ -4454,7 +4462,7 @@ p {
   .fp-info, .fp-image { padding: 3rem 1.5rem !important; }
   .fp-image { min-height: 40vh; }
   .fp-info h2 { font-size: 26px; }
-  .fp-subtitle-type, .fp-stats p, .fp-keyplan h3 { font-size: 18px; }
+  .fp-subtitle-type, .fp-keyplan h3 { font-size: 18px; }
   .fp-keyplan p, .fp-download span { font-size: 16px; }
   .fp-header { padding: 3rem 1.5rem; }
   .fp-title { font-size: 38px; }
