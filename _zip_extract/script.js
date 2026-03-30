@@ -470,6 +470,14 @@ if (planImage) {
     }
   });
 
+  // Block ALL wheel/trackpad scroll on document when lightbox is open
+  // This prevents browser back/forward navigation on horizontal swipe
+  document.addEventListener('wheel', (e) => {
+    if (lbWrap && lbWrap.classList.contains('active')) {
+      e.preventDefault();
+    }
+  }, { passive: false, capture: true });
+
   if (lbWrap) {
     lbWrap.addEventListener('wheel', (e) => {
       if (!lbWrap.classList.contains('active')) return;
