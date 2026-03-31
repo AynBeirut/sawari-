@@ -349,6 +349,26 @@ if (planImage) {
     updatePlanUI();
   });
 
+  // Reposition planPrev for mobile
+  function adjustPlanPrevPosition() {
+    const prev = document.getElementById('planPrev');
+    const right = document.querySelector('.plan-right');
+    const left = document.querySelector('.plan-left');
+    if (prev && right && left) {
+      if (window.innerWidth <= 767) {
+        if (prev.parentNode !== right) {
+          right.appendChild(prev);
+        }
+      } else {
+        if (prev.parentNode !== left) {
+          left.insertBefore(prev, left.firstChild);
+        }
+      }
+    }
+  }
+  window.addEventListener('resize', adjustPlanPrevPosition);
+  adjustPlanPrevPosition();
+
   // Scroll functionality on the viewer
   const planViewer = document.querySelector('.plan-viewer');
   if (planViewer) {
@@ -741,7 +761,20 @@ if (philosophyCenterText && philosophyNodes.length) {
   const setPhilosophyTopic = (topic) => {
     const nextTopic = philosophyCopy[topic] ? topic : 'default';
     if (currentPhilosophyTopic !== nextTopic) {
-      philosophyCenterText.textContent = philosophyCopy[nextTopic];
+      if (window.innerWidth <= 767) {
+        philosophyCenterText.innerHTML = `
+          <div class="phil-text-content">${philosophyCopy[nextTopic]}</div>
+          <button class="phil-read-more" type="button">Read More</button>
+        `;
+        const expandBtn = philosophyCenterText.querySelector('.phil-read-more');
+        const textContent = philosophyCenterText.querySelector('.phil-text-content');
+        expandBtn.addEventListener('click', () => {
+          textContent.classList.add('is-expanded');
+          expandBtn.classList.add('is-hidden');
+        });
+      } else {
+        philosophyCenterText.textContent = philosophyCopy[nextTopic];
+      }
 
       if (philosophyStage?.classList.contains('show')) {
         philosophyCenterText.classList.remove('is-rising');
