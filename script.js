@@ -741,6 +741,7 @@ document.addEventListener('keydown', (e) => {
 const philosophyCenterText = document.getElementById('philCenterText');
 const philosophyNodes = document.querySelectorAll('.phil-node');
 const philosophyStage = document.querySelector('.philosophy-stage');
+const philosophySection = document.querySelector('.philosophy');
 
 if (philosophyCenterText && philosophyNodes.length) {
   const philosophyCopy = {
@@ -757,6 +758,79 @@ if (philosophyCenterText && philosophyNodes.length) {
 
   let lockedTopic = 'concept';
   let currentPhilosophyTopic = '';
+  let philModalLastFocus = null;
+
+  const closePhilosophyMobileModal = () => {
+    const modal = document.getElementById('philMobileModal');
+    if (!modal) {
+      return;
+    }
+
+    const activeElement = document.activeElement;
+    if (activeElement instanceof HTMLElement && modal.contains(activeElement)) {
+      if (philModalLastFocus instanceof HTMLElement) {
+        philModalLastFocus.focus();
+      } else {
+        activeElement.blur();
+      }
+    }
+
+    modal.classList.remove('is-open');
+    modal.inert = true;
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('phil-modal-open');
+    document.body.style.overflow = '';
+  };
+
+  const openPhilosophyMobileModal = (topicKey) => {
+    if (window.innerWidth > 767) {
+      return;
+    }
+
+    let modal = document.getElementById('philMobileModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'philMobileModal';
+      modal.className = 'phil-mobile-modal';
+      modal.setAttribute('aria-hidden', 'true');
+      modal.inert = true;
+      modal.innerHTML = `
+        <button class="phil-mobile-modal-close" type="button" aria-label="Close">&times;</button>
+        <div class="phil-mobile-modal-stage">
+          <img class="phil-mobile-wheel" src="assets/psd-export/088-vector-smart-object-2.png" alt="" />
+          <img class="phil-mobile-wheel phil-mobile-wheel-inner" src="assets/psd-export/088-vector-smart-object-2.png" alt="" />
+          <div class="phil-mobile-modal-text"></div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const closeBtn = modal.querySelector('.phil-mobile-modal-close');
+      closeBtn?.addEventListener('click', closePhilosophyMobileModal);
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          closePhilosophyMobileModal();
+        }
+      });
+    }
+
+    const nextTopic = philosophyCopy[topicKey] ? topicKey : 'default';
+    const textHolder = modal.querySelector('.phil-mobile-modal-text');
+    const closeBtn = modal.querySelector('.phil-mobile-modal-close');
+
+    philModalLastFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+
+    if (textHolder) {
+      textHolder.textContent = philosophyCopy[nextTopic];
+    }
+
+    modal.classList.add('is-open');
+    modal.inert = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('phil-modal-open');
+    document.body.style.overflow = 'hidden';
+    closeBtn?.focus();
+  };
 
   const setPhilosophyTopic = (topic) => {
     const nextTopic = philosophyCopy[topic] ? topic : 'default';
@@ -767,10 +841,8 @@ if (philosophyCenterText && philosophyNodes.length) {
           <button class="phil-read-more" type="button">Read More</button>
         `;
         const expandBtn = philosophyCenterText.querySelector('.phil-read-more');
-        const textContent = philosophyCenterText.querySelector('.phil-text-content');
-        expandBtn.addEventListener('click', () => {
-          textContent.classList.add('is-expanded');
-          expandBtn.classList.add('is-hidden');
+        expandBtn?.addEventListener('click', () => {
+          openPhilosophyMobileModal(nextTopic);
         });
       } else {
         philosophyCenterText.textContent = philosophyCopy[nextTopic];
@@ -823,6 +895,23 @@ if (philosophyCenterText && philosophyNodes.length) {
   if (philosophyStage) {
     philosophyStage.addEventListener('mouseleave', () => {
       setPhilosophyTopic(lockedTopic);
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && document.body.classList.contains('phil-modal-open')) {
+      closePhilosophyMobileModal();
+    }
+  });
+
+  if (philosophySection) {
+    philosophySection.addEventListener('click', (event) => {
+      if (window.innerWidth <= 767) {
+        const readMoreBtn = event.target.closest('.phil-read-more');
+        if (readMoreBtn) {
+          event.preventDefault();
+        }
+      }
     });
   }
 
@@ -889,6 +978,9 @@ if (registerForm) {
 
 /* POPUP LOGIC */
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.site-header');
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const primaryNav = document.getElementById('primaryNav');
   const popup = document.getElementById('registerPopup');
   const closePopup = document.getElementById('closePopup');
   const enquireBtns = document.querySelectorAll('.nav-enquire, a[href="#register"]');
@@ -914,7 +1006,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryLightboxProgress = document.getElementById('galleryLightboxProgress');
   const galleryTriggers = document.querySelectorAll('.gallery-open');
 
-  const galleryCollections = {
+  const closeMobileMenu = () => {
+    if (!header || !mobileMenuToggle) {
+      return;
+    }
+
+    header.classList.remove('menu-open');
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    mobileMenuToggle.setAttribute('aria-label', 'Open menu');
+  };
+
+  if (mobileMenuToggle && header) {
+    mobileMenuToggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('menu-open');
+      mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    primaryNav?.querySelectorAll('a, button').forEach((element) => {
+      element.addEventListener('click', () => {
+        if (window.innerWidth <= 767) {
+          closeMobileMenu();
+        }
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 767) {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!header.classList.contains('menu-open')) {
+        return;
+      }
+
+      if (window.innerWidth > 767) {
+        closeMobileMenu();
+        return;
+      }
+
+      const target = event.target;
+      if (target instanceof Node && !header.contains(target)) {
+        closeMobileMenu();
+      }
+    });
+  }
+
+  let galleryCollections = {
     lobby: {
       labelImage: 'assets/psd-export/154-entrance-lobby-1.png',
       labelAlt: 'Entrance Lobby',
@@ -1027,6 +1167,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const galleryCollectionsDataNode = document.getElementById('galleryCollectionsData');
+  if (galleryCollectionsDataNode) {
+    try {
+      const parsed = JSON.parse(galleryCollectionsDataNode.textContent || '{}');
+      if (parsed && typeof parsed === 'object') {
+        galleryCollections = parsed;
+      }
+    } catch {
+      // Keep default gallery collections when JSON is malformed.
+    }
+  }
+
   let activeGalleryFilter = 'lobby';
   let activeGalleryIndex = 1;
 
@@ -1109,17 +1261,42 @@ document.addEventListener('DOMContentLoaded', () => {
     statsObserver.observe(projectStats);
   }
 
+  let videoInlineLastFocus = null;
+
+  if (videoInlinePlayer) {
+    videoInlinePlayer.inert = videoInlinePlayer.getAttribute('aria-hidden') !== 'false';
+  }
+
   const closeInlineVideo = () => {
     if (!videoSection || !videoInlinePlayer) {
       return;
     }
 
+    const activeElement = document.activeElement;
+    if (activeElement instanceof HTMLElement && videoInlinePlayer.contains(activeElement)) {
+      const fallbackFocus =
+        videoInlineLastFocus instanceof HTMLElement && document.contains(videoInlineLastFocus)
+          ? videoInlineLastFocus
+          : videoPlayButton instanceof HTMLElement && document.contains(videoPlayButton)
+            ? videoPlayButton
+            : null;
+
+      if (fallbackFocus) {
+        fallbackFocus.focus();
+      } else {
+        activeElement.blur();
+      }
+    }
+
     videoSection.classList.remove('is-playing');
+    videoInlinePlayer.inert = true;
     videoInlinePlayer.setAttribute('aria-hidden', 'true');
 
     if (videoInlineFrame) {
       videoInlineFrame.src = '';
     }
+
+    videoInlineLastFocus = null;
   };
 
   if (videoPlayButton && videoSection && videoInlinePlayer && videoInlineFrame) {
@@ -1130,10 +1307,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      videoInlineLastFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       const autoplayUrl = `${baseEmbed}${baseEmbed.includes('?') ? '&' : '?'}autoplay=1&rel=0`;
       videoInlineFrame.src = autoplayUrl;
       videoSection.classList.add('is-playing');
+      videoInlinePlayer.inert = false;
       videoInlinePlayer.setAttribute('aria-hidden', 'false');
+      videoInlineClose?.focus();
     });
   }
 

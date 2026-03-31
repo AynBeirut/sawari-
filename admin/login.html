@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sawari Admin Login</title>
+  <link rel="stylesheet" href="/admin/styles.css" />
+</head>
+<body class="admin-body">
+  <main class="admin-shell admin-login-shell">
+    <h1>Admin Login</h1>
+    <p>Enter admin email and password to manage content.</p>
+    <form id="adminLoginForm" class="admin-card">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="username" required />
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required />
+      <button type="submit">Login</button>
+      <p id="loginStatus" class="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script>
+    const form = document.getElementById('adminLoginForm');
+    const status = document.getElementById('loginStatus');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = '';
+
+      const email = form.email.value;
+      const password = form.password.value;
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      const body = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        status.textContent = body.error || 'Login failed.';
+        status.className = 'status error';
+        return;
+      }
+
+      status.textContent = 'Logged in.';
+      status.className = 'status success';
+      window.location.href = '/admin/dashboard-en.html';
+    });
+  </script>
+</body>
+</html>

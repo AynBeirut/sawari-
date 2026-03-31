@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sawari Admin Dashboard (AR)</title>
+  <link rel="stylesheet" href="/admin/styles.css" />
+</head>
+<body class="admin-body" data-lang="ar">
+  <main class="admin-shell">
+    <header class="admin-header">
+      <h1>لوحة تحكم صواري (العربية)</h1>
+      <div class="admin-actions">
+        <a href="/admin/dashboard-en.html">Go to English Dashboard</a>
+        <button id="logoutBtn" type="button">Logout</button>
+      </div>
+    </header>
+
+    <section class="admin-card">
+      <h2>Editable Text</h2>
+      <form id="textForm" class="admin-grid">
+        <label>Location Title<input name="loc-title" type="text" /></label>
+        <label>Location Subtitle<textarea name="loc-subtitle" rows="2"></textarea></label>
+        <label>Philosophy Center Text<textarea name="philosophy-center" rows="3"></textarea></label>
+        <label>Register Title<input name="register-title" type="text" /></label>
+        <label>Footer Address<input name="footer-address" type="text" /></label>
+        <button type="submit">Save Text</button>
+      </form>
+    </section>
+
+    <section class="admin-card">
+      <h2>Gallery Images</h2>
+      <form id="galleryForm" class="admin-grid compact">
+        <label>Category
+          <select name="filter">
+            <option value="lobby">Lobby</option>
+            <option value="1bed">1 Bedroom</option>
+            <option value="2bed">2 Bedrooms</option>
+            <option value="3bed">3 Bedrooms</option>
+            <option value="garden">Garden</option>
+          </select>
+        </label>
+        <label>Position
+          <select name="index">
+            <option value="0">Left</option>
+            <option value="1">Main</option>
+            <option value="2">Right</option>
+          </select>
+        </label>
+        <label>Image File<input name="image" type="file" accept="image/*" required /></label>
+        <button type="submit">Upload Image</button>
+      </form>
+    </section>
+
+    <section class="admin-card">
+      <h2>PDF Downloads</h2>
+      <form class="pdfForm admin-grid compact" data-slot="brochure">
+        <label>Brochure PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
+        <button type="submit">Upload Brochure</button>
+      </form>
+      <form class="pdfForm admin-grid compact" data-slot="floor-plan">
+        <label>Floor Plan PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
+        <button type="submit">Upload Floor Plan</button>
+      </form>
+      <form class="pdfForm admin-grid compact" data-slot="concept-plan">
+        <label>Concept Plan PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
+        <button type="submit">Upload Concept Plan</button>
+      </form>
+      <form class="pdfForm admin-grid compact" data-slot="all-documents">
+        <label>All Documents PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
+        <button type="submit">Upload All Documents</button>
+      </form>
+    </section>
+
+    <p id="adminStatus" class="status" aria-live="polite"></p>
+  </main>
+  <script src="/admin/dashboard.js"></script>
+</body>
+</html>
