@@ -1235,7 +1235,7 @@ p {
   content: "";
   position: absolute;
   left: calc(max(735px, 9.3vw) + 1rem);
-  right: 26vw;
+  right: 40vw;
   bottom: 3.2rem;
   height: 3px;
   background: rgba(87, 103, 101, 0.18);
@@ -5018,14 +5018,14 @@ html[dir="rtl"] .plans #planTextContainer.plan-text-container {
 }
 
 html:not([dir="rtl"]) .plans .plan-vline {
-  left: 35% !important;
+  left: 39% !important;
   top: 14.5% !important;
   height: 25.5% !important;
 }
 
 html:not([dir="rtl"]) .plans #planTextContainer.plan-text-container {
   top: 18% !important;
-  left: calc(35% + 1.35rem) !important;
+  left: calc(39% + 1.35rem) !important;
   right: auto !important;
   width: 52% !important;
 }
