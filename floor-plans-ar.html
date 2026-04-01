@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sawari Ajman - Floor Plans</title>
+  <title>سواري عجمان - مخططات الطوابق</title>
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,23 +30,23 @@
 </head>
 <body class="page-floor-plans">
   <header class="site-header">
-    <a class="brand-wrap" href="index.html#top" aria-label="Sawari home">
+    <a class="brand-wrap" href="index-ar.html#top" aria-label="صفحة سواري الرئيسية">
       <img class="brand-mark" src="assets/psd-export/233-logo-1.png" alt="Sawari" />
     </a>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="primaryNav">
       <span></span>
       <span></span>
       <span></span>
     </button>
-    <nav class="site-nav" id="primaryNav" aria-label="Main navigation">
-      <a href="index.html#overview"><img src="assets/psd-export/232-overview-1.png" alt="Overview" /></a>
-      <a href="index.html#amenities"><img src="assets/psd-export/231-amenities-1.png" alt="Amenities" /></a>
-      <a href="index.html#location"><img src="assets/psd-export/230-location-1.png" alt="Location" /></a>
-      <a href="index.html#plans"><img src="assets/psd-export/229-floor-plans-2.png" alt="Floor Plans" /></a>
-      <a href="index.html#gallery"><img src="assets/psd-export/228-gallery-1.png" alt="Gallery" /></a>
-      <a href="index.html#faq"><img src="assets/psd-export/227-faq-2.png" alt="FAQ" /></a>
-      <a class="nav-enquire" href="index.html#register"><img src="assets/psd-export/226-enquire-now-1.png" alt="Enquire Now" /></a>
-      <button class="nav-lang" type="button" aria-label="Switch language">
+    <nav class="site-nav" id="primaryNav" aria-label="القائمة الرئيسية">
+      <a href="index-ar.html#overview"><img src="assets/psd-export/232-overview-1.png" alt="Overview" /></a>
+      <a href="index-ar.html#amenities"><img src="assets/psd-export/231-amenities-1.png" alt="Amenities" /></a>
+      <a href="index-ar.html#location"><img src="assets/psd-export/230-location-1.png" alt="Location" /></a>
+      <a href="index-ar.html#plans"><img src="assets/psd-export/229-floor-plans-2.png" alt="Floor Plans" /></a>
+      <a href="index-ar.html#gallery"><img src="assets/psd-export/228-gallery-1.png" alt="Gallery" /></a>
+      <a href="index-ar.html#faq"><img src="assets/psd-export/227-faq-2.png" alt="FAQ" /></a>
+      <a class="nav-enquire" href="index-ar.html#register"><img src="assets/psd-export/226-enquire-now-1.png" alt="Enquire Now" /></a>
+      <button class="nav-lang" type="button" aria-label="تبديل اللغة">
         <svg class="nav-lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/>
           <line x1="2" y1="12" x2="22" y2="12"/>
@@ -60,7 +60,7 @@
   </header>
   <main>
     <section class="hero" id="top">
-      <img class="hero-bg" src="assets/floor-plans-hero-bg.png" alt="Sawari Ajman - Floor Plans" />
+      <img class="hero-bg" src="assets/floor-plans-hero-bg.png" alt="سواري عجمان - مخططات الطوابق" />
       <img class="hero-overlay" src="assets/psd-export/223-vector-smart-object-4.png" alt="" aria-hidden="true" />
       <img class="hero-wordmark" src="assets/psd-export/225-vector-smart-object-5.png" alt="Sawari" />
       <img class="hero-mouse" src="assets/psd-export/224-icon-mouse-1.png" alt="" aria-hidden="true" />
@@ -69,8 +69,8 @@
     <section class="fp-header layout-container">
       <div class="fp-title-wrap">
         <div class="fp-title-copy">
-          <h1 class="fp-title">FLOOR PLANS</h1>
-          <p class="fp-subtitle">Carefully planned spaces designed to combine practicality with elegance</p>
+          <h1 class="fp-title">مخططات الطوابق</h1>
+          <p class="fp-subtitle">مساحات مصممة بعناية لتجمع بين الطابع العملي والأناقة</p>
         </div>
       </div>
     </section>
@@ -470,32 +470,30 @@
     </div>
 
     <!-- White spacer section to separate floor plans and register as requested -->
-    <div style="height: 120px; background-color: #ffffff; width: 100%;"></div>
+    <div class="fp-register-spacer"></div>
 
     <section class="register section" id="register">
       <div class="container register-grid reveal">
         <img src="assets/psd-export/024-4-1.png" alt="Reception lobby interior" />
         <form id="registerForm" class="register-form" novalidate>
-          <img src="assets/psd-export/037-register-your-interest-1.png" alt="Register your interest" class="register-title" />
+          <div class="register-title" data-cms-key="register-title">سجل اهتمامك</div>
           <div class="field-wrap">
             <img src="assets/psd-export/026-name-1.png" alt="Name" class="field-label" />
-            <input type="text" name="name" aria-label="Name" required />
+            <input type="text" name="name" aria-label="الاسم" required />
           </div>
           <div class="field-wrap">
             <img src="assets/psd-export/028-email-1.png" alt="Email" class="field-label" />
-            <input type="email" name="email" aria-label="Email" required />
+            <input type="email" name="email" aria-label="البريد الإلكتروني" required />
           </div>
           <div class="field-wrap">
             <img src="assets/psd-export/030-mobile-1.png" alt="Mobile" class="field-label" />
-            <input type="tel" name="phone" aria-label="Mobile" required />
+            <input type="tel" name="phone" aria-label="رقم الجوال" required />
           </div>
           <div class="field-wrap">
             <img src="assets/psd-export/033-message-1.png" alt="Message" class="field-label" />
-            <textarea name="message" rows="2" aria-label="Message"></textarea>
+            <textarea name="message" rows="2" aria-label="الرسالة"></textarea>
           </div>
-          <button class="register-submit" type="submit">
-            <img src="assets/psd-export/036-submit-1.png" alt="Submit" />
-          </button>
+          <button class="register-submit" type="submit">إرسال</button>
           <p id="registerStatus" class="form-status" aria-live="polite"></p>
         </form>
       </div>
@@ -527,34 +525,34 @@
       <div class="footer-grid reveal">
       <div class="footer-brand-col">
         <img src="assets/psd-export/012-vector-smart-object-copy-2-1.png" alt="Sawari wordmark" class="footer-logo" />
-        <p class="footer-address">Ajman, UAE</p>
-        <p class="footer-stay"><img src="assets/psd-export/008-stay-in-touch-1.png" alt="Stay in touch" /></p>
+        <p class="footer-address" data-cms-key="footer-address">عجمان، الإمارات العربية المتحدة</p>
+        <p class="footer-stay"><img src="assets/psd-export/008-stay-in-touch-1.png" alt="ابقَ على تواصل" /></p>
         <div class="footer-socials">
-          <a href="#" aria-label="Social link 1"><img src="assets/psd-export/011-layer-524-1.png" alt="" /></a>
-          <a href="#" aria-label="Social link 2"><img src="assets/psd-export/009-layer-522-1.png" alt="" /></a>
-          <a href="#" aria-label="Social link 3"><img src="assets/psd-export/010-layer-523-1.png" alt="" /></a>
+          <a href="#" aria-label="رابط اجتماعي 1"><img src="assets/psd-export/011-layer-524-1.png" alt="" /></a>
+          <a href="#" aria-label="رابط اجتماعي 2"><img src="assets/psd-export/009-layer-522-1.png" alt="" /></a>
+          <a href="#" aria-label="رابط اجتماعي 3"><img src="assets/psd-export/010-layer-523-1.png" alt="" /></a>
         </div>
       </div>
       <div>
-        <a href="#overview" class="footer-col-heading">Project Overview</a>
-        <a href="#amenities">Amenities</a>
-        <a href="#location">Location</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#plans">Floor Plans</a>
+        <a href="index-ar.html#overview" class="footer-col-heading">نظرة عامة على المشروع</a>
+        <a href="index-ar.html#amenities">المرافق</a>
+        <a href="index-ar.html#location">الموقع</a>
+        <a href="index-ar.html#gallery">معرض الصور</a>
+        <a href="#plans">مخططات الطوابق</a>
       </div>
       <div class="footer-vline-2" aria-hidden="true"></div>
       <div>
-        <a href="#register">Register</a>
-        <a href="#faq">FAQ</a>
-        <a href="#plans">Downloads</a>
-        <a href="#top">Videos</a>
-        <a href="#top">Virtual Tours</a>
+        <a href="#register">التسجيل</a>
+        <a href="index-ar.html#faq">الأسئلة الشائعة</a>
+        <a href="#plans">التنزيلات</a>
+        <a href="index-ar.html#video">الفيديوهات</a>
+        <a href="index-ar.html#virtual-tour">الجولات الافتراضية</a>
       </div>
       <div class="footer-vline-3" aria-hidden="true"></div>
       <div>
-        <a href="#top">Privacy Policy</a>
-        <a href="#top">Terms &amp; Conditions</a>
-        <a href="#top">Cookies</a>
+        <a href="#top">سياسة الخصوصية</a>
+        <a href="#top">الشروط والأحكام</a>
+        <a href="#top">ملفات تعريف الارتباط</a>
       </div>
     </div>
   </footer>

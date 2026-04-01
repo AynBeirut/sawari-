@@ -47,6 +47,12 @@ img {
   margin: 0 auto;
 }
 
+.fp-register-spacer {
+  width: 100%;
+  height: 120px;
+  background-color: #ffffff;
+}
+
 .section,
 .section-dark {
   padding: 4rem 0;
@@ -1238,19 +1244,19 @@ p {
 .gallery-filter button {
   border: 0;
   background: transparent;
-  padding: 0 1rem;
+  padding: 0 0.55rem;
   cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   align-self: flex-start;
 }
 
 .gallery-filter button img {
-  height: 18px;
+  height: 14px;
   width: auto;
   opacity: 0.55;
   transition: opacity 0.2s;
@@ -1264,14 +1270,12 @@ p {
 .gallery-filter button.active::after {
   content: "";
   position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: -2.2rem;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: -1.6rem;
   height: 3px;
   background: rgba(87, 103, 101, 0.6);
 }
-
-.gallery-grid {
   display: grid;
   width: 100%;
   margin: 2rem auto 0;
@@ -2169,7 +2173,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
+  gap: 1.5rem;
   position: relative;
 }
 
@@ -2178,7 +2182,7 @@ p {
   width: 2px;
   height: auto;
   flex-shrink: 0;
-  margin-right: -21.5rem;
+  margin-inline-end: 1.5rem;
 }
 
 .newsletter-inner p,
@@ -2277,8 +2281,7 @@ p {
   height: 95px;
   object-fit: fill;
   flex-shrink: 0;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-inline: 1.5rem;
   opacity: 1;
 }
 
@@ -2474,15 +2477,15 @@ p {
   background: var(--line);
   justify-self: center;
   align-self: stretch;
-  margin-left: -4rem;
+  margin: 0;
 }
 
 .footer-vline-2 {
-  margin-left: -4rem;
+  margin: 0;
 }
 
 .footer-vline-3 {
-  margin-left: -4rem;
+  margin: 0;
 }
 
 /* register / FAQ column */
@@ -2921,6 +2924,24 @@ p {
     width: 32px;
   }
 
+  /* Keep arrows inside the panel on tablet */
+  .plan-prev {
+    position: absolute;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .plan-next {
+    position: absolute;
+    left: auto;
+    right: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
   .plan-zoom {
     width: 36px;
   }
@@ -3092,6 +3113,375 @@ p {
   .faq {
     --faq-list-offset: calc(4px + 1rem);
   }
+
+/* Arabic baseline RTL support */
+html[dir="rtl"] body {
+  text-align: right;
+  font-family: 'Cairo', 'Futura', 'Tahoma', sans-serif;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] a,
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] label,
+html[dir="rtl"] .loc-subtitle,
+html[dir="rtl"] .plan-stats,
+html[dir="rtl"] .faq-answer,
+html[dir="rtl"] .faq-q-text,
+html[dir="rtl"] .gallery-filter-label,
+html[dir="rtl"] .contact-label-text,
+html[dir="rtl"] .contact-value-text {
+  font-family: 'Cairo', 'Futura', 'Tahoma', sans-serif;
+}
+
+html[dir="rtl"] .site-header {
+  direction: rtl;
+}
+
+html[dir="rtl"] .site-nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .site-nav .nav-main-link {
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+html[dir="rtl"] .site-nav .nav-enquire {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .overview-title-text {
+  font-size: clamp(1.7rem, 2.1vw, 2.4rem);
+  color: var(--myrtle);
+  margin: 0;
+}
+
+html[dir="rtl"] .overview-body-text {
+  margin: 0.85rem 0 0;
+  color: #556a67;
+  font-size: clamp(1rem, 1.15vw, 1.28rem);
+  line-height: 1.75;
+}
+
+html[dir="rtl"] .nav-lang-icon {
+  margin-right: 0;
+  margin-left: 0.1rem;
+}
+
+html[dir="rtl"] .overview-head,
+html[dir="rtl"] .amenities-head,
+html[dir="rtl"] .loc-head,
+html[dir="rtl"] .faq-head,
+html[dir="rtl"] .plan-head-col {
+  direction: rtl;
+}
+
+html[dir="rtl"] .newsletter-inner,
+html[dir="rtl"] .contact-item {
+  direction: rtl;
+}
+
+html[dir="rtl"] .newsletter-vline {
+  margin-inline-end: 0;
+  margin-inline-start: 1.5rem;
+}
+
+html[dir="rtl"] .footer-vline-1,
+html[dir="rtl"] .footer-vline-2,
+html[dir="rtl"] .footer-vline-3 {
+  margin: 0;
+}
+
+html[dir="rtl"] .plan-text-container {
+  left: auto;
+  right: calc(34% + 5.25rem);
+  text-align: right;
+}
+
+html[dir="rtl"] #planTextContainer.plan-text-container {
+  left: auto;
+  right: 1rem;
+}
+
+html[dir="rtl"] .footer-grid {
+  direction: rtl;
+}
+
+html[dir="rtl"] .footer-grid a,
+html[dir="rtl"] .footer-grid p {
+  text-align: right;
+}
+
+html[dir="rtl"] .gallery-head {
+  width: 100%;
+  margin: 0;
+  background: #e5e2da;
+  padding: 3.5rem calc((100% - min(1223px, 92vw)) / 2) 0 4vw;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .gallery-filter {
+  width: 100%;
+  margin: 0 0 1.55rem;
+  justify-content: flex-end;
+  background: #e5e2da;
+  padding: 1.5rem 4vw 3.5rem max(735px, 9.3vw);
+  gap: 1.35rem;
+}
+
+html[dir="rtl"] .gallery-filter::after {
+  right: calc(max(735px, 9.3vw) + 1rem);
+  left: 26vw;
+  bottom: 3.2rem;
+}
+
+html[dir="rtl"] .gallery-grid {
+  direction: ltr;
+}
+
+html[dir="rtl"] .gallery .container {
+  width: min(1833px, calc((100vw - 4rem) / var(--page-zoom, 1)));
+  max-width: none;
+  margin-right: 50%;
+  margin-left: 0;
+  transform: translateX(50%);
+  padding: 0;
+}
+
+html[dir="rtl"] .gallery-progress {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .gallery-head-texts {
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.7rem;
+  padding-top: 2rem;
+}
+
+html[dir="rtl"] .plans-title-text,
+html[dir="rtl"] .gallery-title-text,
+html[dir="rtl"] .tour-title-text,
+html[dir="rtl"] .faq-head-title-text,
+html[dir="rtl"] .newsletter-title-text {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--myrtle);
+  margin: 0;
+}
+
+html[dir="rtl"] .plans-title-text {
+  font-size: clamp(1.9rem, 2.2vw, 2.5rem);
+}
+
+html[dir="rtl"] .plans-subtitle-text,
+html[dir="rtl"] .gallery-subtitle-text,
+html[dir="rtl"] .tour-subtitle-text {
+  margin: 0;
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  color: #516360;
+  line-height: 1.4;
+}
+
+html[dir="rtl"] .plans-subtitle-text {
+  font-size: clamp(1rem, 1.15vw, 1.4rem);
+}
+
+html[dir="rtl"] .plan-cta-label-text {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 0.94rem;
+  color: var(--deep);
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+  line-height: 1.2;
+  padding-inline: 0.4rem;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+html[dir="rtl"] .plan-cta {
+  align-self: center;
+  min-width: 220px;
+}
+
+html[dir="rtl"] .gallery-title-text,
+html[dir="rtl"] .tour-title-text,
+html[dir="rtl"] .faq-head-title-text,
+html[dir="rtl"] .newsletter-title-text {
+  font-size: clamp(1.7rem, 2vw, 2.3rem);
+}
+
+html[dir="rtl"] .gallery-filter-label {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 0.78rem;
+  color: #4a5e5b;
+  white-space: nowrap;
+}
+
+html[dir="rtl"] .gallery-filter button {
+  margin-bottom: 1.65rem;
+}
+
+html[dir="rtl"] .gallery-filter button.active::after {
+  content: "";
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: -1.6rem;
+  height: 3px;
+  background: rgba(87, 103, 101, 0.6);
+}
+
+html[dir="rtl"] .gallery-title-text {
+  font-size: clamp(2rem, 2.2vw, 2.45rem) !important;
+}
+
+html[dir="rtl"] .gallery-subtitle-text {
+  font-size: clamp(1.15rem, 1.2vw, 1.45rem) !important;
+}
+
+html[dir="rtl"] .overlay-label-text {
+  font-size: 1.08rem;
+  line-height: 1.42;
+}
+
+html[dir="rtl"] .gallery-filter button.active .gallery-filter-label,
+html[dir="rtl"] .gallery-filter button:hover .gallery-filter-label {
+  color: #2f4340;
+}
+
+html[dir="rtl"] .tour-subtitle-text {
+  font-size: clamp(0.95rem, 1.05vw, 1.28rem);
+  max-width: 1000px;
+}
+
+html[dir="rtl"] .faq-q-text {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 1.05rem;
+  color: #3f514f;
+  text-align: right;
+}
+
+html[dir="rtl"] .newsletter-title-text {
+  color: #5d615f;
+}
+
+html[dir="rtl"] .contact-label-text {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 1rem;
+  color: #8f8f8f;
+  margin: 0 0 0.25rem;
+}
+
+html[dir="rtl"] .contact-value-text {
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  font-size: 0.95rem;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+html[dir="rtl"] .contact-phone-text {
+  letter-spacing: 0.02em;
+}
+
+html[dir="rtl"] .phil-title-text {
+  width: auto;
+  padding: 0.2rem 0.5rem;
+  color: #d9d9d9;
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  font-family: 'Futura', 'Century Gothic', sans-serif;
+  text-transform: uppercase;
+}
+
+html[dir="rtl"] .phil-label-text {
+  width: max-content;
+  max-width: 210px;
+  padding: 0.14rem 0.35rem;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  text-align: center;
+  color: #e4e4e4;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  html[dir="rtl"] .site-nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  html[dir="rtl"] #planTextContainer.plan-text-container {
+    right: 1rem;
+    left: 1rem;
+  }
+
+  html[dir="rtl"] .gallery-head {
+    width: calc(100% - 2rem);
+    padding: 2rem 0 0;
+  }
+
+  html[dir="rtl"] .gallery-filter {
+    width: calc(100% - 2rem);
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  html[dir="rtl"] .gallery-filter::after {
+    left: 0;
+    right: 0;
+  }
+
+  html[dir="rtl"] .gallery .container {
+    width: calc(100% - 2rem);
+  }
+
+  html[dir="rtl"] .site-nav .nav-main-link,
+  html[dir="rtl"] .site-nav .nav-enquire {
+    font-size: 1rem;
+  }
+
+  html[dir="rtl"] .overview-title-text {
+    font-size: 1.45rem;
+  }
+
+  html[dir="rtl"] .overview-body-text {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  html[dir="rtl"] .phil-title-text {
+    max-width: 138px;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    padding: 0.1rem 0.3rem;
+  }
+
+  html[dir="rtl"] .plan-cta-label-text {
+    font-size: 0.82rem;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif !important;
+  }
+
+  html[dir="rtl"] .phil-label-text {
+    max-width: 138px;
+    font-size: 0.62rem;
+  }
+}
 
   html,
   body {
@@ -3331,6 +3721,10 @@ p {
     justify-content: flex-start;
   }
 
+  .tab.active {
+    order: -1;
+  }
+
   .tab.active::after {
     bottom: -0.68rem;
     height: 3px;
@@ -3408,6 +3802,11 @@ p {
   .plan-prev,
   .plan-next {
     width: 26px;
+  }
+
+  /* Hide plan-prev in plan-left on mobile to prevent flash before JS moves it */
+  .plan-left .plan-prev {
+    display: none;
   }
 
   .plan-vline {
@@ -4106,6 +4505,50 @@ p {
   margin-left: calc(9.2rem + 2rem);
 }
 
+/* Arabic floor-plans page: place heading bars on the right side of text */
+html[dir="rtl"] .page-floor-plans .fp-title-wrap {
+  padding-left: 0;
+  padding-right: 2rem;
+  margin-left: 0;
+  margin-right: max(284px, 7.45vw);
+}
+
+html[dir="rtl"] .page-floor-plans .fp-title-wrap::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .page-floor-plans .fp-title-copy,
+html[dir="rtl"] .page-floor-plans .fp-info,
+html[dir="rtl"] .page-floor-plans .fp-header-block,
+html[dir="rtl"] .page-floor-plans .fp-keyplan {
+  text-align: right;
+}
+
+html[dir="rtl"] .page-floor-plans .fp-header-block {
+  padding-left: 0;
+  padding-right: 2rem;
+  margin-left: 0;
+  margin-right: 9.2rem;
+}
+
+html[dir="rtl"] .page-floor-plans .fp-header-block::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .page-floor-plans .fp-keyplan {
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 9.2rem;
+  padding-right: 2rem;
+}
+
+html[dir="rtl"] .page-floor-plans .fp-info > .fp-download {
+  margin-left: 0;
+  margin-right: calc(9.2rem + 2rem);
+}
+
 
 
 
@@ -4398,6 +4841,302 @@ p {
   to   { transform: translateY(0);    opacity: 1; }
 }
 
+/* ==================================
+   FINAL ARABIC RTL STABILIZATION
+   ================================== */
+html[dir="rtl"] body,
+html[dir="rtl"] body * {
+  font-family: 'Cairo', 'Tahoma', sans-serif !important;
+}
+
+html[dir="rtl"] .site-nav .nav-main-link,
+html[dir="rtl"] .site-nav .nav-enquire {
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+}
+
+html[dir="rtl"] .overview-title-text {
+  font-size: clamp(1.75rem, 2.15vw, 2.55rem) !important;
+  line-height: 1.3 !important;
+}
+
+html[dir="rtl"] .overview-body-text {
+  font-size: clamp(1.02rem, 1.15vw, 1.34rem) !important;
+  line-height: 1.8 !important;
+}
+
+html[dir="rtl"] .gallery .container {
+  width: min(1223px, 92vw) !important;
+  max-width: 1223px !important;
+  margin: 0 auto !important;
+  margin-left: auto !important;
+  transform: none !important;
+  padding: 0 !important;
+}
+
+html[dir="rtl"] .gallery-head,
+html[dir="rtl"] .gallery-filter {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html[dir="rtl"] .gallery-head {
+  padding: 3.5rem calc((100% - min(1223px, 92vw)) / 2) 0 4vw !important;
+  background: #e5e2da !important;
+}
+
+html[dir="rtl"] .gallery-filter {
+  justify-content: flex-end !important;
+  padding: 1.5rem 4vw 3.5rem max(735px, 9.3vw) !important;
+  background: #e5e2da !important;
+  gap: 1.35rem !important;
+}
+
+html[dir="rtl"] .gallery-filter::after {
+  right: calc(max(735px, 9.3vw) + 1rem) !important;
+  left: 26vw !important;
+  bottom: 3.2rem !important;
+}
+
+html[dir="rtl"] .gallery-filter-label {
+  font-size: 0.78rem !important;
+  line-height: 1.3 !important;
+}
+
+html[dir="rtl"] .plan-head {
+  align-items: center !important;
+  gap: 1.1rem !important;
+  justify-content: flex-start !important;
+  direction: rtl !important;
+}
+
+html[dir="rtl"] .plan-cta {
+  position: relative !important;
+  display: inline-block !important;
+  min-width: 228px !important;
+  align-self: center !important;
+  flex-shrink: 0 !important;
+}
+
+html[dir="rtl"] .plan-cta-bg {
+  width: 220px !important;
+  display: block !important;
+}
+
+html[dir="rtl"] .plan-cta-label-text {
+  position: absolute !important;
+  inset: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: auto !important;
+  transform: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  font-size: 0.9rem !important;
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif !important;
+  color: var(--deep) !important;
+  white-space: normal !important;
+  line-height: 1.25 !important;
+  padding: 0 0.4rem !important;
+  direction: rtl !important;
+  unicode-bidi: embed !important;
+}
+
+html[dir="rtl"] .plan-left .plan-prev {
+  left: auto !important;
+  right: 6% !important;
+}
+
+html[dir="rtl"] .plan-right .plan-next {
+  left: auto !important;
+  right: 6% !important;
+}
+
+html[dir="rtl"] .plan-left .plan-prev img {
+  transform: scaleX(-1) !important;
+}
+
+html[dir="rtl"] .plan-vline {
+  left: auto !important;
+  right: 30% !important;
+  top: 14.5% !important;
+  height: 25.5% !important;
+}
+
+html[dir="rtl"] .plans #planTextContainer.plan-text-container {
+  top: 18% !important;
+  left: auto !important;
+  right: calc(30% + 1.35rem) !important;
+  width: 52% !important;
+}
+
+html:not([dir="rtl"]) .plans .plan-vline {
+  left: 35% !important;
+  top: 14.5% !important;
+  height: 25.5% !important;
+}
+
+html:not([dir="rtl"]) .plans #planTextContainer.plan-text-container {
+  top: 18% !important;
+  left: calc(35% + 1.35rem) !important;
+  right: auto !important;
+  width: 52% !important;
+}
+
+html[dir="rtl"] .gallery-grid {
+  width: 100% !important;
+  margin: 1.6rem auto 0 !important;
+}
+
+html[dir="rtl"] .plans-title-text,
+html[dir="rtl"] .gallery-title-text,
+html[dir="rtl"] .tour-title-text,
+html[dir="rtl"] .faq-head-title-text,
+html[dir="rtl"] .newsletter-title-text {
+  font-size: clamp(1.72rem, 2vw, 2.28rem) !important;
+  line-height: 1.25 !important;
+}
+
+html[dir="rtl"] .plans-subtitle-text,
+html[dir="rtl"] .gallery-subtitle-text,
+html[dir="rtl"] .tour-subtitle-text,
+html[dir="rtl"] .faq-q-text,
+html[dir="rtl"] .faq-answer,
+html[dir="rtl"] .loc-subtitle,
+html[dir="rtl"] .plan-stats,
+html[dir="rtl"] .contact-label-text,
+html[dir="rtl"] .contact-value-text {
+  line-height: 1.7 !important;
+}
+
+html[dir="rtl"] .phil-title-text,
+html[dir="rtl"] .phil-label-text {
+  text-transform: none !important;
+}
+
+@media (max-width: 767px) {
+  html[dir="rtl"] .gallery .container,
+  html[dir="rtl"] .gallery-head,
+  html[dir="rtl"] .gallery-filter {
+    width: 100% !important;
+  }
+
+  html[dir="rtl"] .gallery-head {
+    padding: 2rem 1rem 0 !important;
+  }
+
+  html[dir="rtl"] .gallery-filter {
+    padding: 1rem 1rem 2rem !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  html[dir="rtl"] .gallery-filter::after {
+    right: 1rem !important;
+    left: 1rem !important;
+    bottom: 1.75rem !important;
+  }
+
+  html[dir="rtl"] .gallery .container {
+    width: calc(100% - 2rem) !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  html[dir="rtl"] .plan-cta {
+    min-width: 190px !important;
+  }
+
+  html[dir="rtl"] .plan-cta-bg {
+    width: 190px !important;
+  }
+
+  html[dir="rtl"] .plan-cta-label-text {
+    position: absolute !important;
+    inset: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: auto !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 0.76rem !important;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif !important;
+    color: var(--deep) !important;
+    padding: 0 0.4rem !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+  }
+
+  html[dir="rtl"] .plan-left .plan-prev {
+    right: 4vw !important;
+  }
+
+  html[dir="rtl"] .plan-right .plan-next {
+    left: auto !important;
+    right: 4vw !important;
+  }
+
+  html[dir="rtl"] .site-nav .nav-main-link,
+  html[dir="rtl"] .site-nav .nav-enquire {
+    font-size: 0.98rem !important;
+  }
+}
+
+/* Keep the decorative section bars on the right side of heading text in Arabic pages */
+html[dir="rtl"] .overview-head,
+html[dir="rtl"] .amenities-head,
+html[dir="rtl"] .loc-head,
+html[dir="rtl"] .plan-head-col,
+html[dir="rtl"] .gallery-head,
+html[dir="rtl"] .tour-head,
+html[dir="rtl"] .faq-head {
+  flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .loc-head-text,
+html[dir="rtl"] .plan-head-texts,
+html[dir="rtl"] .gallery-head-texts,
+html[dir="rtl"] .tour-head-texts,
+html[dir="rtl"] .faq-head-title {
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+@media (max-width: 1024px) {
+  html[dir="rtl"] .overview-head,
+  html[dir="rtl"] .amenities-head,
+  html[dir="rtl"] .loc-head,
+  html[dir="rtl"] .plan-head-col,
+  html[dir="rtl"] .gallery-head,
+  html[dir="rtl"] .tour-head,
+  html[dir="rtl"] .faq-head {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+  }
+
+  html[dir="rtl"] .loc-head-text,
+  html[dir="rtl"] .plan-head-texts,
+  html[dir="rtl"] .gallery-head-texts,
+  html[dir="rtl"] .tour-head-texts,
+  html[dir="rtl"] .faq-head-title {
+    text-align: right !important;
+    align-items: flex-end !important;
+  }
+}
+
 .reg-popup-close {
   position: absolute;
   top: 1.1rem;
@@ -4640,6 +5379,12 @@ p {
   .fp-info > .fp-download { margin-left: 1.5rem; }
   .fp-info, .fp-image { padding: 4rem 1.5rem !important; }
   .fp-image { min-height: 50vh; }
+
+  html[dir="rtl"] .page-floor-plans .fp-header { align-items: flex-end; }
+  html[dir="rtl"] .page-floor-plans .fp-title-wrap { margin-right: 0; padding-right: 1.5rem; margin-bottom: 2rem; }
+  html[dir="rtl"] .page-floor-plans .fp-header-block { margin-right: 0; padding-right: 1.5rem; margin-top: 1.5rem; }
+  html[dir="rtl"] .page-floor-plans .fp-keyplan { margin-right: 0; padding-right: 1.5rem; margin-top: 1.5rem; }
+  html[dir="rtl"] .page-floor-plans .fp-info > .fp-download { margin-right: 1.5rem; }
   
   /* Make sure philosophy stage scales safely */
   .philosophy-stage {
@@ -4657,8 +5402,198 @@ p {
   .fp-title { font-size: 38px; }
   .fp-subtitle { font-size: 20px; }
   #planTextContainer.plan-text-container h3 {
-    font-size: 28px !important;
-    line-height: 1.02;
+    font-size: 13px !important;
+    line-height: 1.15;
   }
   
   }
+
+/* DEFINITIVE Arabic mobile heading fix – bars right, titles right
+   KEY: all text containers use align-items:stretch so title/subtitle
+   fill the full width, then text-align:right positions text at right edge. */
+@media (max-width: 1024px) {
+
+  /* ---- LOCATION ---- */
+  html[dir="rtl"] #location .loc-head {
+    display: flex !important;
+    flex-direction: row !important;
+    direction: rtl !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  html[dir="rtl"] #location .loc-vline {
+    order: 0 !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  html[dir="rtl"] #location .loc-head-text {
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+  }
+  html[dir="rtl"] #location .loc-title,
+  html[dir="rtl"] #location .loc-subtitle {
+    display: block !important;
+    width: 100% !important;
+    text-align: right !important;
+    direction: rtl !important;
+    margin: 0 !important;
+  }
+
+  /* ---- FLOOR PLANS ---- */
+  html[dir="rtl"] #plans .plan-head-col {
+    display: flex !important;
+    flex-direction: row !important;
+    direction: rtl !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  html[dir="rtl"] #plans .plan-head-line {
+    order: 0 !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  html[dir="rtl"] #plans .plan-head-texts {
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+  }
+  html[dir="rtl"] #plans .plans-title-text,
+  html[dir="rtl"] #plans .plans-subtitle-text {
+    display: block !important;
+    width: 100% !important;
+    text-align: right !important;
+    direction: rtl !important;
+    margin: 0 !important;
+  }
+
+  /* ---- GALLERY ---- */
+  html[dir="rtl"] #gallery .gallery-head {
+    display: flex !important;
+    flex-direction: row !important;
+    direction: rtl !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    padding: 2rem 1rem !important;
+  }
+  html[dir="rtl"] #gallery .gallery-vline {
+    order: 0 !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  html[dir="rtl"] #gallery .gallery-head-texts {
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+    padding-top: 0 !important;
+  }
+  html[dir="rtl"] #gallery .gallery-title-text,
+  html[dir="rtl"] #gallery .gallery-subtitle-text {
+    display: block !important;
+    width: 100% !important;
+    text-align: right !important;
+    direction: rtl !important;
+    margin: 0 !important;
+  }
+
+  /* ---- VISUAL TOUR ---- */
+  html[dir="rtl"] .tour.section .tour-head {
+    display: flex !important;
+    flex-direction: row !important;
+    direction: rtl !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  html[dir="rtl"] .tour.section .tour-vline {
+    order: 0 !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+  html[dir="rtl"] .tour.section .tour-head-texts {
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+  }
+  html[dir="rtl"] .tour.section .tour-title-text,
+  html[dir="rtl"] .tour.section .tour-subtitle-text {
+    display: block !important;
+    width: 100% !important;
+    text-align: right !important;
+    direction: rtl !important;
+    margin: 0 !important;
+  }
+
+  /* ---- Overview, Amenities, FAQ ---- */
+  html[dir="rtl"] body:not(.page-floor-plans) .overview-head,
+  html[dir="rtl"] body:not(.page-floor-plans) .amenities-head,
+  html[dir="rtl"] body:not(.page-floor-plans) .faq-head {
+    display: flex !important;
+    flex-direction: row !important;
+    direction: rtl !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+  html[dir="rtl"] body:not(.page-floor-plans) .overview-copy,
+  html[dir="rtl"] body:not(.page-floor-plans) .faq-head-title {
+    flex: 1 1 auto !important;
+    align-items: stretch !important;
+    min-width: 0 !important;
+  }
+  html[dir="rtl"] body:not(.page-floor-plans) .overview-title-text,
+  html[dir="rtl"] body:not(.page-floor-plans) .overview-body-text,
+  html[dir="rtl"] body:not(.page-floor-plans) .faq-head-title-text {
+    display: block !important;
+    width: 100% !important;
+    text-align: right !important;
+    direction: rtl !important;
+    margin: 0 !important;
+  }
+
+  /* ---- vlines always auto-sized ---- */
+  html[dir="rtl"] body:not(.page-floor-plans) .overview-vline,
+  html[dir="rtl"] body:not(.page-floor-plans) .amenities-vline,
+  html[dir="rtl"] body:not(.page-floor-plans) .loc-vline,
+  html[dir="rtl"] body:not(.page-floor-plans) .gallery-vline,
+  html[dir="rtl"] body:not(.page-floor-plans) .tour-vline,
+  html[dir="rtl"] body:not(.page-floor-plans) .faq-head-line {
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+
+  /* ---- Plan viewer unit description – right-aligned and pushed up ---- */
+  html[dir="rtl"] .plans #planTextContainer.plan-text-container {
+    left: 30% !important;
+    right: 2rem !important;
+    top: 3rem !important;
+    width: auto !important;
+    text-align: right !important;
+    direction: rtl !important;
+  }
+  html[dir="rtl"] #planTextContainer.plan-text-container h3,
+  html[dir="rtl"] #planTextContainer .plan-subtitle,
+  html[dir="rtl"] #planTextContainer .plan-stats,
+  html[dir="rtl"] #planTextContainer .plan-stats p,
+  html[dir="rtl"] #planTextContainer .plan-progress {
+    text-align: right !important;
+    direction: rtl !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+

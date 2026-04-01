@@ -47,6 +47,22 @@ const mapTargets = {
   }
 };
 
+const isArabicPage =
+  document.documentElement.lang === 'ar' ||
+  document.documentElement.dir === 'rtl' ||
+  /index-ar\.html$/i.test(window.location.pathname);
+
+if (isArabicPage) {
+  mapTargets.sharjah.copy = '10 دقائق من مركز مدينة الشارقة';
+  mapTargets.sharjah.label = 'مركز مدينة الشارقة';
+  mapTargets.alzorah.copy = '13 دقيقة من الزوراء';
+  mapTargets.alzorah.label = 'الزوراء';
+  mapTargets.ajman.copy = '15 دقيقة من شاطئ عجمان';
+  mapTargets.ajman.label = 'شاطئ عجمان';
+  mapTargets.dubai.copy = '30 دقيقة من مطار دبي';
+  mapTargets.dubai.label = 'مطار دبي';
+}
+
 function activateMapTarget(targetKey) {
   const selectedTarget = mapTargets[targetKey] || mapTargets.sharjah;
 
@@ -306,24 +322,49 @@ const planStats = document.getElementById('planStats');
 const planProgress = document.getElementById('planProgress');
 const planDownloadLink = document.querySelector('.plan-dl-row');
 
+function localizePlanText(value) {
+  if (!isArabicPage || typeof value !== 'string') {
+    return value;
+  }
+
+  return value
+    .replaceAll('ONE BED APARTMENT', 'شقة بغرفة نوم واحدة')
+    .replaceAll('TWO BED APARTMENT', 'شقة بغرفتي نوم')
+    .replaceAll('THREE BED APARTMENT', 'شقة بثلاث غرف نوم')
+    .replaceAll('FOUR BED APARTMENT', 'شقة بأربع غرف نوم')
+    .replaceAll('4 BED DUPLEX TYPE 1', 'دوبلكس 4 غرف نوم - النوع 1')
+    .replaceAll('4 BED DUPLEX TYPE 2', 'دوبلكس 4 غرف نوم - النوع 2')
+    .replaceAll('LOWER FLOOR', 'الطابق السفلي')
+    .replaceAll('UPPER FLOOR', 'الطابق العلوي')
+    .replaceAll('BED TYPE', 'نوع')
+    .replaceAll('Unit Area (NSA)', 'مساحة الوحدة (NSA)')
+    .replaceAll('Balcony/Terrace Area', 'مساحة الشرفة/التراس')
+    .replaceAll('Total Area (GSA)', 'المساحة الإجمالية (GSA)')
+    .replaceAll('SQM', 'متر مربع');
+}
+
 function updatePlanUI() {
   const p = plans[planIndex];
+  const localizedTitle = localizePlanText(p.title || '');
+  const localizedSubtitle = localizePlanText(p.subtitle || '');
+  const localizedStats = Array.isArray(p.stats) ? p.stats.map(localizePlanText) : [];
+
   if (planImage) {
     planImage.src = p.image;
-    planImage.alt = [p.title, p.subtitle].filter(Boolean).join(' · ') || 'Floor plan';
+    planImage.alt = [localizedTitle, localizedSubtitle].filter(Boolean).join(' · ') || (isArabicPage ? 'مخطط طابق' : 'Floor plan');
   }
   
-  if (planTitle) planTitle.textContent = p.title || 'FLOOR PLAN';
+  if (planTitle) planTitle.textContent = localizedTitle || (isArabicPage ? 'مخطط الطابق' : 'FLOOR PLAN');
   if (planSubtitle) {
-    if (p.subtitle) {
-      planSubtitle.textContent = p.subtitle;
+    if (localizedSubtitle) {
+      planSubtitle.textContent = localizedSubtitle;
       planSubtitle.hidden = false;
     } else {
       planSubtitle.hidden = true;
     }
   }
   if (planStats) {
-    planStats.innerHTML = p.stats.map(s => `<p>${s}</p>`).join('');
+    planStats.innerHTML = localizedStats.map(s => `<p>${s}</p>`).join('');
   }
   if (planProgress) {
     planProgress.textContent = `${planIndex + 1} / ${plans.length}`;
@@ -331,7 +372,11 @@ function updatePlanUI() {
   if (planDownloadLink) {
     planDownloadLink.href = p.image;
     planDownloadLink.setAttribute('download', p.image.split('/').pop() || 'floor-plan.jpg');
-    planDownloadLink.setAttribute('aria-label', `Download ${[p.title, p.subtitle].filter(Boolean).join(' ')} floor plan`);
+    if (isArabicPage) {
+      planDownloadLink.setAttribute('aria-label', `تحميل مخطط ${[localizedTitle, localizedSubtitle].filter(Boolean).join(' ')}`);
+    } else {
+      planDownloadLink.setAttribute('aria-label', `Download ${[p.title, p.subtitle].filter(Boolean).join(' ')} floor plan`);
+    }
   }
 }
 
@@ -744,7 +789,19 @@ const philosophyStage = document.querySelector('.philosophy-stage');
 const philosophySection = document.querySelector('.philosophy');
 
 if (philosophyCenterText && philosophyNodes.length) {
-  const philosophyCopy = {
+  const philosophyCopy = isArabicPage
+    ? {
+        default: 'هوية حضرية مميزة تتجلى في تكوين معماري لأبراج أنيقة تجعل سواري وجهة بارزة متعددة الاستخدامات.',
+        concept: 'أيديولوجية المفهوم: رؤية متكاملة لمجتمع عصري يوازن بين الراحة، الهوية المعمارية، والاتصال الحضري.',
+        iconic: 'هوية حضرية مميزة: تصميم معماري يرسخ حضور سواري كمعلم بصري واضح ضمن مشهد المدينة.',
+        central: 'منطقة سنترال بوينت: موقع محوري يربط السكن بالخدمات اليومية والمراكز الحيوية بسهولة.',
+        premium: 'مواد فاخرة: تشطيبات مختارة بعناية تجمع بين الجودة العالية والاستدامة طويلة المدى.',
+        human: 'تنقل يركز على الإنسان: حركة سلسة ومسارات مريحة تعزز تجربة السكان والزوار يومياً.',
+        lifestyle: 'تكامل أنماط الحياة: مزج متناغم بين السكن والترفيه والرفاهية في بيئة واحدة.',
+        community: 'حياة تتمحور حول المجتمع: مساحات مشتركة تعزز التفاعل وروح الانتماء بين السكان.',
+        luxury: 'الفخامة مع الاستدامة: جودة معيشية راقية مدعومة بحلول مسؤولة وفعالة للمستقبل.'
+      }
+    : {
     default: 'Dynamic and iconic skyline through a composition of elegantly articulated towers that establish Sawari as a landmark mixed-use destination.',
     concept: 'Dummy text about concept ideology, describing the overall vision behind Sawari and how every design decision supports a clear, unified development identity.',
     iconic: 'Dummy text about iconic urban identity, expressing how Sawari creates a recognizable landmark presence with a strong and memorable silhouette.',
@@ -838,7 +895,7 @@ if (philosophyCenterText && philosophyNodes.length) {
       if (window.innerWidth <= 767) {
         philosophyCenterText.innerHTML = `
           <div class="phil-text-content">${philosophyCopy[nextTopic]}</div>
-          <button class="phil-read-more" type="button">Read More</button>
+          <button class="phil-read-more" type="button">${isArabicPage ? 'اقرأ المزيد' : 'Read More'}</button>
         `;
         const expandBtn = philosophyCenterText.querySelector('.phil-read-more');
         expandBtn?.addEventListener('click', () => {
@@ -979,6 +1036,7 @@ if (registerForm) {
 /* POPUP LOGIC */
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
+  const languageToggleButton = document.querySelector('.nav-lang');
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const primaryNav = document.getElementById('primaryNav');
   const popup = document.getElementById('registerPopup');
@@ -1005,6 +1063,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryLightboxNext = document.getElementById('galleryLightboxNext');
   const galleryLightboxProgress = document.getElementById('galleryLightboxProgress');
   const galleryTriggers = document.querySelectorAll('.gallery-open');
+  const menuOpenLabel = isArabicPage ? 'فتح القائمة' : 'Open menu';
+  const menuCloseLabel = isArabicPage ? 'إغلاق القائمة' : 'Close menu';
+
+  if (languageToggleButton) {
+    languageToggleButton.addEventListener('click', () => {
+      const isArabic =
+        document.documentElement.lang === 'ar' ||
+        document.documentElement.dir === 'rtl' ||
+        /index-ar\.html$/i.test(window.location.pathname);
+      const isFloorPlansPage = /floor-plans(?:-ar)?\.html$/i.test(window.location.pathname);
+      const hash = window.location.hash || '';
+      const targetPath = isFloorPlansPage
+        ? (isArabic ? 'floor-plans.html' : 'floor-plans-ar.html')
+        : (isArabic ? 'index.html' : 'index-ar.html');
+      window.location.href = `${targetPath}${hash}`;
+    });
+  }
 
   const closeMobileMenu = () => {
     if (!header || !mobileMenuToggle) {
@@ -1013,14 +1088,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     header.classList.remove('menu-open');
     mobileMenuToggle.setAttribute('aria-expanded', 'false');
-    mobileMenuToggle.setAttribute('aria-label', 'Open menu');
+    mobileMenuToggle.setAttribute('aria-label', menuOpenLabel);
   };
 
   if (mobileMenuToggle && header) {
     mobileMenuToggle.addEventListener('click', () => {
       const isOpen = header.classList.toggle('menu-open');
       mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      mobileMenuToggle.setAttribute('aria-label', isOpen ? menuCloseLabel : menuOpenLabel);
     });
 
     primaryNav?.querySelectorAll('a, button').forEach((element) => {
@@ -1536,6 +1611,33 @@ document.addEventListener('DOMContentLoaded', () => {
      FLOOR PLANS LIGHTBOX
      ================================== */
   if (document.body.classList.contains('page-floor-plans')) {
+    if (isArabicPage) {
+      const fpTitle = document.querySelector('.fp-title');
+      const fpSubtitle = document.querySelector('.fp-subtitle');
+      if (fpTitle) fpTitle.textContent = 'مخططات الطوابق';
+      if (fpSubtitle) fpSubtitle.textContent = 'مساحات مصممة بعناية لتجمع بين الطابع العملي والأناقة';
+
+      document.querySelectorAll('.fp-header-block h2').forEach((el) => {
+        el.textContent = localizePlanText(el.textContent.trim());
+      });
+
+      document.querySelectorAll('.fp-subtitle-type').forEach((el) => {
+        el.textContent = localizePlanText(el.textContent.trim());
+      });
+
+      document.querySelectorAll('.fp-stats p').forEach((el) => {
+        el.textContent = localizePlanText(el.textContent.trim());
+      });
+
+      document.querySelectorAll('.fp-keyplan h3').forEach((el) => {
+        el.textContent = 'المخطط الرئيسي';
+      });
+
+      document.querySelectorAll('.fp-download span').forEach((el) => {
+        el.textContent = 'تحميل مخطط الطابق';
+      });
+    }
+
     // Wire each download button to its floor plan image
     document.querySelectorAll('.fp-item').forEach(item => {
       const img = item.querySelector('.fp-image > img:not(.fp-zoom-icon)');
@@ -1544,7 +1646,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const filename = img.src.split('/').pop() || 'floor-plan.jpg';
         dlBtn.href = img.src;
         dlBtn.setAttribute('download', filename);
-        dlBtn.setAttribute('aria-label', `Download ${img.alt || 'floor plan'}`);
+        dlBtn.setAttribute('aria-label', isArabicPage ? `تحميل ${img.alt || 'مخطط الطابق'}` : `Download ${img.alt || 'floor plan'}`);
       }
     });
 
