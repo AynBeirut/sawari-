@@ -1276,6 +1276,8 @@ p {
   height: 3px;
   background: rgba(87, 103, 101, 0.6);
 }
+
+.gallery-grid {
   display: grid;
   width: 100%;
   margin: 2rem auto 0;
