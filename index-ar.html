@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=200060" />
+  <link rel="stylesheet" href="styles.css?v=200088" />
   <script>
     (function () {
       window.applyPageScale = function applyPageScale() {
@@ -250,11 +250,11 @@
           </div>
         </div>
         <div class="gallery-filter reveal">
-          <button class="active" data-filter="lobby" type="button"><span class="gallery-filter-label">الردهة</span></button>
-          <button data-filter="1bed" type="button"><span class="gallery-filter-label">غرفة نوم واحدة</span></button>
-          <button data-filter="2bed" type="button"><span class="gallery-filter-label">غرفتا نوم</span></button>
-          <button data-filter="3bed" type="button"><span class="gallery-filter-label">ثلاث غرف نوم</span></button>
-          <button data-filter="garden" type="button"><span class="gallery-filter-label">الحديقة</span></button>
+          <button class="active" data-filter="lobby" type="button" spellcheck="false"><span class="gallery-filter-label">الردهة</span></button>
+          <button data-filter="1bed" type="button" spellcheck="false"><span class="gallery-filter-label">غرفة نوم واحدة</span></button>
+          <button data-filter="2bed" type="button" spellcheck="false"><span class="gallery-filter-label">غرفتا نوم</span></button>
+          <button data-filter="3bed" type="button" spellcheck="false"><span class="gallery-filter-label">ثلاث غرف نوم</span></button>
+          <button data-filter="garden" type="button" spellcheck="false"><span class="gallery-filter-label">الحديقة</span></button>
         </div>
       <div class="container">
         <div class="gallery-grid reveal">
@@ -485,20 +485,20 @@
         <form id="registerForm" class="register-form" novalidate>
           <div class="register-title" data-cms-key="register-title">سجل اهتمامك</div>
           <div class="field-wrap">
-            <img src="assets/psd-export/026-name-1.png" alt="Name" class="field-label" />
-            <input type="text" name="name" aria-label="Name" required />
+            <span class="field-label-text">الاسم</span>
+            <input type="text" name="name" aria-label="الاسم" required />
           </div>
           <div class="field-wrap">
-            <img src="assets/psd-export/028-email-1.png" alt="Email" class="field-label" />
-            <input type="email" name="email" aria-label="Email" required />
+            <span class="field-label-text">البريد الإلكتروني</span>
+            <input type="email" name="email" aria-label="البريد الإلكتروني" required />
           </div>
           <div class="field-wrap">
-            <img src="assets/psd-export/030-mobile-1.png" alt="Mobile" class="field-label" />
-            <input type="tel" name="phone" aria-label="Mobile" required />
+            <span class="field-label-text">الجوال</span>
+            <input type="tel" name="phone" aria-label="الجوال" required />
           </div>
           <div class="field-wrap">
-            <img src="assets/psd-export/033-message-1.png" alt="Message" class="field-label" />
-            <textarea name="message" rows="2" aria-label="Message"></textarea>
+            <span class="field-label-text">الرسالة</span>
+            <textarea name="message" rows="2" aria-label="الرسالة"></textarea>
           </div>
           <button class="register-submit" type="submit">إرسال</button>
           <p id="registerStatus" class="form-status" aria-live="polite"></p>

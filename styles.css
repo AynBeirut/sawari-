@@ -3115,6 +3115,7 @@ p {
   .faq {
     --faq-list-offset: calc(4px + 1rem);
   }
+}
 
 /* Arabic baseline RTL support */
 html[dir="rtl"] body {
@@ -3485,6 +3486,7 @@ html[dir="rtl"] .phil-label-text {
   }
 }
 
+@media (max-width: 767px) {
   html,
   body {
     overflow-x: hidden;
@@ -4859,8 +4861,8 @@ html[dir="rtl"] .site-nav .nav-enquire {
 }
 
 html[dir="rtl"] .overview-title-text {
-  font-size: clamp(1.75rem, 2.15vw, 2.55rem) !important;
-  line-height: 1.3 !important;
+  font-size: 48.75px !important;
+  line-height: 1.2 !important;
 }
 
 html[dir="rtl"] .overview-body-text {
@@ -4869,11 +4871,12 @@ html[dir="rtl"] .overview-body-text {
 }
 
 html[dir="rtl"] .gallery .container {
-  width: min(1223px, 92vw) !important;
-  max-width: 1223px !important;
-  margin: 0 auto !important;
-  margin-left: auto !important;
-  transform: none !important;
+  /* Mirror English: 1833px container centred via RTL-flip of the same trick */
+  width: min(1833px, calc((100vw - 4rem) / var(--page-zoom, 1))) !important;
+  max-width: none !important;
+  margin-right: 50% !important;
+  margin-left: 0 !important;
+  transform: translateX(50%) !important;
   padding: 0 !important;
 }
 
@@ -4885,26 +4888,58 @@ html[dir="rtl"] .gallery-filter {
 }
 
 html[dir="rtl"] .gallery-head {
+  /* Mirror English head: padding-left=(100%-1223px)/2 → padding-right for RTL (standard container alignment) */
   padding: 3.5rem calc((100% - min(1223px, 92vw)) / 2) 0 4vw !important;
   background: #e5e2da !important;
+  justify-content: flex-start !important;   /* RTL flex-start = items anchored to the RIGHT side */
 }
 
 html[dir="rtl"] .gallery-filter {
-  justify-content: flex-end !important;
+  direction: ltr !important;
+  flex-direction: row-reverse !important; /* RTL button order */
+  justify-content: flex-end !important;   /* anchors reversed items at x=735px left edge */
   padding: 1.5rem 4vw 3.5rem max(735px, 9.3vw) !important;
   background: #e5e2da !important;
   gap: 1.35rem !important;
 }
 
+html[dir="rtl"] .gallery-filter button {
+  direction: rtl !important;
+  line-height: 1 !important;
+  padding: 0 0.55rem !important;
+  align-self: flex-start !important;
+  margin-bottom: 1.4rem !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  background: transparent !important;
+}
+
 html[dir="rtl"] .gallery-filter::after {
-  right: calc(max(735px, 9.3vw) + 1rem) !important;
-  left: 26vw !important;
+  left: calc(max(735px, 9.3vw) + 1rem) !important;
+  right: 40vw !important;  /* ends at right edge of الردهة */
   bottom: 3.2rem !important;
 }
 
+html[dir="rtl"] .gallery-filter button.active::after,
+html[dir="rtl"] .gallery-filter button::after {
+  left: 0.6rem !important;
+  right: 0.6rem !important;
+  bottom: -1.6rem !important;
+}
+
 html[dir="rtl"] .gallery-filter-label {
-  font-size: 0.78rem !important;
-  line-height: 1.3 !important;
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  font-family: 'Cairo', 'Futura', 'Century Gothic', sans-serif !important;
+  color: #4a5e5b !important;
+  letter-spacing: 0 !important;
+  direction: rtl !important;
+}
+
+html[dir="rtl"] .gallery-filter button.active .gallery-filter-label,
+html[dir="rtl"] .gallery-filter button:hover .gallery-filter-label {
+  color: #2f4340 !important;
 }
 
 html[dir="rtl"] .plan-head {
@@ -4956,8 +4991,12 @@ html[dir="rtl"] .plan-left .plan-prev {
 }
 
 html[dir="rtl"] .plan-right .plan-next {
-  left: auto !important;
-  right: 6% !important;
+  left: 6% !important;
+  right: auto !important;
+}
+
+html[dir="rtl"] .plan-right .plan-next img {
+  transform: scaleX(-1) !important;
 }
 
 html[dir="rtl"] .plan-left .plan-prev img {
@@ -5001,8 +5040,14 @@ html[dir="rtl"] .gallery-title-text,
 html[dir="rtl"] .tour-title-text,
 html[dir="rtl"] .faq-head-title-text,
 html[dir="rtl"] .newsletter-title-text {
-  font-size: clamp(1.72rem, 2vw, 2.28rem) !important;
-  line-height: 1.25 !important;
+  font-size: 48.75px !important;
+  line-height: 1.2 !important;
+}
+
+html[dir="rtl"] .plans-subtitle-text,
+html[dir="rtl"] .gallery-subtitle-text,
+html[dir="rtl"] .tour-subtitle-text {
+  font-size: 26px !important;
 }
 
 html[dir="rtl"] .plans-subtitle-text,
@@ -5020,6 +5065,70 @@ html[dir="rtl"] .contact-value-text {
 html[dir="rtl"] .phil-title-text,
 html[dir="rtl"] .phil-label-text {
   text-transform: none !important;
+  font-size: 1.5rem !important;
+}
+
+html[dir="rtl"] .phil-label-text {
+  font-size: 1.1rem !important;
+}
+
+html[dir="rtl"] .field-label-text {
+  display: block;
+  font-family: 'Cairo', 'Tahoma', sans-serif !important;
+  font-size: 0.72rem !important;
+  color: var(--muted) !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+}
+
+/* === Arabic typography: colours & sizes match English design === */
+html[dir="rtl"] .overview-title-text {
+  color: var(--myrtle) !important;
+}
+html[dir="rtl"] .overview-body-text {
+  color: #556a67 !important;
+}
+html[dir="rtl"] .amenities-title {
+  color: var(--accent) !important;     /* matches English .amenities-title: var(--accent) gold */
+}
+html[dir="rtl"] .loc-title {
+  color: var(--ink) !important;        /* matches English .loc-title: inherits --ink */
+}
+html[dir="rtl"] .loc-subtitle {
+  color: var(--muted) !important;      /* matches English .loc-subtitle: var(--muted) */
+}
+html[dir="rtl"] .plans-title-text,
+html[dir="rtl"] .gallery-title-text,
+html[dir="rtl"] .tour-title-text,
+html[dir="rtl"] .faq-head-title-text {
+  color: var(--myrtle) !important;     /* dark forest green — matches English section-title images */
+}
+html[dir="rtl"] .newsletter-title-text {
+  color: var(--myrtle) !important;     /* was #5d615f (muted) — align with other section titles */
+}
+html[dir="rtl"] .plans-subtitle-text,
+html[dir="rtl"] .gallery-subtitle-text,
+html[dir="rtl"] .tour-subtitle-text {
+  color: var(--muted) !important;      /* matches English section subtitle muted colour */
+}
+html[dir="rtl"] .faq-q-text {
+  color: var(--ink) !important;
+  font-size: 1.05rem !important;
+}
+html[dir="rtl"] .faq-answer {
+  color: var(--muted) !important;     /* matches English .faq-answer: var(--muted) */
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+}
+html[dir="rtl"] .contact-label-text {
+  color: var(--muted) !important;     /* muted grey — readable on light #f8f7f4 strip bg */
+  font-size: 0.85rem !important;
+}
+html[dir="rtl"] .contact-value-text {
+  color: var(--ink) !important;       /* was #f1f1f1 (near-white) — INVISIBLE on light bg fix */
+  font-size: 1rem !important;
+  font-weight: 500 !important;
 }
 
 @media (max-width: 767px) {
@@ -5095,48 +5204,80 @@ html[dir="rtl"] .phil-label-text {
   html[dir="rtl"] .site-nav .nav-enquire {
     font-size: 0.98rem !important;
   }
+
+  html[dir="rtl"] .gallery-filter-label {
+    font-size: 0.8rem !important;
+  }
+
+  html[dir="rtl"] .gallery-filter button {
+    padding: 0.25rem 0.45rem !important;
+  }
+
+  html[dir="rtl"] .overview-title-text,
+  html[dir="rtl"] .plans-title-text,
+  html[dir="rtl"] .gallery-title-text,
+  html[dir="rtl"] .tour-title-text,
+  html[dir="rtl"] .faq-head-title-text,
+  html[dir="rtl"] .newsletter-title-text {
+    font-size: clamp(26px, 8.5vw, 40px) !important;
+  }
+
+  html[dir="rtl"] .plans-subtitle-text,
+  html[dir="rtl"] .gallery-subtitle-text,
+  html[dir="rtl"] .tour-subtitle-text,
+  html[dir="rtl"] .overview-body-text {
+    font-size: clamp(0.95rem, 4vw, 1.2rem) !important;
+  }
 }
 
-/* Keep the decorative section bars on the right side of heading text in Arabic pages */
+/* Keep the decorative section bars on the right side of heading text in Arabic pages — desktop only */
 html[dir="rtl"] .overview-head,
 html[dir="rtl"] .amenities-head,
 html[dir="rtl"] .loc-head,
 html[dir="rtl"] .plan-head-col,
-html[dir="rtl"] .gallery-head,
 html[dir="rtl"] .tour-head,
 html[dir="rtl"] .faq-head {
-  flex-direction: row-reverse !important;
+  flex-direction: row;
+  direction: rtl;
+}
+
+html[dir="rtl"] .gallery-head {
+  flex-direction: row;
+  direction: rtl;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 html[dir="rtl"] .loc-head-text,
 html[dir="rtl"] .plan-head-texts,
 html[dir="rtl"] .gallery-head-texts,
-html[dir="rtl"] .tour-head-texts,
-html[dir="rtl"] .faq-head-title {
-  text-align: right !important;
-  align-items: flex-end !important;
+html[dir="rtl"] .tour-head-texts {
+  flex: 1 1 auto;
+  direction: rtl;
+  text-align: right;
+  align-items: flex-start;
 }
 
-@media (max-width: 1024px) {
-  html[dir="rtl"] .overview-head,
-  html[dir="rtl"] .amenities-head,
-  html[dir="rtl"] .loc-head,
-  html[dir="rtl"] .plan-head-col,
-  html[dir="rtl"] .gallery-head,
-  html[dir="rtl"] .tour-head,
-  html[dir="rtl"] .faq-head {
-    flex-direction: row-reverse !important;
-    justify-content: flex-start !important;
-  }
+html[dir="rtl"] .faq-head-title-text,
+html[dir="rtl"] .amenities-title,
+html[dir="rtl"] .overview-title-text {
+  flex: 1 1 auto;
+  text-align: right;
+  direction: rtl;
+}
 
-  html[dir="rtl"] .loc-head-text,
-  html[dir="rtl"] .plan-head-texts,
-  html[dir="rtl"] .gallery-head-texts,
-  html[dir="rtl"] .tour-head-texts,
-  html[dir="rtl"] .faq-head-title {
-    text-align: right !important;
-    align-items: flex-end !important;
-  }
+html[dir="rtl"] .newsletter-title-text {
+  flex: 1 1 auto;
+  text-align: right;
+  direction: rtl;
+  max-width: 360px;
+}
+
+html[dir="rtl"] .newsletter-inner {
+  flex-direction: row;
+  direction: rtl;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .reg-popup-close {
