@@ -2179,12 +2179,17 @@ p {
   position: relative;
 }
 
+.newsletter-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .newsletter-vline {
   /* PSD: line copy 13 [349,10800,351,10892] → 2px wide vertical bar */
   width: 2px;
   height: auto;
   flex-shrink: 0;
-  margin-inline-end: 1.5rem;
 }
 
 .newsletter-inner p,
@@ -3470,9 +3475,10 @@ html[dir="rtl"] .phil-label-text {
 
   html[dir="rtl"] .phil-title-text {
     max-width: 138px;
-    font-size: 0.72rem;
+    font-size: 0.48rem !important;
     line-height: 1.2;
     padding: 0.1rem 0.3rem;
+    font-family: 'Cairo', 'Tahoma', sans-serif !important;
   }
 
   html[dir="rtl"] .plan-cta-label-text {
@@ -3482,7 +3488,14 @@ html[dir="rtl"] .phil-label-text {
 
   html[dir="rtl"] .phil-label-text {
     max-width: 138px;
-    font-size: 0.62rem;
+    font-size: 0.52rem !important;
+    font-family: 'Cairo', 'Tahoma', sans-serif !important;
+  }
+
+  html[dir="rtl"] .phil-center {
+    font-size: 0.6rem !important;
+    font-family: 'Cairo', 'Tahoma', sans-serif !important;
+    text-transform: none !important;
   }
 }
 
@@ -3829,7 +3842,6 @@ html[dir="rtl"] .phil-label-text {
     left: auto;
     right: 4vw;
   }
-
 
   .plan-unit,
   .plan-size,
@@ -5072,6 +5084,27 @@ html[dir="rtl"] .phil-label-text {
   font-size: 1.1rem !important;
 }
 
+@media (max-width: 767px) {
+  html[dir="rtl"] .phil-title-text {
+    font-size: 0.48rem !important;
+    font-family: 'Cairo', 'Tahoma', sans-serif !important;
+    max-width: 138px;
+    line-height: 1.2;
+  }
+
+  html[dir="rtl"] .phil-label-text {
+    font-size: 0.52rem !important;
+    font-family: 'Cairo', 'Tahoma', sans-serif !important;
+    max-width: 138px;
+  }
+
+  html[dir="rtl"] .phil-center {
+    font-size: 0.44rem !important;
+    font-family: 'Cairo', 'Tahoma', sans-serif !important;
+    text-transform: none !important;
+  }
+}
+
 html[dir="rtl"] .field-label-text {
   display: block;
   font-family: 'Cairo', 'Tahoma', sans-serif !important;
@@ -5198,6 +5231,10 @@ html[dir="rtl"] .contact-value-text {
   html[dir="rtl"] .plan-right .plan-next {
     left: auto !important;
     right: 4vw !important;
+  }
+
+  html[dir="rtl"] .plan-right .plan-next img {
+    transform: scaleX(1) !important;
   }
 
   html[dir="rtl"] .site-nav .nav-main-link,
