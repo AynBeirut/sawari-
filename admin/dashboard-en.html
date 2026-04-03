@@ -1,79 +1,675 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sawari Admin Dashboard (EN)</title>
+  <title>Sawari — Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/admin/styles.css" />
 </head>
 <body class="admin-body" data-lang="en">
-  <main class="admin-shell">
-    <header class="admin-header">
-      <h1>Sawari Admin Dashboard (English)</h1>
-      <div class="admin-actions">
-        <a href="/admin/dashboard-ar.html">Go to Arabic Dashboard</a>
-        <button id="logoutBtn" type="button">Logout</button>
+
+  <!-- Mobile Overlay -->
+  <div class="sa-overlay" id="saOverlay"></div>
+
+  <!-- ═══════════ SIDEBAR ═══════════ -->
+  <nav class="sa-sidebar" id="saSidebar" aria-label="Main navigation">
+    <div class="sa-sidebar-logo">
+      <div class="logo-mark">S</div>
+      <span class="logo-text">Sawari</span>
+    </div>
+
+    <ul class="sa-sidebar-nav" role="list">
+      <li class="sa-nav-label">MAIN</li>
+      <li>
+        <button class="sa-nav-btn active" data-section="overview" aria-current="page">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </button>
+      </li>
+      <li>
+        <button class="sa-nav-btn" data-section="registrations">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Registrations
+        </button>
+      </li>
+      <li>
+        <button class="sa-nav-btn" data-section="newsletter">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Newsletter
+        </button>
+      </li>
+      <li class="sa-nav-label">MANAGE</li>
+      <li>
+        <button class="sa-nav-btn" data-section="gallery">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          Gallery
+        </button>
+      </li>
+      <li>
+        <button class="sa-nav-btn" data-section="downloads">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9,15 12,18 15,15"/></svg>
+          Downloads
+        </button>
+      </li>
+      <li>
+        <button class="sa-nav-btn" data-section="floorplans">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+          Floor Plans
+        </button>
+      </li>
+      <li>
+        <button class="sa-nav-btn" data-section="siteimages">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          Site Images
+        </button>
+      </li>
+      <li>
+        <button class="sa-nav-btn" data-section="content">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Content
+        </button>
+      </li>
+      <li class="sa-nav-label">ACCOUNT</li>
+      <li>
+        <a href="/admin/dashboard-ar.html">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Arabic Dashboard
+        </a>
+      </li>
+    </ul>
+
+    <div class="sa-sidebar-footer">
+      <button id="logoutBtn" type="button">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Logout
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ MAIN ═══════════ -->
+  <div class="sa-main">
+
+    <!-- TOPBAR -->
+    <header class="sa-topbar">
+      <div class="sa-topbar-left">
+        <button class="sa-burger" id="saBurger" aria-label="Toggle sidebar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <h1 class="sa-page-title" id="saPageTitle">Dashboard</h1>
+      </div>
+      <div class="sa-topbar-right">
+        <button class="sa-badge-btn" title="Notifications" id="notifBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="sa-badge" id="notifBadge"></span>
+        </button>
+        <div class="sa-user-pill">
+          <div class="sa-user-avatar">A</div>
+          <span class="sa-user-name">Admin</span>
+        </div>
       </div>
     </header>
 
-    <section class="admin-card">
-      <h2>Editable Text</h2>
-      <form id="textForm" class="admin-grid">
-        <label>Location Title<input name="loc-title" type="text" /></label>
-        <label>Location Subtitle<textarea name="loc-subtitle" rows="2"></textarea></label>
-        <label>Philosophy Center Text<textarea name="philosophy-center" rows="3"></textarea></label>
-        <label>Register Title<input name="register-title" type="text" /></label>
-        <label>Footer Address<input name="footer-address" type="text" /></label>
-        <button type="submit">Save Text</button>
-      </form>
-    </section>
+    <!-- CONTENT -->
+    <main class="sa-content">
 
-    <section class="admin-card">
-      <h2>Gallery Images</h2>
-      <form id="galleryForm" class="admin-grid compact">
-        <label>Category
-          <select name="filter">
-            <option value="lobby">Lobby</option>
-            <option value="1bed">1 Bedroom</option>
-            <option value="2bed">2 Bedrooms</option>
-            <option value="3bed">3 Bedrooms</option>
-            <option value="garden">Garden</option>
-          </select>
-        </label>
-        <label>Position
-          <select name="index">
-            <option value="0">Left</option>
-            <option value="1">Main</option>
-            <option value="2">Right</option>
-          </select>
-        </label>
-        <label>Image File<input name="image" type="file" accept="image/*" required /></label>
-        <button type="submit">Upload Image</button>
-      </form>
-    </section>
+      <!-- ── SECTION: OVERVIEW ── -->
+      <section class="sa-section active" id="sec-overview" data-title="Dashboard">
 
-    <section class="admin-card">
-      <h2>PDF Downloads</h2>
-      <form class="pdfForm admin-grid compact" data-slot="brochure">
-        <label>Brochure PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
-        <button type="submit">Upload Brochure</button>
-      </form>
-      <form class="pdfForm admin-grid compact" data-slot="floor-plan">
-        <label>Floor Plan PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
-        <button type="submit">Upload Floor Plan</button>
-      </form>
-      <form class="pdfForm admin-grid compact" data-slot="concept-plan">
-        <label>Concept Plan PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
-        <button type="submit">Upload Concept Plan</button>
-      </form>
-      <form class="pdfForm admin-grid compact" data-slot="all-documents">
-        <label>All Documents PDF<input name="pdf" type="file" accept="application/pdf" required /></label>
-        <button type="submit">Upload All Documents</button>
-      </form>
-    </section>
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Overview</h2>
+          <span class="sa-refresh-label" id="lastRefresh"></span>
+        </div>
 
-    <p id="adminStatus" class="status" aria-live="polite"></p>
-  </main>
+        <!-- KPI Cards -->
+        <div class="sa-kpi-grid">
+          <div class="sa-kpi-card">
+            <div class="sa-kpi-icon gold">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="sa-kpi-body">
+              <div class="sa-kpi-value" id="kpiTotalReg">—</div>
+              <div class="sa-kpi-label">Total Registrations</div>
+            </div>
+          </div>
+          <div class="sa-kpi-card">
+            <div class="sa-kpi-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+            </div>
+            <div class="sa-kpi-body">
+              <div class="sa-kpi-value" id="kpiTodayReg">—</div>
+              <div class="sa-kpi-label">Today's Registrations</div>
+            </div>
+          </div>
+          <div class="sa-kpi-card">
+            <div class="sa-kpi-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="sa-kpi-body">
+              <div class="sa-kpi-value" id="kpiTotalNews">—</div>
+              <div class="sa-kpi-label">Newsletter Subscribers</div>
+            </div>
+          </div>
+          <div class="sa-kpi-card">
+            <div class="sa-kpi-icon orange">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="sa-kpi-body">
+              <div class="sa-kpi-value" id="kpiWeekReg">—</div>
+              <div class="sa-kpi-label">This Week</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Registrations -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Recent Registrations</h3>
+            <button class="sa-btn sa-btn-outline sa-btn-sm" data-section="registrations">
+              View All
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+            </button>
+          </div>
+          <div class="sa-card-body p0">
+            <div class="sa-table-wrap">
+              <table class="sa-table" id="recentRegTable">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody id="recentRegBody">
+                  <tr><td class="sa-table-empty" colspan="5">Loading…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ── SECTION: REGISTRATIONS ── -->
+      <section class="sa-section" id="sec-registrations" data-title="Registrations">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Registrations</h2>
+          <button class="sa-btn sa-btn-outline sa-btn-sm" id="exportRegBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export CSV
+          </button>
+        </div>
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">All Registrations</h3>
+            <input class="sa-input sa-search-field" type="search" id="regSearch" placeholder="Search…" />
+          </div>
+          <div class="sa-card-body p0">
+            <div class="sa-table-wrap">
+              <table class="sa-table" id="allRegTable">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="allRegBody">
+                  <tr><td class="sa-table-empty" colspan="7">Loading…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION: NEWSLETTER ── -->
+      <section class="sa-section" id="sec-newsletter" data-title="Newsletter">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Newsletter</h2>
+          <button class="sa-btn sa-btn-outline sa-btn-sm" id="exportNewsBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export CSV
+          </button>
+        </div>
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Subscribers</h3>
+            <input class="sa-input sa-search-field" type="search" id="newsSearch" placeholder="Search…" />
+          </div>
+          <div class="sa-card-body p0">
+            <div class="sa-table-wrap">
+              <table class="sa-table" id="allNewsTable">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Email</th>
+                    <th>Subscribed At</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="allNewsBody">
+                  <tr><td class="sa-table-empty" colspan="4">Loading…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION: GALLERY ── -->
+      <section class="sa-section" id="sec-gallery" data-title="Gallery">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Gallery</h2>
+        </div>
+
+        <!-- Photo Gallery upload -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Photo Gallery — Upload Image</h3>
+          </div>
+          <div class="sa-card-body">
+            <form id="galleryForm" class="sa-form-grid" novalidate>
+              <div class="sa-form-row">
+                <label class="sa-label">
+                  Category
+                  <select class="sa-select" name="filter">
+                    <option value="lobby">Lobby</option>
+                    <option value="1bed">1 Bedroom</option>
+                    <option value="2bed">2 Bedrooms</option>
+                    <option value="3bed">3 Bedrooms</option>
+                    <option value="garden">Garden</option>
+                  </select>
+                </label>
+                <label class="sa-label">
+                  Position
+                  <select class="sa-select" name="index">
+                    <option value="0">Left</option>
+                    <option value="1">Main</option>
+                    <option value="2">Right</option>
+                  </select>
+                </label>
+              </div>
+              <label class="sa-label">
+                Image File
+                <label class="sa-upload-zone">
+                  <input type="file" name="image" accept="image/*" required id="galleryFileInput" />
+                  <span class="sa-upload-label"><strong>Choose image</strong> or drag &amp; drop<br><small>PNG, JPG, WEBP</small></span>
+                  <span id="galleryFileName" class="sa-file-name"></span>
+                </label>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  Upload Image
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Floor Plan Images upload -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Floor Plan Images — Replace Plan Image</h3>
+          </div>
+          <div class="sa-card-body">
+            <p class="sa-hint-text">Select the floor plan unit, then upload a new image. This replaces the image shown in the plan viewer on the website.</p>
+            <form id="planImageForm" class="sa-form-grid" novalidate>
+              <label class="sa-label">
+                Floor Plan Unit
+                <select class="sa-select" id="planImageSelect" name="index">
+                  <option value="">— loading plans… —</option>
+                </select>
+              </label>
+              <label class="sa-label">
+                New Image
+                <label class="sa-upload-zone">
+                  <input type="file" name="planImage" accept="image/*" required id="planImageFileInput" />
+                  <span class="sa-upload-label"><strong>Choose image</strong> or drag &amp; drop<br><small>PNG, JPG, WEBP</small></span>
+                  <span id="planImageFileName" class="sa-file-name"></span>
+                </label>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  Upload Plan Image
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION: DOWNLOADS ── -->
+      <section class="sa-section" id="sec-downloads" data-title="Downloads">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Downloads</h2>
+        </div>
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">PDF Files</h3>
+          </div>
+          <div class="sa-card-body">
+            <div class="sa-dl-grid">
+              <div class="sa-dl-slot">
+                <div class="sa-dl-slot-title">Brochure</div>
+                <form class="pdfForm sa-form-grid" data-slot="brochure" novalidate>
+                  <label class="sa-label">
+                    PDF File
+                    <label class="sa-upload-zone">
+                      <input type="file" name="pdf" accept="application/pdf" required class="pdf-file-input" />
+                      <span class="sa-upload-label"><strong>Choose file</strong><br><small>PDF only</small></span>
+                      <span class="pdf-file-name sa-file-name"></span>
+                    </label>
+                  </label>
+                  <button type="submit" class="sa-btn sa-btn-gold sa-btn-sm">Upload</button>
+                </form>
+              </div>
+              <div class="sa-dl-slot">
+                <div class="sa-dl-slot-title">Floor Plan</div>
+                <form class="pdfForm sa-form-grid" data-slot="floor-plan" novalidate>
+                  <label class="sa-label">
+                    PDF File
+                    <label class="sa-upload-zone">
+                      <input type="file" name="pdf" accept="application/pdf" required class="pdf-file-input" />
+                      <span class="sa-upload-label"><strong>Choose file</strong><br><small>PDF only</small></span>
+                      <span class="pdf-file-name sa-file-name"></span>
+                    </label>
+                  </label>
+                  <button type="submit" class="sa-btn sa-btn-gold sa-btn-sm">Upload</button>
+                </form>
+              </div>
+              <div class="sa-dl-slot">
+                <div class="sa-dl-slot-title">Concept Plan</div>
+                <form class="pdfForm sa-form-grid" data-slot="concept-plan" novalidate>
+                  <label class="sa-label">
+                    PDF File
+                    <label class="sa-upload-zone">
+                      <input type="file" name="pdf" accept="application/pdf" required class="pdf-file-input" />
+                      <span class="sa-upload-label"><strong>Choose file</strong><br><small>PDF only</small></span>
+                      <span class="pdf-file-name sa-file-name"></span>
+                    </label>
+                  </label>
+                  <button type="submit" class="sa-btn sa-btn-gold sa-btn-sm">Upload</button>
+                </form>
+              </div>
+              <div class="sa-dl-slot">
+                <div class="sa-dl-slot-title">All Documents</div>
+                <form class="pdfForm sa-form-grid" data-slot="all-documents" novalidate>
+                  <label class="sa-label">
+                    PDF File
+                    <label class="sa-upload-zone">
+                      <input type="file" name="pdf" accept="application/pdf" required class="pdf-file-input" />
+                      <span class="sa-upload-label"><strong>Choose file</strong><br><small>PDF only</small></span>
+                      <span class="pdf-file-name sa-file-name"></span>
+                    </label>
+                  </label>
+                  <button type="submit" class="sa-btn sa-btn-gold sa-btn-sm">Upload</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION: FLOOR PLANS ── -->
+      <section class="sa-section" id="sec-floorplans" data-title="Floor Plans">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Floor Plans</h2>
+        </div>
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Edit Floor Plan Details</h3>
+          </div>
+          <div class="sa-card-body">
+            <p class="sa-hint-text">Select a floor plan unit to edit its title, subtitle, area statistics, and key plan notes.</p>
+            <div class="sa-form-grid">
+              <label class="sa-label">
+                Floor Plan Unit
+                <select class="sa-select" id="fpEditSelect">
+                  <option value="">— loading… —</option>
+                </select>
+              </label>
+            </div>
+            <form id="fpTextForm" class="sa-form-grid" novalidate>
+              <input type="hidden" name="index" id="fpEditIndex" value="" />
+              <div class="sa-form-row">
+                <label class="sa-label">
+                  Unit Title
+                  <input class="sa-input" name="title" id="fpTitle" type="text" placeholder="e.g. ONE BED APARTMENT" />
+                </label>
+                <label class="sa-label">
+                  Subtitle / Type
+                  <input class="sa-input" name="subtitle" id="fpSubtitle" type="text" placeholder="e.g. 2 BED TYPE 1" />
+                </label>
+              </div>
+              <div class="sa-card" style="padding:12px; background:var(--sa-bg);">
+                <div class="sa-card-head" style="padding:0 0 8px; border:none;">
+                  <h4 class="sa-card-title" style="font-size:.8rem;">Area Statistics (3 lines)</h4>
+                </div>
+                <div class="sa-form-grid">
+                  <input class="sa-input" name="stat0" id="fpStat0" type="text" placeholder="Unit Area (NSA) - 81.81 SQM" />
+                  <input class="sa-input" name="stat1" id="fpStat1" type="text" placeholder="Balcony/Terrace Area - 11.52 SQM" />
+                  <input class="sa-input" name="stat2" id="fpStat2" type="text" placeholder="Total Area (GSA) - 93.33 SQM" />
+                </div>
+              </div>
+              <div class="sa-card" style="padding:12px; background:var(--sa-bg);">
+                <div class="sa-card-head" style="padding:0 0 8px; border:none;">
+                  <h4 class="sa-card-title" style="font-size:.8rem;">Key Plan Notes (4 towers)</h4>
+                </div>
+                <div class="sa-form-grid">
+                  <input class="sa-input" name="kp0" id="fpKp0" type="text" placeholder="CPT A (Triple Tower) - TYP 1 (4TH - 8TH FLOOR)" />
+                  <input class="sa-input" name="kp1" id="fpKp1" type="text" placeholder="CPT B (50 Floor Tower) - TYP 1 (2ND - 13TH FLOOR)" />
+                  <input class="sa-input" name="kp2" id="fpKp2" type="text" placeholder="CPT C (Twin Tower) - TYP 1 (4TH - 8TH FLOOR)" />
+                  <input class="sa-input" name="kp3" id="fpKp3" type="text" placeholder="CPT D (28 Floor Tower) - TYP 1 (2ND - 7TH), 8TH FLOOR" />
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save Plan Details</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION: SITE IMAGES ── -->
+      <section class="sa-section" id="sec-siteimages" data-title="Site Images">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Site Images</h2>
+        </div>
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Replace Website Images</h3>
+          </div>
+          <div class="sa-card-body">
+            <p class="sa-hint-text">Upload a new image to replace a specific image on the website. The image will appear immediately after saving.</p>
+            <form id="siteImageForm" class="sa-form-grid" novalidate>
+              <label class="sa-label">
+                Image Slot
+                <select class="sa-select" name="slot" id="siteImageSlot">
+                  <option value="hero-bg">Hero Background (main banner)</option>
+                  <option value="overview-1">Overview — Photo 1 (Tower)</option>
+                  <option value="overview-2">Overview — Photo 2 (Residence)</option>
+                  <option value="overview-3">Overview — Photo 3 (Courtyard)</option>
+                </select>
+              </label>
+              <label class="sa-label">
+                New Image
+                <label class="sa-upload-zone">
+                  <input type="file" name="siteImage" accept="image/*" required id="siteImageFileInput" />
+                  <span class="sa-upload-label"><strong>Choose image</strong> or drag &amp; drop<br><small>PNG, JPG, WEBP — recommend same dimensions as original</small></span>
+                  <span id="siteImageFileName" class="sa-file-name"></span>
+                </label>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  Replace Image
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION: CONTENT ── -->
+      <section class="sa-section" id="sec-content" data-title="Content">
+        <div class="sa-section-header">
+          <h2 class="sa-section-title">Edit Content</h2>
+        </div>
+
+        <!-- Overview -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Overview Section</h3>
+          </div>
+          <div class="sa-card-body">
+            <form class="sa-form-grid cms-text-form" novalidate>
+              <label class="sa-label">
+                Overview Body Text
+                <textarea class="sa-textarea" name="overview-body" rows="4" placeholder="SAWARI is envisioned as an Urban Oasis..."></textarea>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save Overview Text</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Amenities -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Amenities Section</h3>
+          </div>
+          <div class="sa-card-body">
+            <form class="sa-form-grid cms-text-form" novalidate>
+              <label class="sa-label">
+                Section Title
+                <input class="sa-input" name="amenities-title" type="text" placeholder="SAWARI AMENITIES" />
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Location Section</h3>
+          </div>
+          <div class="sa-card-body">
+            <form class="sa-form-grid cms-text-form" novalidate>
+              <label class="sa-label">
+                Location Title
+                <input class="sa-input" name="loc-title" type="text" placeholder="Location &amp; Connectivity" />
+              </label>
+              <label class="sa-label">
+                Location Subtitle
+                <textarea class="sa-textarea" name="loc-subtitle" rows="2" placeholder="Strategically positioned…"></textarea>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Philosophy -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Philosophy Section</h3>
+          </div>
+          <div class="sa-card-body">
+            <form class="sa-form-grid cms-text-form" novalidate>
+              <label class="sa-label">
+                Center Text
+                <textarea class="sa-textarea" name="philosophy-center" rows="3" placeholder="Dynamic and iconic skyline…"></textarea>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- FAQ Answers -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">FAQ Answers</h3>
+          </div>
+          <div class="sa-card-body">
+            <form class="sa-form-grid cms-text-form" novalidate>
+              <label class="sa-label">
+                Q1: Who is the developer?
+                <textarea class="sa-textarea" name="faq-1" rows="2"></textarea>
+              </label>
+              <label class="sa-label">
+                Q2: What types of units are available?
+                <textarea class="sa-textarea" name="faq-2" rows="2"></textarea>
+              </label>
+              <label class="sa-label">
+                Q3: What are the payment plans?
+                <textarea class="sa-textarea" name="faq-3" rows="2"></textarea>
+              </label>
+              <label class="sa-label">
+                Q4: Why invest in Sawari?
+                <textarea class="sa-textarea" name="faq-4" rows="2"></textarea>
+              </label>
+              <label class="sa-label">
+                Q5: What makes Sawari unique?
+                <textarea class="sa-textarea" name="faq-5" rows="2"></textarea>
+              </label>
+              <label class="sa-label">
+                Q6: Expected completion date?
+                <textarea class="sa-textarea" name="faq-6" rows="2"></textarea>
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save FAQ Answers</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Register / Footer -->
+        <div class="sa-card">
+          <div class="sa-card-head">
+            <h3 class="sa-card-title">Register Form &amp; Footer</h3>
+          </div>
+          <div class="sa-card-body">
+            <form class="sa-form-grid cms-text-form" novalidate>
+              <label class="sa-label">
+                Register Form Title
+                <input class="sa-input" name="register-title" type="text" placeholder="Register your interest" />
+              </label>
+              <label class="sa-label">
+                Footer Address
+                <input class="sa-input" name="footer-address" type="text" placeholder="Ajman, UAE" />
+              </label>
+              <div>
+                <button type="submit" class="sa-btn sa-btn-gold">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Status bar -->
+      <div id="adminStatus" role="status" aria-live="polite"></div>
+
+    </main>
+  </div>
+
   <script src="/admin/dashboard.js"></script>
 </body>
 </html>

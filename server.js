@@ -14,6 +14,7 @@ const PORT = Number(process.env.PORT || 3000);
 const rootDir = __dirname;
 const dataDir = path.join(rootDir, 'data');
 const leadsPath = path.join(dataDir, 'leads.json');
+const plansPath = path.join(dataDir, 'plans.json');
 const SALES_EMAIL = 'sales@sawri.com';
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'sales@sawari.com';
@@ -31,8 +32,24 @@ const EDITABLE_TEXT_KEYS = [
   'loc-subtitle',
   'philosophy-center',
   'register-title',
-  'footer-address'
+  'footer-address',
+  'overview-body',
+  'amenities-title',
+  'faq-1',
+  'faq-2',
+  'faq-3',
+  'faq-4',
+  'faq-5',
+  'faq-6'
 ];
+
+// Named image slots for site-wide image replacement
+const SITE_IMAGE_SLOTS = {
+  'hero-bg': true,
+  'overview-1': true,
+  'overview-2': true,
+  'overview-3': true
+};
 
 const upload = multer({
   storage: multer.diskStorage({
@@ -67,6 +84,49 @@ const upload = multer({
   limits: {
     fileSize: 15 * 1024 * 1024
   }
+});
+
+// Separate multer for floor plan images (saves to assets/plans/)
+const uploadPlanImage = multer({
+  storage: multer.diskStorage({
+    destination: (_req, _file, cb) => {
+      const dir = path.join(rootDir, 'assets', 'plans');
+      fs.mkdirSync(dir, { recursive: true });
+      cb(null, dir);
+    },
+    filename: (_req, file, cb) => {
+      const ext = path.extname(file.originalname || '').toLowerCase() || '.jpg';
+      const baseName = path
+        .basename(file.originalname || `plan${ext}`, ext)
+        .replace(/[^a-zA-Z0-9-_\s]/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      cb(null, `${Date.now()}-${baseName || 'plan'}${ext}`);
+    }
+  }),
+  limits: { fileSize: 15 * 1024 * 1024 }
+});
+
+// Separate multer for site hero/overview images (saves to assets/uploads/)
+const uploadSiteImage = multer({
+  storage: multer.diskStorage({
+    destination: (_req, _file, cb) => {
+      const dir = path.join(rootDir, 'assets', 'uploads');
+      fs.mkdirSync(dir, { recursive: true });
+      cb(null, dir);
+    },
+    filename: (_req, file, cb) => {
+      const ext = path.extname(file.originalname || '').toLowerCase() || '.jpg';
+      const baseName = path
+        .basename(file.originalname || `img${ext}`, ext)
+        .replace(/[^a-zA-Z0-9-_]/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '')
+        .toLowerCase();
+      cb(null, `${Date.now()}-${baseName || 'image'}${ext}`);
+    }
+  }),
+  limits: { fileSize: 15 * 1024 * 1024 }
 });
 
 const smtpConfig = {
@@ -108,6 +168,21 @@ function readLeads() {
 
 function writeLeads(data) {
   fs.writeFileSync(leadsPath, JSON.stringify(data, null, 2));
+}
+
+function readPlans() {
+  if (!fs.existsSync(plansPath)) {
+    return [];
+  }
+  try {
+    return JSON.parse(fs.readFileSync(plansPath, 'utf8'));
+  } catch {
+    return [];
+  }
+}
+
+function writePlans(data) {
+  fs.writeFileSync(plansPath, JSON.stringify(data, null, 2));
 }
 
 function validEmail(value) {
@@ -253,6 +328,111 @@ app.post('/api/admin/login', (req, res) => {
 app.post('/api/admin/logout', (_req, res) => {
   res.clearCookie(ADMIN_COOKIE_NAME);
   res.json({ ok: true });
+});
+
+app.get('/api/admin/leads', ensureAdminAuth, (_req, res) => {
+  try {
+    const store = readLeads();
+    res.json(store);
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to read leads' });
+  }
+});
+
+app.delete('/api/admin/leads/:type/:index', ensureAdminAuth, (req, res) => {
+  try {
+    const { type, index } = req.params;
+    const store = readLeads();
+    if (!store[type] || !Array.isArray(store[type])) {
+      return res.status(400).json({ error: 'Invalid type' });
+    }
+    const idx = parseInt(index, 10);
+    if (isNaN(idx) || idx < 0 || idx >= store[type].length) {
+      return res.status(400).json({ error: 'Invalid index' });
+    }
+    store[type].splice(idx, 1);
+    writeLeads(store);
+    res.json({ ok: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to delete lead' });
+  }
+});
+
+// ── Plans (public) ──
+app.get('/api/plans', (_req, res) => {
+  try {
+    res.json(readPlans());
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to read plans' });
+  }
+});
+
+// ── Plans admin: update text data ──
+app.put('/api/admin/update-plans', ensureAdminAuth, (req, res) => {
+  try {
+    const plans = readPlans();
+    const { index, title, subtitle, stats, keyplan } = req.body;
+    const idx = parseInt(index, 10);
+    if (isNaN(idx) || idx < 0 || idx >= plans.length) {
+      return res.status(400).json({ error: 'Invalid plan index' });
+    }
+    if (title !== undefined) plans[idx].title = String(title);
+    if (subtitle !== undefined) plans[idx].subtitle = String(subtitle);
+    if (Array.isArray(stats)) plans[idx].stats = stats.map(String);
+    if (Array.isArray(keyplan)) plans[idx].keyplan = keyplan.map(String);
+    writePlans(plans);
+    res.json({ ok: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to update plan' });
+  }
+});
+
+// ── Plans admin: upload plan image ──
+app.post('/api/admin/update-plan-image', ensureAdminAuth, uploadPlanImage.single('planImage'), (req, res) => {
+  try {
+    const plans = readPlans();
+    const idx = parseInt(req.body.index, 10);
+    if (!req.file) {
+      return res.status(400).json({ error: 'Image file is required' });
+    }
+    if (isNaN(idx) || idx < 0 || idx >= plans.length) {
+      return res.status(400).json({ error: 'Invalid plan index' });
+    }
+    const relPath = path.relative(rootDir, req.file.path).replace(/\\/g, '/');
+    plans[idx].image = relPath;
+    writePlans(plans);
+    res.json({ ok: true, path: relPath });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to upload plan image' });
+  }
+});
+
+// ── Site images admin: replace a named image slot ──
+app.post('/api/admin/update-site-image', ensureAdminAuth, uploadSiteImage.single('siteImage'), (req, res) => {
+  try {
+    const slot = String(req.body.slot || '').trim();
+    if (!SITE_IMAGE_SLOTS[slot]) {
+      return res.status(400).json({ error: `Unknown image slot: ${slot}` });
+    }
+    if (!req.file) {
+      return res.status(400).json({ error: 'Image file is required' });
+    }
+    const relPath = path.relative(rootDir, req.file.path).replace(/\\/g, '/');
+    // Update src in both HTML files
+    ['en', 'ar'].forEach((lang) => {
+      try {
+        const html = readHtml(lang);
+        const $ = cheerio.load(html);
+        $(`[data-cms-img="${slot}"]`).attr('src', relPath);
+        writeHtml(lang, $.html());
+      } catch {
+        // If AR file missing, skip
+      }
+    });
+    res.json({ ok: true, path: relPath });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to update site image' });
+  }
 });
 
 app.get('/api/admin/content', ensureAdminAuth, (req, res) => {

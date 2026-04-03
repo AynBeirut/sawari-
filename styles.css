@@ -2082,6 +2082,7 @@ html[dir="rtl"] .stat-label {
 html[dir="rtl"] .phil-iconic-lbl    { left: unset; right: 79.5%; }
 html[dir="rtl"] .phil-central-lbl   { left: unset; right: 75%; }
 html[dir="rtl"] .phil-community-lbl { left: unset; right: 72%; }
+html[dir="rtl"] .phil-luxury-lbl    { left: 50%; transform: translateX(-50%); }
 
 .faq {
   background: #f5f4f1;
