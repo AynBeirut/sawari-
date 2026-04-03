@@ -215,7 +215,33 @@ if (planImage) {
   const planViewer = document.querySelector('.plan-viewer');
   if (planViewer) {
     let scrollTimeout;
+    let planWheelEnabled = false;
+    let planWheelEnableTimer = null;
+
+    const planSection = document.getElementById('plans');
+    if (planSection) {
+      const planSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Section entered viewport — enable wheel after 3 seconds
+            planWheelEnableTimer = setTimeout(() => {
+              planWheelEnabled = true;
+            }, 3000);
+          } else {
+            // Section left viewport — disable and cancel pending activation
+            planWheelEnabled = false;
+            if (planWheelEnableTimer) {
+              clearTimeout(planWheelEnableTimer);
+              planWheelEnableTimer = null;
+            }
+          }
+        });
+      }, { threshold: 0.3 });
+      planSectionObserver.observe(planSection);
+    }
+
     planViewer.addEventListener('wheel', (e) => {
+      if (!planWheelEnabled) return; // Not yet activated — let page scroll normally
       e.preventDefault(); // Prevent page scrolling
       if (scrollTimeout) return; // Debounce
       
