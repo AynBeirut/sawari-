@@ -1073,11 +1073,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.dir === 'rtl' ||
         /index-ar\.html$/i.test(window.location.pathname);
       const isFloorPlansPage = /floor-plans(?:-ar)?\.html$/i.test(window.location.pathname);
-      const hash = window.location.hash || '';
       const targetPath = isFloorPlansPage
         ? (isArabic ? 'floor-plans.html' : 'floor-plans-ar.html')
         : (isArabic ? 'index.html' : 'index-ar.html');
-      window.location.href = `${targetPath}${hash}`;
+      window.location.href = targetPath;
     });
   }
 

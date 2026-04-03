@@ -1147,6 +1147,15 @@ p {
   max-width: 90%;
 }
 
+html[dir="rtl"] .stat-label {
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #8a8a8a;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .gallery {
   background: #ffffff;
   overflow-x: clip;
@@ -1942,7 +1951,7 @@ p {
 /* Title: PSD x849–1081 / y38–58 (rel) */
 .phil-title {
   left: 44.22%;
-  top: 3.16%;
+  top: 2.08%;
   width: 12.08%;
 }
 
@@ -2065,7 +2074,14 @@ p {
 /* LUXURY WITH SUSTAINABILITY — bottom */
 .phil-luxury-dot-o { left: 48.54%; top: 89.59%; width: 2.92%; }
 .phil-luxury-dot-i { left: 49.22%; top: 90.67%; width: 1.56%; }
-.phil-luxury-lbl   { left: 41.72%; top: 96.09%; width: 16.67%; }
+.phil-luxury-lbl   { left: 41.72%; top: 94.60%; width: 16.67%; }
+
+/* RTL: left-side labels — anchor by right edge so text grows away from the dot.
+   right: X% means the label's right edge sits at (100-X)% from the stage left,
+   keeping a consistent gap matching the right-side labels. */
+html[dir="rtl"] .phil-iconic-lbl    { left: unset; right: 79.5%; }
+html[dir="rtl"] .phil-central-lbl   { left: unset; right: 75%; }
+html[dir="rtl"] .phil-community-lbl { left: unset; right: 72%; }
 
 .faq {
   background: #f5f4f1;
@@ -2458,6 +2474,21 @@ p {
   height: 17px;
   width: auto;
   object-fit: contain;
+}
+
+.doc-label-text {
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #3a3a3a;
+  text-transform: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.doc-item {
+  text-decoration: none;
 }
 
 .site-footer {
@@ -3385,6 +3416,27 @@ html[dir="rtl"] .faq-q-text {
   text-align: right;
 }
 
+/* RTL FAQ: offset on right side, toggle on left, icon smaller */
+html[dir="rtl"] .faq-list {
+  margin-left: 0;
+  margin-right: var(--faq-list-offset);
+  width: calc(100% - var(--faq-list-offset));
+}
+
+html[dir="rtl"] .faq-item {
+  position: relative;
+  padding-left: 1.75rem;
+  padding-right: 0;
+}
+
+html[dir="rtl"] .faq-toggle-icon {
+  position: absolute;
+  left: 0;
+  margin-left: 0;
+  width: 16px;
+  height: 16px;
+}
+
 html[dir="rtl"] .newsletter-title-text {
   color: #5d615f;
 }
@@ -3475,7 +3527,7 @@ html[dir="rtl"] .phil-label-text {
 
   html[dir="rtl"] .phil-title-text {
     max-width: 138px;
-    font-size: 0.48rem !important;
+    font-size: 0.52rem !important;
     line-height: 1.2;
     padding: 0.1rem 0.3rem;
     font-family: 'Cairo', 'Tahoma', sans-serif !important;
@@ -4955,9 +5007,9 @@ html[dir="rtl"] .gallery-filter button:hover .gallery-filter-label {
 }
 
 html[dir="rtl"] .plan-head {
-  align-items: center !important;
+  align-items: flex-start !important;
   gap: 1.1rem !important;
-  justify-content: flex-start !important;
+  justify-content: space-between !important;
   direction: rtl !important;
 }
 
@@ -4965,7 +5017,7 @@ html[dir="rtl"] .plan-cta {
   position: relative !important;
   display: inline-block !important;
   min-width: 228px !important;
-  align-self: center !important;
+  align-self: flex-start !important;
   flex-shrink: 0 !important;
 }
 
@@ -5017,7 +5069,7 @@ html[dir="rtl"] .plan-left .plan-prev img {
 
 html[dir="rtl"] .plan-vline {
   left: auto !important;
-  right: 30% !important;
+  right: 39% !important;
   top: 14.5% !important;
   height: 25.5% !important;
 }
@@ -5025,8 +5077,14 @@ html[dir="rtl"] .plan-vline {
 html[dir="rtl"] .plans #planTextContainer.plan-text-container {
   top: 18% !important;
   left: auto !important;
-  right: calc(30% + 1.35rem) !important;
+  right: calc(39% + 1.35rem) !important;
   width: 52% !important;
+}
+
+html[dir="rtl"] .plan-dl-row {
+  left: auto !important;
+  right: calc(39% + 2px + 2rem) !important;
+  flex-direction: row-reverse;
 }
 
 html:not([dir="rtl"]) .plans .plan-vline {
@@ -5077,16 +5135,12 @@ html[dir="rtl"] .contact-value-text {
 html[dir="rtl"] .phil-title-text,
 html[dir="rtl"] .phil-label-text {
   text-transform: none !important;
-  font-size: 1.5rem !important;
-}
-
-html[dir="rtl"] .phil-label-text {
   font-size: 1.1rem !important;
 }
 
 @media (max-width: 767px) {
   html[dir="rtl"] .phil-title-text {
-    font-size: 0.48rem !important;
+    font-size: 0.52rem !important;
     font-family: 'Cairo', 'Tahoma', sans-serif !important;
     max-width: 138px;
     line-height: 1.2;
@@ -5149,6 +5203,12 @@ html[dir="rtl"] .faq-q-text {
   color: var(--ink) !important;
   font-size: 1.05rem !important;
 }
+
+html[dir="rtl"] .faq-toggle-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
 html[dir="rtl"] .faq-answer {
   color: var(--muted) !important;     /* matches English .faq-answer: var(--muted) */
   font-size: 1.15rem !important;
@@ -5543,6 +5603,65 @@ html[dir="rtl"] .newsletter-inner {
   .reg-popup-close {
     top: 0.8rem;
     right: 0.8rem;
+  }
+}
+
+/* RTL popup overrides */
+html[dir="rtl"] .reg-popup-close {
+  right: auto;
+  left: 1.1rem;
+}
+
+html[dir="rtl"] .reg-popup-form-side {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .reg-popup-eyebrow,
+html[dir="rtl"] .reg-popup-heading,
+html[dir="rtl"] .reg-popup-sub,
+html[dir="rtl"] .reg-popup-label,
+html[dir="rtl"] .reg-popup-privacy {
+  font-family: 'Cairo', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+html[dir="rtl"] .reg-popup-eyebrow {
+  font-size: 12px;
+}
+
+html[dir="rtl"] .reg-popup-heading {
+  font-size: 32px;
+}
+
+html[dir="rtl"] .reg-popup-input {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Cairo', sans-serif;
+}
+
+html[dir="rtl"] .reg-popup-input::placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .reg-popup-submit {
+  font-family: 'Cairo', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 15px;
+}
+
+html[dir="rtl"] .reg-popup-privacy {
+  flex-direction: row-reverse;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  html[dir="rtl"] .reg-popup-close {
+    right: auto;
+    left: 0.8rem;
   }
 }
 
