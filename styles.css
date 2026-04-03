@@ -1951,7 +1951,7 @@ html[dir="rtl"] .stat-label {
 /* Title: PSD x849–1081 / y38–58 (rel) */
 .phil-title {
   left: 44.22%;
-  top: 1.6%;
+  top: 2.7%;
   width: 12.08%;
 }
 
@@ -2074,7 +2074,7 @@ html[dir="rtl"] .stat-label {
 /* LUXURY WITH SUSTAINABILITY — bottom */
 .phil-luxury-dot-o { left: 48.54%; top: 88.79%; width: 2.92%; }
 .phil-luxury-dot-i { left: 49.22%; top: 89.87%; width: 1.56%; }
-.phil-luxury-lbl   { left: 41.72%; top: 94.0%; width: 16.67%; }
+.phil-luxury-lbl   { left: 41.72%; top: 95.7%; width: 16.67%; }
 
 /* RTL: left-side labels — anchor by right edge so text grows away from the dot.
    right: X% means the label's right edge sits at (100-X)% from the stage left,
@@ -2082,8 +2082,8 @@ html[dir="rtl"] .stat-label {
 html[dir="rtl"] .phil-iconic-lbl    { left: unset; right: 79.5%; }
 html[dir="rtl"] .phil-central-lbl   { left: unset; right: 75%; }
 html[dir="rtl"] .phil-community-lbl { left: unset; right: 72%; }
-html[dir="rtl"] .phil-luxury-lbl    { left: 50%; transform: translateX(-50%); }
-html[dir="rtl"] .phil-title         { left: 50%; transform: translateX(-50%); }
+html[dir="rtl"] .phil-luxury-lbl    { left: 50%; transform: translateX(-50%); top: 94.0%; }
+html[dir="rtl"] .phil-title         { left: 50%; transform: translateX(-50%); top: 1.6%; }
 
 .faq {
   background: #f5f4f1;
