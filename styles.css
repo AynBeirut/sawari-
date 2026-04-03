@@ -5205,6 +5205,10 @@ html[dir="rtl"] .faq-q-text {
   font-size: 1.05rem !important;
 }
 
+html[dir="rtl"] .faq-item.is-open .faq-q-text {
+  font-size: 1.2rem !important;
+}
+
 html[dir="rtl"] .faq-toggle-icon {
   width: 16px !important;
   height: 16px !important;
@@ -5214,6 +5218,10 @@ html[dir="rtl"] .faq-answer {
   color: var(--muted) !important;     /* matches English .faq-answer: var(--muted) */
   font-size: 1.15rem !important;
   line-height: 1.65 !important;
+}
+
+html[dir="rtl"] .faq-answer.open {
+  font-size: 1.25rem !important;
 }
 html[dir="rtl"] .contact-label-text {
   color: var(--muted) !important;     /* muted grey — readable on light #f8f7f4 strip bg */
@@ -5376,6 +5384,10 @@ html[dir="rtl"] .newsletter-inner {
   direction: rtl;
   justify-content: flex-start;
   align-items: center;
+}
+
+html[dir="rtl"] .newsletter-inner form {
+  margin-right: auto;
 }
 
 .reg-popup-close {
