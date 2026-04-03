@@ -1935,7 +1935,7 @@ html[dir="rtl"] .stat-label {
 /* Wheel rings diagram: PSD x459–1459 / y102–1103 (rel) */
 .phil-wheel {
   left: 23.90%;
-  top: 8.49%;
+  top: 7.69%;
   width: 52.08%;
   transform-origin: 50% 50%;
   animation: philWheelSpin 34s linear infinite;
@@ -1951,14 +1951,14 @@ html[dir="rtl"] .stat-label {
 /* Title: PSD x849–1081 / y38–58 (rel) */
 .phil-title {
   left: 44.22%;
-  top: 2.08%;
+  top: 2.7%;
   width: 12.08%;
 }
 
 /* Center text: PSD x591–1332 / y504–699 (rel) */
 .phil-center {
   left: 30.78%;
-  top: 41.97%;
+  top: 41.17%;
   width: 38.59%;
   aspect-ratio: 741 / 195;
   display: flex;
@@ -2038,43 +2038,43 @@ html[dir="rtl"] .stat-label {
 /* === Per-element positions derived from PSD bbox (canvas: 1920×1201) === */
 
 /* Top dot — no label */
-.phil-top-o  { left: 48.54%; top:  7.08%; width: 2.92%; }
-.phil-top-i  { left: 49.22%; top:  8.16%; width: 1.56%; }
+.phil-top-o  { left: 48.54%; top:  6.28%; width: 2.92%; }
+.phil-top-i  { left: 49.22%; top:  7.36%; width: 1.56%; }
 
 /* ICONIC URBAN IDENTITY — left middle */
-.phil-iconic-dot-o { left: 22.50%; top: 47.96%; width: 2.92%; }
-.phil-iconic-dot-i { left: 23.18%; top: 49.04%; width: 1.56%; }
-.phil-iconic-lbl   { left:  6.61%; top: 49.38%; width: 14.22%; }
+.phil-iconic-dot-o { left: 22.50%; top: 47.16%; width: 2.92%; }
+.phil-iconic-dot-i { left: 23.18%; top: 48.24%; width: 1.56%; }
+.phil-iconic-lbl   { left:  6.61%; top: 48.58%; width: 14.22%; }
 
 /* CENTRAL POINT DISTRICT — upper left */
-.phil-central-dot-o { left: 26.61%; top: 25.31%; width: 2.92%; }
-.phil-central-dot-i { left: 27.29%; top: 26.39%; width: 1.56%; }
-.phil-central-lbl   { left: 11.15%; top: 26.81%; width: 14.22%; }
+.phil-central-dot-o { left: 26.61%; top: 24.51%; width: 2.92%; }
+.phil-central-dot-i { left: 27.29%; top: 25.59%; width: 1.56%; }
+.phil-central-lbl   { left: 11.15%; top: 26.01%; width: 14.22%; }
 
 /* PREMIUM MATERIALS — upper right */
-.phil-premium-dot-o { left: 69.06%; top: 24.48%; width: 2.92%; }
-.phil-premium-dot-i { left: 69.74%; top: 25.56%; width: 1.56%; }
-.phil-premium-lbl   { left: 73.91%; top: 26.31%; width: 11.72%; }
+.phil-premium-dot-o { left: 69.06%; top: 23.68%; width: 2.92%; }
+.phil-premium-dot-i { left: 69.74%; top: 24.76%; width: 1.56%; }
+.phil-premium-lbl   { left: 73.91%; top: 25.51%; width: 11.72%; }
 
 /* HUMAN-CENTERED MOBILITY — right middle */
-.phil-human-dot-o { left: 74.53%; top: 47.96%; width: 2.92%; }
-.phil-human-dot-i { left: 75.21%; top: 49.04%; width: 1.56%; }
-.phil-human-lbl   { left: 78.80%; top: 49.21%; width: 16.82%; }
+.phil-human-dot-o { left: 74.53%; top: 47.16%; width: 2.92%; }
+.phil-human-dot-i { left: 75.21%; top: 48.24%; width: 1.56%; }
+.phil-human-lbl   { left: 78.80%; top: 48.41%; width: 16.82%; }
 
 /* LIFESTYLE INTEGRATION — lower right */
-.phil-lifestyle-dot-o { left: 66.88%; top: 73.61%; width: 2.92%; }
-.phil-lifestyle-dot-i { left: 67.55%; top: 74.69%; width: 1.56%; }
-.phil-lifestyle-lbl   { left: 72.08%; top: 75.19%; width: 13.13%; }
+.phil-lifestyle-dot-o { left: 66.88%; top: 72.81%; width: 2.92%; }
+.phil-lifestyle-dot-i { left: 67.55%; top: 73.89%; width: 1.56%; }
+.phil-lifestyle-lbl   { left: 72.08%; top: 74.39%; width: 13.13%; }
 
 /* COMMUNITY-CENTRIC LIVING — lower left */
-.phil-community-dot-o { left: 29.48%; top: 73.61%; width: 2.92%; }
-.phil-community-dot-i { left: 30.16%; top: 74.69%; width: 1.56%; }
-.phil-community-lbl   { left:  9.69%; top: 75.19%; width: 17.34%; }
+.phil-community-dot-o { left: 29.48%; top: 72.81%; width: 2.92%; }
+.phil-community-dot-i { left: 30.16%; top: 73.89%; width: 1.56%; }
+.phil-community-lbl   { left:  9.69%; top: 74.39%; width: 17.34%; }
 
 /* LUXURY WITH SUSTAINABILITY — bottom */
-.phil-luxury-dot-o { left: 48.54%; top: 89.59%; width: 2.92%; }
-.phil-luxury-dot-i { left: 49.22%; top: 90.67%; width: 1.56%; }
-.phil-luxury-lbl   { left: 41.72%; top: 94.60%; width: 16.67%; }
+.phil-luxury-dot-o { left: 48.54%; top: 88.79%; width: 2.92%; }
+.phil-luxury-dot-i { left: 49.22%; top: 89.87%; width: 1.56%; }
+.phil-luxury-lbl   { left: 41.72%; top: 95.7%; width: 16.67%; }
 
 /* RTL: left-side labels — anchor by right edge so text grows away from the dot.
    right: X% means the label's right edge sits at (100-X)% from the stage left,
