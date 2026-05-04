@@ -314,6 +314,7 @@ if (planImage) {
     if(lbWrap) {
       lbWrap.classList.add('active');
       lbWrap.setAttribute('aria-hidden', 'false');
+      lbWrap.inert = false;
     }
     document.body.classList.add('gallery-lightbox-open');
     window.applyPageScale?.();
@@ -324,6 +325,7 @@ if (planImage) {
     if(lbWrap) {
       lbWrap.classList.remove('active');
       lbWrap.setAttribute('aria-hidden', 'true');
+      lbWrap.inert = true;
     }
     document.body.classList.remove('gallery-lightbox-open');
     window.applyPageScale?.();
@@ -497,6 +499,8 @@ const mainTour = document.getElementById('tourMain');
 const tourThumbsTrack = document.getElementById('tourThumbs');
 const thumbs = Array.from(document.querySelectorAll('#tourThumbs img'));
 const tourArrowButtons = Array.from(document.querySelectorAll('.tour-rail .thumb-arrow'));
+const tourHeadbarImage = document.getElementById('tourHeadbarImage');
+const tourHeadbarText = document.getElementById('tourHeadbarText');
 
 if (mainTour && thumbs.length) {
   let activeTourIndex = Math.max(thumbs.findIndex((thumb) => thumb.classList.contains('active')), 0);
@@ -536,6 +540,21 @@ if (mainTour && thumbs.length) {
     const tourImage = activeThumb.getAttribute('data-main') || activeThumb.getAttribute('src');
     mainTour.src = tourImage;
     mainTour.alt = activeThumb.alt.replace('thumbnail', 'scene').trim() || 'Virtual tour scene';
+
+    // Update tour headbar title
+    const titleText = activeThumb.getAttribute('data-title');
+    if (tourHeadbarText && titleText) {
+      tourHeadbarText.textContent = titleText;
+      tourHeadbarText.hidden = false;
+      if (tourHeadbarImage) {
+        tourHeadbarImage.hidden = true;
+      }
+    } else if (tourHeadbarImage) {
+      tourHeadbarImage.hidden = false;
+      if (tourHeadbarText) {
+        tourHeadbarText.hidden = true;
+      }
+    }
 
     keepTourThumbVisible(activeThumb);
   };
@@ -958,85 +977,92 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholderText: '',
       items: [
         {
-          image: 'assets/psd-export/151-4-2.png',
-          fullImage: 'assets/psd-export/151-4-2.png',
-          lightboxAlt: 'Lobby reception image'
+          image: 'assets/gallery/lobby/1.jpg',
+          fullImage: 'assets/gallery/lobby/1.jpg',
+          lightboxAlt: 'Lobby image 1'
         },
         {
-          image: 'assets/psd-export/149-1-5.png',
-          fullImage: 'assets/psd-export/149-1-5.png',
-          lightboxAlt: 'Entrance lobby image'
+          image: 'assets/gallery/lobby/2.jpg',
+          fullImage: 'assets/gallery/lobby/2.jpg',
+          lightboxAlt: 'Lobby image 2'
         },
         {
-          image: 'assets/psd-export/150-2-2.png',
-          fullImage: 'assets/psd-export/150-2-2.png',
-          lightboxAlt: 'Lobby interior image'
+          image: 'assets/gallery/lobby/3.jpg',
+          fullImage: 'assets/gallery/lobby/3.jpg',
+          lightboxAlt: 'Lobby image 3'
         }
       ]
     },
     '1bed': {
       labelImage: '',
       labelAlt: '',
-      placeholderText: '',
+      placeholderText: '1 BEDROOM',
       items: [
         {
-          image: 'assets/psd-export/151-4-2.png',
-          fullImage: 'assets/psd-export/151-4-2.png',
-          lightboxAlt: '1 bedroom placeholder image 3'
+          image: 'assets/gallery/1bed/1.jpg',
+          fullImage: 'assets/gallery/1bed/1.jpg',
+          lightboxAlt: '1 bedroom image 1'
         },
         {
-          image: 'assets/psd-export/118-2-1.png',
-          fullImage: 'assets/psd-export/118-2-1.png',
-          lightboxAlt: '1 bedroom placeholder image 1'
+          image: 'assets/gallery/1bed/2.jpg',
+          fullImage: 'assets/gallery/1bed/2.jpg',
+          lightboxAlt: '1 bedroom image 2'
         },
         {
-          image: 'assets/psd-export/150-2-2.png',
-          fullImage: 'assets/psd-export/150-2-2.png',
-          lightboxAlt: '1 bedroom placeholder image 2'
+          image: 'assets/gallery/1bed/3.jpg',
+          fullImage: 'assets/gallery/1bed/3.jpg',
+          lightboxAlt: '1 bedroom image 3'
         }
       ]
     },
     '2bed': {
       labelImage: '',
       labelAlt: '',
-      placeholderText: '',
+      placeholderText: '2 BEDROOMS',
       items: [
         {
-          image: 'assets/psd-export/118-2-1.png',
-          fullImage: 'assets/psd-export/118-2-1.png',
-          lightboxAlt: '2 bedrooms placeholder image 3'
+          image: 'assets/gallery/2bed/1.jpg',
+          fullImage: 'assets/gallery/2bed/1.jpg',
+          lightboxAlt: '2 bedrooms image 1'
         },
         {
-          image: 'assets/psd-export/150-2-2.png',
-          fullImage: 'assets/psd-export/150-2-2.png',
-          lightboxAlt: '2 bedrooms placeholder image 1'
-        },
-        {
-          image: 'assets/psd-export/151-4-2.png',
-          fullImage: 'assets/psd-export/151-4-2.png',
-          lightboxAlt: '2 bedrooms placeholder image 2'
+          image: 'assets/gallery/2bed/2.jpg',
+          fullImage: 'assets/gallery/2bed/2.jpg',
+          lightboxAlt: '2 bedrooms image 2'
         }
       ]
     },
     '3bed': {
       labelImage: '',
       labelAlt: '',
-      placeholderText: '',
+      placeholderText: '3 BEDROOMS',
       items: [
         {
-          image: 'assets/psd-export/149-1-5.png',
-          fullImage: 'assets/psd-export/149-1-5.png',
-          lightboxAlt: '3 bedrooms placeholder image 3'
+          image: 'assets/gallery/3bed/1.jpg',
+          fullImage: 'assets/gallery/3bed/1.jpg',
+          lightboxAlt: '3 bedrooms image 1'
         },
         {
-          image: 'assets/psd-export/151-4-2.png',
-          fullImage: 'assets/psd-export/151-4-2.png',
-          lightboxAlt: '3 bedrooms placeholder image 1'
+          image: 'assets/gallery/3bed/2.jpg',
+          fullImage: 'assets/gallery/3bed/2.jpg',
+          lightboxAlt: '3 bedrooms image 2'
+        }
+      ]
+    },
+    '4bed': {
+      labelImage: '',
+      labelAlt: '',
+      placeholderText: '4 BEDROOMS',
+      items: [
+        {
+          image: 'assets/gallery/4bed/1.jpg',
+          fullImage: 'assets/gallery/4bed/1.jpg',
+          lightboxAlt: '4 bedrooms image 1'
         },
         {
-          image: 'assets/psd-export/118-2-1.png',
-          fullImage: 'assets/psd-export/118-2-1.png',
-          lightboxAlt: '3 bedrooms placeholder image 2'
+          image: 'assets/gallery/4bed/2.png',
+          fullImage: 'assets/gallery/4bed/2.png',
+          lightboxAlt: '4 bedrooms image 2'
         }
       ]
     },
@@ -1283,21 +1309,33 @@ document.addEventListener('DOMContentLoaded', () => {
       gallerySideRight.alt = nextItem.lightboxAlt;
     }
 
-    if (galleryMainLabelImage) {
-      if (collection.labelImage) {
+    // Show either image label OR text label, never both
+    if (collection.labelImage) {
+      // Show image label, hide text label
+      if (galleryMainLabelImage) {
         galleryMainLabelImage.src = collection.labelImage;
         galleryMainLabelImage.alt = collection.labelAlt;
         galleryMainLabelImage.hidden = false;
-      } else {
+      }
+      if (galleryMainLabelText) {
+        galleryMainLabelText.textContent = '';
+        galleryMainLabelText.hidden = true;
+      }
+    } else if (collection.placeholderText) {
+      // Show text label, hide image label
+      if (galleryMainLabelImage) {
         galleryMainLabelImage.hidden = true;
       }
-    }
-
-    if (galleryMainLabelText) {
-      if (collection.placeholderText) {
-        galleryMainLabelText.textContent = `${collection.placeholderText}\n${activeGalleryIndex + 1} / ${totalItems}`;
+      if (galleryMainLabelText) {
+        galleryMainLabelText.textContent = collection.placeholderText;
         galleryMainLabelText.hidden = false;
-      } else {
+      }
+    } else {
+      // Hide both labels
+      if (galleryMainLabelImage) {
+        galleryMainLabelImage.hidden = true;
+      }
+      if (galleryMainLabelText) {
         galleryMainLabelText.textContent = '';
         galleryMainLabelText.hidden = true;
       }
@@ -1344,6 +1382,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     galleryLightbox.classList.remove('active');
     galleryLightbox.setAttribute('aria-hidden', 'true');
+    galleryLightbox.inert = true;
     document.body.classList.remove('gallery-lightbox-open');
     if (galleryLightboxImage) {
       galleryLightboxImage.src = '';
@@ -1367,6 +1406,7 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryLightboxImage.alt = imageLabel;
         galleryLightbox.classList.add('active');
         galleryLightbox.setAttribute('aria-hidden', 'false');
+        galleryLightbox.inert = false;
         document.body.classList.add('gallery-lightbox-open');
       };
 
@@ -1424,6 +1464,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (event.key === 'Escape' && galleryLightbox?.classList.contains('active')) {
       closeGalleryLightbox();
+      return;
+    }
+
+    // Navigate gallery lightbox with arrow keys
+    if (galleryLightbox?.classList.contains('active')) {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        const collection = galleryCollections[activeGalleryFilter] || galleryCollections.lobby;
+        activeGalleryIndex = (activeGalleryIndex - 1 + collection.items.length) % collection.items.length;
+        updateGalleryDisplay();
+        if (galleryLightboxImage) {
+          galleryLightboxImage.src = collection.items[activeGalleryIndex].fullImage;
+          galleryLightboxImage.alt = collection.items[activeGalleryIndex].lightboxAlt;
+        }
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        const collection = galleryCollections[activeGalleryFilter] || galleryCollections.lobby;
+        activeGalleryIndex = (activeGalleryIndex + 1) % collection.items.length;
+        updateGalleryDisplay();
+        if (galleryLightboxImage) {
+          galleryLightboxImage.src = collection.items[activeGalleryIndex].fullImage;
+          galleryLightboxImage.alt = collection.items[activeGalleryIndex].lightboxAlt;
+        }
+      }
     }
   });
 

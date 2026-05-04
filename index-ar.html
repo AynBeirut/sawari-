@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=200088" />
+  <link rel="stylesheet" href="styles.css?v=200097" />
   <script>
     (function () {
       window.applyPageScale = function applyPageScale() {
@@ -254,7 +254,7 @@
           <button data-filter="1bed" type="button" spellcheck="false"><span class="gallery-filter-label">غرفة نوم واحدة</span></button>
           <button data-filter="2bed" type="button" spellcheck="false"><span class="gallery-filter-label">غرفتا نوم</span></button>
           <button data-filter="3bed" type="button" spellcheck="false"><span class="gallery-filter-label">ثلاث غرف نوم</span></button>
-          <button data-filter="garden" type="button" spellcheck="false"><span class="gallery-filter-label">الحديقة</span></button>
+          <button data-filter="4bed" type="button" spellcheck="false"><span class="gallery-filter-label">أربع غرف نوم</span></button>
         </div>
       <div class="container">
         <div class="gallery-grid reveal">
@@ -283,8 +283,11 @@
         </div>
         <div class="tour-stage">
           <div class="tour-main-wrap">
-            <div class="tour-headbar"><img src="assets/psd-export/134-1-bedroom-apartment-tower-a-1.png" alt="1 Bedroom Apartment - Tower A" /></div>
-            <img id="tourMain" class="tour-main" src="assets/psd-export/118-2-1.png" alt="مشهد الجولة الافتراضية" />
+            <div class="tour-headbar">
+              <img id="tourHeadbarImage" src="" alt="" hidden />
+              <span id="tourHeadbarText" class="tour-headbar-text">غرفة نوم واحدة</span>
+            </div>
+            <img id="tourMain" class="tour-main" src="assets/gallery/1bed/1.jpg" alt="مشهد الجولة الافتراضية" />
             <button class="tour-main-icon-secondary-btn" id="tourSecondaryBtn" aria-label="Start visual tour">
               <div class="tour-main-icon-secondary" aria-hidden="true">
                 <img class="tour-main-icon-secondary-bg" src="assets/psd-export/121-ellipse-1-1.png" alt="" />
@@ -301,10 +304,16 @@
           <div class="tour-rail" aria-hidden="true">
             <button class="thumb-arrow" type="button">&#8592;</button>
             <div class="tour-thumbs" id="tourThumbs">
-              <img class="active" src="assets/psd-export/116-1-1.png" data-main="assets/psd-export/118-2-1.png" alt="Living room thumbnail" />
-              <img src="assets/psd-export/117-1-2.png" data-main="assets/psd-export/149-1-5.png" alt="Kitchen thumbnail" />
-              <img src="assets/psd-export/119-1-3.png" data-main="assets/psd-export/150-2-2.png" alt="Lobby thumbnail" />
-              <img src="assets/psd-export/120-1-4.png" data-main="assets/psd-export/151-4-2.png" alt="Bedroom thumbnail" />
+              <img class="active" src="assets/psd-export/116-1-1.png" data-main="assets/gallery/1bed/1.jpg" data-title="غرفة نوم واحدة" alt="1 bedroom thumbnail 1" />
+              <img src="assets/psd-export/117-1-2.png" data-main="assets/gallery/1bed/2.jpg" data-title="غرفة نوم واحدة" alt="1 bedroom thumbnail 2" />
+              <img src="assets/psd-export/119-1-3.png" data-main="assets/gallery/1bed/3.jpg" data-title="غرفة نوم واحدة" alt="1 bedroom thumbnail 3" />
+              <img src="assets/psd-export/120-1-4.png" data-main="assets/gallery/1bed/4.jpg" data-title="غرفة نوم واحدة" alt="1 bedroom thumbnail 4" />
+              <img src="assets/psd-export/116-1-1.png" data-main="assets/gallery/2bed/1.jpg" data-title="غرفتا نوم" alt="2 bedrooms thumbnail 1" />
+              <img src="assets/psd-export/117-1-2.png" data-main="assets/gallery/2bed/2.jpg" data-title="غرفتا نوم" alt="2 bedrooms thumbnail 2" />
+              <img src="assets/psd-export/119-1-3.png" data-main="assets/gallery/3bed/1.jpg" data-title="ثلاث غرف نوم" alt="3 bedrooms thumbnail 1" />
+              <img src="assets/psd-export/120-1-4.png" data-main="assets/gallery/3bed/2.jpg" data-title="ثلاث غرف نوم" alt="3 bedrooms thumbnail 2" />
+              <img src="assets/psd-export/116-1-1.png" data-main="assets/gallery/4bed/1.jpg" data-title="أربع غرف نوم" alt="4 bedrooms thumbnail 1" />
+              <img src="assets/psd-export/117-1-2.png" data-main="assets/gallery/4bed/2.png" data-title="أربع غرف نوم" alt="4 bedrooms thumbnail 2" />
             </div>
             <button class="thumb-arrow" type="button">&#8594;</button>
           </div>
@@ -345,7 +354,7 @@
 
         <!-- Center text block -->
         <div class="phil-el phil-center" id="philCenterText" data-cms-key="philosophy-center" aria-live="polite">
-          هوية حضرية مميزة تتجلى في تكوين معماري لأبراج أنيقة تجعل سواري وجهة بارزة متعددة الاستخدامات.
+          تم تصميم سواري حول الإنسان، حيث يعزز بيئات قابلة للمشي، وترابطاً سلساً، ومساحات عامة متكاملة، مما يخلق أسلوب حياة ديناميكياً وسهل الوصول لكل من السكان والزوار.
         </div>
 
         <!-- Top dot (no label) -->
@@ -401,13 +410,13 @@
             <span class="faq-q-text">من هو المطور العقاري لمشروع سواري؟</span>
             <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
           </button>
-          <div class="faq-answer">يتم تطوير سواري بواسطة فريق يمتلك خبرة عميقة في التطوير العقاري والتخطيط العمراني في المنطقة.</div>
+          <div class="faq-answer">تم تطوير مشروع سواري من قبل فريق يتمتع بخبرة عميقة في قطاع العقارات على مستوى المنطقة، بالتعاون مع خطيب وعلمي، وهي شركة استشارية عالمية رائدة في التخطيط والهندسة والتصميم، والمسؤولة عن المخطط الرئيسي للمشروع.</div>
 
           <button class="faq-item" type="button" aria-expanded="false">
             <span class="faq-q-text">ما هي أنواع الوحدات المتوفرة في سواري؟</span>
             <img class="faq-toggle-icon" src="assets/psd-export/061-layer-1.png" alt="" aria-hidden="true" />
           </button>
-          <div class="faq-answer">تتوفر وحدات استوديو وشقق بغرفة نوم واحدة وشقق بغرفتي نوم.</div>
+          <div class="faq-answer">تتوفر في سواري مجموعة متنوعة من الوحدات السكنية تشمل استوديوهات، وشققاً بغرفة نوم واحدة، وغرفتين، وثلاث وأربع غرف نوم، لتلبية مختلف أنماط الحياة واحتياجات السكان.</div>
 
           <button class="faq-item" type="button" aria-expanded="false">
             <span class="faq-q-text">ما هي خطط السداد المتاحة؟</span>
@@ -457,7 +466,7 @@
           <img src="assets/psd-export/041-line-5.png" alt="" class="contact-vbar" aria-hidden="true" />
           <div class="contact-text">
             <p class="contact-label-text">العنوان</p>
-            <p class="contact-value-text">عجمان، دبي، الإمارات العربية المتحدة</p>
+            <p class="contact-value-text">الزاهية، عجمان، الإمارات العربية المتحدة</p>
           </div>
         </div>
         <div class="contact-item">
@@ -564,7 +573,7 @@
     </div>
   </footer>
 
-  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true" inert>
     <button class="gallery-lightbox-close" id="galleryLightboxClose" type="button" aria-label="إغلاق صورة المعرض">&times;</button>
     <button class="gallery-lightbox-nav prev" id="galleryLightboxPrev" type="button" aria-label="صورة المعرض السابقة">&#8592;</button>
     <div class="gallery-lightbox-viewport">
@@ -575,7 +584,7 @@
   </div>
 
   <!-- Floor Plans Lightbox for Home Page -->
-  <div class="fp-lightbox" id="homeFpLightbox" aria-hidden="true">
+  <div class="fp-lightbox" id="homeFpLightbox" aria-hidden="true" inert>
     <button class="fp-lightbox-close" id="homeFpLightboxClose" type="button" aria-label="إغلاق عرض مخطط الطابق">&times;</button>
     <button class="gallery-lightbox-nav prev" id="homeFpLightboxPrev" type="button" aria-label="مخطط الطابق السابق">&#8592;</button>
     
@@ -646,85 +655,92 @@
     "placeholderText": "",
     "items": [
       {
-        "image": "assets/psd-export/151-4-2.png",
-        "fullImage": "assets/psd-export/151-4-2.png",
-        "lightboxAlt": "Lobby reception image"
+        "image": "assets/gallery/lobby/1.jpg",
+        "fullImage": "assets/gallery/lobby/1.jpg",
+        "lightboxAlt": "Lobby image 1"
       },
       {
-        "image": "assets/psd-export/149-1-5.png",
-        "fullImage": "assets/psd-export/149-1-5.png",
-        "lightboxAlt": "Entrance lobby image"
+        "image": "assets/gallery/lobby/2.jpg",
+        "fullImage": "assets/gallery/lobby/2.jpg",
+        "lightboxAlt": "Lobby image 2"
       },
       {
-        "image": "assets/psd-export/150-2-2.png",
-        "fullImage": "assets/psd-export/150-2-2.png",
-        "lightboxAlt": "Lobby interior image"
+        "image": "assets/gallery/lobby/3.jpg",
+        "fullImage": "assets/gallery/lobby/3.jpg",
+        "lightboxAlt": "Lobby image 3"
       }
     ]
   },
   "1bed": {
     "labelImage": "",
     "labelAlt": "",
-    "placeholderText": "",
+    "placeholderText": "غرفة نوم واحدة",
     "items": [
       {
-        "image": "assets/psd-export/151-4-2.png",
-        "fullImage": "assets/psd-export/151-4-2.png",
-        "lightboxAlt": "1 bedroom placeholder image 3"
+        "image": "assets/gallery/1bed/1.jpg",
+        "fullImage": "assets/gallery/1bed/1.jpg",
+        "lightboxAlt": "1 bedroom image 1"
       },
       {
-        "image": "assets/psd-export/118-2-1.png",
-        "fullImage": "assets/psd-export/118-2-1.png",
-        "lightboxAlt": "1 bedroom placeholder image 1"
+        "image": "assets/gallery/1bed/2.jpg",
+        "fullImage": "assets/gallery/1bed/2.jpg",
+        "lightboxAlt": "1 bedroom image 2"
       },
       {
-        "image": "assets/psd-export/150-2-2.png",
-        "fullImage": "assets/psd-export/150-2-2.png",
-        "lightboxAlt": "1 bedroom placeholder image 2"
+        "image": "assets/gallery/1bed/3.jpg",
+        "fullImage": "assets/gallery/1bed/3.jpg",
+        "lightboxAlt": "1 bedroom image 3"
       }
     ]
   },
   "2bed": {
     "labelImage": "",
     "labelAlt": "",
-    "placeholderText": "",
+    "placeholderText": "غرفتا نوم",
     "items": [
       {
-        "image": "assets/psd-export/118-2-1.png",
-        "fullImage": "assets/psd-export/118-2-1.png",
-        "lightboxAlt": "2 bedrooms placeholder image 3"
+        "image": "assets/gallery/2bed/1.jpg",
+        "fullImage": "assets/gallery/2bed/1.jpg",
+        "lightboxAlt": "2 bedrooms image 1"
       },
       {
-        "image": "assets/psd-export/150-2-2.png",
-        "fullImage": "assets/psd-export/150-2-2.png",
-        "lightboxAlt": "2 bedrooms placeholder image 1"
-      },
-      {
-        "image": "assets/psd-export/151-4-2.png",
-        "fullImage": "assets/psd-export/151-4-2.png",
-        "lightboxAlt": "2 bedrooms placeholder image 2"
+        "image": "assets/gallery/2bed/2.jpg",
+        "fullImage": "assets/gallery/2bed/2.jpg",
+        "lightboxAlt": "2 bedrooms image 2"
       }
     ]
   },
   "3bed": {
     "labelImage": "",
     "labelAlt": "",
-    "placeholderText": "",
+    "placeholderText": "ثلاث غرف نوم",
     "items": [
       {
-        "image": "assets/psd-export/149-1-5.png",
-        "fullImage": "assets/psd-export/149-1-5.png",
-        "lightboxAlt": "3 bedrooms placeholder image 3"
+        "image": "assets/gallery/3bed/1.jpg",
+        "fullImage": "assets/gallery/3bed/1.jpg",
+        "lightboxAlt": "3 bedrooms image 1"
       },
       {
-        "image": "assets/psd-export/151-4-2.png",
-        "fullImage": "assets/psd-export/151-4-2.png",
-        "lightboxAlt": "3 bedrooms placeholder image 1"
+        "image": "assets/gallery/3bed/2.jpg",
+        "fullImage": "assets/gallery/3bed/2.jpg",
+        "lightboxAlt": "3 bedrooms image 2"
+      }
+    ]
+  },
+  "4bed": {
+    "labelImage": "",
+    "labelAlt": "",
+    "placeholderText": "أربع غرف نوم",
+    "items": [
+      {
+        "image": "assets/gallery/4bed/1.jpg",
+        "fullImage": "assets/gallery/4bed/1.jpg",
+        "lightboxAlt": "4 bedrooms image 1"
       },
       {
-        "image": "assets/psd-export/118-2-1.png",
-        "fullImage": "assets/psd-export/118-2-1.png",
-        "lightboxAlt": "3 bedrooms placeholder image 2"
+        "image": "assets/gallery/4bed/2.png",
+        "fullImage": "assets/gallery/4bed/2.png",
+        "lightboxAlt": "4 bedrooms image 2"
       }
     ]
   },
