@@ -634,7 +634,7 @@ if (philosophyCenterText && philosophyNodes.length) {
   const philosophyCopy = isArabicPage
     ? {
         default: 'هوية حضرية مميزة تتجلى في تكوين معماري لأبراج أنيقة تجعل سواري وجهة بارزة متعددة الاستخدامات.',
-        concept: 'أيديولوجية المفهوم: رؤية متكاملة لمجتمع عصري يوازن بين الراحة، الهوية المعمارية، والاتصال الحضري.',
+        concept: 'تم تصميم سواري حول الإنسان، حيث يعزز بيئات قابلة للمشي، وترابطاً سلساً، ومساحات عامة متكاملة، مما يخلق أسلوب حياة ديناميكياً وسهل الوصول لكل من السكان والزوار',
         iconic: 'هوية حضرية مميزة: تصميم معماري يرسخ حضور سواري كمعلم بصري واضح ضمن مشهد المدينة.',
         central: 'منطقة سنترال بوينت: موقع محوري يربط السكن بالخدمات اليومية والمراكز الحيوية بسهولة.',
         premium: 'مواد فاخرة: تشطيبات مختارة بعناية تجمع بين الجودة العالية والاستدامة طويلة المدى.',
@@ -645,7 +645,7 @@ if (philosophyCenterText && philosophyNodes.length) {
       }
     : {
     default: 'Dynamic and iconic skyline through a composition of elegantly articulated towers that establish Sawari as a landmark mixed-use destination.',
-    concept: 'Dummy text about concept ideology, describing the overall vision behind Sawari and how every design decision supports a clear, unified development identity.',
+    concept: 'Designed around people, Sawari promotes walkable environments, strong connectivity, and integrated public realms, fostering a dynamic and accessible lifestyle for residents and visitors alike.',
     iconic: 'Dummy text about iconic urban identity, expressing how Sawari creates a recognizable landmark presence with a strong and memorable silhouette.',
     central: 'Dummy text about central point district, highlighting Sawari as a connected destination with seamless access to the city and its daily essentials.',
     premium: 'Dummy text about premium materials, reflecting refined finishes, durable surfaces, and carefully selected details that elevate everyday living.',

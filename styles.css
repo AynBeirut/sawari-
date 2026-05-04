@@ -2118,21 +2118,25 @@ html[dir="rtl"] .stat-label {
 }
 
 /* Swap outer and inner circle colors when active */
-.phil-node[class*="-dot-o"] {
+.phil-node[class*="-dot-o"],
+.phil-node[class*="-top-o"] {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
-.phil-node[class*="-dot-i"] {
+.phil-node[class*="-dot-i"],
+.phil-node[class*="-top-i"] {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
-.phil-node[class*="-dot-o"].is-active {
-  opacity: 0;
+.phil-node[class*="-dot-o"].is-active,
+.phil-node[class*="-top-o"].is-active {
+  filter: brightness(0.5) saturate(0.6) hue-rotate(150deg) contrast(1.1);
 }
 
-.phil-node[class*="-dot-i"].is-active {
+.phil-node[class*="-dot-i"].is-active,
+.phil-node[class*="-top-i"].is-active {
   filter: brightness(1.3);
 }
 
