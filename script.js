@@ -814,7 +814,27 @@ if (philosophyCenterText && philosophyNodes.length) {
     });
   }
 
-  setPhilosophyTopic(lockedTopic);
+  // Set initial topic
+  setPhilosophyTopic('concept');
+
+  // Ensure concept is activated when philosophy section first appears
+  if (philosophySection) {
+    let hasTriggered = false;
+    const philosophyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasTriggered) {
+            hasTriggered = true;
+            // Activate the concept topic when section becomes visible for the first time
+            lockedTopic = 'concept';
+            setPhilosophyTopic('concept');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    philosophyObserver.observe(philosophySection);
+  }
 }
 
 const newsletterForm = document.getElementById('newsletterForm');
