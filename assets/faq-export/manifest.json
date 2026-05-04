@@ -1,0 +1,459 @@
+{
+  "psd": "FAQ.psd",
+  "document_size": [
+    1919,
+    898
+  ],
+  "exported_layers": 28,
+  "full_composite": "full-composite.png",
+  "items": [
+    {
+      "file": "000-bg-1.png",
+      "name": "bg",
+      "bbox": [
+        0,
+        0,
+        1919,
+        898
+      ],
+      "size": [
+        1919,
+        898
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "002-line-copy-7-1.png",
+      "name": "line copy 7",
+      "bbox": [
+        375,
+        337,
+        1571,
+        338
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "003-who-is-the-developer-behind-sawari-1.png",
+      "name": "WHO IS THE DEVELOPER BEHIND SAWARI?",
+      "bbox": [
+        374,
+        286,
+        907,
+        309
+      ],
+      "size": [
+        533,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "004-layer-1.png",
+      "name": "+",
+      "bbox": [
+        1546,
+        282,
+        1569,
+        305
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "005-line-copy-1.png",
+      "name": "line  copy",
+      "bbox": [
+        375,
+        337,
+        1571,
+        338
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "006-line-copy-8-1.png",
+      "name": "line copy 8",
+      "bbox": [
+        375,
+        417,
+        1571,
+        418
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "007-what-types-of-units-available-in-sawari-1.png",
+      "name": "WHAT TYPES OF UNITS AVAILABLE IN SAWARI?",
+      "bbox": [
+        374,
+        366,
+        951,
+        389
+      ],
+      "size": [
+        577,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "008-copy-1.png",
+      "name": "+ copy",
+      "bbox": [
+        1546,
+        362,
+        1569,
+        385
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "009-line-copy-2-1.png",
+      "name": "line  copy 2",
+      "bbox": [
+        375,
+        417,
+        1571,
+        418
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "010-line-copy-9-1.png",
+      "name": "line copy 9",
+      "bbox": [
+        375,
+        497,
+        1571,
+        498
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "011-what-are-the-payment-plans-1.png",
+      "name": "WHAT ARE THE PAYMENT PLANS?",
+      "bbox": [
+        374,
+        446,
+        787,
+        469
+      ],
+      "size": [
+        413,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "012-copy-2-1.png",
+      "name": "+ copy 2",
+      "bbox": [
+        1546,
+        442,
+        1569,
+        465
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "013-line-copy-3-1.png",
+      "name": "line  copy 3",
+      "bbox": [
+        375,
+        497,
+        1571,
+        498
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "014-line-copy-10-1.png",
+      "name": "line copy 10",
+      "bbox": [
+        375,
+        577,
+        1571,
+        578
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "015-why-invest-in-sawari-1.png",
+      "name": "WHY INVEST IN SAWARI?",
+      "bbox": [
+        374,
+        526,
+        689,
+        549
+      ],
+      "size": [
+        315,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "016-copy-3-1.png",
+      "name": "+ copy 3",
+      "bbox": [
+        1546,
+        522,
+        1569,
+        545
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "017-line-copy-4-1.png",
+      "name": "line  copy 4",
+      "bbox": [
+        375,
+        577,
+        1571,
+        578
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "018-line-copy-11-1.png",
+      "name": "line copy 11",
+      "bbox": [
+        375,
+        657,
+        1571,
+        658
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "019-what-makes-sawari-unique-1.png",
+      "name": "WHAT MAKES SAWARI UNIQUE?",
+      "bbox": [
+        374,
+        606,
+        785,
+        629
+      ],
+      "size": [
+        411,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "020-copy-4-1.png",
+      "name": "+ copy 4",
+      "bbox": [
+        1546,
+        602,
+        1569,
+        625
+      ],
+      "size": [
+        23,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "021-line-copy-5-1.png",
+      "name": "line  copy 5",
+      "bbox": [
+        375,
+        657,
+        1571,
+        658
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "022-line-copy-12-1.png",
+      "name": "line copy 12",
+      "bbox": [
+        375,
+        826,
+        1571,
+        827
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "023-when-is-the-expected-completion-date-for-sawari-1.png",
+      "name": "WHEN IS THE EXPECTED COMPLETION DATE FOR SAWARI?",
+      "bbox": [
+        374,
+        686,
+        1105,
+        709
+      ],
+      "size": [
+        731,
+        23
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "024-layer-2.png",
+      "name": "-",
+      "bbox": [
+        1547,
+        687,
+        1570,
+        692
+      ],
+      "size": [
+        23,
+        5
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "025-line-copy-6-1.png",
+      "name": "line  copy 6",
+      "bbox": [
+        375,
+        826,
+        1571,
+        827
+      ],
+      "size": [
+        1196,
+        1
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "026-line-copy-6-2.png",
+      "name": "line copy 6",
+      "bbox": [
+        348,
+        83,
+        352,
+        251
+      ],
+      "size": [
+        4,
+        168
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "027-faq-1.png",
+      "name": "FAQ    ",
+      "bbox": [
+        381,
+        138,
+        470,
+        177
+      ],
+      "size": [
+        89,
+        39
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    },
+    {
+      "file": "028-phase-1-will-be-delivered-by-the-end-of-2027-phase-2-will-be-d-1.png",
+      "name": "Phase 1 will be delivered by the end of 2027, Phase 2 will be d",
+      "bbox": [
+        375,
+        734,
+        1521,
+        792
+      ],
+      "size": [
+        1146,
+        58
+      ],
+      "opacity": 255,
+      "blend_mode": "BlendMode.NORMAL"
+    }
+  ]
+}

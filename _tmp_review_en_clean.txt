@@ -1,0 +1,22 @@
+﻿
+space    #text                                                                 
+-----    -----                                                                 
+preserve English website                                                       
+preserve Feedback 1                                                            
+preserve = Sawari is spelled wrong here                                        
+preserve Feedback 2:                                                           
+preserve  Replace the answer:  Sawari is developed by a team with deep regio...
+preserve Feedback 3:â                                                         
+preserve  â Wrong address wording                                             
+preserve The website says: â€œAjman, Dubai, United Arab Emiratesâ€.           
+preserve Should be: Al Zahya, Ajman, U                                         
+preserve nited Arab Emirates                                                   
+preserve Feedback 4 :                                                          
+preserve The website says only: Studios, 1-bedroom, and 2-bedroom.             
+preserve We need to add a 3BR, 4Bedroom duplex apartment.                      
+preserve Feedback 5:                                                           
+preserve The text in the middle should be this - Designed around people, Saw...
+preserve Feedback 6:                                                           
+preserve add 3 bedroom and 4 bedroom                                           
+
+

@@ -1285,8 +1285,8 @@ html[dir="rtl"] .stat-label {
 .gallery-filter::after {
   content: "";
   position: absolute;
-  left: calc(max(735px, 9.3vw) + 1rem);
-  right: 40vw;
+  left: calc(max(735px, 9.3vw) + 0.5rem);
+  right: 37.7vw;
   bottom: 3.2rem;
   height: 3px;
   background: rgba(87, 103, 101, 0.18);
