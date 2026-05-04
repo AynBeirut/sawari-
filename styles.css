@@ -2110,16 +2110,30 @@ html[dir="rtl"] .stat-label {
 
 .phil-node {
   cursor: pointer;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
+  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
 .phil-node.is-active {
   transform: scale(1.03);
 }
 
-/* Swap colors when active */
-.phil-node[class*="-dot-"].is-active {
-  filter: invert(1);
+/* Swap outer and inner circle colors when active */
+.phil-node[class*="-dot-o"] {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.phil-node[class*="-dot-i"] {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.phil-node[class*="-dot-o"].is-active {
+  opacity: 0;
+}
+
+.phil-node[class*="-dot-i"].is-active {
+  filter: brightness(1.3);
 }
 
 .philosophy-stage:not(.show) .phil-wheel {
