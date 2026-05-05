@@ -3614,6 +3614,7 @@ html[dir="rtl"] .contact-value-text {
 
 html[dir="rtl"] .contact-phone-text {
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 html[dir="rtl"] .phil-title-text {
