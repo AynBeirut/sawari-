@@ -1,6 +1,6 @@
 [
   {
-    "title": "ONE BED APARTMENT",
+    "title": "ONE BED APARTMENT - TYPE 1",
     "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 81.81 SQM",
@@ -16,8 +16,8 @@
     "image": "assets/plans/1BED TYP 1.jpg"
   },
   {
-    "title": "TWO BED APARTMENT",
-    "subtitle": "2 BED TYPE 1",
+    "title": "TWO BED APARTMENT - TYPE 1",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 141.28 SQM",
       "Balcony/Terrace Area - 9.51 SQM",
@@ -32,8 +32,8 @@
     "image": "assets/plans/2 BED TYP 1.jpg"
   },
   {
-    "title": "TWO BED APARTMENT",
-    "subtitle": "2 BED TYPE 2",
+    "title": "TWO BED APARTMENT - TYPE 2",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 120.68 SQM",
       "Balcony/Terrace Area - 53.72 SQM",
@@ -48,8 +48,8 @@
     "image": "assets/plans/2 BED TYP 2.jpg"
   },
   {
-    "title": "THREE BED APARTMENT",
-    "subtitle": "3 BED TYPE 1",
+    "title": "THREE BED APARTMENT - TYPE 1",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 185.39 SQM",
       "Balcony/Terrace Area - 22.22 SQM",
@@ -64,8 +64,8 @@
     "image": "assets/plans/3 BED TYP 1.jpg"
   },
   {
-    "title": "THREE BED APARTMENT",
-    "subtitle": "3 BED TYPE 2",
+    "title": "THREE BED APARTMENT - TYPE 2",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 173.82 SQM",
       "Balcony/Terrace Area - 22.22 SQM",
@@ -80,8 +80,8 @@
     "image": "assets/plans/3 BED TYP 2.jpg"
   },
   {
-    "title": "THREE BED APARTMENT",
-    "subtitle": "3 BED TYPE 3",
+    "title": "THREE BED APARTMENT - TYPE 3",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 186.51 SQM",
       "Balcony/Terrace Area - 41.24 SQM",
@@ -96,8 +96,8 @@
     "image": "assets/plans/3 BED TYP 3.jpg"
   },
   {
-    "title": "THREE BED APARTMENT",
-    "subtitle": "3 BED TYPE 4",
+    "title": "THREE BED APARTMENT - TYPE 4",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 226.75 SQM",
       "Balcony/Terrace Area - 35.80 SQM",
@@ -112,8 +112,8 @@
     "image": "assets/plans/3 BED TYP 4.jpg"
   },
   {
-    "title": "THREE BED APARTMENT",
-    "subtitle": "3 BED TYPE 4A",
+    "title": "THREE BED APARTMENT - TYPE 4",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 226.75 SQM",
       "Balcony/Terrace Area - 155.07 SQM",
@@ -128,8 +128,8 @@
     "image": "assets/plans/3 BED TYP 4A.jpg"
   },
   {
-    "title": "FOUR BED APARTMENT",
-    "subtitle": "4 BED TYPE 1",
+    "title": "FOUR BED APARTMENT - TYPE 1",
+    "subtitle": "",
     "stats": [
       "Unit Area (NSA) - 253.09 SQM",
       "Balcony/Terrace Area - 41.24 SQM",

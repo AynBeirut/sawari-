@@ -118,6 +118,10 @@ function localizePlanText(value) {
   }
 
   return value
+    .replaceAll('ONE BED APARTMENT - TYPE', 'شقة بغرفة نوم واحدة - نوع')
+    .replaceAll('TWO BED APARTMENT - TYPE', 'شقة بغرفتي نوم - نوع')
+    .replaceAll('THREE BED APARTMENT - TYPE', 'شقة بثلاث غرف نوم - نوع')
+    .replaceAll('FOUR BED APARTMENT - TYPE', 'شقة بأربع غرف نوم - نوع')
     .replaceAll('ONE BED APARTMENT', 'شقة بغرفة نوم واحدة')
     .replaceAll('TWO BED APARTMENT', 'شقة بغرفتي نوم')
     .replaceAll('THREE BED APARTMENT', 'شقة بثلاث غرف نوم')
