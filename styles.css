@@ -1269,7 +1269,7 @@ html[dir="rtl"] .stat-label {
   display: flex;
   align-items: center;
   gap: 1.35rem;
-  margin-bottom: 1.55rem;
+  margin-bottom: 0;
   padding-bottom: 3.5rem;
   justify-content: flex-start;
   margin-top: 0;
@@ -3422,7 +3422,7 @@ html[dir="rtl"] .gallery-head {
 
 html[dir="rtl"] .gallery-filter {
   width: 100%;
-  margin: 0 0 1.55rem;
+  margin: 0;
   justify-content: flex-end;
   background: #e5e2da;
   padding: 1.5rem 4vw 3.5rem max(735px, 9.3vw);
@@ -3430,9 +3430,9 @@ html[dir="rtl"] .gallery-filter {
 }
 
 html[dir="rtl"] .gallery-filter::after {
-  right: calc(max(735px, 9.3vw) + 1rem);
-  left: 26vw;
-  bottom: 3.2rem;
+  left: calc(max(735px, 9.3vw) + 0rem) !important;
+  right: 29vw !important;
+  bottom: 3.2rem !important;
 }
 
 html[dir="rtl"] .gallery-grid {
@@ -3540,7 +3540,7 @@ html[dir="rtl"] .gallery-filter button.active::after {
 }
 
 html[dir="rtl"] .gallery-filter button[data-filter="4bed"].active::after {
-  bottom: -2.2rem;
+  bottom: -1.7rem !important;
 }
 
 html[dir="rtl"] .gallery-title-text {
@@ -5141,23 +5141,6 @@ html[dir="rtl"] .gallery-filter button {
   outline: none !important;
   -webkit-tap-highlight-color: transparent !important;
   background: transparent !important;
-}
-
-html[dir="rtl"] .gallery-filter::after {
-  left: calc(max(735px, 9.3vw) + 1rem) !important;
-  right: 40vw !important;  /* ends at right edge of الردهة */
-  bottom: 3.2rem !important;
-}
-
-html[dir="rtl"] .gallery-filter button.active::after,
-html[dir="rtl"] .gallery-filter button::after {
-  left: 0.6rem !important;
-  right: 0.6rem !important;
-  bottom: -1.6rem !important;
-}
-
-html[dir="rtl"] .gallery-filter button[data-filter="4bed"].active::after {
-  bottom: -2.2rem !important;
 }
 
 html[dir="rtl"] .gallery-filter-label {
