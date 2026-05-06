@@ -2286,9 +2286,9 @@ html[dir="rtl"] .phil-title         { left: 50%; transform: translateX(-50%); to
   max-width: calc(100% - 36px);
   height: auto;
   font-family: 'Futura 100', 'Futura', 'Century Gothic', sans-serif;
-  font-size: 10.5px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 14px;
+  line-height: 22px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--ink);
@@ -5364,11 +5364,11 @@ html[dir="rtl"] .tour-subtitle-text {
 }
 html[dir="rtl"] .faq-q-text {
   color: var(--ink) !important;
-  font-size: 1.05rem !important;
+  font-size: 1.5rem !important;
 }
 
 html[dir="rtl"] .faq-item.is-open .faq-q-text {
-  font-size: 1.2rem !important;
+  font-size: 1.65rem !important;
 }
 
 html[dir="rtl"] .faq-toggle-icon {
