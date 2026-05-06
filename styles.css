@@ -3430,7 +3430,7 @@ html[dir="rtl"] .gallery-head {
 
 html[dir="rtl"] .gallery-filter {
   width: 100%;
-  margin: 0 0 1.55rem;
+  margin: -2px 0 1.55rem;
   justify-content: flex-end;
   background: #e5e2da;
   padding: 1.5rem 4vw 3.5rem max(735px, 9.3vw);
