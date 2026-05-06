@@ -3548,7 +3548,7 @@ html[dir="rtl"] .gallery-filter button.active::after {
 }
 
 html[dir="rtl"] .gallery-filter button[data-filter="4bed"].active::after {
-  bottom: -2.2rem;
+  bottom: -1.6rem;
 }
 
 html[dir="rtl"] .gallery-title-text {
