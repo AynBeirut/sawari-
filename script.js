@@ -5,8 +5,7 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show');
+        revealObserver.unobserve(entry.target);
       }
     });
   },
@@ -118,10 +117,10 @@ function localizePlanText(value) {
   }
 
   return value
-    .replaceAll('ONE BED APARTMENT - TYPE', 'شقة بغرفة نوم واحدة - نوع')
-    .replaceAll('TWO BED APARTMENT - TYPE', 'شقة بغرفتي نوم - نوع')
-    .replaceAll('THREE BED APARTMENT - TYPE', 'شقة بثلاث غرف نوم - نوع')
-    .replaceAll('FOUR BED APARTMENT - TYPE', 'شقة بأربع غرف نوم - نوع')
+    .replaceAll('ONE BED APARTMENT - TYPE', 'شقة بغرفة نوم واحدة - النوع')
+    .replaceAll('TWO BED APARTMENT - TYPE', 'شقة بغرفتي نوم - النوع')
+    .replaceAll('THREE BED APARTMENT - TYPE', 'شقة بثلاث غرف نوم - النوع')
+    .replaceAll('FOUR BED APARTMENT - TYPE', 'شقة بأربع غرف نوم - النوع')
     .replaceAll('ONE BED APARTMENT', 'شقة بغرفة نوم واحدة')
     .replaceAll('TWO BED APARTMENT', 'شقة بغرفتي نوم')
     .replaceAll('THREE BED APARTMENT', 'شقة بثلاث غرف نوم')
@@ -130,7 +129,7 @@ function localizePlanText(value) {
     .replaceAll('4 BED DUPLEX TYPE 2', 'دوبلكس 4 غرف نوم - النوع 2')
     .replaceAll('LOWER FLOOR', 'الطابق السفلي')
     .replaceAll('UPPER FLOOR', 'الطابق العلوي')
-    .replaceAll('BED TYPE', 'نوع')
+    .replaceAll('BED TYPE', 'النوع')
     .replaceAll('Unit Area (NSA)', 'مساحة الوحدة (NSA)')
     .replaceAll('Balcony/Terrace Area', 'مساحة الشرفة/التراس')
     .replaceAll('Total Area (GSA)', 'المساحة الإجمالية (GSA)')
@@ -640,7 +639,7 @@ if (philosophyCenterText && philosophyNodes.length) {
         default: 'هوية حضرية مميزة تتجلى في تكوين معماري لأبراج أنيقة تجعل سواري وجهة بارزة متعددة الاستخدامات.',
         concept: 'تم تصميم سواري حول الإنسان، حيث يعزز بيئات قابلة للمشي، وترابطاً سلساً، ومساحات عامة متكاملة، مما يخلق أسلوب حياة ديناميكياً وسهل الوصول لكل من السكان والزوار',
         iconic: 'هوية حضرية مميزة: تصميم معماري يرسخ حضور سواري كمعلم بصري واضح ضمن مشهد المدينة.',
-        central: 'منطقة سنترال بوينت: موقع محوري يربط السكن بالخدمات اليومية والمراكز الحيوية بسهولة.',
+        central: 'المنطقة المركزية: موقع محوري يربط السكن بالخدمات اليومية والمراكز الحيوية بسهولة.',
         premium: 'مواد فاخرة: تشطيبات مختارة بعناية تجمع بين الجودة العالية والاستدامة طويلة المدى.',
         human: 'تنقل يركز على الإنسان: حركة سلسة ومسارات مريحة تعزز تجربة السكان والزوار يومياً.',
         lifestyle: 'تكامل أنماط الحياة: مزج متناغم بين السكن والترفيه والرفاهية في بيئة واحدة.',
