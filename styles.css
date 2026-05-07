@@ -3479,6 +3479,8 @@ html[dir="rtl"] #homeFpLightboxInfo .fp-keyplan {
   margin-top: 0;
   margin-left: 0;
   width: 100%;
+  position: relative;
+  left: 175px;
 }
 
 html[dir="rtl"] #fpLightboxInfo .fp-keyplan h3,
