@@ -3471,7 +3471,7 @@ html[dir="rtl"] #fpLightboxInfo .fp-stats p,
 html[dir="rtl"] #homeFpLightboxInfo .fp-stats p {
   margin-bottom: 0.6rem;
   line-height: 1.7;
-  font-size: 14.5px;
+  font-size: 11px;
 }
 
 html[dir="rtl"] #fpLightboxInfo .fp-keyplan,
@@ -3487,14 +3487,14 @@ html[dir="rtl"] #fpLightboxInfo .fp-keyplan h3,
 html[dir="rtl"] #homeFpLightboxInfo .fp-keyplan h3 {
   text-align: right;
   margin-bottom: 0.85rem;
-  font-size: 12px;
+  font-size: 8px;
 }
 
 html[dir="rtl"] #fpLightboxInfo .fp-keyplan p,
 html[dir="rtl"] #homeFpLightboxInfo .fp-keyplan p {
   margin-bottom: 0.55rem;
   line-height: 1.7;
-  font-size: 13.5px;
+  font-size: 9px;
 }
 
 html[dir="rtl"] .gallery-head {
