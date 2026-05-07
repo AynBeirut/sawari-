@@ -4204,7 +4204,7 @@ html[dir="rtl"] .phil-label-text {
   }
 
   .gallery-filter button[data-filter="4bed"].active::after {
-    bottom: -0.72rem;
+    bottom: -1.2rem;
   }
 
   .gallery .container {
