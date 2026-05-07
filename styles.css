@@ -1349,6 +1349,22 @@ html[dir="rtl"] .stat-label {
   background: rgba(87, 103, 101, 0.6);
 }
 
+.gallery-filter button[data-filter="4bed"] .gallery-filter-label {
+  color: var(--muted);
+  opacity: 0.48;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 549;
+  letter-spacing: 0.05em;
+}
+
+.gallery-filter button[data-filter="4bed"].active .gallery-filter-label,
+.gallery-filter button[data-filter="4bed"]:hover .gallery-filter-label {
+  color: var(--muted);
+  opacity: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 549;
+}
+
 .gallery-filter button[data-filter="4bed"].active::after {
   bottom: -2.2rem;
 }
@@ -4172,9 +4188,7 @@ html[dir="rtl"] .phil-label-text {
   }
 
   .gallery-filter::after {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1.6rem;
+    display: none;
   }
 
   .gallery-filter button {
