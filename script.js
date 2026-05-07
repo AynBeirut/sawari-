@@ -133,7 +133,43 @@ function localizePlanText(value) {
     .replaceAll('Unit Area (NSA)', 'مساحة الوحدة (NSA)')
     .replaceAll('Balcony/Terrace Area', 'مساحة الشرفة/التراس')
     .replaceAll('Total Area (GSA)', 'المساحة الإجمالية (GSA)')
-    .replaceAll('SQM', 'متر مربع');
+    .replaceAll('SQM', 'متر مربع')
+    // Tower and floor translations
+    .replaceAll('Triple Tower', 'البرج الثلاثي')
+    .replaceAll('Twin Tower', 'البرج التوأم')
+    .replaceAll('Floor Tower', 'برج بـ')
+    .replaceAll('TYP', 'النوع')
+    .replaceAll('FLOOR', 'طابق')
+    .replaceAll('1ST', 'الأول')
+    .replaceAll('2ND', 'الثاني')
+    .replaceAll('3RD', 'الثالث')
+    .replaceAll('4TH', 'الرابع')
+    .replaceAll('5TH', 'الخامس')
+    .replaceAll('6TH', 'السادس')
+    .replaceAll('7TH', 'السابع')
+    .replaceAll('8TH', 'الثامن')
+    .replaceAll('9TH', 'التاسع')
+    .replaceAll('10TH', 'العاشر')
+    .replaceAll('11TH', 'الحادي عشر')
+    .replaceAll('12TH', 'الثاني عشر')
+    .replaceAll('13TH', 'الثالث عشر')
+    .replaceAll('14TH', 'الرابع عشر')
+    .replaceAll('15TH', 'الخامس عشر')
+    .replaceAll('16TH', 'السادس عشر')
+    .replaceAll('17TH', 'السابع عشر')
+    .replaceAll('18TH', 'الثامن عشر')
+    .replaceAll('19TH', 'التاسع عشر')
+    .replaceAll('20TH', 'العشرون')
+    .replaceAll('21ST', 'الحادي والعشرون')
+    .replaceAll('22ND', 'الثاني والعشرون')
+    .replaceAll('23RD', 'الثالث والعشرون')
+    .replaceAll('24TH', 'الرابع والعشرون')
+    .replaceAll('25TH', 'الخامس والعشرون')
+    .replaceAll('26TH', 'السادس والعشرون')
+    .replaceAll('27TH', 'السابع والعشرون')
+    .replaceAll('28TH', 'الثامن والعشرون')
+    .replaceAll('29TH', 'التاسع والعشرون')
+    .replaceAll('30TH', 'الثلاثون');
 }
 
 function updatePlanUI() {
@@ -1540,6 +1576,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.querySelectorAll('.fp-keyplan h3').forEach((el) => {
         el.textContent = 'المخطط الرئيسي';
+      });
+
+      document.querySelectorAll('.fp-keyplan p').forEach((el) => {
+        el.textContent = localizePlanText(el.textContent.trim());
       });
 
       document.querySelectorAll('.fp-download span').forEach((el) => {

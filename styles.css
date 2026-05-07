@@ -3175,7 +3175,7 @@ html[dir="rtl"] .phil-title         { left: 50%; transform: translateX(-50%); to
   }
 
   .gallery-filter button[data-filter="4bed"].active::after {
-    bottom: -1.5rem;
+    bottom: -1rem;
   }
 
   .gallery-grid {
@@ -3420,6 +3420,81 @@ html[dir="rtl"] .footer-grid p {
   text-align: right;
 }
 
+html[dir="rtl"] .footer-stay {
+  font-family: 'Cairo', 'Futura', sans-serif;
+  font-size: 0.7rem;
+  color: #5f6f6d;
+  letter-spacing: 0.02em;
+}
+
+/* RTL Floor Plan Lightbox */
+html[dir="rtl"] .fp-lightbox-info {
+  border-left: none;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: right;
+  padding: 5rem 2.5rem 2rem 2rem;
+}
+
+html[dir="rtl"] .fp-lightbox-copy {
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+html[dir="rtl"] .fp-lightbox-info h2 {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+html[dir="rtl"] .fp-subtitle-type {
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+html[dir="rtl"] #fpLbSubtitle,
+html[dir="rtl"] #lbPlanSubtitle {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+html[dir="rtl"] #fpLightboxInfo .fp-stats,
+html[dir="rtl"] #homeFpLightboxInfo .fp-stats {
+  margin-bottom: 1.5rem;
+}
+
+html[dir="rtl"] #fpLightboxInfo .fp-stats p,
+html[dir="rtl"] #homeFpLightboxInfo .fp-stats p {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+  font-size: 14.5px;
+}
+
+html[dir="rtl"] #fpLightboxInfo .fp-keyplan,
+html[dir="rtl"] #homeFpLightboxInfo .fp-keyplan {
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+html[dir="rtl"] #fpLightboxInfo .fp-keyplan h3,
+html[dir="rtl"] #homeFpLightboxInfo .fp-keyplan h3 {
+  text-align: right;
+  margin-bottom: 0.85rem;
+  font-size: 12px;
+}
+
+html[dir="rtl"] #fpLightboxInfo .fp-keyplan p,
+html[dir="rtl"] #homeFpLightboxInfo .fp-keyplan p {
+  margin-bottom: 0.55rem;
+  line-height: 1.7;
+  font-size: 13.5px;
+}
+
 html[dir="rtl"] .gallery-head {
   width: 100%;
   margin: 0;
@@ -3576,7 +3651,7 @@ html[dir="rtl"] .tour-subtitle-text {
 
 html[dir="rtl"] .faq-q-text {
   font-family: 'Futura', 'Century Gothic', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   color: #3f514f;
   text-align: right;
 }
@@ -3615,9 +3690,10 @@ html[dir="rtl"] .contact-label-text {
 
 html[dir="rtl"] .contact-value-text {
   font-family: 'Futura', 'Century Gothic', sans-serif;
-  font-size: 0.95rem;
-  color: #f1f1f1;
+  font-size: 1rem;
+  color: var(--muted);
   margin: 0;
+  font-weight: 400;
 }
 
 html[dir="rtl"] .contact-phone-text {
@@ -4112,7 +4188,7 @@ html[dir="rtl"] .phil-label-text {
   }
 
   .gallery-filter button[data-filter="4bed"].active::after {
-    bottom: -1.1rem;
+    bottom: -0.72rem;
   }
 
   .gallery .container {
@@ -5043,6 +5119,11 @@ html[dir="rtl"] .page-floor-plans .fp-info > .fp-download {
     border-top: 1px solid rgba(255,255,255,0.08);
     padding: 1.5rem 1.5rem 4rem;
     justify-content: flex-start;
+  }
+  
+  html[dir="rtl"] .fp-lightbox-info {
+    border-right: none;
+    padding: 1.5rem 2rem 4rem 1.5rem;
   }
 }
 
